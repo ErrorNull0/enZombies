@@ -1,0 +1,982 @@
+<ErrorNull>
+	<append xpath="/buffs">
+
+
+		<!-- ********** HOLDING COMPUTER MONITOR ********** -->
+		<buff name="BusinessmanBossDeco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="Entities/Electrical/monitorPrefab" 
+					local_offset="0.1,0.10,-0.35" 
+					local_rotation="260,0,0" 
+					local_scale="0.25"
+					parent_transform="RightHand"
+				/>
+			</effect_group>
+		</buff>
+
+		<!-- ********** HOLDING SPENT TORCH AND TEA ********** -->
+		<buff name="HikerFemale1Deco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Tools/torch.fbx" 
+					local_offset="-0.07,0.02,-0.04" 
+					local_rotation="15,0,15" 
+					parent_transform="RightHand"
+				/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Food/redteaprefab.prefab" 
+					local_offset="-0.09,0.05,-0.05" 
+					local_rotation="180,0,0" 
+					parent_transform="LeftHand"
+				/>
+			</effect_group>
+		</buff>
+				
+		<!-- ********** HOLDING SPENT TORCH AND BONE ********** -->
+		<buff name="HikerFemale2Deco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?weapons/melee/knives/boneshivprefab.prefab" 
+					local_offset="-0.16,0.14,0.03" 
+					local_rotation="210,0,-30" 
+					parent_transform="RightHand"
+				/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Tools/torch.fbx" 
+					local_offset="-0.1,0.00,-0.03" 
+					local_rotation="180,0,0" 
+					parent_transform="LeftHand"
+				/>
+			</effect_group>
+		</buff>
+		
+		<!-- ********** HOLDING SPENT TORCH AND MURKY WATER ********** -->
+		<buff name="HikerMale1Deco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Tools/torch02_unlitprefab.prefab" 
+					local_offset="-0.07,-0.07,-0.07" 
+					local_rotation="15,0,15" 
+					parent_transform="RightHand"
+				/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Food/bottledriverwaterprefab.prefab" 
+					local_offset="-0.09,0.05,-0.05" 
+					local_rotation="180,0,0" 
+					parent_transform="LeftHand"
+				/>
+			</effect_group>
+		</buff>
+
+		<!-- ********** HOLDING SPENT TORCH AND BIG BONE ********** -->
+		<buff name="HikerMale2Deco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Crafting/femur.fbx" 
+					local_offset="-0.10,-0.05,-0.07" 
+					local_rotation="-60,0,0" 
+					parent_transform="RightHand"
+				/>	
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Tools/torch02_unlitprefab.prefab" 
+					local_offset="-0.1,0.1,-0.03" 
+					local_rotation="180,0,0" 
+					parent_transform="LeftHand"
+				/>
+			</effect_group>
+		</buff>
+
+
+
+
+		<!-- ********** FLAMES ON BODY ********** -->
+		<buff name="BurntFemaleFlamerDeco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" 
+					particle="p_torch_wall" 
+					local_offset="0,0,0" 
+					local_rotation="0,0,0" 
+					parent_transform="RightForeArm"
+				/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" 
+					particle="p_torch_wall" 
+					local_offset="0,0,0" 
+					local_rotation="0,0,0" 
+					parent_transform="LeftForeArm"
+				/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" 
+					particle="p_torch_wall" 
+					local_offset="0,-0.16,-0.2" 
+					local_rotation="0,0,0" 
+					parent_transform="Head"
+				/>
+				<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_torch_wall"/>
+			</effect_group>
+		</buff>
+		
+		<!-- ********** FLAME ON HEAD ********** -->
+		<buff name="BurntMaleFlamerDeco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" 
+					particle="p_torch_wall" 
+					local_offset="0,-0.16,0.2" 
+					local_rotation="0,0,0" 
+					parent_transform="Head"
+				/>
+				<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_torch_wall"/>
+			</effect_group>
+		</buff>
+		
+		<!-- ********** FLAME ON TORCH ********** -->
+		<buff name="BurntGiantDeco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Tools/torch02_unlitprefab.prefab" 
+					local_offset="-0.1,0.02,-0.03" 
+					local_rotation="33,30,55" 
+					parent_transform="RightHand"
+				/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" 
+					particle="p_torch_wall" 
+					local_offset="-0.3,0.05,0.2" 
+					local_rotation="0,0,0" 
+					parent_transform="RightHand"
+				/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Misc/sackprefab.prefab" 
+					local_offset="-0.09,-0.05,-0.03" 
+					local_rotation="-30,-30,-160" 
+					parent_transform="LeftHand"
+				/>
+				<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_torch_wall"/>
+			</effect_group>
+		</buff>
+		
+		<!-- ********** HOLDING TORCHES IN BOTH HANDS **********
+		Attaching pre-lit torches torchprefab and torch02prefab caused lag and glitches.
+		Using unlit torches and applying flame particle seemed to avoid those issues. -->
+		<buff name="BurntGoblinTorchDeco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Tools/torch02_unlitprefab.prefab" 
+					local_offset="-0.1,-0.1,-0.05" 
+					local_rotation="0,0,0" 
+					parent_transform="RightHand"
+				/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Tools/torch02_unlitprefab.prefab" 
+					local_offset="-0.1,0.1,-0.03" 
+					local_rotation="180,0,0" 
+					parent_transform="LeftHand"
+				/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" 
+					particle="p_torch_wall" 
+					local_offset="-0.1,0.5,-0.05" 
+					local_rotation="0,0,0" 
+					parent_transform="RightHand"
+				/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" 
+					particle="p_torch_wall" 
+					local_offset="-0.1,-0.5,-0.03" 
+					local_rotation="180,0,0" 
+					parent_transform="LeftHand"
+				/>
+				<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_torch_wall"/>
+			</effect_group>
+		</buff>
+		
+		
+		<!-- ********** HOLDING CACTUS IN BOTH HANDS ********** -->
+		<buff name="DesertGiantDeco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="Entities/Plants/cactus04Prefab" 
+					local_offset="-0.16,0.17,0.03" 
+					local_rotation="-35,130,0" 
+					parent_transform="RightHand"
+				/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="Entities/Plants/cactus04Prefab" 
+					local_offset="-0.15,-0.2,0.03" 
+					local_rotation="0,40,150" 
+					parent_transform="LeftHand"
+				/>
+			</effect_group>
+		</buff>
+		
+		<!-- ********** HOLDING BONES IN BOTH HANDS ********** -->
+		<buff name="DesertGoblinDeco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?weapons/melee/knives/boneshivprefab.prefab" 
+					local_offset="-0.18,0.25,0.08" 
+					local_rotation="210,0,-20" 
+					parent_transform="RightHand"
+				/>
+			</effect_group>
+		</buff>
+				
+		<!-- ********** HOLDING RIFLE AND LOOTBAG ********** -->
+		<buff name="Cowboy3Deco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Weapons/ranged/doublebarrelshotgun/doublebarrelshotgunprefab.prefab" 
+					local_offset="-0.27,0.25,0.00" 
+					local_rotation="60,90,-30" 
+					parent_transform="RightHand"
+				/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Misc/sackprefab.prefab" 
+					local_offset="-0.09,-0.05,-0.03" 
+					local_rotation="-30,-30,-160" 
+					parent_transform="LeftHand"
+				/>
+			</effect_group>
+		</buff>				
+				
+		<!-- ********** HOLDING SHOVEL AND BAG ********** -->
+		<buff name="DesertMiner1Deco" hidden="true">
+			<effect_group>
+				
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Tools/shovel_ironPrefab.prefab" 
+					local_offset="-0.05,-0.02,-0.04" 
+					local_rotation="0,0,45" 
+					parent_transform="RightHand"
+				/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Misc/sackprefab.prefab" 
+					local_offset="-0.09,-0.05,-0.03" 
+					local_rotation="-30,-30,-160" 
+					parent_transform="LeftHand"
+				/>
+			</effect_group>
+		</buff>
+		
+		<!-- ********** HOLDING PICKAXE AND BAG ********** -->
+		<buff name="DesertMiner2Deco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Tools/pickaxe_ironprefab.prefab" 
+					local_offset="-0.10,0.05,-0.03" 
+					local_rotation="0,210,-45" 
+					parent_transform="RightHand"
+				/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Misc/sackprefab.prefab" 
+					local_offset="-0.09,-0.05,-0.03" 
+					local_rotation="-30,-30,-160" 
+					parent_transform="LeftHand"
+				/>
+			</effect_group>
+		</buff>
+		
+		<!-- ********** HOLDING STEEL PICKAXE AND BAG ********** -->
+		<buff name="DesertMiner3Deco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Tools/pickaxe_steelprefab.prefab" 
+					local_offset="-0.20,0.15,0.03" 
+					local_rotation="0,210,-45" 
+					parent_transform="RightHand"
+				/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Misc/sackprefab.prefab" 
+					local_offset="-0.09,-0.05,-0.03" 
+					local_rotation="-30,-30,-160" 
+					parent_transform="LeftHand"
+				/>
+			</effect_group>
+		</buff>
+				
+		<!-- ********** HOLDING TORCH ********** -->
+		<buff name="Oldtimer1Deco" hidden="true">
+			<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Tools/torch02_unlitprefab.prefab" 
+					local_offset="-0.07,-0.07,-0.07" 
+					local_rotation="15,0,15" 
+					parent_transform="RightHand"
+				/>
+			</effect_group>
+		</buff>
+		
+		<!-- ********** HOLDING BONE KNIVES IN BOTH HANDS ********** -->
+		<buff name="FarmerFemale3Deco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?weapons/melee/knives/boneshivprefab.prefab" 
+					local_offset="-0.1,0.03,-0.04" 
+					local_rotation="0,0,40" 
+					parent_transform="RightHand"
+				/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?weapons/melee/knives/boneshivprefab.prefab" 
+					local_offset="-0.07,-0.01,-0.04" 
+					local_rotation="210,40,0" 
+					parent_transform="LeftHand"
+				/>
+			</effect_group>
+		</buff>
+		
+		<!-- ********** HOLDING HAMMER ********** -->
+		<buff name="Utility3Deco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?tools/hammerprefab.prefab" 
+					local_offset="-0.1,-0.12,-0.05" 
+					local_rotation="0,-120,0" 
+					parent_transform="RightHand"
+				/>
+			</effect_group>
+		</buff>
+		
+		<!-- ********** HOLDING BONE KNIVES IN BOTH HANDS ********** -->
+		<buff name="WastelandGoblinDeco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?weapons/melee/knives/boneshivprefab.prefab" 
+					local_offset="-0.1,0.1,-0.05" 
+					local_rotation="0,0,0" 
+					parent_transform="RightHand"
+				/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?weapons/melee/knives/boneshivprefab.prefab" 
+					local_offset="-0.1,-0.1,-0.03" 
+					local_rotation="180,0,0" 
+					parent_transform="LeftHand"
+				/>
+			</effect_group>
+		</buff>
+
+		<!-- ********** HOLDING IRON CLUB AND ITEM SACK ********** -->
+		<buff name="WastelandGiantDeco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Weapons/melee/clubiron/clubironchainprefab.prefab" 
+					local_offset="-0.1,0.02,-0.03" 
+					local_rotation="33,30,55" 
+					parent_transform="RightHand"
+				/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Misc/sackprefab.prefab" 
+					local_offset="-0.09,-0.05,-0.03" 
+					local_rotation="-30,-30,-160" 
+					parent_transform="LeftHand"
+				/>
+			</effect_group>
+		</buff>
+		
+		
+		
+		
+		
+		<!-- ********** Punk Male 1 - Knives ********** -->
+		<buff name="PunkMale1Deco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Weapons/melee/knives/hunting_knifeprefab.prefab" 
+					local_offset="-0.1,-0.03,-0.05" 
+					local_rotation="0,-120,0" 
+					parent_transform="RightHand"
+				/>				
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Weapons/melee/knives/hunting_knifeprefab.prefab" 
+					local_offset="-0.1,0.03,-0.05" 
+					local_rotation="180,45,0" 
+					parent_transform="LeftHand"
+				/>	
+			</effect_group>
+		</buff>
+		
+		<!-- ********** Punk Male 2 - clubs ********** -->
+		<buff name="PunkMale2Deco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Weapons/melee/clubwood/clubwoodchainprefab.prefab" 
+					local_offset="-0.05,-0.05,-0.08" 
+					local_rotation="40,-45,0" 
+					parent_transform="RightHand"
+				/>	
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Weapons/melee/clubwood/clubwoodprefab.prefab" 
+					local_offset="0.0,0.10,-0.15" 
+					local_rotation="180,45,40" 
+					parent_transform="LeftHand"
+				/>	
+			</effect_group>
+		</buff>
+		
+		<!-- ********** Punk Male 3 - club and knife ********** -->
+		<buff name="PunkMale3Deco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Weapons/melee/clubwood/clubwoodprefab.prefab" 
+					local_offset="-0.05,-0.05,-0.08" 
+					local_rotation="40,-45,0" 
+					parent_transform="RightHand"
+				/>				
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?weapons/melee/knives/boneshivprefab.prefab" 
+					local_offset="-0.09,-0.01,-0.04" 
+					local_rotation="210,40,0" 
+					parent_transform="LeftHand"
+				/>
+			</effect_group>
+		</buff>
+		
+		<!-- ********** Punk Male 4 - bone knives ********** -->
+		<buff name="PunkMale4Deco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?weapons/melee/knives/boneshivprefab.prefab" 
+					local_offset="-0.1,0.03,-0.04" 
+					local_rotation="0,0,40" 
+					parent_transform="RightHand"
+				/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?weapons/melee/knives/boneshivprefab.prefab" 
+					local_offset="-0.09,-0.01,-0.04" 
+					local_rotation="210,40,0" 
+					parent_transform="LeftHand"
+				/>
+			</effect_group>
+		</buff>
+				
+		<!-- ********** Punk Female 2 - clubs ********** -->
+		<buff name="PunkFemale2Deco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Weapons/melee/club/club_wood_spikedprefab.prefab" 
+					local_offset="-0.07,0.00,-0.03" 
+					local_rotation="40,-45,0" 
+					parent_transform="RightHand"
+				/>	
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Weapons/melee/club/club_wood_refinedprefab.prefab" 
+					local_offset="-0.07,0.00,-0.05" 
+					local_rotation="180,45,40" 
+					parent_transform="LeftHand"
+				/>	
+			</effect_group>
+		</buff>
+		
+		<!-- ********** Punk Female 3 - club and knife ********** -->
+		<buff name="PunkFemale3Deco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Weapons/melee/club/club_wood_refinedprefab.prefab" 
+					local_offset="-0.07,0.00,-0.03" 
+					local_rotation="40,-45,0" 
+					parent_transform="RightHand"
+				/>				
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?weapons/melee/knives/boneshivprefab.prefab" 
+					local_offset="-0.09,-0.01,-0.04" 
+					local_rotation="210,40,0" 
+					parent_transform="LeftHand"
+				/>
+			</effect_group>
+		</buff>
+				
+		<!-- ********** Stealth Male 1 - Knives ********** -->
+		<buff name="StealthMale1Deco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Weapons/melee/knives/hunting_knifeprefab.prefab" 
+					local_offset="-0.1,0.03,-0.05" 
+					local_rotation="180,60,0" 
+					parent_transform="RightHand"
+				/>				
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Weapons/melee/knives/hunting_knifeprefab.prefab" 
+					local_offset="-0.1,-0.03,-0.05" 
+					local_rotation="0,225,0" 
+					parent_transform="LeftHand"
+				/>	
+			</effect_group>
+		</buff>
+		
+		<!-- ********** Swat Male 1 - baton ********** -->
+		<buff name="SwatMale1Deco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Weapons/melee/taserbaton/taserbatonprefab.prefab" 
+					local_offset="-0.10,0.03,-0.02" 
+					local_rotation="40,-45,0" 
+					parent_transform="RightHand"
+				/>
+			</effect_group>
+		</buff>
+		
+<!--
+		BUFF PREFAB POSITIONING:
+		OFFSET
+		x: pos = up the arm toward shoulders, neg = down the arm toward fingers
+		y: pos = veritcal up/out along thumb
+		z: pos = away from side of zombie 
+		ROTATION
+		x: pos = rotate leftward along forearm as axis
+		y: pos = clockwise along thumb axis
+		z: pos = rotate toward player along hips axis
+		
+		<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+			prefab="#Other/Items?Crafting/Metal/IronBucket.fbx" 
+			local_offset="-0.15,0.12,-0.17" 
+			local_rotation="135,0,330" 
+			parent_transform="LeftHand"
+		/>
+		
+		<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+			prefab="#Other/Items?Food/bottledriverwaterprefab.prefab" 
+			local_offset="-0.09,-0.05,-0.05" 
+			local_rotation="0,0,0" 
+			parent_transform="RightHand"
+		/>	
+-->
+		
+		<!-- ********** SNOW SANTA ********** -->
+		<buff name="Santa1Deco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Weapons/melee/candycane/candycaneshivprefab.prefab" 
+					local_offset="-0.13,0.1,0.0" 
+					local_rotation="30,0,200" 
+					parent_transform="RightHand"
+				/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Misc/sackprefab.prefab" 
+					local_offset="-0.09,-0.05,-0.03" 
+					local_rotation="-30,-30,-160" 
+					parent_transform="LeftHand"
+				/>
+			</effect_group>
+		</buff>	
+		
+		<!-- ********** SNOW SANTA HELPER ********** -->
+		<buff name="SantaHelper1Deco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Weapons/melee/candycane/candycaneshivprefab.prefab" 
+					local_offset="-0.1,0.1,-0.05" 
+					local_rotation="0,0,0" 
+					parent_transform="RightHand"
+				/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Misc/sackprefab.prefab" 
+					local_offset="-0.09,-0.05,-0.03" 
+					local_rotation="-30,-30,-160" 
+					parent_transform="LeftHand"
+				/>
+			</effect_group>
+		</buff>	
+		
+		
+		<!-- ********** Snufkin Boss ********** -->
+		<buff name="SnufkinDeco" hidden="true">
+			<effect_group>
+												
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="Vehicles/Gyrocopter/gyrocopter_start"/>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="Vehicles/Gyrocopter/gyrocopter_med_lp"/>	
+				
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Weapons/ranged/junk drone/junkdroneheld_prefab.prefab" 
+					local_offset="-0.2,0.0,-0.24" 
+					local_rotation="0,0,90" 
+					parent_transform="Spine1"
+				/>
+				
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Weapons/ranged/rocketlauncher/rocketlauncherprefab.prefab" 
+					local_offset="0.2,0.0,-0.18" 
+					local_rotation="0,90,90" 
+					parent_transform="Spine1"
+				/>
+				
+								
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Weapons/ranged/rocketlauncher/rockethandprefab.prefab" 
+					local_offset="-0.45,-0.1,0.0" 
+					local_rotation="0,80,0" 
+					parent_transform="RightLeg"
+				/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" 
+					particle="p_torch_wall" 
+					local_offset="-0.6,-0.2,0" 
+					local_rotation="0,0,0" 
+					parent_transform="RightLeg"
+				/>
+				
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Weapons/ranged/rocketlauncher/rockethandprefab.prefab" 
+					local_offset="-0.45,0.09,0.0" 
+					local_rotation="0,80,0" 
+					parent_transform="LeftLeg"
+				/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" 
+					particle="p_torch_wall" 
+					local_offset="-0.6,0,0" 
+					local_rotation="0,0,0" 
+					parent_transform="LeftLeg"
+				/>
+				
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" 
+					particle="p_torch_wall" 
+					local_offset="0.90,-0.1,-0.1" 
+					local_rotation="0,0,0" 
+					parent_transform="Spine1"		
+				/>
+				
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Weapons/melee/taserbaton/taserbatonprefab.prefab" 
+					local_offset="-0.03,0,-0.02" 
+					local_rotation="0,0,45" 
+					parent_transform="RightHand"
+				/>
+				
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Weapons/Melee/Knives/machetePrefab.prefab" 
+					local_offset="-.12,-0.4,-0.03" 
+					local_rotation="-10,90,0" 
+					parent_transform="LeftHand"
+				/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Tools/wrenchPrefab.prefab" 
+					local_offset="-0.08,-0.4,-0.03" 
+					local_rotation="0,-90,0" 
+					parent_transform="LeftHand"
+				/>
+				
+				
+				<triggered_effect trigger="onSelfDied" action="AttachPrefabToEntity" 
+					prefab="prefabs/prefabexplosion6" 
+					local_offset="0.0,0.0,0" 
+					local_rotation="0,0,0" 
+					parent_transform="Spine1"
+				/>	
+				
+				<!-- remove flames from jetpack exhaust and boots -->
+				<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_torch_wall"/>
+				
+				<!-- add fire tto jetpack -->
+				<triggered_effect trigger="onSelfDied" action="AttachParticleEffectToEntity" 
+					particle="p_fire_small" 
+					local_offset="-0.1,-0.25,-0.3" 
+					local_rotation="0,90,0" 
+					parent_transform="Head"
+				/>						
+				
+				<triggered_effect trigger="onSelfDied" action="PlaySound" sound="drone_shutdown"/>
+				
+				
+			</effect_group>
+		</buff>
+		<buff name="SnufkinScream" hidden="true">
+			<update_rate value="20"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="horde_spawn"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="positionAOE" range="11" buff="buffArchon">
+					<requirement name="EntityTagCompare" tags="zombie"/>
+				</triggered_effect>
+			</effect_group>
+		</buff>
+		<buff name="SnufkinAOE" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="10"/>
+			<effect_group>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="50">
+					<requirement name="EntityTagCompare" target="self" tags="zombie"/>
+				</passive_effect>
+			</effect_group>
+		</buff>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- ********** SCREEN EFFECT FOR GREEN SCREAMER'S SCREAM ********** -->
+		<buff name="buffScreamer3Scream" hidden="true">
+			<update_rate value="12"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="screamer3buff0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="screamer3buff1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="positionAOE" range="15" buff="buffScreamer3"/>
+			</effect_group>
+		</buff>
+		<buff name="buffScreamer3" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="3"/>
+			<effect_group>
+				<passive_effect name="RunSpeed" operation="perc_subtract" value="0.4,.1" duration="0,3">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.4,.1" duration="0,3">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.4,.1" duration="0,3">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<passive_effect name="JumpStrength" operation="perc_subtract" value="0.4,.1" duration="0,3">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="1.0" fade="1" effect_name="Blur"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.2" fade="1" effect_name="Radiation"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.5" fade="1" effect_name="Drunk"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Blur"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Radiation"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Drunk"/>
+				<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Blur"/>
+				<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Radiation"/>
+				<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Drunk"/>
+			</effect_group>
+		</buff>
+		
+
+		
+		
+		
+		<!-- ********** SCREEN EFFECT FOR FEMALE LAB CREATURES' SCREAM ********** -->
+		
+		<!-- Female Lab Creature 1 -->
+		<buff name="buffLabCreatureFemale1Scream" hidden="true">
+			<update_rate value="8"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="screamer3buff1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="labCreatureFemaleBuff1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="positionAOE" range="10" buff="LabCreatureFemale1ScreamEffects"/>
+			</effect_group>
+		</buff>
+		<buff name="LabCreatureFemale1ScreamEffects" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="1"/>
+			<effect_group>
+				<passive_effect name="RunSpeed" operation="perc_subtract" value="0.8,.2" duration="0,1">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.8,.2" duration="0,1">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.8,.2" duration="0,1">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<passive_effect name="JumpStrength" operation="perc_subtract" value="0.8,.2" duration="0,1">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.5" fade="1" effect_name="Blur"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="1" effect_name="Drunk" fade="1"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Blur"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" effect_name="Drunk" fade="1"/>
+				<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Blur"/>
+				<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" intensity="0" effect_name="Drunk" fade="1"/>
+			</effect_group>
+		</buff>
+		
+		<!-- Female Lab Creature 2 -->
+		<buff name="buffLabCreatureFemale2Scream" hidden="true">
+			<update_rate value="7"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="screamer3buff1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="labCreatureFemaleBuff2"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="positionAOE" range="11" buff="LabCreatureFemale2ScreamEffects"/>
+			</effect_group>
+		</buff>
+		<buff name="LabCreatureFemale2ScreamEffects" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="1.5"/>
+			<effect_group>
+				<passive_effect name="RunSpeed" operation="perc_subtract" value="0.8,.2" duration="0,2">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.8,.2" duration="0,2">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.8,.2" duration="0,2">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<passive_effect name="JumpStrength" operation="perc_subtract" value="0.8,.2" duration="0,2">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="1" fade="1" effect_name="Blur"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="1" effect_name="Drunk" fade="1"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Blur"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" effect_name="Drunk" fade="1"/>
+				<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Blur"/>
+				<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" intensity="0" effect_name="Drunk" fade="1"/>
+			</effect_group>
+		</buff>
+		
+		<!-- Female Lab Creature 3 -->
+		<buff name="buffLabCreatureFemale3Scream" hidden="true">
+			<update_rate value="6"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="screamer3buff1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="labCreatureFemaleBuff3"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="positionAOE" range="12" buff="LabCreatureFemale3ScreamEffects"/>
+			</effect_group>
+		</buff>
+		<buff name="LabCreatureFemale3ScreamEffects" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="2"/>
+			<effect_group>
+				<passive_effect name="RunSpeed" operation="perc_subtract" value="0.8,.2" duration="0,3">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.8,.2" duration="0,3">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.8,.2" duration="0,3">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<passive_effect name="JumpStrength" operation="perc_subtract" value="0.8,.2" duration="0,3">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="1.5" fade="1" effect_name="Blur"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="1" effect_name="Drunk" fade="1"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Blur"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" effect_name="Drunk" fade="1"/>
+				<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Blur"/>
+				<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" intensity="0" effect_name="Drunk" fade="1"/>
+			</effect_group>
+		</buff>
+		
+		
+		<!-- Female Lab Creature 4 -->
+		<buff name="buffLabCreatureFemale4Scream" hidden="true">
+			<update_rate value="5"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="screamer3buff1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="labCreatureFemaleBuff4"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="positionAOE" range="13" buff="LabCreatureFemale4ScreamEffects"/>
+			</effect_group>
+		</buff>
+		<buff name="LabCreatureFemale4ScreamEffects" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="2.5"/>
+			<effect_group>
+				<passive_effect name="RunSpeed" operation="perc_subtract" value="0.8,.2" duration="0,3">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.8,.2" duration="0,3">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.8,.2" duration="0,3">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<passive_effect name="JumpStrength" operation="perc_subtract" value="0.8,.2" duration="0,3">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="2" fade="1" effect_name="Blur"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="2" effect_name="Drunk" fade="1"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Blur"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" effect_name="Drunk" fade="1"/>
+				<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Blur"/>
+				<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" intensity="0" effect_name="Drunk" fade="1"/>
+			</effect_group>
+		</buff>
+		
+		<!-- Desert Crawler -->
+		<buff name="DesertCrawlerDeco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="Entities/Animals/vulture/vulture" local_offset="0,-.3,.25" local_rotation="-45,0,0" parent_transform="Spine3"/>
+				<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false"  parent_transform="Spine" transform_path="body_mesh"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_torch_wall" local_offset=".2,0,0" local_rotation="0,0,0" parent_transform="RightHand"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_torch_wall" local_offset="-.2,0,0" local_rotation="0,0,0" parent_transform="LeftHand"/>
+			</effect_group>
+		</buff>
+		
+		<!-- slight radiation effect -->
+		<buff name="buffRadiationAura" hidden="true">
+			<damage_type value="radiation"/>
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<update_rate value="1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="2" buff="buffRadiationAuraEffect">
+					<requirement name="!EntityTagCompare" target="other" tags="vehicle,zombie,turret,drone"/>
+				</triggered_effect>
+			</effect_group>
+		</buff>
+		<buff name="buffRadiationAuraEffect" icon="ui_game_symbol_radiation" icon_color="255,128,0" icon_blink="true">
+			<damage_type value="radiation"/>
+			<stack_type value="replace"/>
+			<duration value="2"/>
+			<update_rate value="1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value="1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RadiationSignal" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RadiationSignal" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="RadiationSignal" operation="Equals" value="2"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RadiationSignal" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity=".20" fade=".5" effect_name="Hot">
+					<requirement name="CVarCompare" cvar="RadiationSignal" operation="Equals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0" fade=".5" effect_name="Hot">
+					<requirement name="CVarCompare" cvar="RadiationSignal" operation="Equals" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Hot"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" effect_name="Radiation" intensity=".5" fade="2"/>
+				<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" effect_name="Radiation" intensity="0" fade="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" effect_name="Radiation" intensity="0" fade="2"/>
+			</effect_group>
+		</buff>	
+		
+		
+		
+		
+		
+		
+		
+
+		<buff name="testDecos" hidden="true">
+			<effect_group>
+				
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Misc/torch_droppedPrefab.prefab" local_offset="-.1,0,0" local_rotation="0,0,-90" parent_transform="RightHand"/>
+			<!--
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Tools/torch02_droppedPrefab.prefab" local_offset="-.3,.25,0" local_rotation="0,0,-135" parent_transform="Head"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="Entities/OutdoorDecor/cowSkullPrefab" local_offset="-.3,0,-.1" local_rotation="0,-45,90" parent_transform="Head"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/Club/Club_Wood_BranchPrefab.prefab" local_offset="-.3,-.25,0" local_rotation="0,0,-45" parent_transform="Head"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Spear/spear_stone_Prefab.prefab" local_offset="-.1,-.2,0" local_rotation="0,90,0" parent_transform="Head"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Misc/crossbow_bolt_dropped_stonePrefab.prefab" local_offset="-.1,0,0" local_rotation="0,0,-90" parent_transform="RightHand"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Misc/crossbow_bolt_dropped_stonePrefab.prefab" local_offset="-.1,0,0" local_rotation="0,0,-90" parent_transform="LeftHand"/>
+				-->
+			</effect_group>
+		</buff>
+
+
+
+
+		<buff name="buffReduceHpNormal" name_key="buffReduceHpNormalName" hidden="true">
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="HealthLoss" operation="base_set" value="30"/>
+			</effect_group>
+		</buff>
+		<buff name="buffReduceHpStrong" name_key="buffReduceHpStrongName" hidden="true">
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="HealthLoss" operation="base_set" value="60"/>
+			</effect_group>
+		</buff>
+
+
+
+
+		<buff name="buffDanceFever">
+			<stack_type value="replace"/>
+			<duration value="10"/>
+			  <effect_group>
+				  <triggered_effect trigger="onSelfBuffStart" action="SetDancing" enabled="true" />
+				  <triggered_effect trigger="onSelfBuffRemove" action="SetDancing" enabled="false" />
+			  </effect_group>
+		</buff>
+		
+		
+	</append>
+</ErrorNull>

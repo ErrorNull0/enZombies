@@ -1,0 +1,13 @@
+<ErrorNull>
+
+	<!-- ** new quests ** -->
+	<append xpath="/lootcontainers/lootgroup[@name='groupTreasureMaps']">
+		<item name="qc_GoblinRaid" loot_prob_template="medLow"/>
+		<item name="qc_ForestGoblinRaid1" loot_prob_template="medLow"/>
+		<item name="qc_SnowGoblinRaid1" loot_prob_template="medLow"/>
+		<item name="qc_BurntGoblinRaid1" loot_prob_template="medLow"/>
+		<item name="qc_WastelandGoblinRaid1" loot_prob_template="medLow"/>
+		<item name="qc_BusinessmanRaid1" loot_prob_template="medLow"/>
+	</append>
+
+</ErrorNull>

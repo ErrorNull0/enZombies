@@ -1,0 +1,327 @@
+<ErrorNull>
+
+<!-- SPAWNERs THAT WERE NOT MODIFIED FROM VANILLA:
+
+AbandonedHouseHorde, gamestages 1
+ZombieBikerBarHorde, gamestages 1, 50, 100, 200, 400, 800
+ZombieNightClubHorde, gamestages 1, 50, 100, 200, 400, 800
+ZombieSpecialInfectedHorde, gamestages 1, 50, 100, 200, 400, 800
+ZombieGhostTownHorde, gamestages 1, 50, 100, 200, 400, 800
+HospitalHorde, gamestages 1, 50, 100, 200, 400, 800
+LabWorkerHorde, gamestages 1, 50, 100, 200, 400, 800
+ZombieSpiderOnlyHorde, gamestages 1, 50, 100, 200, 400, 800
+ZombieSoldierHorde, gamestages 1, 50, 100, 200, 400, 800
+ZombieHazMatOnlyHorde, gamestages 1, 50, 100, 200, 400, 800
+ZombieUtilityWorkerHorde, gamestages 1, 50, 100, 200, 400, 800
+ZombieJanitorOnlyHorde, gamestages 1, 50, 100, 200, 400, 800
+ZombieLumberjackHorde, gamestages 1, 50, 100, 200, 400, 800
+ZombieBusinessManHorde, gamestages 1, 50, 100, 200, 400, 800
+ZombieFatCopHorde, gamestages 1, 50, 100, 200, 400, 800
+ZombieBurntHorde, gamestages 1, 50, 100, 200, 400, 800
+
+-->
+
+
+
+<remove xpath="/gamestages/spawner[@name='SleeperTestChamberGSList']" />
+<append xpath="/gamestages">
+	<spawner name="SleeperTestChamberGSList">		
+		<gamestage stage="1"><spawn group="testChamberZombie1" num="1" maxAlive="1" duration="1"/></gamestage>
+		<gamestage stage="50"><spawn group="testChamberZombie50" num="1" maxAlive="1" duration="1"/></gamestage>
+		<gamestage stage="100"><spawn group="testChamberZombie100" num="1" maxAlive="1" duration="1"/></gamestage>
+		<gamestage stage="150"><spawn group="testChamberZombie150" num="1" maxAlive="1" duration="1"/></gamestage>
+		<gamestage stage="200"><spawn group="testChamberZombie200" num="1" maxAlive="1" duration="1"/></gamestage>
+		<gamestage stage="300"><spawn group="testChamberZombie300" num="1" maxAlive="1" duration="1"/></gamestage>
+		<gamestage stage="400"><spawn group="testChamberZombie400" num="1" maxAlive="1" duration="1"/></gamestage>
+		<gamestage stage="600"><spawn group="testChamberZombie600" num="1" maxAlive="1" duration="1"/></gamestage>
+		<gamestage stage="800"><spawn group="testChamberZombie800" num="1" maxAlive="1" duration="1"/></gamestage>
+		<gamestage stage="1000"><spawn group="testChamberZombie1000" num="1" maxAlive="1" duration="1"/></gamestage>
+		<gamestage stage="1200"><spawn group="testChamberZombie1200" num="1" maxAlive="1" duration="1"/></gamestage>
+	</spawner>
+</append>
+
+
+
+<!-- The vaninlla ZombieBadassGSHorde spawner spans across 28 gamestage division. Below it has been modified to only use 20 gamestage divisions and only 9 unique spawn groups to allow easier customization of zombie details. -->
+<remove xpath="/gamestages/spawner[@name='ZombieBadassGSHorde']" />
+<append xpath="/gamestages">
+	<spawner name="ZombieBadassGSHorde">
+		<gamestage stage="1"><spawn group="badassHordeStageGS1" num="1" maxAlive="1" duration="1"/></gamestage>
+		<gamestage stage="2"><spawn group="badassHordeStageGS1" num="2" maxAlive="2" duration="1"/></gamestage>
+		<gamestage stage="3"><spawn group="badassHordeStageGS1" num="3" maxAlive="3" duration="1"/></gamestage>
+		<gamestage stage="5"><spawn group="badassHordeStageGS1" num="5" maxAlive="5" duration="1"/></gamestage>
+		<gamestage stage="10"><spawn group="badassHordeStageGS1" num="10" maxAlive="10" duration="1"/></gamestage>
+		<gamestage stage="20"><spawn group="badassHordeStageGS25" num="15" maxAlive="20" duration="1"/></gamestage>
+		<gamestage stage="30"><spawn group="badassHordeStageGS40" num="20" maxAlive="30" duration="1"/></gamestage>
+		<gamestage stage="40"><spawn group="badassHordeStageGS40" num="25" maxAlive="40" duration="1"/></gamestage>
+		<gamestage stage="50"><spawn group="badassHordeStageGS75" num="30" maxAlive="50" duration="1"/></gamestage>
+		<gamestage stage="75"><spawn group="badassHordeStageGS75" num="35" maxAlive="75" duration="1"/></gamestage>
+		<gamestage stage="100"><spawn group="badassHordeStageGS150" num="40" maxAlive="100" duration="1"/></gamestage>
+		<gamestage stage="150"><spawn group="badassHordeStageGS150" num="45" maxAlive="150" duration="1"/></gamestage>
+		<gamestage stage="200"><spawn group="badassHordeStageGS300" num="50" maxAlive="200" duration="1"/></gamestage>
+		<gamestage stage="300"><spawn group="badassHordeStageGS300" num="75" maxAlive="256" duration="1"/></gamestage>
+		<gamestage stage="400"><spawn group="badassHordeStageGS300" num="100" maxAlive="256" duration="1"/></gamestage>
+		<gamestage stage="500"><spawn group="badassHordeStageGS700" num="125" maxAlive="256" duration="1"/></gamestage>
+		<gamestage stage="700"><spawn group="badassHordeStageGS700" num="150" maxAlive="256" duration="1"/></gamestage>
+		<gamestage stage="900"><spawn group="badassHordeStageGS900" num="175" maxAlive="256" duration="1"/></gamestage>
+		<gamestage stage="1150"><spawn group="badassHordeStageGS1200" num="200" maxAlive="256" duration="1"/></gamestage>
+		<gamestage stage="1350"><spawn group="badassHordeStageGS1200" num="216" maxAlive="256" duration="1"/></gamestage>
+	</spawner>
+</append>
+
+
+<!-- The vaninlla ZombieBadassOnlyHorde spawner spans across 28 gamestage division. Below it has been modified to only use 20 gamestage divisions and only span 16 spawn groups to allow easier modification of zombie details. -->
+<remove xpath="/gamestages/spawner[@name='ZombieBadassOnlyHorde']" />
+<append xpath="/gamestages">
+	<spawner name="ZombieBadassOnlyHorde">
+		<gamestage stage="1"><spawn group="badassOnlyHordeStageGS1" num="1" maxAlive="1" duration="1"/></gamestage>
+		<gamestage stage="2"><spawn group="badassOnlyHordeStageGS1" num="2" maxAlive="2" duration="1"/></gamestage>
+		<gamestage stage="3"><spawn group="badassOnlyHordeStageGS1" num="3" maxAlive="3" duration="1"/></gamestage>
+		<gamestage stage="5"><spawn group="badassOnlyHordeStageGS1" num="5" maxAlive="5" duration="1"/></gamestage>
+		<gamestage stage="10"><spawn group="badassOnlyHordeStageGS1" num="10" maxAlive="10" duration="1"/></gamestage>
+		<gamestage stage="20"><spawn group="badassOnlyHordeStageGS20" num="15" maxAlive="20" duration="1"/></gamestage>
+		<gamestage stage="30"><spawn group="badassOnlyHordeStageGS30" num="20" maxAlive="30" duration="1"/></gamestage>
+		<gamestage stage="40"><spawn group="badassOnlyHordeStageGS40" num="25" maxAlive="40" duration="1"/></gamestage>
+		<gamestage stage="50"><spawn group="badassOnlyHordeStageGS50" num="30" maxAlive="50" duration="1"/></gamestage>
+		<gamestage stage="75"><spawn group="badassOnlyHordeStageGS75" num="35" maxAlive="75" duration="1"/></gamestage>
+		<gamestage stage="100"><spawn group="badassOnlyHordeStageGS100" num="40" maxAlive="100" duration="1"/></gamestage>
+		<gamestage stage="150"><spawn group="badassOnlyHordeStageGS150" num="45" maxAlive="150" duration="1"/></gamestage>
+		<gamestage stage="200"><spawn group="badassOnlyHordeStageGS200" num="50" maxAlive="200" duration="1"/></gamestage>
+		<gamestage stage="300"><spawn group="badassOnlyHordeStageGS300" num="75" maxAlive="256" duration="1"/></gamestage>
+		<gamestage stage="400"><spawn group="badassOnlyHordeStageGS400" num="100" maxAlive="256" duration="1"/></gamestage>
+		<gamestage stage="500"><spawn group="badassOnlyHordeStageGS500" num="125" maxAlive="256" duration="1"/></gamestage>
+		<gamestage stage="700"><spawn group="badassOnlyHordeStageGS700" num="150" maxAlive="256" duration="1"/></gamestage>
+		<gamestage stage="900"><spawn group="badassOnlyHordeStageGS900" num="175" maxAlive="256" duration="1"/></gamestage>
+		<gamestage stage="1150"><spawn group="badassOnlyHordeStageGS1150" num="200" maxAlive="256" duration="1"/></gamestage>
+		<gamestage stage="1350"><spawn group="badassOnlyHordeStageGS1350" num="216" maxAlive="256" duration="1"/></gamestage>
+	</spawner>
+</append>
+
+
+<!-- The vaninlla ScoutGSList spawner spans across several hundred gamestage division. Below it has been modified to only use 20 gamestage divisions and only 16 unique spawn groups to allow easier customization of zombie details. -->
+<remove xpath="/gamestages/spawner[@name='ScoutGSList']" />
+<append xpath="/gamestages">
+	<spawner name="ScoutGSList">		
+		<gamestage stage="1"><spawn group="scoutHordeStageGS1" num="1" maxAlive="1" duration="1"/></gamestage>
+		<gamestage stage="2"><spawn group="scoutHordeStageGS1" num="2" maxAlive="2" duration="1"/></gamestage>
+		<gamestage stage="4"><spawn group="scoutHordeStageGS1" num="3" maxAlive="3" duration="1"/></gamestage>
+		<gamestage stage="6"><spawn group="scoutHordeStageGS1" num="6" maxAlive="6" duration="1"/></gamestage>
+		<gamestage stage="11"><spawn group="scoutHordeStageGS1" num="9" maxAlive="9" duration="1"/></gamestage>
+		<gamestage stage="18"><spawn group="scoutHordeStageGS2" num="14" maxAlive="14" duration="1"/></gamestage>
+		<gamestage stage="29"><spawn group="scoutHordeStageGS3" num="21" maxAlive="20" duration="1"/></gamestage>
+		<gamestage stage="44"><spawn group="scoutHordeStageGS4" num="30" maxAlive="29" duration="1"/></gamestage>
+		<gamestage stage="67"><spawn group="scoutHordeStageGS5" num="42" maxAlive="40" duration="1"/></gamestage>
+		<gamestage stage="98"><spawn group="scoutHordeStageGS6" num="56" maxAlive="53" duration="1"/></gamestage>
+		<gamestage stage="140"><spawn group="scoutHordeStageGS7" num="73" maxAlive="68" duration="1"/></gamestage>
+		<gamestage stage="195"><spawn group="scoutHordeStageGS8" num="92" maxAlive="85" duration="1"/></gamestage>
+		<gamestage stage="266"><spawn group="scoutHordeStageGS9" num="114" maxAlive="103" duration="1"/></gamestage>
+		<gamestage stage="355"><spawn group="scoutHordeStageGS10" num="137" maxAlive="124" duration="1"/></gamestage>
+		<gamestage stage="463"><spawn group="scoutHordeStageGS11" num="163" maxAlive="145" duration="1"/></gamestage>
+		<gamestage stage="593"><spawn group="scoutHordeStageGS12" num="189" maxAlive="167" duration="1"/></gamestage>
+		<gamestage stage="746"><spawn group="scoutHordeStageGS13" num="217" maxAlive="190" duration="1"/></gamestage>
+		<gamestage stage="923"><spawn group="scoutHordeStageGS14" num="245" maxAlive="212" duration="1"/></gamestage>
+		<gamestage stage="1124"><spawn group="scoutHordeStageGS15" num="272" maxAlive="235" duration="1"/></gamestage>
+		<gamestage stage="1350"><spawn group="scoutHordeStageGS16" num="300" maxAlive="256" duration="1"/></gamestage>
+	</spawner>
+</append>
+
+
+
+
+<!--
+WanderingHorde appears to be a hardcoded reference and is not called directly from an XML file. These zombie groups spawn as random wandering horde groups.
+-->
+<remove xpath="/gamestages/spawner[@name='WanderingHorde']" />
+<append xpath="/gamestages">
+	<spawner name="WanderingHorde">
+		<gamestage stage="01"><spawn group="ZombiesCrawlers" 			num="10" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="02"><spawn group="enWanderingBusiness" 		num="10" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="03"><spawn group="enWanderingFarmers" 		num="10" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="04"><spawn group="enWanderingStrippers" 		num="10" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="05"><spawn group="enWanderingHazmats" 		num="10" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="06"><spawn group="enWanderingWorkers" 		num="10" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="07"><spawn group="enWanderingCrazies" 		num="10" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="08"><spawn group="enWanderingCamos" 			num="05" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="09"><spawn group="enWanderingHikers" 			num="10" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="10"><spawn group="enWanderingPunks" 			num="10" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="11"><spawn group="enWanderingKHz" 			num="10" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="12"><spawn group="ZombieDogGroup"				num="05" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="13"><spawn group="enWanderingCowboys"			num="10" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="14"><spawn group="enWanderingFatasses"		num="10" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="15"><spawn group="enWanderingSpiders" 		num="10" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="16"><spawn group="enWanderingAthletes" 		num="10" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="17"><spawn group="enWanderingBikers" 			num="08" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="18"><spawn group="enWanderingMiners"			num="08" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="19"><spawn group="enWanderingFlamers" 		num="08" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="20"><spawn group="enWanderingLumberjacks" 	num="06" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="21"><spawn group="enWanderingMilitary"		num="10" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="22"><spawn group="enWanderingLabCreatures"	num="08" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="23"><spawn group="ZombieDogGroup"				num="06" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="24"><spawn group="enWanderingCops" 			num="01" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="25"><spawn group="enWanderingGiants" 			num="01" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="26"><spawn group="enWanderingBusiness2"		num="08" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="27"><spawn group="enWanderingFarmers2"		num="08" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="28"><spawn group="enWanderingStrippers2"		num="08" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="29"><spawn group="enWanderingHazmats2"		num="08" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="30"><spawn group="enWanderingWorkers2"		num="08" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="31"><spawn group="enWanderingCrazies2" 		num="08" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="32"><spawn group="enWanderingCamos2"			num="05" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="33"><spawn group="enWanderingHikers2"			num="08" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="34"><spawn group="ZombieDogGroup"				num="07" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="35"><spawn group="enWanderingPunks2"			num="08" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="36"><spawn group="enWanderingKHz2"			num="08" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="37"><spawn group="enWanderingCowboys2"		num="08" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="38"><spawn group="enWanderingFatasses2"		num="08" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="39"><spawn group="enWanderingSpiders2"		num="08" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="40"><spawn group="enWanderingAthletes2"		num="08" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="41"><spawn group="enWanderingBikers2"			num="06" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="42"><spawn group="enWanderingMiners2"			num="06" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="43"><spawn group="enWanderingFlamers2"		num="06" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="44"><spawn group="enWanderingLumberjacks2"	num="06" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="45"><spawn group="ZombieDogGroup"				num="08" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="46"><spawn group="enWanderingMilitary2"		num="08" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="47"><spawn group="enWanderingLabCreatures2"	num="08" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="48"><spawn group="enWanderingCops2"			num="02" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="49"><spawn group="enWanderingGiants"			num="02" maxAlive="30" duration="09"/></gamestage>
+		<gamestage stage="50"><spawn group="enWanderingDemolition"		num="01" maxAlive="30" duration="09"/></gamestage>
+	</spawner>
+</append>
+
+
+<!-- The vaninlla SleeperGSList spawner spans across several hundred gamestage division. Below it has been modified to only use 20 gamestage divisions and only 18 unique spawn groups to allow easier customization of zombie details. -->
+<remove xpath="/gamestages/spawner[@name='SleeperGSList']" />
+<append xpath="/gamestages">
+	<spawner name="SleeperGSList">
+		<gamestage stage="1"><spawn group="sleeperHordeStageGS1" num="1" maxAlive="1" duration="1"/></gamestage>
+		<gamestage stage="2"><spawn group="sleeperHordeStageGS1" num="2" maxAlive="2" duration="1"/></gamestage>
+		<gamestage stage="3"><spawn group="sleeperHordeStageGS1" num="3" maxAlive="3" duration="1"/></gamestage>
+		<gamestage stage="5"><spawn group="sleeperHordeStageGS5" num="5" maxAlive="5" duration="1"/></gamestage>
+		<gamestage stage="10"><spawn group="sleeperHordeStageGS10" num="10" maxAlive="10" duration="1"/></gamestage>
+		<gamestage stage="20"><spawn group="sleeperHordeStageGS20" num="15" maxAlive="15" duration="1"/></gamestage>
+		<gamestage stage="30"><spawn group="sleeperHordeStageGS30" num="20" maxAlive="20" duration="1"/></gamestage>
+		<gamestage stage="40"><spawn group="sleeperHordeStageGS40" num="25" maxAlive="25" duration="1"/></gamestage>
+		<gamestage stage="50"><spawn group="sleeperHordeStageGS50" num="30" maxAlive="30" duration="1"/></gamestage>
+		<gamestage stage="75"><spawn group="sleeperHordeStageGS75" num="35" maxAlive="35" duration="1"/></gamestage>
+		<gamestage stage="100"><spawn group="sleeperHordeStageGS100" num="40" maxAlive="40" duration="1"/></gamestage>
+		<gamestage stage="150"><spawn group="sleeperHordeStageGS150" num="45" maxAlive="45" duration="1"/></gamestage>
+		<gamestage stage="200"><spawn group="sleeperHordeStageGS200" num="50" maxAlive="50" duration="1"/></gamestage>
+		<gamestage stage="300"><spawn group="sleeperHordeStageGS300" num="55" maxAlive="75" duration="1"/></gamestage>
+		<gamestage stage="400"><spawn group="sleeperHordeStageGS400" num="60" maxAlive="100" duration="1"/></gamestage>
+		<gamestage stage="500"><spawn group="sleeperHordeStageGS500" num="65" maxAlive="125" duration="1"/></gamestage>
+		<gamestage stage="700"><spawn group="sleeperHordeStageGS700" num="70" maxAlive="150" duration="1"/></gamestage>
+		<gamestage stage="900"><spawn group="sleeperHordeStageGS900" num="75" maxAlive="175" duration="1"/></gamestage>
+		<gamestage stage="1150"><spawn group="sleeperHordeStageGS1150" num="80" maxAlive="200" duration="1"/></gamestage>
+		<gamestage stage="1350"><spawn group="sleeperHordeStageGS1350" num="85" maxAlive="256" duration="1"/></gamestage>
+	</spawner>
+</append>
+
+
+
+<!-- 
+The BloodMoonHorde spawner activates during the blood moon horde, which by default runs from time 22:00 to 4:00 every 7 days. The vaninlla copy of this spawner spans across several hundred gamestage division. Below it has been modified to only use 21 gamestage divisions and only 17 unique spawn groups to allow easier customization of zombie details.
+-->
+<remove xpath="/gamestages/spawner[@name='BloodMoonHorde']" />
+<append xpath="/gamestages">
+	<spawner name="BloodMoonHorde">
+		<gamestage stage="1">
+			<spawn group="feralHordeStageGS1" num="5" maxAlive="8" duration="2"/>
+		</gamestage>
+		<gamestage stage="2">
+			<spawn group="feralHordeStageGS1" num="5" maxAlive="8" duration="2"/>
+		</gamestage>
+		<gamestage stage="4">
+			<spawn group="feralHordeStageGS1" num="10" maxAlive="8" duration="2"/>
+		</gamestage>
+		<gamestage stage="6">
+			<spawn group="feralHordeStageGS1" num="20" maxAlive="8" duration="2"/>
+		</gamestage>
+		<gamestage stage="11">
+			<spawn group="feralHordeStageGS1" num="20" maxAlive="9" duration="2" interval="10"/>
+			<spawn group="BloodmoonCreaturesGS1" num="10" maxAlive="10" duration="1" interval="10"/>
+			<spawn group="feralHordeStageGS1" num="20" maxAlive="9" duration="2"/>
+		</gamestage>
+		<gamestage stage="18">
+			<spawn group="feralHordeStageGS1" num="20" maxAlive="15" duration="2" interval="10"/>
+			<spawn group="BloodmoonCreaturesGS2" num="12" maxAlive="12" duration="1" interval="10"/>
+			<spawn group="feralHordeStageGS1" num="40" maxAlive="15" duration="2"/>
+		</gamestage>
+		<gamestage stage="30">
+			<spawn group="feralHordeStageGS2" num="50" maxAlive="22" duration="2" interval="10"/>
+			<spawn group="BloodmoonCreaturesGS3" num="14" maxAlive="14" duration="1" interval="10"/>
+			<spawn group="feralHordeStageGS3" num="70" maxAlive="22" duration="2" interval="10"/>
+		</gamestage>
+		<gamestage stage="45">
+			<spawn group="feralHordeStageGS3" num="80" maxAlive="32" duration="2" interval="10"/>
+			<spawn group="BloodmoonCreaturesGS4" num="16" maxAlive="16" duration="1" interval="10"/>
+			<spawn group="feralHordeStageGS4" num="100" maxAlive="32" duration="2" interval="10"/>
+		</gamestage>
+		<gamestage stage="70">
+			<spawn group="feralHordeStageGS4" num="110" maxAlive="45" duration="2" interval="10"/>
+			<spawn group="BloodmoonCreaturesGS5" num="18" maxAlive="18" duration="1" interval="10"/>
+			<spawn group="feralHordeStageGS5" num="130" maxAlive="45" duration="2" interval="10"/>
+		</gamestage>
+		<gamestage stage="100">
+			<spawn group="feralHordeStageGS5" num="140" maxAlive="61" duration="2" interval="10"/>
+			<spawn group="BloodmoonCreaturesGS6" num="20" maxAlive="20" duration="1" interval="10"/>
+			<spawn group="feralHordeStageGS6" num="160" maxAlive="61" duration="2" interval="10"/>
+		</gamestage>
+		<gamestage stage="140">
+			<spawn group="feralHordeStageGS6" num="170" maxAlive="80" duration="2" interval="10"/>
+			<spawn group="BloodmoonCreaturesGS7" num="22" maxAlive="22" duration="1" interval="10"/>
+			<spawn group="feralHordeStageGS7" num="190" maxAlive="80" duration="2" interval="10"/>
+		</gamestage>
+		<gamestage stage="200">
+			<spawn group="feralHordeStageGS7" num="200" maxAlive="102" duration="2" interval="10"/>
+			<spawn group="BloodmoonCreaturesGS8" num="24" maxAlive="24" duration="1" interval="10"/>
+			<spawn group="feralHordeStageGS8" num="220" maxAlive="102" duration="2" interval="10"/>
+		</gamestage>
+		<gamestage stage="270">
+			<spawn group="feralHordeStageGS8" num="230" maxAlive="128" duration="2" interval="10"/>
+			<spawn group="BloodmoonCreaturesGS9" num="26" maxAlive="26" duration="1" interval="10"/>
+			<spawn group="feralHordeStageGS9" num="250" maxAlive="128" duration="2" interval="10"/>
+		</gamestage>
+		<gamestage stage="360">
+			<spawn group="feralHordeStageGS9" num="260" maxAlive="156" duration="2" interval="10"/>
+			<spawn group="BloodmoonCreaturesGS10" num="28" maxAlive="28" duration="1" interval="10"/>
+			<spawn group="feralHordeStageGS10" num="280" maxAlive="156" duration="2" interval="10"/>
+		</gamestage>
+		<gamestage stage="475">
+			<spawn group="feralHordeStageGS10" num="290" maxAlive="187" duration="2" interval="10"/>
+			<spawn group="BloodmoonCreaturesGS11" num="30" maxAlive="30" duration="1" interval="10"/>
+			<spawn group="feralHordeStageGS11" num="310" maxAlive="187" duration="2" interval="10"/>
+		</gamestage>
+		<gamestage stage="610">
+			<spawn group="feralHordeStageGS11" num="320" maxAlive="221" duration="2" interval="10"/>
+			<spawn group="BloodmoonCreaturesGS12" num="32" maxAlive="32" duration="1" interval="10"/>
+			<spawn group="feralHordeStageGS12" num="340" maxAlive="221" duration="2" interval="10"/>
+		</gamestage>
+		<gamestage stage="770">
+			<spawn group="feralHordeStageGS12" num="350" maxAlive="256" duration="2" interval="10"/>
+			<spawn group="BloodmoonCreaturesGS13" num="34" maxAlive="34" duration="1" interval="10"/>
+			<spawn group="feralHordeStageGS13" num="370" maxAlive="256" duration="2" interval="10"/>
+		</gamestage>
+		<gamestage stage="950">
+			<spawn group="feralHordeStageGS13" num="380" maxAlive="256" duration="2" interval="10"/>
+			<spawn group="BloodmoonCreaturesGS14" num="36" maxAlive="36" duration="1" interval="10"/>
+			<spawn group="feralHordeStageGS14" num="400" maxAlive="256" duration="2" interval="10"/>
+		</gamestage>
+		<gamestage stage="1160">
+			<spawn group="feralHordeStageGS14" num="410" maxAlive="256" duration="2" interval="10"/>
+			<spawn group="BloodmoonCreaturesGS15" num="38" maxAlive="38" duration="1" interval="10"/>
+			<spawn group="feralHordeStageGS15" num="430" maxAlive="256" duration="2" interval="10"/>
+		</gamestage>
+		<gamestage stage="1400">
+			<spawn group="feralHordeStageGS15" num="440" maxAlive="256" duration="2" interval="10"/>
+			<spawn group="BloodmoonCreaturesGS16" num="40" maxAlive="40" duration="1" interval="10"/>
+			<spawn group="feralHordeStageGS16" num="460" maxAlive="256" duration="2" interval="10"/>
+		</gamestage>
+		<gamestage stage="1650">
+			<spawn group="feralHordeStageGS16" num="470" maxAlive="256" duration="2" interval="10"/>
+			<spawn group="BloodmoonCreaturesGS17" num="42" maxAlive="42" duration="1" interval="10"/>
+			<spawn group="feralHordeStageGS17" num="490" maxAlive="256" duration="2" interval="10"/>
+		</gamestage>		
+	</spawner>
+</append>
+
+		
+</ErrorNull>

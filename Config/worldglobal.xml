@@ -1,0 +1,29 @@
+<Doughs>
+  <!-- a19 Defaults
+  day, night
+  <property name="ambientEquatorScale" value=".7, .65"/>
+  <property name="ambientGroundScale" value=".4, .2"/>
+  <property name="ambientSkyScale" value=".9, .5"/>
+  add, scale
+  <property name="ambientMoon" value=".6, .4"/>
+-->
+
+  <!-- How much light the moon gives off?
+    add?
+      1 = a lot
+      0 = the least
+    scale?
+      1 = a lot
+      0 = the least
+  -->
+  <set xpath="/worldglobal/environment/property[@name='ambientMoon']/@value">0, 0</set>
+
+  <!-- NOTE: Setting some of these to absolute night min (0.1) is a little unrealistic
+   day -> nighttime transition.  Like, it gets dark too fast as night falls.
+   Its nice and dark, but you miss out on some twilight ambiance. -->
+  <set xpath="/worldglobal/environment/property[@name='ambientEquatorScale']/@value">.7, .4</set>
+  <set xpath="/worldglobal/environment/property[@name='ambientGroundScale']/@value">.4, .1</set>
+  <set xpath="/worldglobal/environment/property[@name='ambientSkyScale']/@value">.9, .3</set>
+
+
+</Doughs>

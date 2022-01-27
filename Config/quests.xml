@@ -1,0 +1,810 @@
+<ErrorNull>
+	
+	<!-- adding enZombies to all quests that involve non-animal zombies -->
+	
+	<!--<remove xpath="/quests/quest[@id='challenge_silenceofthelambs']/action[@type='SpawnEnemy']" />
+	<append xpath="/quests/quest[@id='challenge_silenceofthelambs']">
+		<action type="SpawnEnemy" id="zombieScreamer" value="2" phase="3"/>
+		<action type="SpawnEnemy" id="enScreamer1" value="1-2" phase="3"/>
+		<action type="SpawnEnemy" id="enWastelandFemaleCrazy,enWastelandFemale3,enBurntFemale1,enBurntFemale2" value="1-2" phase="3"/>
+	</append>
+	-->
+	
+	<!--<remove xpath="/quests/quest[@id='challenge_nurseyoubacktohealth']/action[@type='SpawnEnemy']" />
+	<append xpath="/quests/quest[@id='challenge_nurseyoubacktohealth']">
+		<action type="SpawnEnemy" id="zombieNurse" value="4" phase="3"/>
+		<action type="SpawnEnemy" id="enDesertFemale1,enDesertFemale1,enDesertFemale1,enForestFemale2,enForestFemale3" value="2" phase="3"/>
+	</append>
+	-->
+	
+	<!--<remove xpath="/quests/quest[@id='challenge_starvingtourists']/action[@type='SpawnEnemy']" />
+	<append xpath="/quests/quest[@id='challenge_starvingtourists']">
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="4" phase="3"/>
+		<action type="SpawnEnemy" id="enSnowMale3,enForestMale3" value="2" phase="3"/>
+	</append>
+	-->
+	
+	<!--<remove xpath="/quests/quest[@id='challenge_itsybitsyspider']/action[@type='SpawnEnemy']" />
+	<append xpath="/quests/quest[@id='challenge_itsybitsyspider']">
+		<action type="SpawnEnemy" id="zombieSpider" value="4" phase="3"/>
+		<action type="SpawnEnemy" id="enDesertSpider,enForestSpider,enSnowSpider,enWastelandSpider" value="2" phase="3"/>
+	</append>
+	-->
+	
+	<!--<remove xpath="/quests/quest[@id='challenge_ladykiller']/action[@type='SpawnEnemy']" />
+	<append xpath="/quests/quest[@id='challenge_ladykiller']">
+		<action type="SpawnEnemy" id="zombieArlene" value="2" phase="3"/>
+		<action type="SpawnEnemy" id="zombieDarlene" value="2" phase="3"/>
+		<action type="SpawnEnemy" id="zombieMarlene" value="2" phase="3"/>
+		<action type="SpawnEnemy" id="zombieNurse" value="2" phase="3"/>
+		<action type="SpawnEnemy" id="enWastelandFemale1,enWastelandFemale2,enJoggerFemale3,enJoggerFemale4" value="2" phase="3"/>
+	</append>
+	-->
+	
+	<!--<remove xpath="/quests/quest[@id='challenge_maneater']/action[@type='SpawnEnemy']" />
+	<append xpath="/quests/quest[@id='challenge_maneater']">
+		<action type="SpawnEnemy" id="zombieBoe" value="2" phase="3"/>
+		<action type="SpawnEnemy" id="zombieJoe" value="1-2" phase="3"/>
+		<action type="SpawnEnemy" id="zombieMoe" value="2" phase="3"/>
+		<action type="SpawnEnemy" id="zombieYo" value="2" phase="3"/>
+		<action type="SpawnEnemy" id="zombieSteve" value="1-2" phase="3"/>
+		<action type="SpawnEnemy" id="enForestMale1,enForestMale2,enForestMale4,enDesertMale1,enDesertMale2" value="2" phase="3"/>
+	</append>
+	-->
+	
+	<!--<remove xpath="/quests/quest[@id='challenge_imalumberjackandimokay']/action[@type='SpawnEnemy']" />
+	<append xpath="/quests/quest[@id='challenge_imalumberjackandimokay']">
+		<action type="SpawnEnemy" id="zombieSnow" value="4" phase="3"/>
+		<action type="SpawnEnemy" id="enLumberjack1,enLumberjack2" value="2" phase="3"/>
+	</append>
+	-->
+	
+	<!--<remove xpath="/quests/quest[@id='challenge_yournothingspecial']/action[@type='SpawnEnemy']" />
+	<append xpath="/quests/quest[@id='challenge_yournothingspecial']">
+		<action type="SpawnEnemy" id="zombieSpider" value="1-2" phase="3"/>
+		<action type="SpawnEnemy" id="zombieFatHawaiian" value="2" phase="3"/>
+		<action type="SpawnEnemy" id="zombieWightFeral" value="2" phase="3"/>
+		<action type="SpawnEnemy" id="zombieScreamer" value="1-2" phase="3"/>
+		<action type="SpawnEnemy" id="zombieBurnt" value="1-2" phase="3"/>
+		<action type="SpawnEnemy" id="enDesertSpider,enForestSpider,enSnowSpider,enWastelandSpider" value="1" phase="3"/>
+		<action type="SpawnEnemy" id="enBiker1,enBiker2,enDesertCowboy1,enDesertCowboy2,enLumberjack1,enLumberjack2" value="1" phase="3"/>
+		<action type="SpawnEnemy" id="enDesertSpider,enForestSpider,enSnowSpider,enWastelandSpider" value="1" phase="3"/>
+	</append>
+	-->
+	
+	<!--<remove xpath="/quests/quest[@id='challenge_blitzdefense']/action[@type='SpawnEnemy']" />
+	<append xpath="/quests/quest[@id='challenge_blitzdefense']">
+		<action type="SpawnEnemy" id="zombieFootballPlayer" value="4" phase="3"/>
+		<action type="SpawnEnemy" id="enFootballMale1,enFootballMale2" value="2" phase="3"/>
+	</append>
+	-->
+	
+	<!--<remove xpath="/quests/quest[@id='challenge_givemeaz']/action[@type='SpawnEnemy']" />
+	<append xpath="/quests/quest[@id='challenge_givemeaz']">
+		<action type="SpawnEnemy" id="zombieCheerleader" value="4" phase="3"/>
+		<action type="SpawnEnemy" id="enJoggerFemale1,enJoggerFemale2,enJoggerFemale5" value="2" phase="3"/>
+	</append>
+	-->
+	
+	<!--<remove xpath="/quests/quest[@id='challenge_dishonorabledischarge']/action[@type='SpawnEnemy']" />
+	<append xpath="/quests/quest[@id='challenge_dishonorabledischarge']">
+		<action type="SpawnEnemy" id="zombieSoldier" value="4" phase="3"/>
+		<action type="SpawnEnemy" id="enSoldierMale1,enSoldierMale2" value="1-2" phase="3"/>
+		<action type="SpawnEnemy" id="enSoldierFemale1,enSoldierFemale2" value="1" phase="3"/>
+	</append>
+	-->
+	
+	<!--<remove xpath="/quests/quest[@id='challenge_cableguysnevermadeit']/action[@type='SpawnEnemy']" />
+	<append xpath="/quests/quest[@id='challenge_cableguysnevermadeit']">
+		<action type="SpawnEnemy" id="zombieUtilityWorker" value="4" phase="3"/>
+		<action type="SpawnEnemy" id="enUtility1,enUtility2" value="2" phase="3"/>
+	</append>
+	-->
+	
+	<!--<remove xpath="/quests/quest[@id='tier1_buried_supplies']/action[@type='SpawnEnemy']" />
+	<append xpath="/quests/quest[@id='tier1_buried_supplies']">
+		<action type="SpawnEnemy" id="zombieArlene,zombieDarlene,zombieMarlene,zombieBoe,zombieJoe,zombieMoe,zombieYo" value="2" phase="2"/>
+		<action type="SpawnEnemy" id="enWastelandFemale1,enWastelandFemale2,enJoggerFemale3,enJoggerFemale4" value="1-2" phase="2"/>
+		<action type="SpawnEnemy" id="enForestMale1,enForestMale2,enForestMale4,enDesertMale1,enDesertMale2" value="1-2" phase="2"/>
+	</append>
+	-->
+	
+	<!--<remove xpath="/quests/quest[@id='tier2_buried_supplies']/action[@type='SpawnEnemy']" />
+	<append xpath="/quests/quest[@id='tier2_buried_supplies']">
+		<action type="SpawnEnemy" id="zombieArlene,zombieDarlene,zombieMarlene,zombieBoe,zombieJoe,zombieMoe,zombieYo" value="2" phase="2"/>
+		<action type="SpawnEnemy" id="enWastelandFemale1,enWastelandFemale2,enJoggerFemale3,enJoggerFemale4" value="1-2" phase="2"/>
+		<action type="SpawnEnemy" id="enForestMale1,enForestMale2,enForestMale4,enDesertMale1,enDesertMale2" value="1-2" phase="2"/>
+		<action type="SpawnEnemy" id="enForestMale3,enSnowMale3,enForestMaleCamo,enSnowMaleCamo" value="2" phase="2"/>
+	</append>
+	-->
+	
+	<!-- ********** GOBLINS RAID ********** -->
+	
+	<append xpath="/quests">
+		<quest id="challenge_GoblinRaid">
+			<property name="name_key" value="challenge_GoblinRaid"/>
+			<property name="subtitle_key" value="challenge_GoblinRaid_subtitle"/>
+			<property name="description_key" value="challenge_GoblinRaid_offer"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="offer_key" value="challenge_GoblinRaid_offer"/>
+			<property name="completion_key" value="challenge_GoblinRaid_completion" />	
+			<property name="difficulty" value="hard"/>
+			<property name="completiontype" value="TurnIn"/>
+			<objective type="RandomGoto" value="500-800" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+			<action type="SpawnEnemy" id="enBurntGoblin1" value="2" phase="3"/>
+			<action type="SpawnEnemy" id="enWastelandGoblin1" value="2" phase="3"/>
+			<action type="SpawnEnemy" id="enDesertGoblin1" value="2" phase="3"/>
+			<action type="SpawnEnemy" id="enForestGoblin1" value="3" phase="3"/>
+			<action type="SpawnEnemy" id="enSnowGoblin1" value="3" phase="3"/>
+			<objective type="ZombieKill" id="enForestGoblin1" value="1" phase="3"/>
+			<objective type="ZombieKill" id="enDesertGoblin1" value="1" phase="3"/>
+			<objective type="ZombieKill" id="enSnowGoblin1" value="1" phase="3"/>
+			<objective type="ZombieKill" id="enBurntGoblin1" value="1" phase="3"/>
+			<objective type="ZombieKill" id="enWastelandGoblin1" value="1" phase="3"/>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="4"/>
+			</objective>
+			<reward type="Exp" value="1500"/>
+			<reward type="Item" id="casinoCoin" value="1000"/>
+		</quest>
+	</append>
+	
+	
+	
+	<!-- ********** FOREST GOBLIN RAID ********** -->
+	
+	<append xpath="/quests">
+		<quest id="challenge_ForestGoblinRaid1">
+			<property name="name_key" value="challenge_ForestGoblinRaid1"/>
+			<property name="subtitle_key" value="challenge_ForestGoblinRaid1_subtitle"/>
+			<property name="description_key" value="challenge_ForestGoblinRaid1_offer"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="offer_key" value="challenge_ForestGoblinRaid1_offer"/>
+			<property name="difficulty" value="hard"/>
+			<property name="shareable" value="false"/>			
+			<objective type="RandomGoto" value="500-800" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+			<action type="SpawnEnemy" id="enForestGoblin1" value="4" phase="3"/>
+			<action type="SpawnEnemy" id="enForestGoblin2" value="4" phase="3"/>
+			<action type="SpawnEnemy" id="enForestGoblin3" value="5" phase="3"/>
+			<objective type="ZombieKill" id="enForestGoblin1" value="2" phase="3"/>
+			<objective type="ZombieKill" id="enForestGoblin2" value="2" phase="3"/>
+			<objective type="ZombieKill" id="enForestGoblin3" value="2" phase="3"/>
+			<reward type="Quest" id="challenge_ForestGoblinRaid2"/>
+		</quest>
+	</append>
+	
+	<append xpath="/quests">
+		<quest id="challenge_ForestGoblinRaid2">
+			<property name="name_key" value="challenge_ForestGoblinRaid2"/>
+			<property name="subtitle_key" value="challenge_ForestGoblinRaid2_subtitle"/>
+			<property name="description_key" value="challenge_ForestGoblinRaid2_offer"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="offer_key" value="challenge_ForestGoblinRaid2_offer"/>
+			<property name="difficulty" value="hard"/>
+			<property name="shareable" value="false"/>
+			<objective type="RandomGoto" value="500-800" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+			<action type="SpawnEnemy" id="enForestGoblin1" value="5" phase="3"/>
+			<action type="SpawnEnemy" id="enForestGoblin2" value="5" phase="3"/>
+			<action type="SpawnEnemy" id="enForestGoblin3" value="6" phase="3"/>
+			<action type="SpawnEnemy" id="enWolf" value="2" phase="3"/>
+			<objective type="ZombieKill" id="enForestGoblin1" value="4" phase="3"/>
+			<objective type="ZombieKill" id="enForestGoblin2" value="4" phase="3"/>
+			<objective type="ZombieKill" id="enForestGoblin3" value="4" phase="3"/>
+			<objective type="AnimalKill" id="enWolf" value="1" phase="3"/>
+			<reward type="Quest" id="challenge_ForestGoblinRaid3"/>
+		</quest>
+	</append>
+	
+	<append xpath="/quests">
+		<quest id="challenge_ForestGoblinRaid3">
+			<property name="name_key" value="challenge_ForestGoblinRaid3"/>
+			<property name="subtitle_key" value="challenge_ForestGoblinRaid3_subtitle"/>
+			<property name="description_key" value="challenge_ForestGoblinRaid3_offer"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="offer_key" value="challenge_ForestGoblinRaid3_offer"/>
+			<property name="completion_key" value="challenge_ForestGoblinRaid3_completion" />
+			<property name="difficulty" value="hard"/>
+			<property name="shareable" value="true"/>
+			<property name="completiontype" value="TurnIn"/>
+			<objective type="RandomGoto" value="500-800" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+			<action type="SpawnEnemy" id="enForestGoblin1" value="9" phase="3"/>
+			<action type="SpawnEnemy" id="enForestGoblin2" value="9" phase="3"/>
+			<action type="SpawnEnemy" id="enForestGoblin3" value="10" phase="3"/>
+			<action type="SpawnEnemy" id="enWolf" value="2" phase="3"/>
+			<action type="SpawnEnemy" id="enForestGiant" value="3" phase="3"/>
+			<objective type="ZombieKill" id="enForestGoblin1" value="7" phase="3"/>
+			<objective type="ZombieKill" id="enForestGoblin2" value="7" phase="3"/>
+			<objective type="ZombieKill" id="enForestGoblin3" value="7" phase="3"/>
+			<objective type="ZombieKill" id="enForestGiant" value="2" phase="3"/>
+			<objective type="AnimalKill" id="enWolf" value="1" phase="3"/>
+			<objective type="InteractWithNPC">
+			<property name="phase" value="4"/>
+			</objective>
+			<reward type="Exp" value="8800"/>
+			<reward type="Item" id="casinoCoin" value="7500"/>
+		</quest>
+	</append>
+	
+	
+	
+	<!-- ********** DESERT GOBLIN RAID ********** -->
+	
+	<append xpath="/quests">
+		<quest id="challenge_DesertGoblinRaid1">
+			<property name="name_key" value="challenge_DesertGoblinRaid1"/>
+			<property name="subtitle_key" value="challenge_DesertGoblinRaid1_subtitle"/>
+			<property name="description_key" value="challenge_DesertGoblinRaid1_offer"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="offer_key" value="challenge_DesertGoblinRaid1_offer"/>
+			<property name="difficulty" value="hard"/>
+			<property name="shareable" value="false"/>			
+			<objective type="RandomGoto" value="500-800" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+			<action type="SpawnEnemy" id="enDesertGoblin1" value="4" phase="3"/>
+			<action type="SpawnEnemy" id="enDesertGoblin2" value="4" phase="3"/>
+			<action type="SpawnEnemy" id="enDesertGoblin3" value="5" phase="3"/>
+			<objective type="ZombieKill" id="enDesertGoblin1" value="2" phase="3"/>
+			<objective type="ZombieKill" id="enDesertGoblin2" value="2" phase="3"/>
+			<objective type="ZombieKill" id="enDesertGoblin3" value="2" phase="3"/>
+			<reward type="Quest" id="challenge_DesertGoblinRaid2"/>
+		</quest>
+	</append>
+	
+	<append xpath="/quests">
+		<quest id="challenge_DesertGoblinRaid2">
+			<property name="name_key" value="challenge_DesertGoblinRaid2"/>
+			<property name="subtitle_key" value="challenge_DesertGoblinRaid2_subtitle"/>
+			<property name="description_key" value="challenge_DesertGoblinRaid2_offer"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="offer_key" value="challenge_DesertGoblinRaid2_offer"/>
+			<property name="difficulty" value="hard"/>
+			<property name="shareable" value="false"/>
+			<objective type="RandomGoto" value="500-800" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+			<action type="SpawnEnemy" id="enDesertGoblin1" value="5" phase="3"/>
+			<action type="SpawnEnemy" id="enDesertGoblin2" value="5" phase="3"/>
+			<action type="SpawnEnemy" id="enDesertGoblin3" value="6" phase="3"/>
+			<action type="SpawnEnemy" id="enCoyote" value="2" phase="3"/>
+			<objective type="ZombieKill" id="enDesertGoblin1" value="4" phase="3"/>
+			<objective type="ZombieKill" id="enDesertGoblin2" value="4" phase="3"/>
+			<objective type="ZombieKill" id="enDesertGoblin3" value="4" phase="3"/>
+			<objective type="AnimalKill" id="enCoyote" value="1" phase="3"/>
+			<reward type="Quest" id="challenge_DesertGoblinRaid3"/>
+		</quest>
+	</append>
+	
+	<append xpath="/quests">
+		<quest id="challenge_DesertGoblinRaid3">
+			<property name="name_key" value="challenge_DesertGoblinRaid3"/>
+			<property name="subtitle_key" value="challenge_DesertGoblinRaid3_subtitle"/>
+			<property name="description_key" value="challenge_DesertGoblinRaid3_offer"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="offer_key" value="challenge_DesertGoblinRaid3_offer"/>
+			<property name="completion_key" value="challenge_DesertGoblinRaid3_completion" />
+			<property name="difficulty" value="hard"/>
+			<property name="shareable" value="true"/>
+			<property name="completiontype" value="TurnIn"/>
+			<objective type="RandomGoto" value="500-800" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+			<action type="SpawnEnemy" id="enDesertGiant" value="3" phase="3"/>
+			<action type="SpawnEnemy" id="enDesertGoblin1" value="9" phase="3"/>
+			<action type="SpawnEnemy" id="enDesertGoblin2" value="9" phase="3"/>
+			<action type="SpawnEnemy" id="enDesertGoblin3" value="10" phase="3"/>
+			<action type="SpawnEnemy" id="enCoyote" value="3" phase="3"/>
+			<objective type="ZombieKill" id="enDesertGoblin1" value="7" phase="3"/>
+			<objective type="ZombieKill" id="enDesertGoblin2" value="7" phase="3"/>
+			<objective type="ZombieKill" id="enDesertGoblin3" value="7" phase="3"/>
+			<objective type="ZombieKill" id="enDesertGiant" value="2" phase="3"/>
+			<objective type="AnimalKill" id="enCoyote" value="2" phase="3"/>
+			<objective type="InteractWithNPC">
+			<property name="phase" value="4"/>
+			</objective>
+			<reward type="Exp" value="8900"/>
+			<reward type="Item" id="casinoCoin" value="7700"/>
+		</quest>
+	</append>
+	
+	
+	
+	<!-- ********** SNOW GOBLIN RAID ********** -->
+	
+	<append xpath="/quests">
+		<quest id="challenge_SnowGoblinRaid1">
+			<property name="name_key" value="challenge_SnowGoblinRaid1"/>
+			<property name="subtitle_key" value="challenge_SnowGoblinRaid1_subtitle"/>
+			<property name="description_key" value="challenge_SnowGoblinRaid1_offer"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="offer_key" value="challenge_SnowGoblinRaid1_offer"/>
+			<property name="difficulty" value="hard"/>
+			<property name="shareable" value="false"/>			
+			<objective type="RandomGoto" value="500-800" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+			<action type="SpawnEnemy" id="enSnowGoblin1" value="4" phase="3"/>
+			<action type="SpawnEnemy" id="enSnowGoblin2" value="4" phase="3"/>
+			<action type="SpawnEnemy" id="enSnowGoblin3" value="5" phase="3"/>
+			<objective type="ZombieKill" id="enSnowGoblin1" value="2" phase="3"/>
+			<objective type="ZombieKill" id="enSnowGoblin2" value="2" phase="3"/>
+			<objective type="ZombieKill" id="enSnowGoblin3" value="2" phase="3"/>
+			<reward type="Quest" id="challenge_SnowGoblinRaid2"/>
+		</quest>
+	</append>
+	
+	<append xpath="/quests">
+		<quest id="challenge_SnowGoblinRaid2">
+			<property name="name_key" value="challenge_SnowGoblinRaid2"/>
+			<property name="subtitle_key" value="challenge_SnowGoblinRaid2_subtitle"/>
+			<property name="description_key" value="challenge_SnowGoblinRaid2_offer"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="offer_key" value="challenge_SnowGoblinRaid2_offer"/>
+			<property name="difficulty" value="hard"/>
+			<property name="shareable" value="false"/>
+			<objective type="RandomGoto" value="500-800" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+			<action type="SpawnEnemy" id="enSnowGoblin1" value="5" phase="3"/>
+			<action type="SpawnEnemy" id="enSnowGoblin2" value="5" phase="3"/>
+			<action type="SpawnEnemy" id="enSnowGoblin3" value="6" phase="3"/>
+			<action type="SpawnEnemy" id="enWolf" value="2" phase="3"/>
+			<objective type="ZombieKill" id="enSnowGoblin1" value="4" phase="3"/>
+			<objective type="ZombieKill" id="enSnowGoblin2" value="4" phase="3"/>
+			<objective type="ZombieKill" id="enSnowGoblin3" value="4" phase="3"/>
+			<objective type="AnimalKill" id="enWolf" value="1" phase="3"/>
+			<reward type="Quest" id="challenge_SnowGoblinRaid3"/>
+		</quest>
+	</append>
+	
+	<append xpath="/quests">
+		<quest id="challenge_SnowGoblinRaid3">
+			<property name="name_key" value="challenge_SnowGoblinRaid3"/>
+			<property name="subtitle_key" value="challenge_SnowGoblinRaid3_subtitle"/>
+			<property name="description_key" value="challenge_SnowGoblinRaid3_offer"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="offer_key" value="challenge_SnowGoblinRaid3_offer"/>
+			<property name="completion_key" value="challenge_SnowGoblinRaid3_completion" />
+			<property name="difficulty" value="hard"/>
+			<property name="shareable" value="true"/>
+			<property name="completiontype" value="TurnIn"/>
+			<objective type="RandomGoto" value="500-800" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+			<action type="SpawnEnemy" id="enSnowGoblin1" value="9" phase="3"/>
+			<action type="SpawnEnemy" id="enSnowGoblin2" value="9" phase="3"/>
+			<action type="SpawnEnemy" id="enSnowGoblin3" value="10" phase="3"/>
+			<action type="SpawnEnemy" id="enWolf" value="2" phase="3"/>
+			<action type="SpawnEnemy" id="enSnowGiant" value="3" phase="3"/>
+			<objective type="ZombieKill" id="enSnowGoblin1" value="7" phase="3"/>
+			<objective type="ZombieKill" id="enSnowGoblin2" value="7" phase="3"/>
+			<objective type="ZombieKill" id="enSnowGoblin3" value="7" phase="3"/>
+			<objective type="ZombieKill" id="enSnowGiant" value="2" phase="3"/>
+			<objective type="AnimalKill" id="enWolf" value="1" phase="3"/>
+			<objective type="InteractWithNPC">
+			<property name="phase" value="4"/>
+			</objective>
+			<reward type="Exp" value="9000"/>
+			<reward type="Item" id="casinoCoin" value="8000"/>
+		</quest>
+	</append>
+	
+	
+	<!-- ********** BURNT GOBLIN RAID ********** -->
+	
+	<append xpath="/quests">
+		<quest id="challenge_BurntGoblinRaid1">
+			<property name="name_key" value="challenge_BurntGoblinRaid1"/>
+			<property name="subtitle_key" value="challenge_BurntGoblinRaid1_subtitle"/>
+			<property name="description_key" value="challenge_BurntGoblinRaid1_offer"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="offer_key" value="challenge_BurntGoblinRaid1_offer"/>
+			<property name="difficulty" value="hard"/>
+			<property name="shareable" value="false"/>			
+			<objective type="RandomGoto" value="500-800" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+			<action type="SpawnEnemy" id="enBurntGoblin1" value="4" phase="3"/>
+			<action type="SpawnEnemy" id="enBurntGoblin2" value="4" phase="3"/>
+			<action type="SpawnEnemy" id="enBurntGoblin3" value="5" phase="3"/>
+			<objective type="ZombieKill" id="enBurntGoblin1" value="2" phase="3"/>
+			<objective type="ZombieKill" id="enBurntGoblin2" value="2" phase="3"/>
+			<objective type="ZombieKill" id="enBurntGoblin3" value="2" phase="3"/>
+			<reward type="Quest" id="challenge_BurntGoblinRaid2"/>
+		</quest>
+	</append>
+	
+	<append xpath="/quests">
+		<quest id="challenge_BurntGoblinRaid2">
+			<property name="name_key" value="challenge_BurntGoblinRaid2"/>
+			<property name="subtitle_key" value="challenge_BurntGoblinRaid2_subtitle"/>
+			<property name="description_key" value="challenge_BurntGoblinRaid2_offer"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="offer_key" value="challenge_BurntGoblinRaid2_offer"/>
+			<property name="difficulty" value="hard"/>
+			<property name="shareable" value="false"/>
+			<objective type="RandomGoto" value="500-800" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+			<action type="SpawnEnemy" id="enWolf" value="2" phase="3"/>
+			<action type="SpawnEnemy" id="enBurntGoblin1" value="6" phase="3"/>
+			<action type="SpawnEnemy" id="enBurntGoblin2" value="6" phase="3"/>
+			<action type="SpawnEnemy" id="enBurntGoblin3" value="7" phase="3"/>
+			<objective type="ZombieKill" id="enBurntGoblin1" value="4" phase="3"/>
+			<objective type="ZombieKill" id="enBurntGoblin2" value="4" phase="3"/>
+			<objective type="ZombieKill" id="enBurntGoblin3" value="4" phase="3"/>
+			<objective type="AnimalKill" id="enWolf" value="1" phase="3"/>
+			<reward type="Quest" id="challenge_BurntGoblinRaid3"/>
+		</quest>
+	</append>
+	
+	<append xpath="/quests">
+		<quest id="challenge_BurntGoblinRaid3">
+			<property name="name_key" value="challenge_BurntGoblinRaid3"/>
+			<property name="subtitle_key" value="challenge_BurntGoblinRaid3_subtitle"/>
+			<property name="description_key" value="challenge_BurntGoblinRaid3_offer"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="offer_key" value="challenge_BurntGoblinRaid3_offer"/>
+			<property name="completion_key" value="challenge_BurntGoblinRaid3_completion" />
+			<property name="difficulty" value="hard"/>
+			<property name="shareable" value="true"/>
+			<property name="completiontype" value="TurnIn"/>
+			<objective type="RandomGoto" value="500-800" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+			<action type="SpawnEnemy" id="enBurntGiant" value="3" phase="3"/>
+			<action type="SpawnEnemy" id="enWolf" value="2" phase="3"/>
+			<action type="SpawnEnemy" id="enBurntGoblin1" value="9" phase="3"/>
+			<action type="SpawnEnemy" id="enBurntGoblin2" value="9" phase="3"/>
+			<action type="SpawnEnemy" id="enBurntGoblin3" value="10" phase="3"/>
+			<objective type="ZombieKill" id="enBurntGoblin1" value="7" phase="3"/>
+			<objective type="ZombieKill" id="enBurntGoblin2" value="7" phase="3"/>
+			<objective type="ZombieKill" id="enBurntGoblin3" value="7" phase="3"/>
+			<objective type="AnimalKill" id="enWolf" value="1" phase="3"/>
+			<objective type="ZombieKill" id="enBurntGiant" value="2" phase="3"/>
+			<objective type="InteractWithNPC">
+			<property name="phase" value="4"/>
+			</objective>
+			<reward type="Exp" value="9900"/>
+			<reward type="Item" id="casinoCoin" value="8500"/>
+		</quest>
+	</append>
+	
+	<!-- ********** WASTELAND GOBLIN RAID ********** -->
+	
+	<append xpath="/quests">
+		<quest id="challenge_WastelandGoblinRaid1">
+			<property name="name_key" value="challenge_WastelandGoblinRaid1"/>
+			<property name="subtitle_key" value="challenge_WastelandGoblinRaid1_subtitle"/>
+			<property name="description_key" value="challenge_WastelandGoblinRaid1_offer"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="offer_key" value="challenge_WastelandGoblinRaid1_offer"/>
+			<property name="difficulty" value="hard"/>
+			<property name="shareable" value="false"/>			
+			<objective type="RandomGoto" value="500-800" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+			<action type="SpawnEnemy" id="enWastelandGoblin1" value="4" phase="3"/>
+			<action type="SpawnEnemy" id="enWastelandGoblin2" value="4" phase="3"/>
+			<action type="SpawnEnemy" id="enWastelandGoblin3" value="5" phase="3"/>
+			<objective type="ZombieKill" id="enWastelandGoblin1" value="2" phase="3"/>
+			<objective type="ZombieKill" id="enWastelandGoblin2" value="2" phase="3"/>
+			<objective type="ZombieKill" id="enWastelandGoblin3" value="2" phase="3"/>
+			<reward type="Quest" id="challenge_WastelandGoblinRaid2"/>
+		</quest>
+	</append>
+	
+	<append xpath="/quests">
+		<quest id="challenge_WastelandGoblinRaid2">
+			<property name="name_key" value="challenge_WastelandGoblinRaid2"/>
+			<property name="subtitle_key" value="challenge_WastelandGoblinRaid2_subtitle"/>
+			<property name="description_key" value="challenge_WastelandGoblinRaid2_offer"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="offer_key" value="challenge_WastelandGoblinRaid2_offer"/>
+			<property name="difficulty" value="hard"/>
+			<property name="shareable" value="false"/>
+			<objective type="RandomGoto" value="500-800" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+			<action type="SpawnEnemy" id="enDireWolf" value="2" phase="3"/>
+			<action type="SpawnEnemy" id="enWastelandGoblin1" value="6" phase="3"/>
+			<action type="SpawnEnemy" id="enWastelandGoblin2" value="6" phase="3"/>
+			<action type="SpawnEnemy" id="enWastelandGoblin3" value="7" phase="3"/>
+			<objective type="AnimalKill" id="enDireWolf" value="1" phase="3"/>
+			<objective type="ZombieKill" id="enWastelandGoblin1" value="4" phase="3"/>
+			<objective type="ZombieKill" id="enWastelandGoblin2" value="4" phase="3"/>
+			<objective type="ZombieKill" id="enWastelandGoblin3" value="4" phase="3"/>
+			<reward type="Quest" id="challenge_WastelandGoblinRaid3"/>
+		</quest>
+	</append>
+	
+	<append xpath="/quests">
+		<quest id="challenge_WastelandGoblinRaid3">
+			<property name="name_key" value="challenge_WastelandGoblinRaid3"/>
+			<property name="subtitle_key" value="challenge_WastelandGoblinRaid3_subtitle"/>
+			<property name="description_key" value="challenge_WastelandGoblinRaid3_offer"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="offer_key" value="challenge_WastelandGoblinRaid3_offer"/>
+			<property name="completion_key" value="challenge_WastelandGoblinRaid3_completion" />
+			<property name="difficulty" value="hard"/>
+			<property name="shareable" value="true"/>
+			<property name="completiontype" value="TurnIn"/>
+			<objective type="RandomGoto" value="500-800" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+			<action type="SpawnEnemy" id="enWastelandGiant" value="3" phase="3"/>
+			<action type="SpawnEnemy" id="enWastelandGoblin1" value="9" phase="3"/>
+			<action type="SpawnEnemy" id="enWastelandGoblin2" value="9" phase="3"/>
+			<action type="SpawnEnemy" id="enWastelandGoblin3" value="10" phase="3"/>
+			<action type="SpawnEnemy" id="enDireWolf" value="2" phase="3"/>
+			<objective type="ZombieKill" id="enWastelandGoblin1" value="7" phase="3"/>
+			<objective type="ZombieKill" id="enWastelandGoblin2" value="7" phase="3"/>
+			<objective type="ZombieKill" id="enWastelandGoblin3" value="7" phase="3"/>
+			<objective type="ZombieKill" id="enWastelandGiant" value="2" phase="3"/>
+			<objective type="AnimalKill" id="enDireWolf" value="1" phase="3"/>
+			<objective type="InteractWithNPC">
+			<property name="phase" value="4"/>
+			</objective>
+			<reward type="Exp" value="10500"/>
+			<reward type="Item" id="casinoCoin" value="9500"/>
+		</quest>
+	</append>
+	
+	
+	
+	
+	<!-- ********** BUSINESSMAN RAID ********** -->
+	
+	<append xpath="/quests">
+		<quest id="challenge_BusinessmanRaid1">
+			<property name="name_key" value="challenge_BusinessmanRaid1"/>
+			<property name="subtitle_key" value="challenge_BusinessmanRaid1_subtitle"/>
+			<property name="description_key" value="challenge_BusinessmanRaid1_offer"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="offer_key" value="challenge_BusinessmanRaid1_offer"/>
+			<property name="difficulty" value="hard"/>
+			<property name="shareable" value="false"/>			
+			<objective type="RandomGoto" value="500-800" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+			<action type="SpawnEnemy" id="enBusinessman1" value="3" phase="3"/>
+			<action type="SpawnEnemy" id="enBusinessman4" value="3" phase="3"/>
+			<action type="SpawnEnemy" id="enBusinesswoman1" value="3" phase="3"/>
+			<action type="SpawnEnemy" id="enBusinesswoman2" value="3" phase="3"/>
+			<action type="SpawnEnemy" id="enBusinessman3Feral,enBusinessman4Feral" value="1" phase="3"/>
+			<action type="SpawnEnemy" id="enBusinesswoman1Feral,enBusinesswoman2Feral" value="1" phase="3"/>
+			<objective type="ZombieKill" id="enBusinessman1" value="2" phase="3"/>
+			<objective type="ZombieKill" id="enBusinessman4" value="2" phase="3"/>			
+			<objective type="ZombieKill" id="enBusinesswoman1" value="2" phase="3"/>
+			<objective type="ZombieKill" id="enBusinesswoman2" value="2" phase="3"/>
+			<reward type="Quest" id="challenge_BusinessmanRaid2"/>
+		</quest>
+	</append>
+	
+	<append xpath="/quests">
+		<quest id="challenge_BusinessmanRaid2">
+			<property name="name_key" value="challenge_BusinessmanRaid2"/>
+			<property name="subtitle_key" value="challenge_BusinessmanRaid2_subtitle"/>
+			<property name="description_key" value="challenge_BusinessmanRaid2_offer"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="offer_key" value="challenge_BusinessmanRaid2_offer"/>
+			<property name="difficulty" value="hard"/>
+			<property name="shareable" value="false"/>
+			<objective type="RandomGoto" value="500-800" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+			<action type="SpawnEnemy" id="enBusinessman2Feral" value="3" phase="3"/>
+			<action type="SpawnEnemy" id="enBusinessman3Feral" value="3" phase="3"/>
+			<action type="SpawnEnemy" id="enBusinesswoman1Feral" value="2" phase="3"/>
+			<action type="SpawnEnemy" id="enBusinesswoman2Feral" value="2" phase="3"/>
+			<action type="SpawnEnemy" id="enBusinessman1,enBusinessman2,enBusinessman3,enBusinessman4" value="2" phase="3"/>
+			<action type="SpawnEnemy" id="enBusinesswoman1,enBusinesswoman2" value="2" phase="2"/>
+			<objective type="ZombieKill" id="enBusinessman2Feral" value="2" phase="3"/>
+			<objective type="ZombieKill" id="enBusinessman3Feral" value="2" phase="3"/>
+			<objective type="ZombieKill" id="enBusinesswoman1Feral" value="1" phase="3"/>
+			<objective type="ZombieKill" id="enBusinesswoman2Feral" value="1" phase="3"/>
+			<reward type="Quest" id="challenge_BusinessmanRaid3"/>
+		</quest>
+	</append>
+	
+	<append xpath="/quests">
+		<quest id="challenge_BusinessmanRaid3">
+			<property name="name_key" value="challenge_BusinessmanRaid3"/>
+			<property name="subtitle_key" value="challenge_BusinessmanRaid3_subtitle"/>
+			<property name="description_key" value="challenge_BusinessmanRaid3_offer"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="offer_key" value="challenge_BusinessmanRaid3_offer"/>
+			<property name="completion_key" value="challenge_BusinessmanRaid3_completion" />
+			<property name="difficulty" value="hard"/>
+			<property name="shareable" value="true"/>
+			<property name="completiontype" value="TurnIn"/>
+			<objective type="RandomGoto" value="500-800" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+			<action type="SpawnEnemy" id="enBusinessman1Radiated" value="2" phase="3"/>
+			<action type="SpawnEnemy" id="enBusinessman2Radiated" value="2" phase="3"/>
+			<action type="SpawnEnemy" id="enBusinessman3Radiated" value="3" phase="3"/>
+			<action type="SpawnEnemy" id="enBusinessman4Radiated" value="3" phase="3"/>
+			<action type="SpawnEnemy" id="enBusinesswoman1Radiated" value="2" phase="3"/>
+			<action type="SpawnEnemy" id="enBusinesswoman2Radiated" value="2" phase="3"/>
+			<action type="SpawnEnemy" id="enBusinessmanBoss" value="1" phase="3"/>
+			<action type="SpawnEnemy" id="enBusinessman1Feral,enBusinessman2Feral,enBusinessman3Feral,enBusinessman4Feral" value="3" phase="3"/>
+			<action type="SpawnEnemy" id="enBusinesswoman1Feral,enBusinesswoman2Feral" value="3" phase="3"/>
+			<objective type="ZombieKill" id="enBusinessman1Radiated" value="1" phase="3"/>
+			<objective type="ZombieKill" id="enBusinessman2Radiated" value="1" phase="3"/>
+			<objective type="ZombieKill" id="enBusinessman3Radiated" value="2" phase="3"/>
+			<objective type="ZombieKill" id="enBusinessman4Radiated" value="2" phase="3"/>
+			<objective type="ZombieKill" id="enBusinesswoman1Radiated" value="1" phase="3"/>
+			<objective type="ZombieKill" id="enBusinesswoman2Radiated" value="1" phase="3"/>
+			<objective type="ZombieKill" id="enBusinessmanBoss" value="1" phase="3"/>
+			<objective type="InteractWithNPC"><property name="phase" value="4"/></objective>
+			<reward type="Exp" value="10000"/>
+			<reward type="Item" id="casinoCoin" value="9000"/>
+		</quest>
+	</append>
+	
+	
+	<!--<set xpath="/quests/quest/objective[@type='RandomGoto']/@value">50</set>-->
+	
+</ErrorNull>

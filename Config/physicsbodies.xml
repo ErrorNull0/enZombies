@@ -1,0 +1,12 @@
+<ErrorNull>
+<!-- lowever values = more jiggly, ragdoll animation cycles/vibrates faster -->
+<set xpath="/bodies/body[@name='zombieUMA']/collider/property[@name='ragdollScale']/@value">0.8 0.8 0.8</set>
+
+<!--
+X: pos = head and legs vertically down lower when ragdoll on stomach, and higher when ragdoll on back
+Y: pos = entire body vertically down lower when ragdoll on stomach, and higher when ragdoll on back
+Z: pos = chest vertically up higher when ragdoll on stomach, and lower when ragdoll on back
+-->
+<set xpath="/bodies/body[@name='zombieUMA']/collider/property[@name='ragdollOffset']/@value">0.03 0.03 0.03</set>
+
+</ErrorNull>

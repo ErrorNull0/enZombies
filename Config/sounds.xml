@@ -1,0 +1,65 @@
+<ErrorNull>
+	<append xpath="/Sounds">
+	
+		<SoundDataNode name="screamer3buff0">
+			<AudioSource name="Sounds/AudioSource_Notifications"/>
+			<AudioClip ClipName="Sounds/Enemies/Scout_Zombie/zombiefemalescoutalert2"/>
+			<LocalCrouchVolumeScale value="1.0"/>
+			<CrouchNoiseScale value="0.5"/>
+			<NoiseScale value="1"/>
+			<MaxVoices value="10"/>
+			<MaxRepeatRate value="0.01"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="screamer3buff1">
+			<AudioSource name="Sounds/AudioSource_Notifications"/>
+			<AudioClip ClipName="Sounds/Ambient_Oneshots/a_horde_oneshot2"/>
+			<LocalCrouchVolumeScale value="1.0"/>
+			<CrouchNoiseScale value="0.5"/>
+			<NoiseScale value="1"/>
+			<MaxVoices value="10"/>
+			<MaxRepeatRate value="0.01"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="labCreatureFemaleBuff1">
+			<AudioSource name="Sounds/AudioSource_Pain"/>
+			<AudioClip ClipName="Sounds/Enemies/Spider_Zombie/spiderdeath1"/>
+			<LocalCrouchVolumeScale value="1.0"/>
+			<CrouchNoiseScale value="0.5"/>
+			<NoiseScale value="1"/>
+			<MaxVoices value="10"/>
+			<MaxRepeatRate value="0.01"/>
+		</SoundDataNode>		
+		
+		<SoundDataNode name="labCreatureFemaleBuff2">
+			<AudioSource name="Sounds/AudioSource_Pain"/>
+			<AudioClip ClipName="Sounds/Enemies/Spider_Zombie/spiderdeath2"/>
+			<LocalCrouchVolumeScale value="1.0"/>
+			<CrouchNoiseScale value="0.5"/>
+			<NoiseScale value="1"/>
+			<MaxVoices value="10"/>
+			<MaxRepeatRate value="0.01"/>
+		</SoundDataNode>	
+		
+		<SoundDataNode name="labCreatureFemaleBuff3">
+			<AudioSource name="Sounds/AudioSource_Pain"/>
+			<AudioClip ClipName="Sounds/Enemies/Spider_Zombie/spiderdeath3"/>
+			<LocalCrouchVolumeScale value="1.0"/>
+			<CrouchNoiseScale value="0.5"/>
+			<NoiseScale value="1"/>
+			<MaxVoices value="10"/>
+			<MaxRepeatRate value="0.01"/>
+		</SoundDataNode>	
+		
+		<SoundDataNode name="labCreatureFemaleBuff4">
+			<AudioSource name="Sounds/AudioSource_Pain"/>
+			<AudioClip ClipName="Sounds/Enemies/Spider_Zombie/spiderdeath1"/>
+			<LocalCrouchVolumeScale value="1.0"/>
+			<CrouchNoiseScale value="0.5"/>
+			<NoiseScale value="1"/>
+			<MaxVoices value="10"/>
+			<MaxRepeatRate value="0.01"/>
+		</SoundDataNode>
+		
+	</append>
+</ErrorNull>
