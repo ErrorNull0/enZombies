@@ -97,7 +97,7 @@
 	<!--<remove xpath="/quests/quest[@id='challenge_cableguysnevermadeit']/action[@type='SpawnEnemy']" />
 	<append xpath="/quests/quest[@id='challenge_cableguysnevermadeit']">
 		<action type="SpawnEnemy" id="zombieUtilityWorker" value="4" phase="3"/>
-		<action type="SpawnEnemy" id="enUtility1,enUtility2" value="2" phase="3"/>
+		<action type="SpawnEnemy" id="enUtilityMale1,enUtilityMale2" value="2" phase="3"/>
 	</append>
 	-->
 	

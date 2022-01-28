@@ -7,33 +7,11 @@
 	
 <append xpath="/item_modifiers">
 
-<!--
-	<item_modifier name="modGunMeleeDamperUMA" installable_tags="weapon,tool" modifier_tags="specialDamage" blocked_tags="noMods" type="attachment">
-		<property name="Extends" value="modGeneralMaster"/>
-		<property name="UnlockedBy" value="modGunMeleeRadRemoverSchematic"/>
-		<effect_group tiered="false">
-			<requirement name="EntityTagCompare" target="other" tags="umazombie"/>
-				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffBurningElement"/>
-		</effect_group>
-	</item_modifier>
--->	
-
-	<item_modifier name="modRagdollDamper" installable_tags="weapon,tool" modifier_tags="specialDamage" blocked_tags="noMods" type="attachment">
-		<property name="Extends" value="modGeneralMaster"/>
-		<effect_group tiered="false">
-			<requirement name="EntityTagCompare" target="other" tags="umazombie"/>
-			<passive_effect name="EntityDamage" operation="base_set" value="1"/>
-			<!--
-			<passive_effect name="HealthLoss" operation="base_set" value="20"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffBurningElement"/>
-			-->
-			<triggered_effect trigger="onSelfPrimaryActionRayHit" action="AddBuff" target="other" buff="buffReduceHpNormal"/>
-			<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffReduceHpStrong"/>
-		</effect_group>
-	</item_modifier>
 	
 	<item_modifier name="modDanceFever" installable_tags="weapon,tool" modifier_tags="specialDamage" blocked_tags="noMods" type="attachment">
 		<property name="Extends" value="modGeneralMaster"/>
+		<property name="CustomIcon" value="questRallyMarker"/>
+		<property name="CustomIconTint" value="150,0,150"/>
 		<effect_group tiered="false">
 			<requirement name="EntityTagCompare" target="other" tags="zombie,trader"/>
 			<triggered_effect trigger="onSelfPrimaryActionRayHit" action="AddBuff" target="other" buff="buffDanceFever"/>

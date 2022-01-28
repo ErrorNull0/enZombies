@@ -1,17 +1,37 @@
 <ErrorNull>
 
+<!-- player chance of ragdoll with hit by a zombie or animal with 'knockdown' tag -->
 <append xpath="/entity_classes/entity_class[@name='playerMale']">
+	<effect_group>
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffInjuryKnockdown01">
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="25"/>
+			<requirement name="NotHasBuff" target="self" buff="buffInjuryKnockdown01Cooldown"/>
+			<requirement name="EntityTagCompare" target="other" tags="enKnockdown25"/>
+		</triggered_effect>
+	</effect_group>
 	<effect_group>
 		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffInjuryKnockdown01">
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
 			<requirement name="NotHasBuff" target="self" buff="buffInjuryKnockdown01Cooldown"/>
-			<requirement name="EntityTagCompare" target="other" tags="knockdown"/>
+			<requirement name="EntityTagCompare" target="other" tags="enKnockdown50"/>
+		</triggered_effect>
+	</effect_group>
+	<effect_group>
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffInjuryKnockdown01">
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="75"/>
+			<requirement name="NotHasBuff" target="self" buff="buffInjuryKnockdown01Cooldown"/>
+			<requirement name="EntityTagCompare" target="other" tags="enKnockdown75"/>
 		</triggered_effect>
 	</effect_group>
 </append>
 
+<!-- Add knockdown ability to vanilla bears -->
+<set xpath="/entity_classes/entity_class[@name='animalBear']/property[@name='Tags']/@value">entity,animal,hostile,bear,perkAT03,enKnockdown50</set>
+<set xpath="/entity_classes/entity_class[@name='animalZombieBear']/property[@name='Tags']/@value">entity,animal,zombie,hostile,bear,enKnockdown50</set>
+
+
 <!--
-By default, zombie HP has a 35% variation spread, varying from -20% to +15% of base value. Instead, this variation spread is reduced to 20% and set from 0% to 20% of its base value. This only impacts the normal zombies. Feral, crawler, and radiated zombies use different code to add the 20% HP variability.
+By default, zombie HP varyies from -20% to +15% of base value. Modifying this variated to go from 0% to 20% instead. This only impacts the normal zombie variation. Feral, crawler, and radiated variations use different code to add this new variability.
 -->
 <set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/effect_group[@name='Base Effects']/passive_effect[@name='HealthMax' and @operation='perc_add']/@value">0,0.2</set>
 
@@ -27,15 +47,8 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	
 	<entity_class name="EN_Zombie_Template" extends="zombieTemplateMale">
 		<property name="HideInSpawnMenu" value="true"/>
-		<!--<property name="Mesh" value="#Entities/Zombies?Zombies/zombie01Ragdoll.prefab"/>-->
 		<property name="Prefab" value="NPC"/>
-		<property name="Class" value="EntityZombie"/>
-		<property name="Parent" value="Enemies"/>
-		<property name="EntityType" value="Zombie"/>
-		<property name="IsEnemyEntity" value="true"/>
 		<property name="ModelType" value="ZombieUMA"/>
-		<property name="RootMotion" value="true"/>
-		<property name="HasRagdoll" value="true"/>
 		<property name="PhysicsBody" value="zombieUMA"/>
 		<property name="HasDeathAnim" value="false"/>
 		<property name="SizeScale" value="1.00"/>
@@ -43,11 +56,6 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 		<property name="DismemberMultiplierArms" value="0.25"/>
 		<property name="DismemberMultiplierLegs" value="0.25"/>
 		<property name="HandItemCrawler" value="enHandZombieCrawler"/>
-		<!--
-		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="perc_add" value="0,0"/>
-		</effect_group>
-		-->
 	</entity_class>
 	
 	<entity_class name="EN_Zombie_Template_Male1" extends="EN_Zombie_Template">
@@ -243,6 +251,18 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 		<property name="Archetype" value="en_testWhite"/>
 	</entity_class>
 	
+	<entity_class name="enTestWhite2" extends="EN_Zombie_Template_Male1">
+		<property name="HideInSpawnMenu" value="false"/>
+		<property name="Tags" value="entity,zombie,walker,umazombie"/>
+		<property name="Archetype" value="en_testWhite2"/>
+	</entity_class>
+	
+	<entity_class name="enTestWhite3" extends="EN_Zombie_Template_Male1">
+		<property name="HideInSpawnMenu" value="false"/>
+		<property name="Tags" value="entity,zombie,walker,umazombie"/>
+		<property name="Archetype" value="en_testWhite3"/>
+	</entity_class>
+	
 	<entity_class name="enTestBlack" extends="EN_Zombie_Template_Male1">
 		<property name="HideInSpawnMenu" value="false"/>
 		<property name="Tags" value="entity,zombie,walker,umazombie"/>
@@ -331,7 +351,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	</entity_class>
 	
 	<entity_class name="enBiker1Radiated" extends="enBiker1Feral">
-		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated,knockdown"/>
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated"/>
 		<property name="HandItem" value="enHand_6085_015_BBBBBBB"/>
 		<property name="Archetype" value="en_biker1Radiated"/>
 		<property name="PainResistPerHit" value=".9"/>
@@ -381,7 +401,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	</entity_class>
 	
 	<entity_class name="enBiker2Radiated" extends="enBiker2Feral">
-		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated,knockdown"/>
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated"/>
 		<property name="HandItem" value="enHand_6085_015_BBBBBBB"/>
 		<property name="Archetype" value="en_biker2Radiated"/>
 		<property name="PainResistPerHit" value=".9"/>
@@ -521,7 +541,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	</entity_class>
 	
 	<entity_class name="enBurntGiant" extends="EN_Zombie_Template_Giant">
-		<property name="Tags" value="entity,zombie,walker,umazombie,knockdown"/>
+		<property name="Tags" value="entity,zombie,walker,umazombie,enKnockdown25"/>
 		<property name="HandItem" value="enHand_50500_000_xBBCDBx"/>
 		<property name="Archetype" value="en_burntGiant"/>
 		<property name="SizeScale" value="0.97"/>
@@ -707,7 +727,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	</entity_class>
 	
 	<entity_class name="enBurntMaleFlamerRadiated" extends="enBurntMaleFlamerFeral">
-		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated,knockdown"/>
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated"/>
 		<property name="HandItem" value="enHand_40200_000_AAABBAA"/>
 		<property name="Archetype" value="en_burntMaleFlamerRadiated"/>
 		<property name="PainResistPerHit" value=".9"/>
@@ -1008,7 +1028,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	</entity_class>
 	
 	<entity_class name="enDesertCowboy1Radiated" extends="enDesertCowboy1Feral">
-		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated,knockdown"/>
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated"/>
 		<property name="HandItem" value="enHand_3550_007_AAAAAAA"/>
 		<property name="Archetype" value="en_desertCowboy1Radiated"/>
 		<property name="PainResistPerHit" value=".9"/>
@@ -1041,7 +1061,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	</entity_class>
 	
 	<entity_class name="enDesertCowboy2Radiated" extends="enDesertCowboy2Feral">
-		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated,knockdown"/>
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated"/>
 		<property name="HandItem" value="enHand_3550_007_AAAAAAA"/>
 		<property name="Archetype" value="en_desertCowboy2Radiated"/>
 		<property name="PainResistPerHit" value=".9"/>
@@ -1075,7 +1095,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	</entity_class>
 	
 	<entity_class name="enDesertCowboy3Radiated" extends="enDesertCowboy3Feral">
-		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated,knockdown"/>
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated"/>
 		<property name="HandItem" value="enHand_6058_007_AAAAAAA"/>
 		<property name="Archetype" value="en_desertCowboy3Radiated"/>
 		<property name="PainResistPerHit" value=".9"/>
@@ -1374,7 +1394,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	</entity_class>
 	
 	<entity_class name="enDesertGiant" extends="EN_Zombie_Template_Giant">
-		<property name="Tags" value="entity,zombie,walker,umazombie,knockdown"/>
+		<property name="Tags" value="entity,zombie,walker,umazombie,enKnockdown25"/>
 		<property name="HandItem" value="enHand_40500_000_ABBBBBA"/>
 		<property name="Archetype" value="en_desertGiant"/>
 		<property name="SizeScale" value="0.97"/>
@@ -1598,7 +1618,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	
 	<entity_class name="enDesertMiner1" extends="EN_Zombie_Template_Male1">
 		<property name="Tags" value="entity,zombie,walker,umazombie"/>
-		<property name="HandItem" value="enHand_2319_010_xBxBAAA"/>
+		<property name="HandItem" value="enHand_2330_010_xBxBAAA"/>
 		<property name="Archetype" value="en_desertMiner1"/>
 		<property name="SizeScale" value="0.99"/>
 		<property name="ExperienceGain" value="468"/>
@@ -1611,7 +1631,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	
 	<entity_class name="enDesertMiner1Feral" extends="enDesertMiner1">
 		<property name="Tags" value="entity,zombie,walker,umazombie,feral"/>
-		<property name="HandItem" value="enHand_4657_015_xBxBAAA"/>
+		<property name="HandItem" value="enHand_4690_015_xBxBAAA"/>
 		<property name="Archetype" value="en_desertMiner1Feral"/>
 		<property name="PainResistPerHit" value=".7"/>
 		<property name="ExperienceGain" value="850"/>
@@ -1621,8 +1641,8 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	</entity_class>
 	
 	<entity_class name="enDesertMiner1Radiated" extends="enDesertMiner1Feral">
-		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated,knockdown"/>
-		<property name="HandItem" value="enHand_5262_015_xBxBAAA"/>
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated"/>
+		<property name="HandItem" value="enHand_5295_015_xBxBAAA"/>
 		<property name="Archetype" value="en_desertMiner1Radiated"/>
 		<property name="PainResistPerHit" value=".9"/>
 		<property name="ExperienceGain" value="1360"/>
@@ -1656,7 +1676,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	</entity_class>
 	
 	<entity_class name="enDesertMiner2Radiated" extends="enDesertMiner2Feral">
-		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated,knockdown"/>
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated"/>
 		<property name="HandItem" value="enHand_70160_015_xBxBAAA"/>
 		<property name="Archetype" value="en_desertMiner2Radiated"/>
 		<property name="PainResistPerHit" value=".9"/>
@@ -1691,7 +1711,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	</entity_class>
 	
 	<entity_class name="enDesertMiner3Radiated" extends="enDesertMiner3Feral">
-		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated,knockdown"/>
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated"/>
 		<property name="HandItem" value="enHand_80200_015_xBxBAAA"/>
 		<property name="Archetype" value="en_desertMiner3Radiated"/>
 		<property name="PainResistPerHit" value=".9"/>
@@ -2308,7 +2328,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	</entity_class>
 	
 	<entity_class name="enForestGiant" extends="EN_Zombie_Template_Giant">
-		<property name="Tags" value="entity,zombie,walker,umazombie,knockdown"/>
+		<property name="Tags" value="entity,zombie,walker,umazombie,enKnockdown25"/>
 		<property name="HandItem" value="enHand_40500_000_xBBBBBx"/>
 		<property name="Archetype" value="en_forestGiant"/>
 		<property name="SizeScale" value="0.97"/>
@@ -3377,7 +3397,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	</entity_class>
 	
 	<entity_class name="enLabCreatureMale4" extends="EN_Zombie_Template_LabCreature">
-		<property name="Tags" value="entity,zombie,walker,umazombie,knockdown"/>
+		<property name="Tags" value="entity,zombie,walker,umazombie"/>
 		<property name="HandItem" value="enHand_4060_100_xxxxxxx"/>
 		<property name="Archetype" value="en_LabCreatureMale4"/>
 		<property name="SizeScale" value="0.97"/>
@@ -3440,7 +3460,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	</entity_class>
 	
 	<entity_class name="enLumberjack1Radiated" extends="enLumberjack1Feral">
-		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated,knockdown"/>
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated"/>
 		<property name="HandItem" value="enHand_5270_015_BBBBBBB"/>
 		<property name="Archetype" value="en_lumberjack1Radiated"/>
 		<property name="PainResistPerHit" value=".9"/>
@@ -3487,7 +3507,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	</entity_class>
 	
 	<entity_class name="enLumberjack2Radiated" extends="enLumberjack2Feral">
-		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated,knockdown"/>
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated"/>
 		<property name="HandItem" value="enHand_5270_015_BBBBBBB"/>
 		<property name="Archetype" value="en_lumberjack2Radiated"/>
 		<property name="PainResistPerHit" value=".9"/>
@@ -4068,7 +4088,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	</entity_class>	
 	
 	<entity_class name="enSnowGiant" extends="EN_Zombie_Template_Giant">
-		<property name="Tags" value="entity,zombie,walker,umazombie,knockdown"/>
+		<property name="Tags" value="entity,zombie,walker,umazombie,enKnockdown25"/>
 		<property name="HandItem" value="enHand_50600_000_ABBBBBA"/>
 		<property name="Archetype" value="en_snowGiant"/>
 		<property name="SizeScale" value="0.97"/>
@@ -5057,10 +5077,45 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 		</effect_group>
 	</entity_class>
 	
-	<entity_class name="enUtility1" extends="EN_Zombie_Template_Male1">
+	<entity_class name="enUtilityFemale1" extends="EN_Zombie_Template_Female2">
+		<property name="Tags" value="entity,zombie,walker,umazombie"/>
+		<property name="HandItem" value="enHand_1622_010_xxxxxxA"/>
+		<property name="Archetype" value="en_utilityFemale1"/>
+		<property name="SizeScale" value="0.99"/>
+		<property name="WalkType" value="5"/>
+		<property name="ExperienceGain" value="358"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="130"/>
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="UtilityFemale1Deco"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enUtilityFemale1Feral" extends="enUtilityFemale1">
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral"/>
+		<property name="HandItem" value="enHand_3236_015_xxxxxxA"/>
+		<property name="Archetype" value="en_utilityFemale1Feral"/>
+		<property name="PainResistPerHit" value=".7"/>
+		<property name="ExperienceGain" value="650"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
+		</effect_group>
+	</entity_class>
+		
+	<entity_class name="enUtilityFemale1Radiated" extends="enUtilityFemale1Feral">
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated"/>
+		<property name="HandItem" value="enHand_3538_015_AAAAAAB"/>
+		<property name="Archetype" value="en_utilityFemale1Radiated"/>
+		<property name="PainResistPerHit" value=".9"/>
+		<property name="ExperienceGain" value="1040"/>
+		<effect_group name="Base Effects" id="regen5">
+			<passive_effect name="HealthMax" operation="perc_set" value="2.6,2.8"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enUtilityMale1" extends="EN_Zombie_Template_Male1">
 		<property name="Tags" value="entity,zombie,walker,umazombie"/>
 		<property name="HandItem" value="enHand_1130_010_xxxxxxx"/>
-		<property name="Archetype" value="en_utility1"/>
+		<property name="Archetype" value="en_utilityMale1"/>
 		<property name="SizeScale" value="0.99"/>
 		<property name="WalkType" value="5"/>
 		<property name="ExperienceGain" value="440"/>
@@ -5069,10 +5124,10 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 		</effect_group>
 	</entity_class>
 	
-	<entity_class name="enUtility1Feral" extends="enUtility1">
+	<entity_class name="enUtilityMale1Feral" extends="enUtilityMale1">
 		<property name="Tags" value="entity,zombie,walker,umazombie,feral"/>
 		<property name="HandItem" value="enHand_2290_015_xxxxxxx"/>
-		<property name="Archetype" value="en_utility1Feral"/>
+		<property name="Archetype" value="en_utilityMale1Feral"/>
 		<property name="PainResistPerHit" value=".7"/>
 		<property name="ExperienceGain" value="800"/>
 		<effect_group name="Base Effects">
@@ -5080,10 +5135,10 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 		</effect_group>
 	</entity_class>
 	
-	<entity_class name="enUtility1Crawler" extends="enUtility1">
+	<entity_class name="enUtilityMale1Crawler" extends="enUtilityMale1">
 		<property name="Tags" value="entity,zombie,walker,umazombie"/>
 		<property name="HandItem" value="enHand_0925_010_xxxxxxx"/>
-		<property name="Archetype" value="en_utility1Feral"/>
+		<property name="Archetype" value="en_utilityMale1Feral"/>
 		<property name="WalkType" value="4"/>
 		<property name="ExperienceGain" value="290"/>
 		<effect_group name="Base Effects">
@@ -5091,10 +5146,10 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 		</effect_group>
 	</entity_class>
 	
-	<entity_class name="enUtility1Radiated" extends="enUtility1Feral">
+	<entity_class name="enUtilityMale1Radiated" extends="enUtilityMale1Feral">
 		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated"/>
 		<property name="HandItem" value="enHand_2595_015_AAAAAAA"/>
-		<property name="Archetype" value="en_utility1Radiated"/>
+		<property name="Archetype" value="en_utilityMale1Radiated"/>
 		<property name="PainResistPerHit" value=".9"/>
 		<property name="ExperienceGain" value="1280"/>
 		<effect_group name="Base Effects" id="regen5">
@@ -5102,10 +5157,10 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 		</effect_group>
 	</entity_class>
 	
-	<entity_class name="enUtility2" extends="EN_Zombie_Template_Male2">
+	<entity_class name="enUtilityMale2" extends="EN_Zombie_Template_Male2">
 		<property name="Tags" value="entity,zombie,walker,umazombie"/>
 		<property name="HandItem" value="enHand_1130_010_xxxxxxx"/>
-		<property name="Archetype" value="en_utility2"/>
+		<property name="Archetype" value="en_utilityMale2"/>
 		<property name="SizeScale" value="0.99"/>
 		<property name="WalkType" value="7"/>
 		<effect_group name="Base Effects">
@@ -5113,10 +5168,10 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 		</effect_group>
 	</entity_class>
 	
-	<entity_class name="enUtility2Feral" extends="enUtility2">
+	<entity_class name="enUtilityMale2Feral" extends="enUtilityMale2">
 		<property name="Tags" value="entity,zombie,walker,umazombie,feral"/>
 		<property name="HandItem" value="enHand_2290_015_xxxxxxx"/>
-		<property name="Archetype" value="en_utility2Feral"/>
+		<property name="Archetype" value="en_utilityMale2Feral"/>
 		<property name="PainResistPerHit" value=".7"/>
 		<property name="ExperienceGain" value="750"/>
 		<effect_group name="Base Effects">
@@ -5124,10 +5179,10 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 		</effect_group>
 	</entity_class>
 	
-	<entity_class name="enUtility2Crawler" extends="enUtility2">
+	<entity_class name="enUtilityMale2Crawler" extends="enUtilityMale2">
 		<property name="Tags" value="entity,zombie,walker,umazombie"/>
 		<property name="HandItem" value="enHand_0925_010_xxxxxxx"/>
-		<property name="Archetype" value="en_utility2Feral"/>
+		<property name="Archetype" value="en_utilityMale2Feral"/>
 		<property name="WalkType" value="4"/>
 		<property name="ExperienceGain" value="272"/>
 		<effect_group name="Base Effects">
@@ -5135,10 +5190,10 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 		</effect_group>
 	</entity_class>
 	
-	<entity_class name="enUtility2Radiated" extends="enUtility2Feral">
+	<entity_class name="enUtilityMale2Radiated" extends="enUtilityMale2Feral">
 		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated"/>
 		<property name="HandItem" value="enHand_2595_015_AAAAAAA"/>
-		<property name="Archetype" value="en_utility2Radiated"/>
+		<property name="Archetype" value="en_utilityMale2Radiated"/>
 		<property name="PainResistPerHit" value=".9"/>
 		<property name="ExperienceGain" value="1200"/>
 		<effect_group name="Base Effects" id="regen5">
@@ -5146,23 +5201,23 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 		</effect_group>
 	</entity_class>
 	
-	<entity_class name="enUtility3" extends="EN_Zombie_Template_Male1">
+	<entity_class name="enUtilityMale3" extends="EN_Zombie_Template_Male1">
 		<property name="Tags" value="entity,zombie,walker,umazombie"/>
 		<property name="HandItem" value="enHand_2045_010_ABBBBBB"/>
-		<property name="Archetype" value="en_utility3"/>
+		<property name="Archetype" value="en_utilityMale3"/>
 		<property name="SizeScale" value="0.98"/>
-		<property name="WalkType" value="5"/>
+		<property name="WalkType" value="2"/>
 		<property name="ExperienceGain" value="440"/>
 		<effect_group name="Base Effects">
 			<passive_effect name="HealthMax" operation="base_set" value="160"/>
-			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Utility3Deco"/>
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="UtilityMale3Deco"/>
 		</effect_group>
 	</entity_class>
 	
-	<entity_class name="enUtility3Feral" extends="enUtility3">
+	<entity_class name="enUtilityMale3Feral" extends="enUtilityMale3">
 		<property name="Tags" value="entity,zombie,walker,umazombie,feral"/>
 		<property name="HandItem" value="enHand_40120_015_ABBBBBB"/>
-		<property name="Archetype" value="en_utility3Feral"/>
+		<property name="Archetype" value="en_utilityMale3Feral"/>
 		<property name="PainResistPerHit" value=".7"/>
 		<property name="ExperienceGain" value="800"/>
 		<effect_group name="Base Effects">
@@ -5170,12 +5225,47 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 		</effect_group>
 	</entity_class>
 	
-	<entity_class name="enUtility3Radiated" extends="enUtility3Feral">
+	<entity_class name="enUtilityMale3Radiated" extends="enUtilityMale3Feral">
 		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated"/>
 		<property name="HandItem" value="enHand_50130_015_ABBBBBB"/>
-		<property name="Archetype" value="en_utility3Radiated"/>
+		<property name="Archetype" value="en_utilityMale3Radiated"/>
 		<property name="PainResistPerHit" value=".9"/>
 		<property name="ExperienceGain" value="1280"/>
+		<effect_group name="Base Effects" id="regen5">
+			<passive_effect name="HealthMax" operation="perc_set" value="2.6,2.8"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enUtilityMale4" extends="EN_Zombie_Template_Male2">
+		<property name="Tags" value="entity,zombie,walker,umazombie"/>
+		<property name="HandItem" value="enHand_2330_010_xBxBAAA"/>
+		<property name="Archetype" value="en_utilityMale4"/>
+		<property name="SizeScale" value="0.98"/>
+		<property name="WalkType" value="7"/>
+		<property name="ExperienceGain" value="468"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="170"/>
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="UtilityMale4Deco"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enUtilityMale4Feral" extends="enUtilityMale4">
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral"/>
+		<property name="HandItem" value="enHand_4690_015_xBxBAAA"/>
+		<property name="Archetype" value="en_utilityMale4Feral"/>
+		<property name="PainResistPerHit" value=".7"/>
+		<property name="ExperienceGain" value="850"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enUtilityMale4Radiated" extends="enUtilityMale4Feral">
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated"/>
+		<property name="HandItem" value="enHand_5295_015_xBxBAAA"/>
+		<property name="Archetype" value="en_utilityMale4Radiated"/>
+		<property name="PainResistPerHit" value=".9"/>
+		<property name="ExperienceGain" value="1360"/>
 		<effect_group name="Base Effects" id="regen5">
 			<passive_effect name="HealthMax" operation="perc_set" value="2.6,2.8"/>
 		</effect_group>
@@ -5367,7 +5457,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	</entity_class>	
 	
 	<entity_class name="enWastelandGiant" extends="EN_Zombie_Template_Giant">
-		<property name="Tags" value="entity,zombie,walker,umazombie,knockdown"/>
+		<property name="Tags" value="entity,zombie,walker,umazombie,enKnockdown25"/>
 		<property name="HandItem" value="enHand_60650_000_ACCCCCB"/>
 		<property name="Archetype" value="en_wastelandGiant"/>
 		<property name="SizeScale" value="0.97"/>
@@ -5993,7 +6083,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	</entity_class>
 	
 	<entity_class name="enBusinessmanBoss" extends="zombieTemplateMale">
-		<property name="Tags" value="entity,zombie,walker,feral,knockdown"/>
+		<property name="Tags" value="entity,zombie,walker,feral"/>
 		<property name="Mesh" value="#Entities/Zombies?Prefabs/ZSuit.prefab"/>
 		<property name="AvatarController" value="AvatarZombie01Controller"/>
 		<property name="ModelType" value="Standard"/>
@@ -6111,7 +6201,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 
 	<entity_class name="khzTemplateMale1" extends="zombieTemplateMale">
 		<property name="HideInSpawnMenu" value="true"/>
-		<!--<property name="Mesh" value="#Entities/Zombies?Zombies/zombie01Ragdoll.prefab" />-->
+		<property name="Prefab" value="NPC"/>
 		<property name="ModelType" value="ZombieUMA" />
 		<property name="PhysicsBody" value="zombieUMA" />
 		<property name="HasDeathAnim" value="false" />
@@ -6151,6 +6241,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 		<property name="SoundHurt" value="Enemies/Base_Zombie_Female/zombiefemalepain"/>
 		<property name="SoundAttack" value="Enemies/Base_Zombie_Female/zombiefemaleattack"/>
 		<property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemaledeath"/>
+		<property name="DanceType" value="2" />
 	</entity_class>
 	<entity_class name="khzTemplateFemale2" extends="khzTemplateFemale1">
 		<property name="HideInSpawnMenu" value="true"/>
@@ -6165,7 +6256,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 			
 	<!-- male with yellow mohawk and tshirt -->
 	<entity_class name="khzAiden" extends="khzTemplateMale1">
-		<property name="Tags" value="entity,zombie,walker" />
+		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="Archetype" value="KHz_Aiden" />
 		<property name="HandItem" value="meleeHandZombieStrong" />
 		<effect_group name="Base Effects">
@@ -6175,7 +6266,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	
 	<!-- old bald male asian with leather tunic -->
 	<entity_class name="khzChang" extends="khzTemplateMale1">
-		<property name="Tags" value="entity,zombie,walker" />
+		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="Archetype" value="KHz_Chang" />
 		<property name="HandItem" value="meleeHandZombieStrong" />
 		<effect_group name="Base Effects">
@@ -6185,7 +6276,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	
 	<!-- female wearing leather hood and long sleeves -->
 	<entity_class name="khzCharlotte" extends="khzTemplateFemale1">
-		<property name="Tags" value="entity,zombie,walker" />
+		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="HandItem" value="enHand_0907_020_xxxxxxx"/>
 		<property name="Archetype" value="KHz_Charlotte" />
 		<property name="WalkType" value="3"/>
@@ -6197,7 +6288,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	</entity_class>
 	
 	<entity_class name="khzCharlotteFeral" extends="khzCharlotte">
-		<property name="Tags" value="entity,zombie,walker,feral" />
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral" />
 		<property name="HandItem" value="enHand_1821_030_xxxxxxx"/>
 		<property name="Archetype" value="KHz_CharlotteFeral" />
 		<property name="PainResistPerHit" value="1.0"/>
@@ -6209,7 +6300,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	
 	<!-- male wearing cowboy hat and poncho -->
 	<entity_class name="khzClint" extends="khzTemplateMale2">
-		<property name="Tags" value="entity,zombie,walker" />
+		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="Archetype" value="KHz_Clint" />
 		<property name="HandItem" value="meleeHandZombieStrong" />
 		<property name="JumpMaxDistance" value="1.4, 1.5" />
@@ -6221,8 +6312,8 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	</entity_class>
 	
 	<!-- female wearing red tank top -->
-	<entity_class name="khzEmma" extends="EN_Zombie_Template_Female1">
-		<property name="Tags" value="entity,zombie,walker" />
+	<entity_class name="khzEmma" extends="khzTemplateFemale1">
+		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="HandItem" value="enHand_0907_020_xxxxxxx"/>
 		<property name="Archetype" value="KHz_Emma" />
 		<property name="WalkType" value="7"/>
@@ -6234,7 +6325,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	</entity_class>
 	
 	<entity_class name="khzEmmaFeral" extends="khzEmma">
-		<property name="Tags" value="entity,zombie,walker,feral" />
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral" />
 		<property name="HandItem" value="enHand_1821_030_xxxxxxx"/>
 		<property name="Archetype" value="KHz_EmmaFeral" />
 		<property name="PainResistPerHit" value="1.0"/>
@@ -6246,7 +6337,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	
 	<!-- larger female with dreadlocks and wearing kevlar vest and leg armor -->
 	<entity_class name="khzGabrielle" extends="khzTemplateFemale2">
-		<property name="Tags" value="entity,zombie,walker" />
+		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="Archetype" value="KHz_Gabrielle" />
 		<property name="HandItem" value="meleeHandZombieStrong" />
 		<property name="JumpMaxDistance" value=".5, .6" />
@@ -6257,14 +6348,14 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	
 	<!-- female wearing jacket -->
 	<entity_class name="khzGrace" extends="khzTemplateFemale1">
-		<property name="Tags" value="entity,zombie,walker" />
+		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="Archetype" value="KHz_Grace" />
 	</entity_class>
 	
 	<!-- old bearded male wearing cowboy hat and leather duster -->
 	<entity_class name="khzHank" extends="khzTemplateMale2">
 		<property name="Archetype" value="KHz_Hank" />
-		<property name="Tags" value="entity,zombie,walker" />
+		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="HandItem" value="meleeHandZombieStrong" />
 		<property name="JumpMaxDistance" value="1.4, 1.5" />
 		<property name="ExperienceGain" value="750" />
@@ -6276,7 +6367,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	
 	<!-- female wearing cowboy hat and jacket -->
 	<entity_class name="khzHelen" extends="khzTemplateFemale2">
-		<property name="Tags" value="entity,zombie,walker" />
+		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="Archetype" value="KHz_Helen" />
 		<property name="HandItem" value="meleeHandZombieStrong" />
 		<property name="JumpMaxDistance" value=".5, .6" />
@@ -6287,7 +6378,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	
 	<!-- male wearing mining helmet and devlar vest no shirt -->
 	<entity_class name="khzJack" extends="khzTemplateMale2">
-		<property name="Tags" value="entity,zombie,walker" />
+		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="Archetype" value="KHz_Jack" />
 		<property name="HandItem" value="meleeHandZombieStrong" />
 		<property name="JumpMaxDistance" value="1.4, 1.5" />
@@ -6300,7 +6391,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	
 	 <!-- bald male with mustache wearing metal chest armor, gloves, and boots -->
 	<entity_class name="khzJeff" extends="khzTemplateMale1">
-		<property name="Tags" value="entity,zombie,walker" />
+		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="Archetype" value="KHz_Jeff" />
 		<effect_group name="Base Effects">
 			<passive_effect name="PhysicalDamageResist" operation="base_set" value="30" />
@@ -6308,8 +6399,8 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	</entity_class>
 	
 	<!-- vanilla looking female wih long shirt and pants -->
-	<entity_class name="khzMaria" extends="EN_Zombie_Template_Female1">
-		<property name="Tags" value="entity,zombie,walker" />
+	<entity_class name="khzMaria" extends="khzTemplateFemale1">
+		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="HandItem" value="enHand_0907_020_xxxxxxx"/>
 		<property name="Archetype" value="KHz_Maria" />
 		<property name="PainResistPerHit" value=".7"/>
@@ -6320,7 +6411,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	</entity_class>
 	
 	<entity_class name="khzMariaFeral" extends="khzMaria">
-		<property name="Tags" value="entity,zombie,walker,feral" />
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral" />
 		<property name="HandItem" value="enHand_1821_030_xxxxxxx"/>
 		<property name="Archetype" value="KHz_MariaFeral" />
 		<property name="PainResistPerHit" value="1.0"/>
@@ -6332,7 +6423,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	
 	<!-- vanilla UMA male with long shirt, pants, and skull cap -->
 	<entity_class name="khzMiguel" extends="EN_Zombie_Template_Male2">
-		<property name="Tags" value="entity,zombie,walker" />
+		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="HandItem" value="enHand_1109_020_xxxxxxx"/>
 		<property name="Archetype" value="KHz_Miguel" />
 		<property name="PainResistPerHit" value=".7"/>
@@ -6344,7 +6435,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	</entity_class>
 	
 	<entity_class name="khzMiguelFeral" extends="khzMiguel">
-		<property name="Tags" value="entity,zombie,walker,feral" />
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral" />
 		<property name="HandItem" value="enHand_2227_030_xxxxxxx"/>
 		<property name="Archetype" value="KHz_MiguelFeral" />
 		<property name="PainResistPerHit" value="1.0"/>
@@ -6356,7 +6447,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	
 	<!-- slightly thick female with dreadlocks wearing kevlar leg armor -->
 	<entity_class name="khzRayah" extends="khzTemplateFemale1">
-		<property name="Tags" value="entity,zombie,walker" />
+		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="Archetype" value="KHz_Rayah" />
 		<effect_group name="Base Effects">
 			<passive_effect name="PhysicalDamageResist" operation="base_set" value="30" />
@@ -6365,13 +6456,13 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	
 	<!-- male wearing business suit -->
 	 <entity_class name="khzRichie" extends="khzTemplateMale1">
-		<property name="Tags" value="entity,zombie,walker" />
+		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="Archetype" value="KHz_Richie" />
 	</entity_class>
 	
 	<!-- female with afro wearing tank top and goth pants -->
 	<entity_class name="khzRoxy" extends="khzTemplateFemale1">
-		<property name="Tags" value="entity,zombie,walker" />
+		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="Archetype" value="KHz_Roxy" />
 		<effect_group name="Base Effects">
 			<passive_effect name="PhysicalDamageResist" operation="base_set" value="9" />
@@ -6380,7 +6471,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	
 	<!-- older male all armored up and also wearing footbal helmet -->
 	<entity_class name="khzVince" extends="khzTemplateMale1">
-		<property name="Tags" value="entity,zombie,walker" />
+		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="Archetype" value="KHz_Vince" />
 		<effect_group name="Base Effects">
 			<passive_effect name="PhysicalDamageResist" operation="base_set" value="30" />
@@ -6389,7 +6480,7 @@ By default, zombie HP has a 35% variation spread, varying from -20% to +15% of b
 	
 	<!-- male with afro wearing goggles, scrap chest armor, no shirt -->
 	<entity_class name="khzWillie" extends="khzTemplateMale1">
-		<property name="Tags" value="entity,zombie,walker" />
+		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="Archetype" value="KHz_Willie" />
 		<effect_group name="Base Effects">
 			<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />

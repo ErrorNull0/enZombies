@@ -320,8 +320,46 @@
 			</effect_group>
 		</buff>
 		
+<!--
+		BUFF PREFAB POSITIONING:
+		OFFSET
+		x: pos = up the arm toward shoulders, neg = down the arm toward fingers
+		y: pos = veritcal up/out along thumb
+		z: pos = away from side of zombie 
+		ROTATION
+		x: pos = rotate leftward along forearm as axis
+		y: pos = clockwise along thumb axis
+		z: pos = rotate toward player along hips axis
+		
+		
+		<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+			prefab="#Other/Items?Food/bottledriverwaterprefab.prefab" 
+			local_offset="-0.09,-0.05,-0.05" 
+			local_rotation="0,0,0" 
+			parent_transform="RightHand"
+		/>	
+-->
+
+		<!-- ********** HOLDING NAILGUN ********** -->
+		<buff name="UtilityFemale1Deco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Tools/nailgunPrefab.prefab" 
+					local_offset="-0.16,0.0,-0.02" 
+					local_rotation="-90,0,0" 
+					parent_transform="RightHand"
+				/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Tools/nailgunPrefab.prefab" 
+					local_offset="-0.14,0.0,-0.02" 
+					local_rotation="90,0,0" 
+					parent_transform="LeftHand"
+				/>
+			</effect_group>
+		</buff>
+				
 		<!-- ********** HOLDING HAMMER ********** -->
-		<buff name="Utility3Deco" hidden="true">
+		<buff name="UtilityMale3Deco" hidden="true">
 			<effect_group>
 				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
 					prefab="#Other/Items?tools/hammerprefab.prefab" 
@@ -330,6 +368,26 @@
 					parent_transform="RightHand"
 				/>
 			</effect_group>
+		</buff>
+		
+		<!-- ********** HOLDING BUCKET ********** -->
+		<buff name="UtilityMale4Deco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Tools/shovel_ironPrefab.prefab" 
+					local_offset="-0.05,-0.02,-0.04" 
+					local_rotation="0,0,45" 
+					parent_transform="RightHand"
+				/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Crafting/Metal/IronBucket.fbx" 
+					local_offset="-0.15,0.12,-0.17" 
+					local_rotation="135,0,330" 
+					parent_transform="LeftHand"
+				/>
+			</effect_group>
+			
+			
 		</buff>
 		
 		<!-- ********** HOLDING BONE KNIVES IN BOTH HANDS ********** -->
@@ -367,9 +425,6 @@
 				/>
 			</effect_group>
 		</buff>
-		
-		
-		
 		
 		
 		<!-- ********** Punk Male 1 - Knives ********** -->
@@ -509,33 +564,7 @@
 				/>
 			</effect_group>
 		</buff>
-		
-<!--
-		BUFF PREFAB POSITIONING:
-		OFFSET
-		x: pos = up the arm toward shoulders, neg = down the arm toward fingers
-		y: pos = veritcal up/out along thumb
-		z: pos = away from side of zombie 
-		ROTATION
-		x: pos = rotate leftward along forearm as axis
-		y: pos = clockwise along thumb axis
-		z: pos = rotate toward player along hips axis
-		
-		<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
-			prefab="#Other/Items?Crafting/Metal/IronBucket.fbx" 
-			local_offset="-0.15,0.12,-0.17" 
-			local_rotation="135,0,330" 
-			parent_transform="LeftHand"
-		/>
-		
-		<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
-			prefab="#Other/Items?Food/bottledriverwaterprefab.prefab" 
-			local_offset="-0.09,-0.05,-0.05" 
-			local_rotation="0,0,0" 
-			parent_transform="RightHand"
-		/>	
--->
-		
+				
 		<!-- ********** SNOW SANTA ********** -->
 		<buff name="Santa1Deco" hidden="true">
 			<effect_group>
@@ -695,10 +724,7 @@
 		
 		
 		
-		
-		
-		
-		
+
 		
 		<!-- ********** SCREEN EFFECT FOR GREEN SCREAMER'S SCREAM ********** -->
 		<buff name="buffScreamer3Scream" hidden="true">
@@ -736,9 +762,6 @@
 				<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Drunk"/>
 			</effect_group>
 		</buff>
-		
-
-		
 		
 		
 		<!-- ********** SCREEN EFFECT FOR FEMALE LAB CREATURES' SCREAM ********** -->
@@ -928,17 +951,13 @@
 		</buff>	
 		
 		
-		
-		
-		
-		
-		
 
+		<!-- testing out different prefabs as decos -->
 		<buff name="testDecos" hidden="true">
 			<effect_group>
 				
 				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Misc/torch_droppedPrefab.prefab" local_offset="-.1,0,0" local_rotation="0,0,-90" parent_transform="RightHand"/>
-			<!--
+				<!--
 				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Tools/torch02_droppedPrefab.prefab" local_offset="-.3,.25,0" local_rotation="0,0,-135" parent_transform="Head"/>
 				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="Entities/OutdoorDecor/cowSkullPrefab" local_offset="-.3,0,-.1" local_rotation="0,-45,90" parent_transform="Head"/>
 				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/Club/Club_Wood_BranchPrefab.prefab" local_offset="-.3,-.25,0" local_rotation="0,0,-45" parent_transform="Head"/>
@@ -948,29 +967,11 @@
 				-->
 			</effect_group>
 		</buff>
-
-
-
-
-		<buff name="buffReduceHpNormal" name_key="buffReduceHpNormalName" hidden="true">
-			<duration value="0"/>
-			<effect_group>
-				<passive_effect name="HealthLoss" operation="base_set" value="30"/>
-			</effect_group>
-		</buff>
-		<buff name="buffReduceHpStrong" name_key="buffReduceHpStrongName" hidden="true">
-			<duration value="0"/>
-			<effect_group>
-				<passive_effect name="HealthLoss" operation="base_set" value="60"/>
-			</effect_group>
-		</buff>
-
-
-
+		
 
 		<buff name="buffDanceFever">
 			<stack_type value="replace"/>
-			<duration value="10"/>
+			<duration value="5"/>
 			  <effect_group>
 				  <triggered_effect trigger="onSelfBuffStart" action="SetDancing" enabled="true" />
 				  <triggered_effect trigger="onSelfBuffRemove" action="SetDancing" enabled="false" />

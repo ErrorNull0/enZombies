@@ -1,9 +1,30 @@
 <config>
+
+<!--
+other textures to try:
+
+female_christa_head
+female_michonne_head
+male_lee_head
+male_luke_head
+male_pete_head
+male_skull_overlay		(head)
+unisex_face_paint01
+unisex_face_paint02
+unisex_tattoo_rose_arm
+unisex_tattoo_skull_arm
+unisex_tattoo_tribal_arm
+female_stockings		(legs)
+unisex_football_logo	(chest)
+
+-->
+
+
 	<append xpath="/archetypes">		
 		
-		<!-- Test Zombies -->
-		
-		<archetype name="en_testWhite" male="true" skin_color="255,255,255">
+		<!-- Test Zombies -->		
+
+		<archetype name="en_testWhite" skin_color="255,255,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face"><texture name="male_head" color="skin"/></part>
 				<part slot="eyes" layer="base" mesh="male_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
@@ -15,7 +36,7 @@
 			<dna><gene name="height" value="1.0"/></dna>
 		</archetype>
 		
-		<archetype name="en_testBlack" male="true" skin_color="0,0,0">
+		<archetype name="en_testBlack" skin_color="0,0,0">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face"><texture name="male_head" color="skin"/></part>
 				<part slot="eyes" layer="base" mesh="male_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
@@ -27,7 +48,7 @@
 			<dna><gene name="height" value="1.0"/></dna>
 		</archetype>
 
-		<archetype name="en_testRed" male="true" skin_color="255,0,0">
+		<archetype name="en_testRed" skin_color="255,0,0">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face"><texture name="male_head" color="skin"/></part>
 				<part slot="eyes" layer="base" mesh="male_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
@@ -39,7 +60,7 @@
 			<dna><gene name="height" value="1.0"/></dna>
 		</archetype>
 
-		<archetype name="en_testGreen" male="true" skin_color="0,255,0">
+		<archetype name="en_testGreen" skin_color="0,255,0">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face"><texture name="male_head" color="skin"/></part>
 				<part slot="eyes" layer="base" mesh="male_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
@@ -51,7 +72,7 @@
 			<dna><gene name="height" value="1.0"/></dna>
 		</archetype>
 		
-		<archetype name="en_testBlue" male="true" skin_color="0,0,255">
+		<archetype name="en_testBlue" skin_color="0,0,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face"><texture name="male_head" color="skin"/></part>
 				<part slot="eyes" layer="base" mesh="male_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
@@ -63,7 +84,7 @@
 			<dna><gene name="height" value="1.0"/></dna>
 		</archetype>
 		
-		<archetype name="en_testYellow" male="true" skin_color="255,255,0">
+		<archetype name="en_testYellow" skin_color="255,255,0">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face"><texture name="male_head" color="skin"/></part>
 				<part slot="eyes" layer="base" mesh="male_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
@@ -75,7 +96,7 @@
 			<dna><gene name="height" value="1.0"/></dna>
 		</archetype>
 		
-		<archetype name="en_testPurple" male="true" skin_color="128,0,255">
+		<archetype name="en_testPurple" skin_color="128,0,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face"><texture name="male_head" color="skin"/></part>
 				<part slot="eyes" layer="base" mesh="male_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
@@ -87,7 +108,7 @@
 			<dna><gene name="height" value="1.0"/></dna>
 		</archetype>
 		
-		<archetype name="en_testCyan" male="true" skin_color="0,255,255">
+		<archetype name="en_testCyan" skin_color="0,255,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face"><texture name="male_head" color="skin"/></part>
 				<part slot="eyes" layer="base" mesh="male_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
@@ -107,7 +128,7 @@
 		
 		<!-- ********** enZombies ********** -->
 	
-		<archetype name="en_biker1" male="true" hair_color="70,40,10" skin_color="150,210,255">
+		<archetype name="en_biker1" hair_color="70,40,10" skin_color="150,210,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -164,7 +185,7 @@
 			</dna>
 		</archetype>
 	
-		<archetype name="en_biker1Feral" male="true" hair_color="70,40,10" skin_color="160,210,255">
+		<archetype name="en_biker1Feral" hair_color="70,40,10" skin_color="160,210,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -226,7 +247,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_biker1Radiated" male="true" hair_color="70,40,10" skin_color="150,220,255">
+		<archetype name="en_biker1Radiated" hair_color="70,40,10" skin_color="150,220,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -288,7 +309,7 @@
 			</dna>
 		</archetype>
 	
-		<archetype name="en_biker2" male="true" hair_color="30,30,30" skin_color="160,200,255">
+		<archetype name="en_biker2" hair_color="30,30,30" skin_color="160,200,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -352,7 +373,7 @@
 			</dna>
 		</archetype>
 	
-		<archetype name="en_biker2Feral" male="true" hair_color="30,30,30" skin_color="170,200,255">
+		<archetype name="en_biker2Feral" hair_color="30,30,30" skin_color="170,200,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -421,7 +442,7 @@
 			</dna>
 		</archetype>
 	
-		<archetype name="en_biker2Radiated" male="true" hair_color="30,30,30" skin_color="160,210,255">
+		<archetype name="en_biker2Radiated" hair_color="30,30,30" skin_color="160,210,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -490,7 +511,7 @@
 			</dna>
 		</archetype>
 	
-		<archetype name="en_burntFemale1" male="true" hair_color="0,0,0" skin_color="120,95,95">
+		<archetype name="en_burntFemale1" hair_color="0,0,0" skin_color="120,95,95">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face_pretty">
 					<texture name="female_head_zombie" color="skin"/>
@@ -547,7 +568,7 @@
 			</dna>
 		</archetype>
 	
-		<archetype name="en_burntFemale1Feral" male="true" hair_color="0,0,0" skin_color="130,95,95">
+		<archetype name="en_burntFemale1Feral" hair_color="0,0,0" skin_color="130,95,95">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face_pretty">
 					<texture name="female_head_zombie" color="skin"/>
@@ -604,7 +625,7 @@
 			</dna>
 		</archetype>
 	
-		<archetype name="en_burntFemale1Radiated" male="true" hair_color="0,0,0" skin_color="120,105,95">
+		<archetype name="en_burntFemale1Radiated" hair_color="0,0,0" skin_color="120,105,95">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face_pretty">
 					<texture name="female_head_zombie" color="skin"/>
@@ -661,7 +682,7 @@
 			</dna>
 		</archetype>
 	
-		<archetype name="en_burntFemale2" male="true" hair_color="0,0,0" skin_color="100,70,70">
+		<archetype name="en_burntFemale2" hair_color="0,0,0" skin_color="100,70,70">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin"/>
@@ -719,7 +740,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_burntFemale2Feral" male="true" hair_color="0,0,0" skin_color="100,70,70">
+		<archetype name="en_burntFemale2Feral" hair_color="0,0,0" skin_color="100,70,70">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin"/>
@@ -777,7 +798,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_burntFemale2Radiated" male="true" hair_color="0,0,0" skin_color="90,80,70">
+		<archetype name="en_burntFemale2Radiated" hair_color="0,0,0" skin_color="90,80,70">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin"/>
@@ -835,7 +856,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_burntFemaleFlamer" male="true" hair_color="0,0,0" skin_color="40,20,10">
+		<archetype name="en_burntFemaleFlamer" hair_color="0,0,0" skin_color="40,20,10">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin"/>
@@ -875,7 +896,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_burntFemaleFlamerFeral" male="true" hair_color="0,0,0" skin_color="45,20,10">
+		<archetype name="en_burntFemaleFlamerFeral" hair_color="0,0,0" skin_color="45,20,10">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin"/>
@@ -917,7 +938,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_burntFemaleFlamerRadiated" male="true" hair_color="0,0,0" skin_color="40,30,10">
+		<archetype name="en_burntFemaleFlamerRadiated" hair_color="0,0,0" skin_color="40,30,10">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin"/>
@@ -959,7 +980,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_burntGiant" male="true" hair_color="0,0,0" skin_color="90,75,70">
+		<archetype name="en_burntGiant" hair_color="0,0,0" skin_color="90,75,70">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -1002,7 +1023,6 @@
 				</part>
 			</base_mesh_parts>
 			<dna>
-				<gene name="height" value="3.0"/>
 				<gene name="weight" value="1.2"/>
 				<gene name="muscle" value="1.3"/>
 				<gene name="gluteusSize" value="1.3"/>			<!-- butt size -->
@@ -1025,7 +1045,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_burntGoblin1" male="true" hair_color="140,110,80" skin_color="100,85,80">
+		<archetype name="en_burntGoblin1" hair_color="140,110,80" skin_color="100,85,80">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head" color="skin"/>
@@ -1100,7 +1120,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_burntGoblin2" male="true" hair_color="60,40,20" skin_color="90,80,75">
+		<archetype name="en_burntGoblin2" hair_color="60,40,20" skin_color="90,80,75">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head" color="skin"/>
@@ -1174,7 +1194,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_burntGoblin3" male="true" hair_color="50,60,40" skin_color="110,95,90">
+		<archetype name="en_burntGoblin3" hair_color="50,60,40" skin_color="110,95,90">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -1247,7 +1267,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_burntMale1" male="true" hair_color="0,0,0" skin_color="120,95,95">
+		<archetype name="en_burntMale1" hair_color="0,0,0" skin_color="120,95,95">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head" color="skin"/>
@@ -1302,7 +1322,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_burntMale1Feral" male="true" hair_color="0,0,0" skin_color="130,95,95">
+		<archetype name="en_burntMale1Feral" hair_color="0,0,0" skin_color="130,95,95">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head" color="skin"/>
@@ -1357,7 +1377,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_burntMale1Radiated" male="true" hair_color="0,0,0" skin_color="120,105,95">
+		<archetype name="en_burntMale1Radiated" hair_color="0,0,0" skin_color="120,105,95">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head" color="skin"/>
@@ -1412,7 +1432,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_burntMale2" male="true" hair_color="0,0,0" skin_color="100,70,70">
+		<archetype name="en_burntMale2" hair_color="0,0,0" skin_color="100,70,70">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head" color="skin"/>
@@ -1467,7 +1487,7 @@
 			</dna>
 		</archetype>
 	
-		<archetype name="en_burntMale2Feral" male="true" hair_color="0,0,0" skin_color="110,70,70">
+		<archetype name="en_burntMale2Feral" hair_color="0,0,0" skin_color="110,70,70">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head" color="skin"/>
@@ -1522,7 +1542,7 @@
 			</dna>
 		</archetype>
 	
-		<archetype name="en_burntMale2Radiated" male="true" hair_color="0,0,0" skin_color="100,80,70">
+		<archetype name="en_burntMale2Radiated" hair_color="0,0,0" skin_color="100,80,70">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head" color="skin"/>
@@ -1577,7 +1597,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_burntMaleFlamer" male="true" hair_color="0,0,0" skin_color="40,20,10">
+		<archetype name="en_burntMaleFlamer" hair_color="0,0,0" skin_color="40,20,10">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -1636,7 +1656,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_burntMaleFlamerFeral" male="true" hair_color="0,0,0" skin_color="50,20,10">
+		<archetype name="en_burntMaleFlamerFeral" hair_color="0,0,0" skin_color="50,20,10">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -1695,7 +1715,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_burntMaleFlamerRadiated" male="true" hair_color="0,0,0" skin_color="40,30,10">
+		<archetype name="en_burntMaleFlamerRadiated" hair_color="0,0,0" skin_color="40,30,10">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -1754,7 +1774,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_businessman1" male="true" hair_color="30,30,30" skin_color="150,210,255">
+		<archetype name="en_businessman1" hair_color="30,30,30" skin_color="150,210,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -1808,7 +1828,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_businessman1Feral" male="true" hair_color="30,30,30" skin_color="160,210,255">
+		<archetype name="en_businessman1Feral" hair_color="30,30,30" skin_color="160,210,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -1865,7 +1885,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_businessman1Radiated" male="true" hair_color="30,30,30" skin_color="150,220,255">
+		<archetype name="en_businessman1Radiated" hair_color="30,30,30" skin_color="150,220,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -1922,7 +1942,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_businessman2" male="true" hair_color="60,50,40" skin_color="160,210,230">
+		<archetype name="en_businessman2" hair_color="60,50,40" skin_color="160,210,230">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -1978,7 +1998,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_businessman2Feral" male="true" hair_color="60,50,40" skin_color="170,210,230">
+		<archetype name="en_businessman2Feral" hair_color="60,50,40" skin_color="170,210,230">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -2038,7 +2058,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_businessman2Radiated" male="true" hair_color="60,50,40" skin_color="160,220,230">
+		<archetype name="en_businessman2Radiated" hair_color="60,50,40" skin_color="160,220,230">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -2098,7 +2118,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_businessman3" male="true" hair_color="170,160,140" skin_color="180,250,240">
+		<archetype name="en_businessman3" hair_color="170,160,140" skin_color="180,250,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -2151,7 +2171,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_businessman3Feral" male="true" hair_color="170,160,140" skin_color="190,250,240">
+		<archetype name="en_businessman3Feral" hair_color="170,160,140" skin_color="190,250,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -2207,7 +2227,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_businessman3Radiated" male="true" hair_color="170,160,140" skin_color="180,260,240">
+		<archetype name="en_businessman3Radiated" hair_color="170,160,140" skin_color="180,260,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -2263,7 +2283,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_businessman4" male="true" hair_color="60,55,50" skin_color="180,255,240">
+		<archetype name="en_businessman4" hair_color="60,55,50" skin_color="180,255,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -2319,7 +2339,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_businessman4Feral" male="true" hair_color="60,55,50" skin_color="190,255,240">
+		<archetype name="en_businessman4Feral" hair_color="60,55,50" skin_color="190,255,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -2378,7 +2398,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_businessman4Radiated" male="true" hair_color="60,55,50" skin_color="170,255,230">
+		<archetype name="en_businessman4Radiated" hair_color="60,55,50" skin_color="170,255,230">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -2437,7 +2457,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_businesswoman1" male="true" hair_color="100,80,60" skin_color="160,200,255">
+		<archetype name="en_businesswoman1" hair_color="100,80,60" skin_color="160,200,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_asian" color="skin"/>
@@ -2497,7 +2517,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_businesswoman1Feral" male="true" hair_color="100,80,60" skin_color="170,200,255">
+		<archetype name="en_businesswoman1Feral" hair_color="100,80,60" skin_color="170,200,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_asian" color="skin"/>
@@ -2560,7 +2580,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_businesswoman1Radiated" male="true" hair_color="100,80,60" skin_color="160,210,255">
+		<archetype name="en_businesswoman1Radiated" hair_color="100,80,60" skin_color="160,210,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_asian" color="skin"/>
@@ -2623,7 +2643,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_businesswoman2" male="true" hair_color="160,140,120" skin_color="160,200,255">
+		<archetype name="en_businesswoman2" hair_color="160,140,120" skin_color="160,200,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_asian" color="skin"/>
@@ -2682,7 +2702,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_businesswoman2Feral" male="true" hair_color="160,140,120" skin_color="170,200,255">
+		<archetype name="en_businesswoman2Feral" hair_color="160,140,120" skin_color="170,200,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_asian" color="skin"/>
@@ -2744,7 +2764,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_businesswoman2Radiated" male="true" hair_color="160,140,120" skin_color="160,210,255">
+		<archetype name="en_businesswoman2Radiated" hair_color="160,140,120" skin_color="160,210,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_asian" color="skin"/>
@@ -2806,7 +2826,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertCowboy1" male="true" hair_color="120,112,12" skin_color="110,130,130">
+		<archetype name="en_desertCowboy1" hair_color="120,112,12" skin_color="110,130,130">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -2869,7 +2889,7 @@
 			</dna>
 		</archetype>
 	
-		<archetype name="en_desertCowboy1Feral" male="true" hair_color="120,112,12" skin_color="120,130,130">
+		<archetype name="en_desertCowboy1Feral" hair_color="120,112,12" skin_color="120,130,130">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -2935,7 +2955,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertCowboy1Radiated" male="true" hair_color="120,112,12" skin_color="110,140,130">
+		<archetype name="en_desertCowboy1Radiated" hair_color="120,112,12" skin_color="110,140,130">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -3001,7 +3021,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertCowboy2" male="true" hair_color="120,112,12" skin_color="100,130,120">
+		<archetype name="en_desertCowboy2" hair_color="120,112,12" skin_color="100,130,120">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -3060,7 +3080,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertCowboy2Feral" male="true" hair_color="120,112,12" skin_color="110,130,120">
+		<archetype name="en_desertCowboy2Feral" hair_color="120,112,12" skin_color="110,130,120">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -3121,7 +3141,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertCowboy2Radiated" male="true" hair_color="120,112,12" skin_color="100,140,120">
+		<archetype name="en_desertCowboy2Radiated" hair_color="120,112,12" skin_color="100,140,120">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -3182,7 +3202,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertCowboy3" male="true" hair_color="120,112,12" skin_color="110,130,130">
+		<archetype name="en_desertCowboy3" hair_color="120,112,12" skin_color="110,130,130">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -3247,7 +3267,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertCowboy3Feral" male="true" hair_color="120,112,12" skin_color="120,130,130">
+		<archetype name="en_desertCowboy3Feral" hair_color="120,112,12" skin_color="120,130,130">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -3315,7 +3335,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertCowboy3Radiated" male="true" hair_color="120,112,12" skin_color="110,140,130">
+		<archetype name="en_desertCowboy3Radiated" hair_color="120,112,12" skin_color="110,140,130">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -3383,7 +3403,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertCowgirl1" male="false" hair_color="35,30,25" skin_color="180,230,220">
+		<archetype name="en_desertCowgirl1" hair_color="35,30,25" skin_color="180,230,220">
 			<base_mesh_parts>
 				<part slot="head" mesh="female_base_face" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -3445,7 +3465,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertCowgirl1Feral" male="false" hair_color="35,30,25" skin_color="190,230,220">
+		<archetype name="en_desertCowgirl1Feral" hair_color="35,30,25" skin_color="190,230,220">
 			<base_mesh_parts>
 				<part slot="head" mesh="female_base_face" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -3510,7 +3530,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertCowgirl1Radiated" male="false" hair_color="35,30,25" skin_color="180,240,220">
+		<archetype name="en_desertCowgirl1Radiated" hair_color="35,30,25" skin_color="180,240,220">
 			<base_mesh_parts>
 				<part slot="head" mesh="female_base_face" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -3575,7 +3595,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertCowgirl2" male="false" hair_color="35,30,25" skin_color="180,230,220">
+		<archetype name="en_desertCowgirl2" hair_color="35,30,25" skin_color="180,230,220">
 			<base_mesh_parts>
 				<part slot="head" mesh="female_base_face_pretty" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -3640,7 +3660,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertCowgirl2Feral" male="false" hair_color="35,30,25" skin_color="190,230,220">
+		<archetype name="en_desertCowgirl2Feral" hair_color="35,30,25" skin_color="190,230,220">
 			<base_mesh_parts>
 				<part slot="head" mesh="female_base_face_pretty" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -3708,7 +3728,7 @@
 			</dna>
 		</archetype>
 
-		<archetype name="en_desertCowgirl2Radiated" male="false" hair_color="35,30,25" skin_color="180,240,220">
+		<archetype name="en_desertCowgirl2Radiated" hair_color="35,30,25" skin_color="180,240,220">
 			<base_mesh_parts>
 				<part slot="head" mesh="female_base_face_pretty" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -3776,7 +3796,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertFemale1" male="false" hair_color="40,30,20" skin_color="180,230,220">
+		<archetype name="en_desertFemale1" hair_color="40,30,20" skin_color="180,230,220">
 			<base_mesh_parts>
 				<part slot="head" mesh="female_base_face_pretty" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -3834,7 +3854,7 @@
 			</dna>
 		</archetype>
 	
-		<archetype name="en_desertFemale1Feral" male="false" hair_color="255,255,255" skin_color="190,230,220">
+		<archetype name="en_desertFemale1Feral" hair_color="255,255,255" skin_color="190,230,220">
 			<base_mesh_parts>
 				<part slot="head" mesh="female_base_face_pretty" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -3897,7 +3917,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertFemale1Radiated" male="false" hair_color="255,255,255" skin_color="180,240,220">
+		<archetype name="en_desertFemale1Radiated" hair_color="255,255,255" skin_color="180,240,220">
 			<base_mesh_parts>
 				<part slot="head" mesh="female_base_face_pretty" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -3960,7 +3980,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertFemale2" male="false" hair_color="90,70,30" skin_color="180,230,220">
+		<archetype name="en_desertFemale2" hair_color="90,70,30" skin_color="180,230,220">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin"/>
@@ -4021,7 +4041,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertFemale2Feral" male="false" hair_color="90,70,30" skin_color="190,230,220">
+		<archetype name="en_desertFemale2Feral" hair_color="90,70,30" skin_color="190,230,220">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin"/>
@@ -4087,7 +4107,7 @@
 		</archetype>
 		
 
-		<archetype name="en_desertFemale2Radiated" male="false" hair_color="90,70,3" skin_color="180,240,220">
+		<archetype name="en_desertFemale2Radiated" hair_color="90,70,3" skin_color="180,240,220">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin"/>
@@ -4152,7 +4172,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertFemale3" male="false" hair_color="60,50,40" skin_color="150,190,190">
+		<archetype name="en_desertFemale3" hair_color="60,50,40" skin_color="150,190,190">
 			<base_mesh_parts>
 				<part slot="head" mesh="female_base_face_pretty" layer="base" >
 					<texture name="female_head_asian" color="skin" />
@@ -4211,7 +4231,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertFemale3Feral" male="false" hair_color="60,50,40" skin_color="160,190,190">
+		<archetype name="en_desertFemale3Feral" hair_color="60,50,40" skin_color="160,190,190">
 			<base_mesh_parts>
 				<part slot="head" mesh="female_base_face_pretty" layer="base" >
 					<texture name="female_head_asian" color="skin" />
@@ -4273,7 +4293,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertFemale3Radiated" male="false" hair_color="60,50,40" skin_color="150,200,190">
+		<archetype name="en_desertFemale3Radiated" hair_color="60,50,40" skin_color="150,200,190">
 			<base_mesh_parts>
 				<part slot="head" mesh="female_base_face_pretty" layer="base" >
 					<texture name="female_head_asian" color="skin" />
@@ -4335,7 +4355,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertFemale4" male="false" hair_color="20,15,10" skin_color="130,160,170">
+		<archetype name="en_desertFemale4" hair_color="20,15,10" skin_color="130,160,170">
 			<base_mesh_parts>
 				<part slot="head" mesh="female_base_face" layer="base" >
 					<texture name="female_head_asian" color="skin" />
@@ -4405,7 +4425,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertFemale4Feral" male="false" hair_color="20,15,10" skin_color="140,160,170">
+		<archetype name="en_desertFemale4Feral" hair_color="20,15,10" skin_color="140,160,170">
 			<base_mesh_parts>
 				<part slot="head" mesh="female_base_face" layer="base" >
 					<texture name="female_head_asian" color="skin" />
@@ -4476,7 +4496,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertFemale4Radiated" male="false" hair_color="20,15,10" skin_color="130,170,170">
+		<archetype name="en_desertFemale4Radiated" hair_color="20,15,10" skin_color="130,170,170">
 			<base_mesh_parts>
 				<part slot="head" mesh="female_base_face" layer="base" >
 					<texture name="female_head_asian" color="skin" />
@@ -4547,7 +4567,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertGiant" male="true" hair_color="50,45,40" skin_color="110,130,130">
+		<archetype name="en_desertGiant" hair_color="50,45,40" skin_color="110,130,130">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -4615,7 +4635,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertGoblin1" male="true" hair_color="140,110,80" skin_color="90,110,110">
+		<archetype name="en_desertGoblin1" hair_color="140,110,80" skin_color="90,110,110">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head" color="skin"/>
@@ -4689,7 +4709,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertGoblin2" male="true" hair_color="30,20,10" skin_color="110,130,130">
+		<archetype name="en_desertGoblin2" hair_color="30,20,10" skin_color="110,130,130">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head" color="skin"/>
@@ -4766,7 +4786,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertGoblin3" male="true" hair_color="15,15,15" skin_color="130,150,150">
+		<archetype name="en_desertGoblin3" hair_color="15,15,15" skin_color="130,150,150">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -4839,7 +4859,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertMale1" male="true" hair_color="120,112,12" skin_color="110,130,130">
+		<archetype name="en_desertMale1" hair_color="120,112,12" skin_color="110,130,130">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_asian_face">
 					<texture name="male_head" color="skin"/>
@@ -4892,7 +4912,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertMale1Feral" male="true" hair_color="120,112,12" skin_color="120,130,130">
+		<archetype name="en_desertMale1Feral" hair_color="120,112,12" skin_color="120,130,130">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_asian_face">
 					<texture name="male_head" color="skin"/>
@@ -4948,7 +4968,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertMale1Radiated" male="true" hair_color="120,112,12" skin_color="110,140,130">
+		<archetype name="en_desertMale1Radiated" hair_color="120,112,12" skin_color="110,140,130">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_asian_face">
 					<texture name="male_head" color="skin"/>
@@ -5004,7 +5024,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertMale2" male="true" hair_color="60,50,40" skin_color="110,130,130">
+		<archetype name="en_desertMale2" hair_color="60,50,40" skin_color="110,130,130">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -5060,7 +5080,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertMale2Feral" male="true" hair_color="60,50,40" skin_color="120,130,130">
+		<archetype name="en_desertMale2Feral" hair_color="60,50,40" skin_color="120,130,130">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -5119,7 +5139,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertMale2Radiated" male="true" hair_color="60,50,40" skin_color="110,140,130">
+		<archetype name="en_desertMale2Radiated" hair_color="60,50,40" skin_color="110,140,130">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -5178,7 +5198,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertMale3" male="true" hair_color="60,50,40" skin_color="125,145,145">
+		<archetype name="en_desertMale3" hair_color="60,50,40" skin_color="125,145,145">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_old" color="skin"/>
@@ -5243,7 +5263,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertMale3Feral" male="true" hair_color="60,50,40" skin_color="135,145,145">
+		<archetype name="en_desertMale3Feral" hair_color="60,50,40" skin_color="135,145,145">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_old" color="skin"/>
@@ -5312,7 +5332,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertMale3Radiated" male="true" hair_color="60,50,40" skin_color="125,155,145">
+		<archetype name="en_desertMale3Radiated" hair_color="60,50,40" skin_color="125,155,145">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_old" color="skin"/>
@@ -5381,7 +5401,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertMale4" male="true" hair_color="50,40,30" skin_color="125,145,145">
+		<archetype name="en_desertMale4" hair_color="50,40,30" skin_color="125,145,145">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_asian_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -5444,7 +5464,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertMale4Feral" male="true" hair_color="50,40,30" skin_color="135,145,145">
+		<archetype name="en_desertMale4Feral" hair_color="50,40,30" skin_color="135,145,145">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_asian_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -5510,7 +5530,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertMale4Radiated" male="true" hair_color="50,40,30" skin_color="125,155,145">
+		<archetype name="en_desertMale4Radiated" hair_color="50,40,30" skin_color="125,155,145">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_asian_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -5576,7 +5596,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertMiner1" male="true" hair_color="40,30,20" skin_color="110,130,130">
+		<archetype name="en_desertMiner1" hair_color="40,30,20" skin_color="110,130,130">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_asian_face">
 					<texture name="male_head" color="skin"/>
@@ -5643,7 +5663,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertMiner1Feral" male="true" hair_color="40,30,20" skin_color="120,130,130">
+		<archetype name="en_desertMiner1Feral" hair_color="40,30,20" skin_color="120,130,130">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_asian_face">
 					<texture name="male_head" color="skin"/>
@@ -5713,7 +5733,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertMiner1Radiated" male="true" hair_color="40,30,20" skin_color="110,140,130">
+		<archetype name="en_desertMiner1Radiated" hair_color="40,30,20" skin_color="110,140,130">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_asian_face">
 					<texture name="male_head" color="skin"/>
@@ -5783,7 +5803,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertMiner2" male="true" hair_color="140,130,120" skin_color="140,176,170">
+		<archetype name="en_desertMiner2" hair_color="140,130,120" skin_color="140,176,170">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_asian_face">
 					<texture name="male_head" color="skin"/>
@@ -5854,7 +5874,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertMiner2Feral" male="true" hair_color="140,130,120" skin_color="150,176,170">
+		<archetype name="en_desertMiner2Feral" hair_color="140,130,120" skin_color="150,176,170">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_asian_face">
 					<texture name="male_head" color="skin"/>
@@ -5928,7 +5948,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertMiner2Radiated" male="true" hair_color="140,130,120" skin_color="140,186,170">
+		<archetype name="en_desertMiner2Radiated" hair_color="140,130,120" skin_color="140,186,170">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_asian_face">
 					<texture name="male_head" color="skin"/>
@@ -6002,7 +6022,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertMiner3" male="true" hair_color="70,60,50" skin_color="120,150,150">
+		<archetype name="en_desertMiner3" hair_color="70,60,50" skin_color="120,150,150">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_asian_face">
 					<texture name="male_head" color="skin"/>
@@ -6074,7 +6094,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertMiner3Feral" male="true" hair_color="70,60,50" skin_color="130,150,150">
+		<archetype name="en_desertMiner3Feral" hair_color="70,60,50" skin_color="130,150,150">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_asian_face">
 					<texture name="male_head" color="skin"/>
@@ -6148,7 +6168,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertMiner3Radiated" male="true" hair_color="70,60,50" skin_color="120,160,150">
+		<archetype name="en_desertMiner3Radiated" hair_color="70,60,50" skin_color="120,160,150">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_asian_face">
 					<texture name="male_head" color="skin"/>
@@ -6222,7 +6242,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertOldtimer1" male="true" hair_color="150,140,130" skin_color="170,200,190">
+		<archetype name="en_desertOldtimer1" hair_color="150,140,130" skin_color="170,200,190">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_old" color="skin"/>
@@ -6290,7 +6310,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertOldtimer1Feral" male="true" hair_color="150,140,130" skin_color="180,200,190">
+		<archetype name="en_desertOldtimer1Feral" hair_color="150,140,130" skin_color="180,200,190">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_old" color="skin"/>
@@ -6361,7 +6381,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_desertOldtimer1Radiated" male="true" hair_color="150,140,130" skin_color="170,210,190">
+		<archetype name="en_desertOldtimer1Radiated" hair_color="150,140,130" skin_color="170,210,190">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_old" color="skin"/>
@@ -6432,7 +6452,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_DesertSpider" male="true" hair_color="20,15,5" skin_color="90,110,110">
+		<archetype name="en_DesertSpider" hair_color="20,15,5" skin_color="90,110,110">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="130,180,180"/>
@@ -6490,7 +6510,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_DesertSpiderFeral" male="true" hair_color="20,15,5" skin_color="100,110,110">
+		<archetype name="en_DesertSpiderFeral" hair_color="20,15,5" skin_color="100,110,110">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="130,180,180"/>
@@ -6551,7 +6571,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_DesertSpiderRadiated" male="true" hair_color="20,15,5" skin_color="90,120,110">
+		<archetype name="en_DesertSpiderRadiated" hair_color="20,15,5" skin_color="90,120,110">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="130,180,180"/>
@@ -6612,7 +6632,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_farmerFemale1" male="true" hair_color="80,70,60" skin_color="160,200,255">
+		<archetype name="en_farmerFemale1" hair_color="80,70,60" skin_color="160,200,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face" >
 					<texture name="female_head_asian" color="skin" />
@@ -6675,7 +6695,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_farmerFemale1Feral" male="true" hair_color="80,70,60" skin_color="170,200,255">
+		<archetype name="en_farmerFemale1Feral" hair_color="80,70,60" skin_color="170,200,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face" >
 					<texture name="female_head_asian" color="skin" />
@@ -6740,7 +6760,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_farmerFemale1Radiated" male="true" hair_color="80,70,60" skin_color="160,210,255">
+		<archetype name="en_farmerFemale1Radiated" hair_color="80,70,60" skin_color="160,210,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face" >
 					<texture name="female_head_asian" color="skin" />
@@ -6810,7 +6830,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_farmerFemale2" male="true" hair_color="80,70,60" skin_color="160,200,255">
+		<archetype name="en_farmerFemale2" hair_color="80,70,60" skin_color="160,200,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face_pretty" >
 					<texture name="female_head_zombie" color="skin" />
@@ -6880,7 +6900,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_farmerFemale2Feral" male="true" hair_color="80,70,60" skin_color="170,200,255">
+		<archetype name="en_farmerFemale2Feral" hair_color="80,70,60" skin_color="170,200,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face_pretty" >
 					<texture name="female_head_zombie" color="skin" />
@@ -6954,7 +6974,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_farmerFemale2Radiated" male="true" hair_color="80,70,60" skin_color="160,210,255">
+		<archetype name="en_farmerFemale2Radiated" hair_color="80,70,60" skin_color="160,210,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face_pretty" >
 					<texture name="female_head_zombie" color="skin" />
@@ -7028,7 +7048,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_farmerFemale3" male="true" hair_color="50,40,30" skin_color="150,210,255">
+		<archetype name="en_farmerFemale3" hair_color="50,40,30" skin_color="150,210,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face" >
 					<texture name="female_head_asian" color="skin" />
@@ -7091,7 +7111,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_farmerFemale3Feral" male="true" hair_color="50,40,30" skin_color="160,210,255">
+		<archetype name="en_farmerFemale3Feral" hair_color="50,40,30" skin_color="160,210,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face" >
 					<texture name="female_head_asian" color="skin" />
@@ -7157,7 +7177,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_farmerFemale3Radiated" male="true" hair_color="50,40,30" skin_color="150,220,255">
+		<archetype name="en_farmerFemale3Radiated" hair_color="50,40,30" skin_color="150,220,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face" >
 					<texture name="female_head_asian" color="skin" />
@@ -7223,7 +7243,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_farmerMale1" male="true" hair_color="30,30,30" skin_color="150,210,255">
+		<archetype name="en_farmerMale1" hair_color="30,30,30" skin_color="150,210,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_old" color="skin"/>
@@ -7280,7 +7300,7 @@
 			</dna>
 		</archetype>
 	
-		<archetype name="en_farmerMale1Feral" male="true" hair_color="30,30,30" skin_color="160,210,255">
+		<archetype name="en_farmerMale1Feral" hair_color="30,30,30" skin_color="160,210,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_old" color="skin"/>
@@ -7339,7 +7359,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_farmerMale1Radiated" male="true" hair_color="30,30,30" skin_color="150,220,255">
+		<archetype name="en_farmerMale1Radiated" hair_color="30,30,30" skin_color="150,220,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_old" color="skin"/>
@@ -7398,7 +7418,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_farmerMale2" male="true" hair_color="30,30,30" skin_color="160,200,255">
+		<archetype name="en_farmerMale2" hair_color="30,30,30" skin_color="160,200,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_old" color="skin"/>
@@ -7455,7 +7475,7 @@
 			</dna>
 		</archetype>
 	
-		<archetype name="en_farmerMale2Feral" male="true" hair_color="30,30,30" skin_color="170,200,255">
+		<archetype name="en_farmerMale2Feral" hair_color="30,30,30" skin_color="170,200,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_old" color="skin"/>
@@ -7515,7 +7535,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_farmerMale2Radiated" male="true" hair_color="30,30,30" skin_color="160,210,255">
+		<archetype name="en_farmerMale2Radiated" hair_color="30,30,30" skin_color="160,210,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_old" color="skin"/>
@@ -7575,7 +7595,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_footballMale1" male="true" hair_color="70,40,10" skin_color="160,200,255">
+		<archetype name="en_footballMale1" hair_color="70,40,10" skin_color="160,200,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -7630,7 +7650,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_footballMale1Feral" male="true" hair_color="70,40,10" skin_color="170,200,255">
+		<archetype name="en_footballMale1Feral" hair_color="70,40,10" skin_color="170,200,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -7689,7 +7709,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_footballMale1Radiated" male="true" hair_color="70,40,10" skin_color="160,210,255">
+		<archetype name="en_footballMale1Radiated" hair_color="70,40,10" skin_color="160,210,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -7748,7 +7768,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_footballMale2" male="true" hair_color="70,40,10" skin_color="165,205,245">
+		<archetype name="en_footballMale2" hair_color="70,40,10" skin_color="165,205,245">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_asian_face">
 					<texture name="male_head" color="skin"/>
@@ -7803,7 +7823,7 @@
 			</dna>
 		</archetype>
 	
-		<archetype name="en_footballMale2Feral" male="true" hair_color="70,40,10" skin_color="175,205,245">
+		<archetype name="en_footballMale2Feral" hair_color="70,40,10" skin_color="175,205,245">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_asian_face">
 					<texture name="male_head" color="skin"/>
@@ -7862,7 +7882,7 @@
 			</dna>
 		</archetype>
 
-		<archetype name="en_footballMale2Radiated" male="true" hair_color="70,40,10" skin_color="165,215,245">
+		<archetype name="en_footballMale2Radiated" hair_color="70,40,10" skin_color="165,215,245">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_asian_face">
 					<texture name="male_head" color="skin"/>
@@ -7921,7 +7941,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestFemale1" male="false" hair_color="100,70,10" skin_color="180,230,220">
+		<archetype name="en_forestFemale1" hair_color="100,70,10" skin_color="180,230,220">
 			<base_mesh_parts>
 				
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
@@ -7981,7 +8001,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestFemale1Feral" male="false" hair_color="100,70,10" skin_color="190,230,220">
+		<archetype name="en_forestFemale1Feral" hair_color="100,70,10" skin_color="190,230,220">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -8043,7 +8063,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestFemale1Radiated" male="false" hair_color="100,70,10" skin_color="180,240,220">
+		<archetype name="en_forestFemale1Radiated" hair_color="100,70,10" skin_color="180,240,220">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -8105,7 +8125,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestFemale2" male="false" hair_color="30,15,0" skin_color="180,230,220">
+		<archetype name="en_forestFemale2" hair_color="30,15,0" skin_color="180,230,220">
 			<base_mesh_parts>
 				<part mesh="female_base_face" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -8164,7 +8184,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestFemale2Feral" male="false" hair_color="30,15,0" skin_color="190,230,220">
+		<archetype name="en_forestFemale2Feral" hair_color="30,15,0" skin_color="190,230,220">
 			<base_mesh_parts>
 				<part mesh="female_base_face" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -8227,7 +8247,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestFemale2Radiated" male="false" hair_color="30,15,0" skin_color="180,240,220">
+		<archetype name="en_forestFemale2Radiated" hair_color="30,15,0" skin_color="180,240,220">
 			<base_mesh_parts>
 				<part mesh="female_base_face" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -8290,7 +8310,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestFemale3" male="false" hair_color="40,30,20" skin_color="180,230,220">
+		<archetype name="en_forestFemale3" hair_color="40,30,20" skin_color="180,230,220">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_asian" color="skin" />
@@ -8351,7 +8371,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestFemale3Feral" male="false" hair_color="40,30,20" skin_color="190,230,220">
+		<archetype name="en_forestFemale3Feral" hair_color="40,30,20" skin_color="190,230,220">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_asian" color="skin" />
@@ -8416,7 +8436,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestFemale3Radiated" male="false" hair_color="40,30,20" skin_color="180,240,220">
+		<archetype name="en_forestFemale3Radiated" hair_color="40,30,20" skin_color="180,240,220">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_asian" color="skin" />
@@ -8481,7 +8501,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestFemale4" male="false" hair_color="130,90,50" skin_color="190,220,210">
+		<archetype name="en_forestFemale4" hair_color="130,90,50" skin_color="190,220,210">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face_pretty" >
 					<texture name="female_head_zombie" color="skin" />
@@ -8547,7 +8567,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestFemale4Feral" male="false" hair_color="130,90,50" skin_color="200,220,210">
+		<archetype name="en_forestFemale4Feral" hair_color="130,90,50" skin_color="200,220,210">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face_pretty" >
 					<texture name="female_head_zombie" color="skin" />
@@ -8616,7 +8636,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestFemale4Radiated" male="false" hair_color="130,90,50" skin_color="190,230,210">
+		<archetype name="en_forestFemale4Radiated" hair_color="130,90,50" skin_color="190,230,210">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face_pretty" >
 					<texture name="female_head_zombie" color="skin" />
@@ -8685,7 +8705,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestFemale5" male="false" hair_color="150,110,90" skin_color="180,230,210">
+		<archetype name="en_forestFemale5" hair_color="150,110,90" skin_color="180,230,210">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face_pretty" >
 					<texture name="female_head_asian" color="skin" />
@@ -8751,7 +8771,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestFemale5Feral" male="false" hair_color="150,110,90" skin_color="190,230,210">
+		<archetype name="en_forestFemale5Feral" hair_color="150,110,90" skin_color="190,230,210">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face_pretty" >
 					<texture name="female_head_asian" color="skin" />
@@ -8821,7 +8841,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestFemale5Radiated" male="false" hair_color="150,110,90" skin_color="180,240,210">
+		<archetype name="en_forestFemale5Radiated" hair_color="150,110,90" skin_color="180,240,210">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face_pretty" >
 					<texture name="female_head_asian" color="skin" />
@@ -8891,7 +8911,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestGoblin1" male="true" hair_color="110,90,15" skin_color="70,100,70">
+		<archetype name="en_forestGoblin1" hair_color="110,90,15" skin_color="70,100,70">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head" color="skin"/>
@@ -8961,7 +8981,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestGoblin2" male="true" hair_color="90,60,30" skin_color="70,110,60">
+		<archetype name="en_forestGoblin2" hair_color="90,60,30" skin_color="70,110,60">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head" color="skin"/>
@@ -9035,7 +9055,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestGoblin3" male="true" hair_color="110,90,15" skin_color="90,120,70">
+		<archetype name="en_forestGoblin3" hair_color="110,90,15" skin_color="90,120,70">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -9109,7 +9129,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestGiant" male="true" hair_color="0,0,0" skin_color="90,120,70">
+		<archetype name="en_forestGiant" hair_color="0,0,0" skin_color="90,120,70">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -9174,7 +9194,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestHikerFemale1" male="true" hair_color="40,30,20" skin_color="140,190,220">
+		<archetype name="en_forestHikerFemale1" hair_color="40,30,20" skin_color="140,190,220">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face" >
 					<texture name="female_head_asian" color="skin" />
@@ -9245,7 +9265,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestHikerFemale1Feral" male="true" hair_color="40,30,20" skin_color="140,190,220">
+		<archetype name="en_forestHikerFemale1Feral" hair_color="40,30,20" skin_color="140,190,220">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face" >
 					<texture name="female_head_asian" color="skin" />
@@ -9319,7 +9339,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestHikerFemale1Radiated" male="true" hair_color="40,30,20" skin_color="140,200,220">
+		<archetype name="en_forestHikerFemale1Radiated" hair_color="40,30,20" skin_color="140,200,220">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face" >
 					<texture name="female_head_asian" color="skin" />
@@ -9393,7 +9413,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestHikerFemale2" male="false" hair_color="140,120,120" skin_color="130,180,210">
+		<archetype name="en_forestHikerFemale2" hair_color="140,120,120" skin_color="130,180,210">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin"/>
@@ -9458,7 +9478,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestHikerFemale2Feral" male="false" hair_color="140,120,120" skin_color="140,180,210">
+		<archetype name="en_forestHikerFemale2Feral" hair_color="140,120,120" skin_color="140,180,210">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin"/>
@@ -9525,7 +9545,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestHikerFemale2Radiated" male="false" hair_color="140,120,120" skin_color="130,190,210">
+		<archetype name="en_forestHikerFemale2Radiated" hair_color="140,120,120" skin_color="130,190,210">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin"/>
@@ -9592,7 +9612,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestHikerMale1" male="true" hair_color="70,60,50" skin_color="170,260,230">
+		<archetype name="en_forestHikerMale1" hair_color="70,60,50" skin_color="170,260,230">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -9654,7 +9674,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestHikerMale1Feral" male="true" hair_color="70,60,50" skin_color="180,260,230">
+		<archetype name="en_forestHikerMale1Feral" hair_color="70,60,50" skin_color="180,260,230">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -9718,7 +9738,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestHikerMale1Radiated" male="true" hair_color="70,60,50" skin_color="170,270,230">
+		<archetype name="en_forestHikerMale1Radiated" hair_color="70,60,50" skin_color="170,270,230">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -9782,7 +9802,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestHikerMale2" male="true" hair_color="100,80,60" skin_color="110,110,100">
+		<archetype name="en_forestHikerMale2" hair_color="100,80,60" skin_color="110,110,100">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -9849,7 +9869,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestHikerMale2Feral" male="true" hair_color="100,80,60" skin_color="120,110,100">
+		<archetype name="en_forestHikerMale2Feral" hair_color="100,80,60" skin_color="120,110,100">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -9918,7 +9938,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestHikerMale2Radiated" male="true" hair_color="100,80,60" skin_color="110,120,100">
+		<archetype name="en_forestHikerMale2Radiated" hair_color="100,80,60" skin_color="110,120,100">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -9987,7 +10007,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestMale1" male="true" hair_color="120,112,12" skin_color="180,250,240">
+		<archetype name="en_forestMale1" hair_color="120,112,12" skin_color="180,250,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -10038,7 +10058,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestMale1Feral" male="true" hair_color="120,112,12" skin_color="190,250,240">
+		<archetype name="en_forestMale1Feral" hair_color="120,112,12" skin_color="190,250,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -10092,7 +10112,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestMale1Radiated" male="true" hair_color="120,112,12" skin_color="180,260,240">
+		<archetype name="en_forestMale1Radiated" hair_color="120,112,12" skin_color="180,260,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -10146,7 +10166,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestMale2" male="true" hair_color="70,40,10" skin_color="180,250,240">
+		<archetype name="en_forestMale2" hair_color="70,40,10" skin_color="180,250,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -10201,7 +10221,7 @@
 			</dna>
 		</archetype>
 	
-		<archetype name="en_forestMale2Feral" male="true" hair_color="70,40,10" skin_color="190,250,240">
+		<archetype name="en_forestMale2Feral" hair_color="70,40,10" skin_color="190,250,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -10260,7 +10280,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestMale2Radiated" male="true" hair_color="70,40,10" skin_color="180,255,240">
+		<archetype name="en_forestMale2Radiated" hair_color="70,40,10" skin_color="180,255,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -10319,7 +10339,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestMale3" male="true" hair_color="50,30,0" skin_color="180,250,240">
+		<archetype name="en_forestMale3" hair_color="50,30,0" skin_color="180,250,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -10380,7 +10400,7 @@
 			</dna>
 		</archetype>
 	
-		<archetype name="en_forestMale3Feral" male="true" hair_color="50,30,0" skin_color="190,250,240">
+		<archetype name="en_forestMale3Feral" hair_color="50,30,0" skin_color="190,250,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -10444,7 +10464,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestMale3Radiated" male="true" hair_color="50,30,0" skin_color="180,240,240">
+		<archetype name="en_forestMale3Radiated" hair_color="50,30,0" skin_color="180,240,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -10508,7 +10528,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestMale4" male="true" hair_color="20,20,20" skin_color="180,250,240">
+		<archetype name="en_forestMale4" hair_color="20,20,20" skin_color="180,250,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -10564,7 +10584,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestMale4Feral" male="true" hair_color="20,20,20" skin_color="190,250,240">
+		<archetype name="en_forestMale4Feral" hair_color="20,20,20" skin_color="190,250,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -10623,7 +10643,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestMale4Radiated" male="true" hair_color="20,20,20" skin_color="180,255,240">
+		<archetype name="en_forestMale4Radiated" hair_color="20,20,20" skin_color="180,255,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -10682,7 +10702,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestMale5" male="true" hair_color="80,72,64" skin_color="190,250,240">
+		<archetype name="en_forestMale5" hair_color="80,72,64" skin_color="190,250,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -10744,7 +10764,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestMale5Feral" male="true" hair_color="80,72,64" skin_color="200,250,240">
+		<archetype name="en_forestMale5Feral" hair_color="80,72,64" skin_color="200,250,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -10809,7 +10829,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestMale5Radiated" male="true" hair_color="80,72,64" skin_color="185,255,235">
+		<archetype name="en_forestMale5Radiated" hair_color="80,72,64" skin_color="185,255,235">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -10874,7 +10894,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestMaleCamo" male="true" hair_color="70,40,10" skin_color="180,250,240">
+		<archetype name="en_forestMaleCamo" hair_color="70,40,10" skin_color="180,250,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -10935,7 +10955,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestMaleCamoFeral" male="true" hair_color="70,40,10" skin_color="190,250,240">
+		<archetype name="en_forestMaleCamoFeral" hair_color="70,40,10" skin_color="190,250,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -10996,7 +11016,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestMaleCamoRadiated" male="true" hair_color="70,40,10" skin_color="180,255,240">
+		<archetype name="en_forestMaleCamoRadiated" hair_color="70,40,10" skin_color="180,255,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -11057,7 +11077,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestSpider" male="true" hair_color="60,50,40" skin_color="70,130,40">
+		<archetype name="en_forestSpider" hair_color="60,50,40" skin_color="70,130,40">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="120,190,120"/>
@@ -11115,7 +11135,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_forestSpiderFeral" male="true" hair_color="60,50,40" skin_color="80,130,40">
+		<archetype name="en_forestSpiderFeral" hair_color="60,50,40" skin_color="80,130,40">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="120,190,120"/>
@@ -11175,7 +11195,7 @@
 			</dna>
 		</archetype>
 
-		<archetype name="en_forestSpiderRadiated" male="true" hair_color="60,50,40" skin_color="70,160,40">
+		<archetype name="en_forestSpiderRadiated" hair_color="60,50,40" skin_color="70,160,40">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="120,190,120"/>
@@ -11235,7 +11255,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_hazmatFemale1" male="true" hair_color="85,40,0" skin_color="150,210,255">
+		<archetype name="en_hazmatFemale1" hair_color="85,40,0" skin_color="150,210,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin"/>
@@ -11295,7 +11315,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_hazmatFemale1Feral" male="true" hair_color="85,40,0" skin_color="160,210,255">
+		<archetype name="en_hazmatFemale1Feral" hair_color="85,40,0" skin_color="160,210,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin"/>
@@ -11359,7 +11379,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_hazmatFemale1Radiated" male="true" hair_color="85,40,0" skin_color="150,220,255">
+		<archetype name="en_hazmatFemale1Radiated" hair_color="85,40,0" skin_color="150,220,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin"/>
@@ -11423,7 +11443,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_hazmatFemale2" male="true" hair_color="60,15,10" skin_color="150,210,255">
+		<archetype name="en_hazmatFemale2" hair_color="60,15,10" skin_color="150,210,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face_pretty">
 					<texture name="female_head_zombie" color="skin"/>
@@ -11481,7 +11501,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_hazmatFemale2Feral" male="true" hair_color="60,15,10" skin_color="160,210,255">
+		<archetype name="en_hazmatFemale2Feral" hair_color="60,15,10" skin_color="160,210,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face_pretty">
 					<texture name="female_head_zombie" color="skin"/>
@@ -11543,7 +11563,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_hazmatFemale2Radiated" male="true" hair_color="60,15,10" skin_color="150,220,255">
+		<archetype name="en_hazmatFemale2Radiated" hair_color="60,15,10" skin_color="150,220,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face_pretty">
 					<texture name="female_head_zombie" color="skin"/>
@@ -11605,7 +11625,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_hazmatMale1" male="true" hair_color="255,255,255" skin_color="255,255,255">
+		<archetype name="en_hazmatMale1" hair_color="255,255,255" skin_color="255,255,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head" color="skin"/>
@@ -11657,7 +11677,7 @@
 		</archetype>
 		
 
-		<archetype name="en_hazmatMale1Feral" male="true" hair_color="255,255,255" skin_color="255,230,230">
+		<archetype name="en_hazmatMale1Feral" hair_color="255,255,255" skin_color="255,230,230">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head" color="skin"/>
@@ -11711,7 +11731,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_hazmatMale1Radiated" male="true" hair_color="255,255,255" skin_color="250,240,230">
+		<archetype name="en_hazmatMale1Radiated" hair_color="255,255,255" skin_color="250,240,230">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head" color="skin"/>
@@ -11765,7 +11785,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_hazmatMale2" male="true" hair_color="70,50,40" skin_color="130,200,255">
+		<archetype name="en_hazmatMale2" hair_color="70,50,40" skin_color="130,200,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -11824,7 +11844,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_hazmatMale2Feral" male="true" hair_color="70,50,40" skin_color="140,200,255">
+		<archetype name="en_hazmatMale2Feral" hair_color="70,50,40" skin_color="140,200,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -11886,7 +11906,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_hazmatMale2Radiated" male="true" hair_color="70,50,40" skin_color="130,210,255">
+		<archetype name="en_hazmatMale2Radiated" hair_color="70,50,40" skin_color="130,210,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -11948,7 +11968,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_hazmatMale3" male="true" hair_color="30,30,30" skin_color="150,210,255">
+		<archetype name="en_hazmatMale3" hair_color="30,30,30" skin_color="150,210,255">
 			<base_mesh_parts>
 				
 				<part slot="head" layer="base" mesh="male_asian_face">
@@ -12007,7 +12027,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_hazmatMale3Feral" male="true" hair_color="30,30,30" skin_color="160,210,255">
+		<archetype name="en_hazmatMale3Feral" hair_color="30,30,30" skin_color="160,210,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_asian_face">
 					<texture name="male_head" color="skin"/>
@@ -12068,7 +12088,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_hazmatMale3Radiated" male="true" hair_color="30,30,30" skin_color="150,220,255">
+		<archetype name="en_hazmatMale3Radiated" hair_color="30,30,30" skin_color="150,220,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_asian_face">
 					<texture name="male_head" color="skin"/>
@@ -12129,7 +12149,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_joggerFemale1" male="false" hair_color="180,160,130" skin_color="190,220,250">
+		<archetype name="en_joggerFemale1" hair_color="180,160,130" skin_color="190,220,250">
 			<base_mesh_parts>
 				<part mesh="female_base_face" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -12188,7 +12208,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_joggerFemale1Feral" male="false" hair_color="180,160,130" skin_color="200,220,250">
+		<archetype name="en_joggerFemale1Feral" hair_color="180,160,130" skin_color="200,220,250">
 			<base_mesh_parts>
 				<part mesh="female_base_face" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -12250,7 +12270,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_joggerFemale1Radiated" male="false" hair_color="180,160,130" skin_color="190,230,250">
+		<archetype name="en_joggerFemale1Radiated" hair_color="180,160,130" skin_color="190,230,250">
 			<base_mesh_parts>
 				<part mesh="female_base_face" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -12312,7 +12332,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_joggerFemale2" male="false" hair_color="90,60,20" skin_color="160,210,250">
+		<archetype name="en_joggerFemale2" hair_color="90,60,20" skin_color="160,210,250">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -12370,7 +12390,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_joggerFemale2Feral" male="false" hair_color="90,60,20" skin_color="170,210,250">
+		<archetype name="en_joggerFemale2Feral" hair_color="90,60,20" skin_color="170,210,250">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -12432,7 +12452,7 @@
 			</dna>
 		</archetype>
 		
-	<archetype name="en_joggerFemale2Radiated" male="false" hair_color="90,60,20" skin_color="160,220,250">
+	<archetype name="en_joggerFemale2Radiated" hair_color="90,60,20" skin_color="160,220,250">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -12494,7 +12514,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_joggerFemale3" male="false" hair_color="16,16,16" skin_color="180,210,250">
+		<archetype name="en_joggerFemale3" hair_color="16,16,16" skin_color="180,210,250">
 			<base_mesh_parts>
 				<part mesh="female_base_face" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -12553,7 +12573,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_joggerFemale3Feral" male="false" hair_color="16,16,16" skin_color="190,210,250">
+		<archetype name="en_joggerFemale3Feral" hair_color="16,16,16" skin_color="190,210,250">
 			<base_mesh_parts>
 				<part mesh="female_base_face" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -12616,7 +12636,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_joggerFemale3Radiated" male="false" hair_color="16,16,16" skin_color="180,220,250">
+		<archetype name="en_joggerFemale3Radiated" hair_color="16,16,16" skin_color="180,220,250">
 			<base_mesh_parts>
 				<part mesh="female_base_face" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -12680,7 +12700,7 @@
 		</archetype>
 		
 		
-		<archetype name="en_joggerFemale4" male="false" hair_color="255,170,170" skin_color="160,210,230">
+		<archetype name="en_joggerFemale4" hair_color="255,170,170" skin_color="160,210,230">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_asian" color="skin" />
@@ -12741,7 +12761,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_joggerFemale4Feral" male="false" hair_color="255,170,170" skin_color="170,210,230">
+		<archetype name="en_joggerFemale4Feral" hair_color="255,170,170" skin_color="170,210,230">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_asian" color="skin" />
@@ -12805,7 +12825,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_joggerFemale4Radiated" male="false" hair_color="255,170,170" skin_color="160,220,230">
+		<archetype name="en_joggerFemale4Radiated" hair_color="255,170,170" skin_color="160,220,230">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_asian" color="skin" />
@@ -12869,7 +12889,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_joggerFemale5" male="false" hair_color="32,16,8" skin_color="110,130,130">
+		<archetype name="en_joggerFemale5" hair_color="32,16,8" skin_color="110,130,130">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -12927,7 +12947,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_joggerFemale5Feral" male="false" hair_color="32,16,8" skin_color="120,130,130">
+		<archetype name="en_joggerFemale5Feral" hair_color="32,16,8" skin_color="120,130,130">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -12989,7 +13009,7 @@
 			</dna>
 		</archetype>
 
-		<archetype name="en_joggerFemale5Radiated" male="false" hair_color="32,16,8" skin_color="110,140,130">
+		<archetype name="en_joggerFemale5Radiated" hair_color="32,16,8" skin_color="110,140,130">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -13053,7 +13073,7 @@
 		
 		
 		
-		<archetype name="en_lumberjack1" male="true" hair_color="30,30,30" skin_color="150,210,255">
+		<archetype name="en_lumberjack1" hair_color="30,30,30" skin_color="150,210,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_old" color="skin"/>
@@ -13116,7 +13136,7 @@
 			</dna>
 		</archetype>
 	
-		<archetype name="en_lumberjack1Feral" male="true" hair_color="30,30,30" skin_color="160,210,255">
+		<archetype name="en_lumberjack1Feral" hair_color="30,30,30" skin_color="160,210,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_old" color="skin"/>
@@ -13182,7 +13202,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_lumberjack1Radiated" male="true" hair_color="30,30,30" skin_color="150,220,255">
+		<archetype name="en_lumberjack1Radiated" hair_color="30,30,30" skin_color="150,220,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_old" color="skin"/>
@@ -13250,7 +13270,7 @@
 		
 		
 		
-		<archetype name="en_lumberjack2" male="true" hair_color="160,180,230" skin_color="138,192,255">
+		<archetype name="en_lumberjack2" hair_color="160,180,230" skin_color="138,192,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_old" color="skin"/>
@@ -13313,7 +13333,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_lumberjack2Feral" male="true" hair_color="160,180,230" skin_color="150,192,255">
+		<archetype name="en_lumberjack2Feral" hair_color="160,180,230" skin_color="150,192,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_old" color="skin"/>
@@ -13379,7 +13399,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_lumberjack2Radiated" male="true" hair_color="160,180,230" skin_color="138,200,255">
+		<archetype name="en_lumberjack2Radiated" hair_color="160,180,230" skin_color="138,200,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_old" color="skin"/>
@@ -13445,7 +13465,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_punkFemale1" male="false" hair_color="80,20,20" skin_color="120,190,210">
+		<archetype name="en_punkFemale1" hair_color="80,20,20" skin_color="120,190,210">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin"/>
@@ -13505,7 +13525,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_punkFemale1Feral" male="false" hair_color="80,20,20" skin_color="130,190,210">
+		<archetype name="en_punkFemale1Feral" hair_color="80,20,20" skin_color="130,190,210">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin"/>
@@ -13566,7 +13586,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_punkFemale2" male="false" hair_color="60,40,20" skin_color="95,120,115">
+		<archetype name="en_punkFemale2" hair_color="60,40,20" skin_color="95,120,115">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin"/>
@@ -13633,7 +13653,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_punkFemale2Feral" male="false" hair_color="60,40,20" skin_color="105,120,115">
+		<archetype name="en_punkFemale2Feral" hair_color="60,40,20" skin_color="105,120,115">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin"/>
@@ -13703,7 +13723,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_punkFemale3" male="false" hair_color="70,90,120" skin_color="150,210,255">
+		<archetype name="en_punkFemale3" hair_color="70,90,120" skin_color="150,210,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin"/>
@@ -13764,7 +13784,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_punkFemale3Feral" male="false" hair_color="70,90,120" skin_color="160,210,255">
+		<archetype name="en_punkFemale3Feral" hair_color="70,90,120" skin_color="160,210,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin"/>
@@ -13827,7 +13847,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_punkFemale4" male="false" hair_color="30,20,10" skin_color="120,190,210">
+		<archetype name="en_punkFemale4" hair_color="30,20,10" skin_color="120,190,210">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin"/>
@@ -13886,7 +13906,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_punkFemale4Feral" male="false" hair_color="30,20,10" skin_color="130,190,210">
+		<archetype name="en_punkFemale4Feral" hair_color="30,20,10" skin_color="130,190,210">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin"/>
@@ -13946,7 +13966,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_punkMale1" male="true" hair_color="30,20,10" skin_color="120,190,210">
+		<archetype name="en_punkMale1" hair_color="30,20,10" skin_color="120,190,210">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -14006,7 +14026,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_punkMale1Feral" male="true" hair_color="30,20,10" skin_color="130,190,210">
+		<archetype name="en_punkMale1Feral" hair_color="30,20,10" skin_color="130,190,210">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -14068,7 +14088,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_punkMale2" male="true" hair_color="60,40,20" skin_color="95,120,115">
+		<archetype name="en_punkMale2" hair_color="60,40,20" skin_color="95,120,115">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -14134,7 +14154,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_punkMale2Feral" male="true" hair_color="60,40,20" skin_color="105,120,115">
+		<archetype name="en_punkMale2Feral" hair_color="60,40,20" skin_color="105,120,115">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -14200,7 +14220,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_punkMale3" male="true" hair_color="60,40,20" skin_color="150,210,255">
+		<archetype name="en_punkMale3" hair_color="60,40,20" skin_color="150,210,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -14262,7 +14282,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_punkMale3Feral" male="true" hair_color="60,40,20" skin_color="160,210,255">
+		<archetype name="en_punkMale3Feral" hair_color="60,40,20" skin_color="160,210,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -14325,7 +14345,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_punkMale4" male="true" hair_color="30,20,10" skin_color="120,190,210">
+		<archetype name="en_punkMale4" hair_color="30,20,10" skin_color="120,190,210">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -14383,7 +14403,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_punkMale4Feral" male="true" hair_color="30,20,10" skin_color="130,190,210">
+		<archetype name="en_punkMale4Feral" hair_color="30,20,10" skin_color="130,190,210">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -14442,7 +14462,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_screamer1" male="false" hair_color="0,0,0" skin_color="190,255,230">
+		<archetype name="en_screamer1" hair_color="0,0,0" skin_color="190,255,230">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face" >
 					<texture name="female_head_asian" color="skin" />
@@ -14505,7 +14525,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_screamer1Feral" male="false" hair_color="0,0,0" skin_color="200,255,230">
+		<archetype name="en_screamer1Feral" hair_color="0,0,0" skin_color="200,255,230">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face" >
 					<texture name="female_head_asian" color="skin" />
@@ -14572,7 +14592,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_screamer1Radiated" male="false" hair_color="0,0,0" skin_color="180,255,220">
+		<archetype name="en_screamer1Radiated" hair_color="0,0,0" skin_color="180,255,220">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face" >
 					<texture name="female_head_asian" color="skin" />
@@ -14639,7 +14659,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_screamer2" male="false" hair_color="0,0,0" skin_color="190,255,230">
+		<archetype name="en_screamer2" hair_color="0,0,0" skin_color="190,255,230">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face" >
 					<texture name="female_head_asian" color="skin" />
@@ -14704,7 +14724,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_screamer2Feral" male="false" hair_color="0,0,0" skin_color="200,255,230">
+		<archetype name="en_screamer2Feral" hair_color="0,0,0" skin_color="200,255,230">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face" >
 					<texture name="female_head_asian" color="skin" />
@@ -14773,7 +14793,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_screamer2Radiated" male="false" hair_color="0,0,0" skin_color="180,255,220">
+		<archetype name="en_screamer2Radiated" hair_color="0,0,0" skin_color="180,255,220">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face" >
 					<texture name="female_head_asian" color="skin" />
@@ -14842,7 +14862,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_screamer3" male="false" hair_color="0,0,0" skin_color="190,255,230">
+		<archetype name="en_screamer3" hair_color="0,0,0" skin_color="190,255,230">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face" >
 					<texture name="female_head_asian" color="skin" />
@@ -14911,7 +14931,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_screamer3Feral" male="false" hair_color="0,0,0" skin_color="200,255,230">
+		<archetype name="en_screamer3Feral" hair_color="0,0,0" skin_color="200,255,230">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face" >
 					<texture name="female_head_asian" color="skin" />
@@ -14983,7 +15003,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_screamer3Radiated" male="false" hair_color="0,0,0" skin_color="180,255,220">
+		<archetype name="en_screamer3Radiated" hair_color="0,0,0" skin_color="180,255,220">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face" >
 					<texture name="female_head_asian" color="skin" />
@@ -15055,7 +15075,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowFemale1" male="false" hair_color="180,160,130" skin_color="128,192,255">
+		<archetype name="en_snowFemale1" hair_color="180,160,130" skin_color="128,192,255">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -15118,7 +15138,7 @@
 		</archetype>
 		
 
-		<archetype name="en_snowFemale1Feral" male="false" hair_color="180,160,130" skin_color="138,192,255">
+		<archetype name="en_snowFemale1Feral" hair_color="180,160,130" skin_color="138,192,255">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -15185,7 +15205,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowFemale1Radiated" male="false" hair_color="180,160,130" skin_color="128,202,255">
+		<archetype name="en_snowFemale1Radiated" hair_color="180,160,130" skin_color="128,202,255">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -15253,7 +15273,7 @@
 		</archetype>
 		
 		
-		<archetype name="en_snowFemale2" male="false" hair_color="110,90,30" skin_color="128,192,255">
+		<archetype name="en_snowFemale2" hair_color="110,90,30" skin_color="128,192,255">
 			<base_mesh_parts>
 				<part mesh="female_base_face" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -15318,7 +15338,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowFemale2Feral" male="false" hair_color="110,90,30" skin_color="138,192,255">
+		<archetype name="en_snowFemale2Feral" hair_color="110,90,30" skin_color="138,192,255">
 			<base_mesh_parts>
 				<part mesh="female_base_face" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -15386,7 +15406,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowFemale2Radiated" male="false" hair_color="110,90,30" skin_color="128,202,255">
+		<archetype name="en_snowFemale2Radiated" hair_color="110,90,30" skin_color="128,202,255">
 			<base_mesh_parts>
 				<part mesh="female_base_face" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -15454,7 +15474,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowFemale3" male="false" hair_color="180,165,130" skin_color="140,200,255">
+		<archetype name="en_snowFemale3" hair_color="180,165,130" skin_color="140,200,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base"  mesh="female_base_face_pretty">
 					<texture name="female_head_asian" color="skin" />
@@ -15515,7 +15535,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowFemale3Feral" male="false" hair_color="180,165,130" skin_color="150,200,255">
+		<archetype name="en_snowFemale3Feral" hair_color="180,165,130" skin_color="150,200,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base"  mesh="female_base_face_pretty">
 					<texture name="female_head_asian" color="skin" />
@@ -15575,7 +15595,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowFemale3Radiated" male="false" hair_color="180,165,130" skin_color="140,210,255">
+		<archetype name="en_snowFemale3Radiated" hair_color="180,165,130" skin_color="140,210,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base"  mesh="female_base_face_pretty">
 					<texture name="female_head_asian" color="skin" />
@@ -15635,7 +15655,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowFemale4" male="false" hair_color="230,230,255" skin_color="128,200,255">
+		<archetype name="en_snowFemale4" hair_color="230,230,255" skin_color="128,200,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base"  mesh="female_base_face_pretty">
 					<texture name="female_head_asian" color="skin" />
@@ -15694,7 +15714,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowFemale4Feral" male="false" hair_color="230,230,255" skin_color="138,200,255">
+		<archetype name="en_snowFemale4Feral" hair_color="230,230,255" skin_color="138,200,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base"  mesh="female_base_face_pretty">
 					<texture name="female_head_asian" color="skin" />
@@ -15754,7 +15774,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowFemale4Radiated" male="false" hair_color="230,230,255" skin_color="128,210,255">
+		<archetype name="en_snowFemale4Radiated" hair_color="230,230,255" skin_color="128,210,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base"  mesh="female_base_face_pretty">
 					<texture name="female_head_asian" color="skin" />
@@ -15814,7 +15834,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowFemale5" male="false" hair_color="30,30,30" skin_color="130,195,255">
+		<archetype name="en_snowFemale5" hair_color="30,30,30" skin_color="130,195,255">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -15876,7 +15896,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowFemale5Feral" male="false" hair_color="30,30,30" skin_color="140,195,255">
+		<archetype name="en_snowFemale5Feral" hair_color="30,30,30" skin_color="140,195,255">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -15941,7 +15961,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowFemale5Radiated" male="false" hair_color="30,30,30" skin_color="130,205,255">
+		<archetype name="en_snowFemale5Radiated" hair_color="30,30,30" skin_color="130,205,255">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -16006,7 +16026,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowGiant" male="true" hair_color="110,120,140" skin_color="128,202,255">
+		<archetype name="en_snowGiant" hair_color="110,120,140" skin_color="128,202,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -16083,7 +16103,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowGoblin1" male="true" hair_color="0,0,0" skin_color="120,170,210">
+		<archetype name="en_snowGoblin1" hair_color="0,0,0" skin_color="120,170,210">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head" color="skin"/>
@@ -16156,7 +16176,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowGoblin2" male="true" hair_color="50,60,40" skin_color="80,130,180">
+		<archetype name="en_snowGoblin2" hair_color="50,60,40" skin_color="80,130,180">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head" color="skin"/>
@@ -16233,7 +16253,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowGoblin3" male="true" hair_color="50,60,40" skin_color="100,150,200">
+		<archetype name="en_snowGoblin3" hair_color="50,60,40" skin_color="100,150,200">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -16309,7 +16329,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowMale1" male="true" hair_color="180,170,180" skin_color="113,177,240">
+		<archetype name="en_snowMale1" hair_color="180,170,180" skin_color="113,177,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="140,200,255"/>
@@ -16367,7 +16387,7 @@
 			</dna>
 		</archetype>
 	
-		<archetype name="en_snowMale1Feral" male="true" hair_color="180,170,180" skin_color="123,177,240">
+		<archetype name="en_snowMale1Feral" hair_color="180,170,180" skin_color="123,177,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="140,200,255"/>
@@ -16430,7 +16450,7 @@
 			</dna>
 		</archetype>
 	
-		<archetype name="en_snowMale1Radiated" male="true" hair_color="180,170,180" skin_color="113,187,240">
+		<archetype name="en_snowMale1Radiated" hair_color="180,170,180" skin_color="113,187,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="130,210,255"/>
@@ -16493,7 +16513,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowMale2" male="true" hair_color="80,70,60" skin_color="113,177,240">
+		<archetype name="en_snowMale2" hair_color="80,70,60" skin_color="113,177,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_asian_face">
 					<texture name="male_head" color="140,200,255"/>
@@ -16553,7 +16573,7 @@
 			</dna>
 		</archetype>
 	
-		<archetype name="en_snowMale2Feral" male="true" hair_color="92,80,64" skin_color="123,177,240">
+		<archetype name="en_snowMale2Feral" hair_color="92,80,64" skin_color="123,177,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_asian_face">
 					<texture name="male_head" color="140,200,255"/>
@@ -16616,7 +16636,7 @@
 			</dna>
 		</archetype>
 	
-		<archetype name="en_snowMale2Radiated" male="true" hair_color="92,80,64" skin_color="113,187,240">
+		<archetype name="en_snowMale2Radiated" hair_color="92,80,64" skin_color="113,187,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_asian_face">
 					<texture name="male_head" color="130,210,255"/>
@@ -16679,7 +16699,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowMale3" male="true" hair_color="60,60,60" skin_color="113,177,240">
+		<archetype name="en_snowMale3" hair_color="60,60,60" skin_color="113,177,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -16740,7 +16760,7 @@
 			</dna>
 		</archetype>
 	
-		<archetype name="en_snowMale3Feral" male="true" hair_color="60,60,60" skin_color="123,177,240">
+		<archetype name="en_snowMale3Feral" hair_color="60,60,60" skin_color="123,177,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -16806,7 +16826,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowMale3Radiated" male="true" hair_color="60,60,60" skin_color="113,187,240">
+		<archetype name="en_snowMale3Radiated" hair_color="60,60,60" skin_color="113,187,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -16871,7 +16891,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowMale4" male="true" hair_color="30,20,10" skin_color="125,177,240">
+		<archetype name="en_snowMale4" hair_color="30,20,10" skin_color="125,177,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_asian_face">
 					<texture name="male_head" color="140,200,255"/>
@@ -16924,7 +16944,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowMale4Feral" male="true" hair_color="30,20,10" skin_color="135,177,240">
+		<archetype name="en_snowMale4Feral" hair_color="30,20,10" skin_color="135,177,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_asian_face">
 					<texture name="male_head" color="140,200,255"/>
@@ -16980,7 +17000,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowMale4Radiated" male="true" hair_color="30,20,10" skin_color="125,187,240">
+		<archetype name="en_snowMale4Radiated" hair_color="30,20,10" skin_color="125,187,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_asian_face">
 					<texture name="male_head" color="140,200,255"/>
@@ -17036,7 +17056,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowMale5" male="true" hair_color="150,135,105" skin_color="110,175,240">
+		<archetype name="en_snowMale5" hair_color="150,135,105" skin_color="110,175,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -17095,7 +17115,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowMale5Feral" male="true" hair_color="150,135,105" skin_color="120,175,240">
+		<archetype name="en_snowMale5Feral" hair_color="150,135,105" skin_color="120,175,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -17160,7 +17180,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowMale5Radiated" male="true" hair_color="150,135,105" skin_color="110,185,240">
+		<archetype name="en_snowMale5Radiated" hair_color="150,135,105" skin_color="110,185,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -17225,7 +17245,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowMale6" male="true" hair_color="120,110,100" skin_color="130,185,250">
+		<archetype name="en_snowMale6" hair_color="30,30,30" skin_color="130,185,250">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -17285,7 +17305,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowMale6Feral" male="true" hair_color="120,110,100" skin_color="140,185,250">
+		<archetype name="en_snowMale6Feral" hair_color="120,110,100" skin_color="140,185,250">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -17350,7 +17370,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowMale6Radiated" male="true" hair_color="120,110,100" skin_color="130,195,250">
+		<archetype name="en_snowMale6Radiated" hair_color="120,110,100" skin_color="130,195,250">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -17415,7 +17435,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowMaleCamo" male="true" hair_color="70,40,10" skin_color="113,177,240">
+		<archetype name="en_snowMaleCamo" hair_color="70,40,10" skin_color="113,177,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -17479,7 +17499,7 @@
 		</archetype>
 		
 
-		<archetype name="en_snowMaleCamoFeral" male="true" hair_color="70,40,10" skin_color="123,177,240">
+		<archetype name="en_snowMaleCamoFeral" hair_color="70,40,10" skin_color="123,177,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -17545,7 +17565,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowMaleCamoRadiated" male="true" hair_color="70,40,10" skin_color="113,187,240">
+		<archetype name="en_snowMaleCamoRadiated" hair_color="70,40,10" skin_color="113,187,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -17611,7 +17631,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowSanta1" male="true" hair_color="255,255,255" skin_color="240,255,255">
+		<archetype name="en_snowSanta1" hair_color="255,255,255" skin_color="240,255,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_old" color="skin"/>
@@ -17674,7 +17694,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowSantaHelper1" male="false" hair_color="170,170,190" skin_color="150,200,255">
+		<archetype name="en_snowSantaHelper1" hair_color="170,170,190" skin_color="150,200,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face_pretty" >
 					<texture name="female_head_asian" color="skin" />
@@ -17738,7 +17758,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowSpider" male="true" hair_color="60,60,60" skin_color="120,185,245">
+		<archetype name="en_snowSpider" hair_color="60,60,60" skin_color="120,185,245">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -17796,7 +17816,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowSpiderFeral" male="true" hair_color="60,60,60" skin_color="130,185,245">
+		<archetype name="en_snowSpiderFeral" hair_color="60,60,60" skin_color="130,185,245">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -17856,7 +17876,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_snowSpiderRadiated" male="true" hair_color="60,60,60" skin_color="120,195,245">
+		<archetype name="en_snowSpiderRadiated" hair_color="60,60,60" skin_color="120,195,245">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -17917,7 +17937,7 @@
 		</archetype>
 		
 		
-		<archetype name="en_soldierFemale1" male="true" hair_color="180,160,140" skin_color="150,190,180">
+		<archetype name="en_soldierFemale1" hair_color="180,160,140" skin_color="150,190,180">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face_pretty">
 					<texture name="female_head_asian" color="skin"/>
@@ -17986,7 +18006,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_soldierFemale1Feral" male="true" hair_color="180,160,140" skin_color="160,190,180">
+		<archetype name="en_soldierFemale1Feral" hair_color="180,160,140" skin_color="160,190,180">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face_pretty">
 					<texture name="female_head_asian" color="skin"/>
@@ -18060,7 +18080,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_soldierFemale1Radiated" male="true" hair_color="180,160,140" skin_color="150,200,180">
+		<archetype name="en_soldierFemale1Radiated" hair_color="180,160,140" skin_color="150,200,180">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face_pretty">
 					<texture name="female_head_asian" color="skin"/>
@@ -18134,7 +18154,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_soldierFemale2" male="true" hair_color="18,12,6" skin_color="180,200,200">
+		<archetype name="en_soldierFemale2" hair_color="18,12,6" skin_color="180,200,200">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin"/>
@@ -18204,7 +18224,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_soldierFemale2Feral" male="true" hair_color="18,12,6" skin_color="190,200,200">
+		<archetype name="en_soldierFemale2Feral" hair_color="18,12,6" skin_color="190,200,200">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin"/>
@@ -18279,7 +18299,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_soldierFemale2Radiated" male="true" hair_color="18,12,6" skin_color="180,210,200">
+		<archetype name="en_soldierFemale2Radiated" hair_color="18,12,6" skin_color="180,210,200">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin"/>
@@ -18354,7 +18374,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_soldierMale1" male="true" hair_color="40,20,10" skin_color="113,177,240">
+		<archetype name="en_soldierMale1" hair_color="40,20,10" skin_color="113,177,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -18423,7 +18443,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_soldierMale1Feral" male="true" hair_color="40,20,10" skin_color="123,177,240">
+		<archetype name="en_soldierMale1Feral" hair_color="40,20,10" skin_color="123,177,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -18498,7 +18518,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_soldierMale1Radiated" male="true" hair_color="40,20,10" skin_color="113,187,240">
+		<archetype name="en_soldierMale1Radiated" hair_color="40,20,10" skin_color="113,187,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -18573,7 +18593,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_soldierMale2" male="true" hair_color="80,60,20" skin_color="180,250,240">
+		<archetype name="en_soldierMale2" hair_color="80,60,20" skin_color="180,250,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -18641,7 +18661,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_soldierMale2Feral" male="true" hair_color="80,60,20" skin_color="190,250,240">
+		<archetype name="en_soldierMale2Feral" hair_color="80,60,20" skin_color="190,250,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -18715,7 +18735,7 @@
 			</dna>
 		</archetype>
 
-		<archetype name="en_soldierMale2Radiated" male="true" hair_color="80,60,20" skin_color="180,255,240">
+		<archetype name="en_soldierMale2Radiated" hair_color="80,60,20" skin_color="180,255,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -18789,7 +18809,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_stealthMale1" male="true" hair_color="40,20,10" skin_color="125,177,240">
+		<archetype name="en_stealthMale1" hair_color="40,20,10" skin_color="125,177,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -18853,7 +18873,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_stealthMale1Feral" male="true" hair_color="40,20,10" skin_color="135,177,240">
+		<archetype name="en_stealthMale1Feral" hair_color="40,20,10" skin_color="135,177,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -18921,7 +18941,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_stealthMale1Radiated" male="true" hair_color="40,20,10" skin_color="125,187,240">
+		<archetype name="en_stealthMale1Radiated" hair_color="40,20,10" skin_color="125,187,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -18989,7 +19009,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_stripper1" male="false" hair_color="180,170,140" skin_color="180,200,220">
+		<archetype name="en_stripper1" hair_color="180,170,140" skin_color="180,200,220">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_asian" color="skin" />
@@ -19045,7 +19065,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_stripper1Feral" male="false" hair_color="180,170,140" skin_color="190,200,220">
+		<archetype name="en_stripper1Feral" hair_color="180,170,140" skin_color="190,200,220">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_asian" color="skin" />
@@ -19105,7 +19125,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_stripper1Radiated" male="false" hair_color="180,170,140" skin_color="180,210,220">
+		<archetype name="en_stripper1Radiated" hair_color="180,170,140" skin_color="180,210,220">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_asian" color="skin" />
@@ -19165,7 +19185,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_stripper2" male="false" hair_color="90,50,10" skin_color="200,220,240">
+		<archetype name="en_stripper2" hair_color="90,50,10" skin_color="200,220,240">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head" color="skin" />
@@ -19224,7 +19244,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_stripper2Feral" male="false" hair_color="90,50,10" skin_color="210,220,240">
+		<archetype name="en_stripper2Feral" hair_color="90,50,10" skin_color="210,220,240">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head" color="skin" />
@@ -19287,7 +19307,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_stripper2Radiated" male="false" hair_color="90,50,10" skin_color="200,230,240">
+		<archetype name="en_stripper2Radiated" hair_color="90,50,10" skin_color="200,230,240">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head" color="skin" />
@@ -19350,7 +19370,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_stripper3" male="false" hair_color="250,100,100" skin_color="180,200,200">
+		<archetype name="en_stripper3" hair_color="250,100,100" skin_color="180,200,200">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_asian" color="skin" />
@@ -19412,7 +19432,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_stripper3Feral" male="false" hair_color="250,100,100" skin_color="190,200,200">
+		<archetype name="en_stripper3Feral" hair_color="250,100,100" skin_color="190,200,200">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_asian" color="skin" />
@@ -19479,7 +19499,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_stripper3Radiated" male="false" hair_color="250,100,100" skin_color="200,210,200">
+		<archetype name="en_stripper3Radiated" hair_color="250,100,100" skin_color="200,210,200">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_asian" color="skin" />
@@ -19546,7 +19566,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_stripper4" male="false" hair_color="30,20,10" skin_color="170,210,255">
+		<archetype name="en_stripper4" hair_color="30,20,10" skin_color="170,210,255">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head" color="skin" />
@@ -19602,7 +19622,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_stripper4Feral" male="false" hair_color="30,20,10" skin_color="180,210,255">
+		<archetype name="en_stripper4Feral" hair_color="30,20,10" skin_color="180,210,255">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head" color="skin" />
@@ -19662,7 +19682,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_stripper4Radiated" male="false" hair_color="30,20,10" skin_color="170,220,255">
+		<archetype name="en_stripper4Radiated" hair_color="30,20,10" skin_color="170,220,255">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head" color="skin" />
@@ -19722,7 +19742,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_swatMale1" male="true" hair_color="40,20,10" skin_color="125,177,240">
+		<archetype name="en_swatMale1" hair_color="40,20,10" skin_color="125,177,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -19793,7 +19813,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_swatMale1Feral" male="true" hair_color="40,20,10" skin_color="135,177,240">
+		<archetype name="en_swatMale1Feral" hair_color="40,20,10" skin_color="135,177,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -19872,7 +19892,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_swatMale1Radiated" male="true" hair_color="40,20,10" skin_color="125,187,240">
+		<archetype name="en_swatMale1Radiated" hair_color="40,20,10" skin_color="125,187,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -19951,7 +19971,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_swatMale2" male="true" hair_color="40,20,10" skin_color="120,200,200">
+		<archetype name="en_swatMale2" hair_color="40,20,10" skin_color="120,200,200">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -20022,7 +20042,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_swatMale2Feral" male="true" hair_color="40,20,10" skin_color="130,200,200">
+		<archetype name="en_swatMale2Feral" hair_color="40,20,10" skin_color="130,200,200">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -20099,7 +20119,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_swatMale2Radiated" male="true" hair_color="40,20,10" skin_color="120,210,200">
+		<archetype name="en_swatMale2Radiated" hair_color="40,20,10" skin_color="120,210,200">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -20176,7 +20196,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_swatMale3" male="true" hair_color="20,20,20" skin_color="110,175,245">
+		<archetype name="en_swatMale3" hair_color="20,20,20" skin_color="110,175,245">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -20244,7 +20264,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_swatMale3Feral" male="true" hair_color="20,20,20" skin_color="120,175,245">
+		<archetype name="en_swatMale3Feral" hair_color="20,20,20" skin_color="120,175,245">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -20319,7 +20339,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_swatMale3Radiated" male="true" hair_color="20,20,20" skin_color="110,185,245">
+		<archetype name="en_swatMale3Radiated" hair_color="20,20,20" skin_color="110,185,245">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -20394,7 +20414,210 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_utility1" male="true" hair_color="30,30,30" skin_color="160,200,255">
+		<archetype name="en_utilityFemale1" hair_color="30,30,30" skin_color="160,200,255">
+			<base_mesh_parts>
+				<part slot="head" layer="base" mesh="female_base_face">
+					<texture name="female_head_zombie" color="skin"/>
+					<texture name="unisex_face_dirt_overlay" color="128,0,0"/>
+				</part>
+				<part slot="head" mesh="female_shaggy_hair_hat" layer="inner" >
+					<texture name="female_shaggy_hair" color="hair" />
+					<texture name="female_shaggy_hair_highlights" color="65,55,45"/>
+				</part>
+				<part slot="head" layer="outer" mesh="unisex_gear_mining_helmet">
+					<texture name="unisex_gear_mining_helmet" color="200,100,100"/>
+					<texture name="unisex_dirt_overlay" color="140,255,0"/>
+				</part>
+				<part slot="eyes" layer="base" mesh="female_base_eyes">
+					<texture name="unisex_eye_bloodshot" color="250,200,200"/>
+				</part>
+				<part slot="chest" layer="base" mesh="female_shirt">
+					<texture name="unisex_shirt" color="200,200,200"/>
+					<texture name="unisex_dirt_overlay" color="128,0,0"/>
+				</part>
+				<part slot="chest" layer="outer" mesh="female_armor_kevlar_vest">
+					<texture name="unisex_armor_kevlar_vest" color="240,128,0"/>
+					<texture name="female_torso_wound" color="128,0,0"/>
+					<texture name="unisex_dirt_overlay" color="128,0,0"/>
+				</part>
+				<part slot="hands" layer="base" mesh="female_base_hands">
+					<texture name="female_hands" color="140,180,240"/>
+					<texture name="unisex_face_dirt_overlay" color="128,0,0"/>
+				</part>
+				<part slot="legs" layer="base" mesh="female_clothes_denim_pants">
+					<texture name="female_pants_01" color="150,130,110"/>
+					<texture name="unisex_face_dirt_overlay" color="128,0,0"/>
+				</part>
+				<part slot="feet" layer="base" mesh="female_worn_boots">
+					<texture name="female_worn_boots" color="190,170,150"/>
+					<texture name="unisex_face_dirt_overlay" color="128,0,0"/>
+				</part>
+			</base_mesh_parts>			
+			<dna>
+				<gene name="height" value="0.3"/>
+				<gene name="weight" value="0.8"/>
+				<gene name="breastSize" value="0.8"/>
+				<gene name="muscle" value="1.0"/>
+				<gene name="gluteusSize" value="0.8"/>			<!-- butt size -->
+				<gene name="headSize" value="0.4"/>
+				<gene name="headWidth" value="1.0"/>
+				<gene name="chinSize" value="1.0"/>				<!-- 0 = pointy			1 = rounded -->
+				<gene name="jawsSize" value="1.0"/>				<!-- 0 = thin			1 = wide -->
+				<gene name="jawsPosition" value="0.5"/>			<!-- 0 = double chin	1 = high -->
+				<gene name="mandibleSize" value="1.0"/>			<!-- 0 = small			1 = large -->
+				<gene name="lipsSize" value="1.0"/>
+				<gene name="mouthSize" value="1.0"/>
+				<gene name="noseWidth" value="0.5"/>
+				<gene name="noseInclination" value="0.5"/>		<!-- 0 = down			1 = up -->
+				<gene name="handsSize" value="0.5"/>
+				<gene name="feetSize" value="1.1"/>
+				<gene name="earsSize" value="0.5"/>
+				<gene name="foreheadPosition" value="1.0"/>		<!-- 0 = high eyebrows	1 = low eyebrows -->
+				<gene name="eyeSize" value="0.5"/>				<!-- 0 = squinty		1 = wide open -->
+			</dna>
+		</archetype>
+		
+		<archetype name="en_utilityFemale1Feral" hair_color="30,30,30" skin_color="170,200,255">
+			<base_mesh_parts>
+				<part slot="head" layer="base" mesh="female_base_face">
+					<texture name="female_head_zombie" color="skin"/>
+					<texture name="female_head_wound" color="160,0,0"/>
+					<texture name="unisex_face_dirt_overlay" color="160,0,0"/>
+				</part>
+				<part slot="head" mesh="female_shaggy_hair_hat" layer="inner" >
+					<texture name="female_shaggy_hair" color="hair" />
+					<texture name="female_shaggy_hair_highlights" color="65,55,45"/>
+				</part>
+				<part slot="head" layer="outer" mesh="unisex_gear_mining_helmet">
+					<texture name="unisex_gear_mining_helmet" color="200,100,100"/>
+					<texture name="male_torso_wound" color="160,0,0"/>
+					<texture name="unisex_face_dirt_overlay" color="140,255,0"/>
+				</part>
+				<part slot="eyes" layer="base" mesh="female_base_eyes">
+					<texture name="unisex_eye_bloodshot" color="255,255,0"/>
+				</part>
+				<part slot="chest" layer="base" mesh="female_shirt">
+					<texture name="unisex_shirt" color="200,200,200"/>
+					<texture name="male_torso_wound" color="160,0,0"/>
+					<texture name="unisex_face_dirt_overlay" color="160,0,0"/>
+				</part>
+				<part slot="chest" layer="outer" mesh="female_armor_kevlar_vest">
+					<texture name="unisex_armor_kevlar_vest" color="240,160,0"/>
+					<texture name="male_torso_wound" color="160,0,0"/>
+					<texture name="female_legs_wound" color="160,0,0"/>
+					<texture name="unisex_face_dirt_overlay" color="160,0,0"/>
+				</part>
+				<part slot="hands" layer="base" mesh="female_base_hands">
+					<texture name="female_hands" color="140,180,240"/>
+					<texture name="male_torso_wound" color="160,0,0"/>
+					<texture name="unisex_face_dirt_overlay" color="160,0,0"/>
+				</part>
+				<part slot="legs" layer="base" mesh="female_clothes_denim_pants">
+					<texture name="female_pants_01" color="150,130,110"/>
+					<texture name="male_head_wound" color="160,0,0"/>
+					<texture name="unisex_face_dirt_overlay" color="160,0,0"/>
+				</part>
+				<part slot="feet" layer="base" mesh="female_worn_boots">
+					<texture name="female_worn_boots" color="190,170,150"/>
+					<texture name="female_torso_wound" color="160,0,0"/>
+					<texture name="unisex_face_dirt_overlay" color="130,0,0"/>
+				</part>
+			</base_mesh_parts>			
+			<dna>
+				<gene name="height" value="0.3"/>
+				<gene name="weight" value="0.8"/>
+				<gene name="breastSize" value="0.8"/>
+				<gene name="muscle" value="1.0"/>
+				<gene name="gluteusSize" value="0.8"/>			<!-- butt size -->
+				<gene name="headSize" value="0.4"/>
+				<gene name="headWidth" value="1.0"/>
+				<gene name="chinSize" value="1.0"/>				<!-- 0 = pointy			1 = rounded -->
+				<gene name="jawsSize" value="1.0"/>				<!-- 0 = thin			1 = wide -->
+				<gene name="jawsPosition" value="0.5"/>			<!-- 0 = double chin	1 = high -->
+				<gene name="mandibleSize" value="1.0"/>			<!-- 0 = small			1 = large -->
+				<gene name="lipsSize" value="1.0"/>
+				<gene name="mouthSize" value="1.0"/>
+				<gene name="noseWidth" value="0.5"/>
+				<gene name="noseInclination" value="0.5"/>		<!-- 0 = down			1 = up -->
+				<gene name="handsSize" value="0.5"/>
+				<gene name="feetSize" value="1.1"/>
+				<gene name="earsSize" value="0.5"/>
+				<gene name="foreheadPosition" value="0.0"/>		<!-- 0 = high eyebrows	1 = low eyebrows -->
+				<gene name="eyeSize" value="1.0"/>				<!-- 0 = squinty		1 = wide open -->
+			</dna>
+		</archetype>
+		
+		<archetype name="en_utilityFemale1Radiated" hair_color="30,30,30" skin_color="160,210,255">
+			<base_mesh_parts>
+				<part slot="head" layer="base" mesh="female_base_face">
+					<texture name="female_head_zombie" color="skin"/>
+					<texture name="female_head_wound" color="140,255,0"/>
+					<texture name="unisex_face_dirt_overlay" color="140,255,0"/>
+				</part>
+				<part slot="head" mesh="female_shaggy_hair_hat" layer="inner" >
+					<texture name="female_shaggy_hair" color="hair" />
+					<texture name="female_shaggy_hair_highlights" color="65,55,45"/>
+				</part>
+				<part slot="head" layer="outer" mesh="unisex_gear_mining_helmet">
+					<texture name="unisex_gear_mining_helmet" color="200,100,100"/>
+					<texture name="male_torso_wound" color="140,255,0"/>
+					<texture name="unisex_face_dirt_overlay" color="140,255,0"/>
+				</part>
+				<part slot="eyes" layer="base" mesh="female_base_eyes">
+					<texture name="unisex_eye_bloodshot" color="140,255,0"/>
+				</part>
+				<part slot="chest" layer="base" mesh="female_shirt">
+					<texture name="unisex_shirt" color="200,200,200"/>
+					<texture name="male_torso_wound" color="140,255,0"/>
+					<texture name="unisex_face_dirt_overlay" color="140,255,0"/>
+				</part>
+				<part slot="chest" layer="outer" mesh="female_armor_kevlar_vest">
+					<texture name="unisex_armor_kevlar_vest" color="240,160,0"/>
+					<texture name="male_torso_wound" color="140,255,0"/>
+					<texture name="female_legs_wound" color="140,255,0"/>
+					<texture name="unisex_face_dirt_overlay" color="140,255,0"/>
+				</part>
+				<part slot="hands" layer="base" mesh="female_base_hands">
+					<texture name="female_hands" color="140,180,240"/>
+					<texture name="male_torso_wound" color="140,255,0"/>
+					<texture name="unisex_face_dirt_overlay" color="140,255,0"/>
+				</part>
+				<part slot="legs" layer="base" mesh="female_clothes_denim_pants">
+					<texture name="female_pants_01" color="150,130,110"/>
+					<texture name="male_head_wound" color="140,255,0"/>
+					<texture name="unisex_face_dirt_overlay" color="140,255,0"/>
+				</part>
+				<part slot="feet" layer="base" mesh="female_worn_boots">
+					<texture name="female_worn_boots" color="190,170,150"/>
+					<texture name="female_torso_wound" color="140,255,0"/>
+					<texture name="unisex_face_dirt_overlay" color="140,255,0"/>
+				</part>
+			</base_mesh_parts>			
+			<dna>
+				<gene name="height" value="0.4"/>
+				<gene name="weight" value="0.9"/>
+				<gene name="breastSize" value="0.8"/>
+				<gene name="muscle" value="1.1"/>
+				<gene name="gluteusSize" value="0.9"/>			<!-- butt size -->
+				<gene name="headSize" value="0.5"/>
+				<gene name="headWidth" value="1.0"/>
+				<gene name="chinSize" value="1.1"/>				<!-- 0 = pointy			1 = rounded -->
+				<gene name="jawsSize" value="1.1"/>				<!-- 0 = thin			1 = wide -->
+				<gene name="jawsPosition" value="0.5"/>			<!-- 0 = double chin	1 = high -->
+				<gene name="mandibleSize" value="1.0"/>			<!-- 0 = small			1 = large -->
+				<gene name="lipsSize" value="1.1"/>
+				<gene name="mouthSize" value="1.1"/>
+				<gene name="noseWidth" value="0.5"/>
+				<gene name="noseInclination" value="0.5"/>		<!-- 0 = down			1 = up -->
+				<gene name="handsSize" value="0.5"/>
+				<gene name="feetSize" value="1.1"/>
+				<gene name="earsSize" value="0.5"/>
+				<gene name="foreheadPosition" value="0.0"/>		<!-- 0 = high eyebrows	1 = low eyebrows -->
+				<gene name="eyeSize" value="1.0"/>				<!-- 0 = squinty		1 = wide open -->
+			</dna>
+		</archetype>
+		
+		<archetype name="en_utilityMale1" hair_color="30,30,30" skin_color="160,200,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -20455,7 +20678,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_utility1Feral" male="true" hair_color="30,30,30" skin_color="170,200,255">
+		<archetype name="en_utilityMale1Feral" hair_color="30,30,30" skin_color="170,200,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -20522,7 +20745,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_utility1Radiated" male="true" hair_color="30,30,30" skin_color="180,210,255">
+		<archetype name="en_utilityMale1Radiated" hair_color="30,30,30" skin_color="180,210,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -20590,7 +20813,7 @@
 		</archetype>
 		
 		
-		<archetype name="en_utility2" male="true" hair_color="30,30,30" skin_color="180,250,240">
+		<archetype name="en_utilityMale2" hair_color="30,30,30" skin_color="180,250,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -20649,7 +20872,7 @@
 			</dna>
 		</archetype>
 
-		<archetype name="en_utility2Feral" male="true" hair_color="30,30,30" skin_color="190,250,240">
+		<archetype name="en_utilityMale2Feral" hair_color="30,30,30" skin_color="190,250,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -20713,7 +20936,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_utility2Radiated" male="true" hair_color="30,30,30" skin_color="180,255,240">
+		<archetype name="en_utilityMale2Radiated" hair_color="30,30,30" skin_color="180,255,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -20777,7 +21000,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_utility3" male="true" hair_color="30,30,30" skin_color="160,200,255">
+		<archetype name="en_utilityMale3" hair_color="30,30,30" skin_color="160,200,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -20836,7 +21059,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_utility3Feral" male="true" hair_color="30,30,30" skin_color="170,200,255">
+		<archetype name="en_utilityMale3Feral" hair_color="30,30,30" skin_color="170,200,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -20899,7 +21122,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_utility3Radiated" male="true" hair_color="30,30,30" skin_color="160,210,255">
+		<archetype name="en_utilityMale3Radiated" hair_color="30,30,30" skin_color="160,210,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -20962,7 +21185,212 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_wastelandFemale1" male="false" hair_color="0,0,0" skin_color="170,140,150">
+		<archetype name="en_utilityMale4" hair_color="30,30,30" skin_color="130,185,250">
+			<base_mesh_parts>
+				<part slot="head" layer="base" mesh="male_base_face">
+					<texture name="male_head_zombie" color="skin"/>
+					<texture name="male_head_wound" color="128,0,0"/>
+					<texture name="unisex_dirt_overlay" color="128,0,0"/>
+				</part>
+				<part slot="head" layer="inner" mesh="male_shaggy_hair_hat">
+					<texture name="male_shaggy_hair" color="hair"/>
+				</part>
+				<part slot="head" layer="outer" mesh="unisex_gear_mining_helmet">
+					<texture name="unisex_gear_mining_helmet" color="200,255,255"/>
+					<texture name="unisex_dirt_overlay" color="128,0,0"/>
+				</part>
+				<part slot="eyes" layer="base" mesh="male_base_eyes">
+					<texture name="unisex_eye_bloodshot" color="250,200,200"/>
+				</part>
+				<part slot="face" layer="base" mesh="male_regent_mustache">
+					<texture name="male_shaggy_hair" color="20,20,20"/>
+				</part>
+				<part slot="chest" layer="base" mesh="male_shirt">
+					<texture name="unisex_shirt" color="80,80,80"/>
+					<texture name="unisex_dirt_overlay" color="128,0,0"/>
+				</part>
+				<part slot="chest" layer="outer" mesh="male_armor_kevlar_vest">
+					<texture name="unisex_armor_kevlar_vest" color="255,230,100"/>
+					<texture name="female_head_wound" color="128,0,0"/>
+					<texture name="unisex_dirt_overlay" color="128,0,0"/>
+				</part>
+				<part slot="hands" layer="base" mesh="male_base_hands">
+					<texture name="male_hands" color="110,120,100"/>
+					<texture name="unisex_face_dirt_overlay" color="128,0,0"/>
+				</part>
+				<part slot="legs" layer="base" mesh="male_clothes_denim_pants">
+					<texture name="male_pants_01" color="180,180,200"/>
+					<texture name="unisex_face_dirt_overlay" color="128,0,0"/>
+				</part>
+				<part slot="feet" layer="base" mesh="male_worn_boots">
+					<texture name="male_worn_boots" color="255,255,255"/>
+					<texture name="unisex_face_dirt_overlay" color="128,0,0"/>
+				</part>
+			</base_mesh_parts>		
+			<dna>
+				<gene name="height" value="1.0"/>
+				<gene name="weight" value="0.8"/>
+				<gene name="muscle" value="0.2"/>
+				<gene name="gluteusSize" value="0.8"/>			<!-- butt size -->
+				<gene name="headSize" value="0.5"/>
+				<gene name="headWidth" value="0.6"/>
+				<gene name="chinSize" value="0.8"/>				<!-- 0 = pointy			1 = rounded -->
+				<gene name="jawsSize" value="0.8"/>				<!-- 0 = thin			1 = wide -->
+				<gene name="jawsPosition" value="0.2"/>			<!-- 0 = double chin	1 = high -->
+				<gene name="mandibleSize" value="0.8"/>			<!-- 0 = small			1 = large -->
+				<gene name="lipsSize" value="0.8"/>
+				<gene name="mouthSize" value="0.8"/>
+				<gene name="noseWidth" value="0.8"/>
+				<gene name="noseInclination" value="0.2"/>		<!-- 0 = down			1 = up -->
+				<gene name="handsSize" value="0.4"/>
+				<gene name="feetSize" value="1.1"/>
+				<gene name="earsSize" value="1.0"/>
+				<gene name="foreheadPosition" value="0.0"/>		<!-- 0 = high eyebrows	1 = low eyebrows -->
+				<gene name="eyeSize" value="1.0"/>				<!-- 0 = squinty		1 = wide open -->
+			</dna>
+		</archetype>
+		
+		<archetype name="en_utilityMale4Feral" hair_color="30,30,30" skin_color="140,185,250">
+			<base_mesh_parts>
+				<part slot="head" layer="base" mesh="male_base_face">
+					<texture name="male_head_zombie" color="skin"/>
+					<texture name="male_head_wound" color="160,0,0"/>
+					<texture name="unisex_face_dirt_overlay" color="160,0,0"/>
+				</part>
+				<part slot="head" layer="inner" mesh="male_shaggy_hair_hat">
+					<texture name="male_shaggy_hair" color="hair"/>
+				</part>
+				<part slot="head" layer="outer" mesh="unisex_gear_mining_helmet">
+					<texture name="unisex_gear_mining_helmet" color="200,255,255"/>
+					<texture name="female_legs_wound" color="160,0,0"/>
+					<texture name="unisex_face_dirt_overlay" color="160,0,0"/>
+				</part>
+				<part slot="eyes" layer="base" mesh="male_base_eyes">
+					<texture name="unisex_eye_bloodshot" color="255,255,0"/>
+				</part>
+				<part slot="face" layer="base" mesh="male_regent_mustache">
+					<texture name="male_shaggy_hair" color="20,20,20"/>
+				</part>
+				<part slot="chest" layer="base" mesh="male_shirt">
+					<texture name="unisex_shirt" color="80,80,80"/>
+					<texture name="male_torso_wound" color="128,0,0"/>
+					<texture name="unisex_face_dirt_overlay" color="160,0,0"/>
+				</part>
+				<part slot="chest" layer="outer" mesh="male_armor_kevlar_vest">
+					<texture name="unisex_armor_kevlar_vest" color="255,230,100"/>
+					<texture name="female_head_wound" color="160,0,0"/>
+					<texture name="unisex_face_dirt_overlay" color="160,0,0"/>
+				</part>
+				<part slot="hands" layer="base" mesh="male_base_hands">
+					<texture name="male_hands" color="110,120,100"/>
+					<texture name="female_legs_wound" color="160,0,0"/>
+					<texture name="unisex_face_dirt_overlay" color="160,0,0"/>
+				</part>
+				<part slot="legs" layer="base" mesh="male_clothes_denim_pants">
+					<texture name="male_pants_01" color="180,180,200"/>
+					<texture name="male_head_wound" color="128,0,0"/>
+					<texture name="unisex_face_dirt_overlay" color="160,0,0"/>
+				</part>
+				<part slot="feet" layer="base" mesh="male_worn_boots">
+					<texture name="male_worn_boots" color="255,255,255"/>
+					<texture name="female_legs_wound" color="140,0,0"/>
+					<texture name="unisex_face_dirt_overlay" color="160,0,0"/>
+				</part>
+			</base_mesh_parts>		
+			<dna>
+				<gene name="height" value="1.0"/>
+				<gene name="weight" value="0.8"/>
+				<gene name="muscle" value="0.2"/>
+				<gene name="gluteusSize" value="0.8"/>			<!-- butt size -->
+				<gene name="headSize" value="0.5"/>
+				<gene name="headWidth" value="0.6"/>
+				<gene name="chinSize" value="0.8"/>				<!-- 0 = pointy			1 = rounded -->
+				<gene name="jawsSize" value="0.8"/>				<!-- 0 = thin			1 = wide -->
+				<gene name="jawsPosition" value="0.2"/>			<!-- 0 = double chin	1 = high -->
+				<gene name="mandibleSize" value="0.8"/>			<!-- 0 = small			1 = large -->
+				<gene name="lipsSize" value="0.8"/>
+				<gene name="mouthSize" value="0.8"/>
+				<gene name="noseWidth" value="0.8"/>
+				<gene name="noseInclination" value="0.2"/>		<!-- 0 = down			1 = up -->
+				<gene name="handsSize" value="0.4"/>
+				<gene name="feetSize" value="1.1"/>
+				<gene name="earsSize" value="1.0"/>
+				<gene name="foreheadPosition" value="0.0"/>		<!-- 0 = high eyebrows	1 = low eyebrows -->
+				<gene name="eyeSize" value="1.0"/>				<!-- 0 = squinty		1 = wide open -->
+			</dna>
+		</archetype>
+		
+		<archetype name="en_utilityMale4Radiated" hair_color="30,30,30" skin_color="130,195,250">
+			<base_mesh_parts>
+				<part slot="head" layer="base" mesh="male_base_face">
+					<texture name="male_head_zombie" color="skin"/>
+					<texture name="male_head_wound" color="140,255,0"/>
+					<texture name="unisex_face_dirt_overlay" color="140,255,0"/>
+				</part>
+				<part slot="head" layer="inner" mesh="male_shaggy_hair_hat">
+					<texture name="male_shaggy_hair" color="hair"/>
+				</part>
+				<part slot="head" layer="outer" mesh="unisex_gear_mining_helmet">
+					<texture name="unisex_gear_mining_helmet" color="200,255,255"/>
+					<texture name="female_legs_wound" color="140,255,0"/>
+					<texture name="unisex_face_dirt_overlay" color="140,255,0"/>
+				</part>
+				<part slot="eyes" layer="base" mesh="male_base_eyes">
+					<texture name="unisex_eye_bloodshot" color="140,255,0"/>
+				</part>
+				<part slot="face" layer="base" mesh="male_regent_mustache">
+					<texture name="male_shaggy_hair" color="20,20,20"/>
+				</part>
+				<part slot="chest" layer="base" mesh="male_shirt">
+					<texture name="unisex_shirt" color="80,80,80"/>
+					<texture name="male_torso_wound" color="140,255,0"/>
+					<texture name="unisex_face_dirt_overlay" color="140,255,0"/>
+				</part>
+				<part slot="chest" layer="outer" mesh="male_armor_kevlar_vest">
+					<texture name="unisex_armor_kevlar_vest" color="255,230,100"/>
+					<texture name="female_head_wound" color="140,255,0"/>
+					<texture name="unisex_face_dirt_overlay" color="140,255,0"/>
+				</part>
+				<part slot="hands" layer="base" mesh="male_base_hands">
+					<texture name="male_hands" color="110,120,100"/>
+					<texture name="female_legs_wound" color="140,255,0"/>
+					<texture name="unisex_face_dirt_overlay" color="140,255,0"/>
+				</part>
+				<part slot="legs" layer="base" mesh="male_clothes_denim_pants">
+					<texture name="male_pants_01" color="180,180,200"/>
+					<texture name="male_head_wound" color="140,255,0"/>
+					<texture name="unisex_face_dirt_overlay" color="140,255,0"/>
+				</part>
+				<part slot="feet" layer="base" mesh="male_worn_boots">
+					<texture name="male_worn_boots" color="255,255,255"/>
+					<texture name="female_legs_wound" color="140,255,0"/>
+					<texture name="unisex_face_dirt_overlay" color="140,255,0"/>
+				</part>
+			</base_mesh_parts>		
+			<dna>
+				<gene name="height" value="1.0"/>
+				<gene name="weight" value="0.8"/>
+				<gene name="muscle" value="0.2"/>
+				<gene name="gluteusSize" value="0.8"/>			<!-- butt size -->
+				<gene name="headSize" value="0.5"/>
+				<gene name="headWidth" value="0.6"/>
+				<gene name="chinSize" value="0.8"/>				<!-- 0 = pointy			1 = rounded -->
+				<gene name="jawsSize" value="0.8"/>				<!-- 0 = thin			1 = wide -->
+				<gene name="jawsPosition" value="0.2"/>			<!-- 0 = double chin	1 = high -->
+				<gene name="mandibleSize" value="0.8"/>			<!-- 0 = small			1 = large -->
+				<gene name="lipsSize" value="0.8"/>
+				<gene name="mouthSize" value="0.8"/>
+				<gene name="noseWidth" value="0.8"/>
+				<gene name="noseInclination" value="0.2"/>		<!-- 0 = down			1 = up -->
+				<gene name="handsSize" value="0.4"/>
+				<gene name="feetSize" value="1.1"/>
+				<gene name="earsSize" value="1.0"/>
+				<gene name="foreheadPosition" value="0.0"/>		<!-- 0 = high eyebrows	1 = low eyebrows -->
+				<gene name="eyeSize" value="1.0"/>				<!-- 0 = squinty		1 = wide open -->
+			</dna>
+		</archetype>
+		
+		<archetype name="en_wastelandFemale1" hair_color="0,0,0" skin_color="170,140,150">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -21018,7 +21446,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_wastelandFemale1Feral" male="false" hair_color="0,0,0" skin_color="180,140,150">
+		<archetype name="en_wastelandFemale1Feral" hair_color="0,0,0" skin_color="180,140,150">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -21082,7 +21510,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_wastelandFemale1Radiated" male="false" hair_color="0,0,0" skin_color="170,150,150">
+		<archetype name="en_wastelandFemale1Radiated" hair_color="0,0,0" skin_color="170,150,150">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -21146,7 +21574,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_wastelandFemale2" male="false" hair_color="40,20,10" skin_color="170,140,150">
+		<archetype name="en_wastelandFemale2" hair_color="40,20,10" skin_color="170,140,150">
 			<base_mesh_parts>
 				<part mesh="female_base_face" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -21204,7 +21632,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_wastelandFemale2Feral" male="false" hair_color="40,20,10" skin_color="180,140,150">
+		<archetype name="en_wastelandFemale2Feral" hair_color="40,20,10" skin_color="180,140,150">
 			<base_mesh_parts>
 				<part mesh="female_base_face" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -21266,7 +21694,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_wastelandFemale2Radiated" male="false" hair_color="40,20,10" skin_color="170,150,150">
+		<archetype name="en_wastelandFemale2Radiated" hair_color="40,20,10" skin_color="170,150,150">
 			<base_mesh_parts>
 				<part mesh="female_base_face" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -21328,7 +21756,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_wastelandFemale3" male="false" hair_color="110,50,50" skin_color="170,140,150">
+		<archetype name="en_wastelandFemale3" hair_color="110,50,50" skin_color="170,140,150">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -21384,7 +21812,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_wastelandFemale3Feral" male="false" hair_color="110,50,50" skin_color="180,140,150">
+		<archetype name="en_wastelandFemale3Feral" hair_color="110,50,50" skin_color="180,140,150">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -21444,7 +21872,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_wastelandFemale3Radiated" male="false" hair_color="110,50,50" skin_color="170,150,150">
+		<archetype name="en_wastelandFemale3Radiated" hair_color="110,50,50" skin_color="170,150,150">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -21504,7 +21932,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_wastelandFemaleCrazy" male="false" hair_color="30,20,10" skin_color="170,140,150">
+		<archetype name="en_wastelandFemaleCrazy" hair_color="30,20,10" skin_color="170,140,150">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -21562,7 +21990,7 @@
 			</dna>
 		</archetype>		
 		
-		<archetype name="en_wastelandFemaleCrazyFeral" male="false" hair_color="30,20,10" skin_color="180,140,150">
+		<archetype name="en_wastelandFemaleCrazyFeral" hair_color="30,20,10" skin_color="180,140,150">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -21621,7 +22049,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_wastelandFemaleCrazyRadiated" male="false" hair_color="30,20,10" skin_color="170,150,150">
+		<archetype name="en_wastelandFemaleCrazyRadiated" hair_color="30,20,10" skin_color="170,150,150">
 			<base_mesh_parts>
 				<part mesh="female_base_face_pretty" slot="head" layer="base" >
 					<texture name="female_head_zombie" color="skin" />
@@ -21680,7 +22108,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_wastelandGiant" male="true" hair_color="0,0,0" skin_color="140,110,120">
+		<archetype name="en_wastelandGiant" hair_color="0,0,0" skin_color="140,110,120">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -21752,7 +22180,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_wastelandGoblin1" male="true" hair_color="140,110,80" skin_color="140,110,120">
+		<archetype name="en_wastelandGoblin1" hair_color="140,110,80" skin_color="140,110,120">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head" color="skin"/>
@@ -21831,7 +22259,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_wastelandGoblin2" male="true" hair_color="60,40,20" skin_color="150,110,120">
+		<archetype name="en_wastelandGoblin2" hair_color="60,40,20" skin_color="150,110,120">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head" color="skin"/>
@@ -21914,7 +22342,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_wastelandGoblin3" male="true" hair_color="30,30,30" skin_color="130,110,120">
+		<archetype name="en_wastelandGoblin3" hair_color="30,30,30" skin_color="130,110,120">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -21992,7 +22420,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_wastelandMale1" male="true" hair_color="50,25,0" skin_color="150,120,130">
+		<archetype name="en_wastelandMale1" hair_color="50,25,0" skin_color="150,120,130">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -22044,7 +22472,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_wastelandMale1Feral" male="true" hair_color="50,25,0" skin_color="160,120,130">
+		<archetype name="en_wastelandMale1Feral" hair_color="50,25,0" skin_color="160,120,130">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -22099,7 +22527,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_wastelandMale1Radiated" male="true" hair_color="50,25,0" skin_color="150,130,130">
+		<archetype name="en_wastelandMale1Radiated" hair_color="50,25,0" skin_color="150,130,130">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -22154,7 +22582,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_wastelandMale2" male="true" hair_color="40,20,10" skin_color="170,140,150">
+		<archetype name="en_wastelandMale2" hair_color="40,20,10" skin_color="170,140,150">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -22209,7 +22637,7 @@
 			</dna>
 		</archetype>
 	
-		<archetype name="en_wastelandMale2Feral" male="true" hair_color="40,20,10" skin_color="180,140,150">
+		<archetype name="en_wastelandMale2Feral" hair_color="40,20,10" skin_color="180,140,150">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -22268,7 +22696,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_wastelandMale2Radiated" male="true" hair_color="40,20,10" skin_color="170,150,150">
+		<archetype name="en_wastelandMale2Radiated" hair_color="40,20,10" skin_color="170,150,150">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -22327,7 +22755,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_wastelandMale3" male="true" hair_color="20,20,20" skin_color="170,150,150">
+		<archetype name="en_wastelandMale3" hair_color="20,20,20" skin_color="170,150,150">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -22384,7 +22812,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_wastelandMale3Feral" male="true" hair_color="20,20,20" skin_color="180,150,150">
+		<archetype name="en_wastelandMale3Feral" hair_color="20,20,20" skin_color="180,150,150">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -22444,7 +22872,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_wastelandMale3Radiated" male="true" hair_color="20,20,20" skin_color="170,160,150">
+		<archetype name="en_wastelandMale3Radiated" hair_color="20,20,20" skin_color="170,160,150">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -22505,7 +22933,7 @@
 		</archetype>
 		
 		
-		<archetype name="en_wastelandMaleCrazy" male="true" hair_color="60,50,40" skin_color="150,120,130">
+		<archetype name="en_wastelandMaleCrazy" hair_color="60,50,40" skin_color="150,120,130">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -22561,7 +22989,7 @@
 			</dna>
 		</archetype>
 	
-		<archetype name="en_wastelandMaleCrazyFeral" male="true" hair_color="60,50,40" skin_color="160,120,130">
+		<archetype name="en_wastelandMaleCrazyFeral" hair_color="60,50,40" skin_color="160,120,130">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -22619,7 +23047,7 @@
 			</dna>
 		</archetype>
 
-		<archetype name="en_wastelandMaleCrazyRadiated" male="true" hair_color="60,50,40" skin_color="160,120,130">
+		<archetype name="en_wastelandMaleCrazyRadiated" hair_color="60,50,40" skin_color="160,120,130">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -22677,7 +23105,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_wastelandSpider" male="true" hair_color="60,50,40" skin_color="120,80,90">
+		<archetype name="en_wastelandSpider" hair_color="60,50,40" skin_color="120,80,90">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -22733,7 +23161,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_wastelandSpiderFeral" male="true" hair_color="60,50,40" skin_color="130,80,90">
+		<archetype name="en_wastelandSpiderFeral" hair_color="60,50,40" skin_color="130,80,90">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -22791,7 +23219,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_wastelandSpiderRadiated" male="true" hair_color="60,50,40" skin_color="120,90,90">
+		<archetype name="en_wastelandSpiderRadiated" hair_color="60,50,40" skin_color="120,90,90">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -22856,7 +23284,7 @@
 		<!-- ********** TEST CHAMBER CREATURES ********** -->
 		<!-- creatures that appear in the vertical glass pods in labs -->
 		
-		<archetype name="en_LabCreatureMale1" male="true" skin_color="180,230,255">
+		<archetype name="en_LabCreatureMale1" skin_color="180,230,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -22910,7 +23338,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_LabCreatureMale2" male="true" skin_color="180,230,255">
+		<archetype name="en_LabCreatureMale2" skin_color="180,230,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -22964,7 +23392,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_LabCreatureMale3" male="true" skin_color="180,230,255">
+		<archetype name="en_LabCreatureMale3" skin_color="180,230,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -23018,7 +23446,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_LabCreatureMale4" male="true" skin_color="180,230,255">
+		<archetype name="en_LabCreatureMale4" skin_color="180,230,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin"/>
@@ -23072,7 +23500,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_LabCreatureFemale1" male="true" skin_color="180,255,240">
+		<archetype name="en_LabCreatureFemale1" skin_color="180,255,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin"/>
@@ -23128,7 +23556,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_LabCreatureFemale2" male="true" skin_color="180,255,240">
+		<archetype name="en_LabCreatureFemale2" skin_color="180,255,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin"/>
@@ -23184,7 +23612,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_LabCreatureFemale3" male="true" skin_color="180,255,240">
+		<archetype name="en_LabCreatureFemale3" skin_color="180,255,240">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin"/>
@@ -23240,7 +23668,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_LabCreatureFemale4" male="true" skin_color="190,255,255">
+		<archetype name="en_LabCreatureFemale4" skin_color="190,255,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin"/>
@@ -23296,7 +23724,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_wildlingFemale1" male="true" hair_color="70,60,30" skin_color="150,190,220">
+		<archetype name="en_wildlingFemale1" hair_color="70,60,30" skin_color="150,190,220">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face" >
 					<texture name="female_head_asian" color="skin" />
@@ -23373,7 +23801,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_wildlingFemale1Feral" male="true" hair_color="70,60,30" skin_color="160,190,220">
+		<archetype name="en_wildlingFemale1Feral" hair_color="70,60,30" skin_color="160,190,220">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face" >
 					<texture name="female_head_asian" color="skin" />
@@ -23450,7 +23878,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="en_wildlingFemale1Radiated" male="true" hair_color="70,60,30" skin_color="150,200,220">
+		<archetype name="en_wildlingFemale1Radiated" hair_color="70,60,30" skin_color="150,200,220">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face" >
 					<texture name="female_head_asian" color="skin" />
@@ -23531,7 +23959,7 @@
 		
 		<!-- *****  Snufkin Boss ***** -->
 		
-		<archetype name="en_snufkinBoss" male="true" hair_color="85,70,60" skin_color="255,255,255">
+		<archetype name="en_snufkinBoss" hair_color="85,70,60" skin_color="255,255,255">
 		<base_mesh_parts>
 			<part slot="head" layer="base" mesh="male_base_face">
 				<texture name="male_head_zombie" color="skin"/>
@@ -23612,7 +24040,7 @@
 		<!-- Below code taken from KHzMusik's UMA Zombie Mod v2.0.0 -->
 		<!-- Forum Page - https://community.7daystodie.com/topic/24348-a19-khzmusiks-modlets -->
 		
-		<archetype name="KHz_Hank" male="true" hair_color="200,200,200" eye_color="99,62,14" skin_color="151,216,255" type="Player" stance="Like" voice_set="trader">
+		<archetype name="KHz_Hank" hair_color="200,200,200" eye_color="99,62,14" skin_color="151,216,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin" />
@@ -23692,7 +24120,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="KHz_Emma" male="false" hair_color="81,70,70" skin_color="151,216,255">
+		<archetype name="KHz_Emma" hair_color="81,70,70" skin_color="151,216,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin" />
@@ -23755,7 +24183,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="KHz_EmmaFeral" male="false" hair_color="81,70,70" skin_color="161,216,255">
+		<archetype name="KHz_EmmaFeral" hair_color="81,70,70" skin_color="161,216,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin" />
@@ -23821,7 +24249,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="KHz_Miguel" male="true" hair_color="23,23,23" skin_color="132,168,180">
+		<archetype name="KHz_Miguel" hair_color="23,23,23" skin_color="132,168,180">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin" />
@@ -23876,7 +24304,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="KHz_MiguelFeral" male="true" hair_color="23,23,23" skin_color="142,168,180">
+		<archetype name="KHz_MiguelFeral" hair_color="23,23,23" skin_color="142,168,180">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin" />
@@ -23933,7 +24361,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="KHz_Gabrielle" male="false" hair_color="30,10,10" eye_color="99,62,14" skin_color="109,132,149" type="Player" stance="Like" voice_set="trader">
+		<archetype name="KHz_Gabrielle" hair_color="30,10,10" eye_color="99,62,14" skin_color="109,132,149">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin" />
@@ -24009,7 +24437,7 @@
 				<gene name="breastSize" value="1" />
 			</dna>
 		</archetype>
-		<archetype name="KHz_Aiden" male="true" hair_color="249,130,2" eye_color="101,111,145" skin_color="139,183,215" type="Player" stance="Like" voice_set="trader">
+		<archetype name="KHz_Aiden" hair_color="249,130,2" eye_color="101,111,145" skin_color="139,183,215">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin" />
@@ -24073,7 +24501,7 @@
 				<gene name="eyeSize" value="0.05" />
 			</dna>
 		</archetype>
-		<archetype name="KHz_Grace" male="false" hair_color="30,25,23" eye_color="60,30,30" skin_color="151,216,255" type="Player" stance="Like" voice_set="trader">
+		<archetype name="KHz_Grace" hair_color="30,25,23" eye_color="60,30,30" skin_color="151,216,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_asian_face">
 					<texture name="female_head_asian" color="skin" />
@@ -24145,7 +24573,7 @@
 				<gene name="breastSize" value="0.33" />
 			</dna>
 		</archetype>
-		<archetype name="KHz_Jeff" male="true" hair_color="20,20,20" eye_color="99,62,14" skin_color="109,136,149" type="Player" stance="Like" voice_set="trader">
+		<archetype name="KHz_Jeff" hair_color="20,20,20" eye_color="99,62,14" skin_color="109,136,149">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin" />
@@ -24225,7 +24653,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="KHz_Charlotte" male="false" hair_color="60,25,23" eye_color="70,80,70" skin_color="139,193,228">
+		<archetype name="KHz_Charlotte" hair_color="60,25,23" eye_color="70,80,70" skin_color="139,193,228">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin" />
@@ -24290,7 +24718,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="KHz_CharlotteFeral" male="false" hair_color="60,25,23" eye_color="70,80,70" skin_color="149,193,228">
+		<archetype name="KHz_CharlotteFeral" hair_color="60,25,23" eye_color="70,80,70" skin_color="149,193,228">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin" />
@@ -24358,7 +24786,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="KHz_Willie" male="true" hair_color="10,10,10" eye_color="40,30,24" skin_color="107,131,130" type="Player" stance="Like" voice_set="trader">
+		<archetype name="KHz_Willie" hair_color="10,10,10" eye_color="40,30,24" skin_color="107,131,130">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin" />
@@ -24438,7 +24866,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="KHz_Helen" male="false" hair_color="230,200,160" eye_color="200,200,255" skin_color="151,216,255" type="Player" stance="Like" voice_set="trader">
+		<archetype name="KHz_Helen" hair_color="230,200,160" eye_color="200,200,255" skin_color="151,216,255">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin" />
@@ -24501,7 +24929,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="KHz_Vince" male="true" hair_color="100,100,100" eye_color="99,62,14" skin_color="139,193,228" type="Player" stance="Like" voice_set="trader">
+		<archetype name="KHz_Vince" hair_color="100,100,100" eye_color="99,62,14" skin_color="139,193,228">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin" />
@@ -24584,7 +25012,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="KHz_Maria" male="false" hair_color="9,9,9" skin_color="132,168,180">
+		<archetype name="KHz_Maria" hair_color="9,9,9" skin_color="132,168,180">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin" />
@@ -24658,7 +25086,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="KHz_MariaFeral" male="false" hair_color="9,9,9" skin_color="142,168,180">
+		<archetype name="KHz_MariaFeral" hair_color="9,9,9" skin_color="142,168,180">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin" />
@@ -24735,7 +25163,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="KHz_Rayah" male="false" hair_color="30,10,10" eye_color="99,90,14" skin_color="132,168,180" type="Player" stance="Like" voice_set="trader">
+		<archetype name="KHz_Rayah" hair_color="30,10,10" eye_color="99,90,14" skin_color="132,168,180">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face">
 					<texture name="female_head_zombie" color="skin" />
@@ -24813,7 +25241,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="KHz_Chang" male="true" hair_color="100,100,100" eye_color="40,20,20" skin_color="133,187,215" type="Player" stance="Like" voice_set="trader">
+		<archetype name="KHz_Chang" hair_color="100,100,100" eye_color="40,20,20" skin_color="133,187,215">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_asian_face">
 					<texture name="male_head_zombie" color="skin" />
@@ -24900,7 +25328,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="KHz_Jack" male="true" hair_color="30,30,30" eye_color="99,62,14" skin_color="139,193,228" type="Player" stance="Like" voice_set="trader">
+		<archetype name="KHz_Jack" hair_color="30,30,30" eye_color="99,62,14" skin_color="139,193,228">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin" />
@@ -24991,7 +25419,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="KHz_Clint" male="true" hair_color="50,30,30" eye_color="116,119,117" skin_color="137,183,215" type="Player" stance="Like" voice_set="trader">
+		<archetype name="KHz_Clint" hair_color="50,30,30" eye_color="116,119,117" skin_color="137,183,215">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin" />
@@ -25076,7 +25504,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="KHz_Richie" male="true" hair_color="32,22,16" eye_color="101,111,145" skin_color="139,183,215" type="Player" stance="Like" voice_set="trader">
+		<archetype name="KHz_Richie" hair_color="32,22,16" eye_color="101,111,145" skin_color="139,183,215">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="male_base_face">
 					<texture name="male_head_zombie" color="skin" />
@@ -25140,7 +25568,7 @@
 			</dna>
 		</archetype>
 		
-		<archetype name="KHz_Roxy" male="false" hair_color="4,2,2" eye_color="34,17,7" skin_color="109,132,149" type="Player" stance="Like" voice_set="trader">
+		<archetype name="KHz_Roxy" hair_color="4,2,2" eye_color="34,17,7" skin_color="109,132,149">
 			<base_mesh_parts>
 				<part slot="head" layer="base" mesh="female_base_face_pretty">
 					<texture name="female_head_zombie" color="skin" />
@@ -25150,8 +25578,6 @@
 					<texture name="female_eyeshadow" color="0,0,0,255" />
 					<texture name="female_eyeliner" color="0,0,0,255" />
 					<texture name="female_blush" color="47,27,22,255" />
-					<!-- For whatever reason, doesn't work here - wound is see-through -->
-					<!-- <texture name="female_head_wound" color="72,23,16,255" /> -->
 					<texture name="unisex_face_dirt_overlay" color="100,80,100,255" />
 				</part>
 				<part slot="head" layer="inner" mesh="unisex_hair_afro">
@@ -25220,15 +25646,3 @@
 
 
 </config>
-
-
-
-
-
-
-
-
-
-
-
-				
