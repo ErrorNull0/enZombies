@@ -47,25 +47,24 @@ ZombieBurntHorde, gamestages 1, 50, 100, 200, 400, 800
 <append xpath="/gamestages">
 	<spawner name="ZombieBadassGSHorde">
 		<gamestage stage="1"><spawn group="badassHordeStageGS1" num="1" maxAlive="1" duration="1"/></gamestage>
-		<gamestage stage="2"><spawn group="badassHordeStageGS1" num="2" maxAlive="2" duration="1"/></gamestage>
-		<gamestage stage="3"><spawn group="badassHordeStageGS1" num="3" maxAlive="3" duration="1"/></gamestage>
-		<gamestage stage="5"><spawn group="badassHordeStageGS1" num="5" maxAlive="5" duration="1"/></gamestage>
-		<gamestage stage="10"><spawn group="badassHordeStageGS1" num="10" maxAlive="10" duration="1"/></gamestage>
-		<gamestage stage="20"><spawn group="badassHordeStageGS25" num="15" maxAlive="20" duration="1"/></gamestage>
-		<gamestage stage="30"><spawn group="badassHordeStageGS40" num="20" maxAlive="30" duration="1"/></gamestage>
-		<gamestage stage="40"><spawn group="badassHordeStageGS40" num="25" maxAlive="40" duration="1"/></gamestage>
-		<gamestage stage="50"><spawn group="badassHordeStageGS75" num="30" maxAlive="50" duration="1"/></gamestage>
-		<gamestage stage="75"><spawn group="badassHordeStageGS75" num="35" maxAlive="75" duration="1"/></gamestage>
-		<gamestage stage="100"><spawn group="badassHordeStageGS150" num="40" maxAlive="100" duration="1"/></gamestage>
-		<gamestage stage="150"><spawn group="badassHordeStageGS150" num="45" maxAlive="150" duration="1"/></gamestage>
-		<gamestage stage="200"><spawn group="badassHordeStageGS300" num="50" maxAlive="200" duration="1"/></gamestage>
-		<gamestage stage="300"><spawn group="badassHordeStageGS300" num="75" maxAlive="256" duration="1"/></gamestage>
-		<gamestage stage="400"><spawn group="badassHordeStageGS300" num="100" maxAlive="256" duration="1"/></gamestage>
-		<gamestage stage="500"><spawn group="badassHordeStageGS700" num="125" maxAlive="256" duration="1"/></gamestage>
-		<gamestage stage="700"><spawn group="badassHordeStageGS700" num="150" maxAlive="256" duration="1"/></gamestage>
-		<gamestage stage="900"><spawn group="badassHordeStageGS900" num="175" maxAlive="256" duration="1"/></gamestage>
-		<gamestage stage="1150"><spawn group="badassHordeStageGS1200" num="200" maxAlive="256" duration="1"/></gamestage>
-		<gamestage stage="1350"><spawn group="badassHordeStageGS1200" num="216" maxAlive="256" duration="1"/></gamestage>
+		<gamestage stage="3"><spawn group="badassHordeStageGS3" num="3" maxAlive="3" duration="1"/></gamestage>
+		<gamestage stage="8"><spawn group="badassHordeStageGS8" num="8" maxAlive="8" duration="1"/></gamestage>
+		<gamestage stage="13"><spawn group="badassHordeStageGS13" num="13" maxAlive="13" duration="1"/></gamestage>
+		<gamestage stage="20"><spawn group="badassHordeStageGS20" num="15" maxAlive="15" duration="1"/></gamestage>
+		<gamestage stage="30"><spawn group="badassHordeStageGS30" num="20" maxAlive="20" duration="1"/></gamestage>
+		<gamestage stage="51"><spawn group="badassHordeStageGS51" num="31" maxAlive="31" duration="1"/></gamestage>
+		<gamestage stage="95"><spawn group="badassHordeStageGS95" num="40" maxAlive="40" duration="1"/></gamestage>
+		<gamestage stage="194"><spawn group="badassHordeStageGS194" num="50" maxAlive="50" duration="1"/></gamestage>
+		<gamestage stage="296"><spawn group="badassHordeStageGS296" num="75" maxAlive="75" duration="1"/></gamestage>
+		<gamestage stage="419"><spawn group="badassHordeStageGS419" num="105" maxAlive="105" duration="1"/></gamestage>
+		<gamestage stage="524"><spawn group="badassHordeStageGS524" num="130" maxAlive="130" duration="1"/></gamestage>
+		<gamestage stage="600"><spawn group="badassHordeStageGS600" num="140" maxAlive="140" duration="1"/></gamestage>
+		<gamestage stage="681"><spawn group="badassHordeStageGS681" num="150" maxAlive="150" duration="1"/></gamestage>
+		<gamestage stage="812"><spawn group="badassHordeStageGS812" num="165" maxAlive="165" duration="1"/></gamestage>
+		<gamestage stage="905"><spawn group="badassHordeStageGS905" num="175" maxAlive="175" duration="1"/></gamestage>
+		<gamestage stage="1003"><spawn group="badassHordeStageGS1003" num="190" maxAlive="190" duration="1"/></gamestage>
+		<gamestage stage="1213"><spawn group="badassHordeStageGS1213" num="210" maxAlive="210" duration="1"/></gamestage>
+		<gamestage stage="1383"><spawn group="badassHordeStageGS1383" num="220" maxAlive="220" duration="1"/></gamestage>
 	</spawner>
 </append>
 
@@ -73,27 +72,26 @@ ZombieBurntHorde, gamestages 1, 50, 100, 200, 400, 800
 <!-- The vaninlla ZombieBadassOnlyHorde spawner spans across 28 gamestage division. Below it has been modified to only use 20 gamestage divisions and only span 16 spawn groups to allow easier modification of zombie details. -->
 <remove xpath="/gamestages/spawner[@name='ZombieBadassOnlyHorde']" />
 <append xpath="/gamestages">
-	<spawner name="ZombieBadassOnlyHorde">
+	<spawner name="ZombieBadassOnlyHorde">	
 		<gamestage stage="1"><spawn group="badassOnlyHordeStageGS1" num="1" maxAlive="1" duration="1"/></gamestage>
-		<gamestage stage="2"><spawn group="badassOnlyHordeStageGS1" num="2" maxAlive="2" duration="1"/></gamestage>
-		<gamestage stage="3"><spawn group="badassOnlyHordeStageGS1" num="3" maxAlive="3" duration="1"/></gamestage>
-		<gamestage stage="5"><spawn group="badassOnlyHordeStageGS1" num="5" maxAlive="5" duration="1"/></gamestage>
-		<gamestage stage="10"><spawn group="badassOnlyHordeStageGS1" num="10" maxAlive="10" duration="1"/></gamestage>
-		<gamestage stage="20"><spawn group="badassOnlyHordeStageGS20" num="15" maxAlive="20" duration="1"/></gamestage>
-		<gamestage stage="30"><spawn group="badassOnlyHordeStageGS30" num="20" maxAlive="30" duration="1"/></gamestage>
-		<gamestage stage="40"><spawn group="badassOnlyHordeStageGS40" num="25" maxAlive="40" duration="1"/></gamestage>
-		<gamestage stage="50"><spawn group="badassOnlyHordeStageGS50" num="30" maxAlive="50" duration="1"/></gamestage>
-		<gamestage stage="75"><spawn group="badassOnlyHordeStageGS75" num="35" maxAlive="75" duration="1"/></gamestage>
-		<gamestage stage="100"><spawn group="badassOnlyHordeStageGS100" num="40" maxAlive="100" duration="1"/></gamestage>
-		<gamestage stage="150"><spawn group="badassOnlyHordeStageGS150" num="45" maxAlive="150" duration="1"/></gamestage>
-		<gamestage stage="200"><spawn group="badassOnlyHordeStageGS200" num="50" maxAlive="200" duration="1"/></gamestage>
-		<gamestage stage="300"><spawn group="badassOnlyHordeStageGS300" num="75" maxAlive="256" duration="1"/></gamestage>
-		<gamestage stage="400"><spawn group="badassOnlyHordeStageGS400" num="100" maxAlive="256" duration="1"/></gamestage>
-		<gamestage stage="500"><spawn group="badassOnlyHordeStageGS500" num="125" maxAlive="256" duration="1"/></gamestage>
-		<gamestage stage="700"><spawn group="badassOnlyHordeStageGS700" num="150" maxAlive="256" duration="1"/></gamestage>
-		<gamestage stage="900"><spawn group="badassOnlyHordeStageGS900" num="175" maxAlive="256" duration="1"/></gamestage>
-		<gamestage stage="1150"><spawn group="badassOnlyHordeStageGS1150" num="200" maxAlive="256" duration="1"/></gamestage>
-		<gamestage stage="1350"><spawn group="badassOnlyHordeStageGS1350" num="216" maxAlive="256" duration="1"/></gamestage>
+		<gamestage stage="3"><spawn group="badassOnlyHordeStageGS3" num="3" maxAlive="3" duration="1"/></gamestage>
+		<gamestage stage="8"><spawn group="badassOnlyHordeStageGS8" num="8" maxAlive="8" duration="1"/></gamestage>
+		<gamestage stage="13"><spawn group="badassOnlyHordeStageGS13" num="13" maxAlive="13" duration="1"/></gamestage>
+		<gamestage stage="20"><spawn group="badassOnlyHordeStageGS20" num="15" maxAlive="15" duration="1"/></gamestage>
+		<gamestage stage="30"><spawn group="badassOnlyHordeStageGS30" num="20" maxAlive="20" duration="1"/></gamestage>
+		<gamestage stage="51"><spawn group="badassOnlyHordeStageGS51" num="31" maxAlive="31" duration="1"/></gamestage>
+		<gamestage stage="95"><spawn group="badassOnlyHordeStageGS95" num="40" maxAlive="40" duration="1"/></gamestage>
+		<gamestage stage="194"><spawn group="badassOnlyHordeStageGS194" num="50" maxAlive="50" duration="1"/></gamestage>
+		<gamestage stage="296"><spawn group="badassOnlyHordeStageGS296" num="75" maxAlive="75" duration="1"/></gamestage>
+		<gamestage stage="419"><spawn group="badassOnlyHordeStageGS419" num="105" maxAlive="105" duration="1"/></gamestage>
+		<gamestage stage="524"><spawn group="badassOnlyHordeStageGS524" num="130" maxAlive="130" duration="1"/></gamestage>
+		<gamestage stage="600"><spawn group="badassOnlyHordeStageGS600" num="140" maxAlive="140" duration="1"/></gamestage>
+		<gamestage stage="681"><spawn group="badassOnlyHordeStageGS681" num="150" maxAlive="150" duration="1"/></gamestage>
+		<gamestage stage="812"><spawn group="badassOnlyHordeStageGS812" num="165" maxAlive="165" duration="1"/></gamestage>
+		<gamestage stage="905"><spawn group="badassOnlyHordeStageGS905" num="175" maxAlive="175" duration="1"/></gamestage>
+		<gamestage stage="1003"><spawn group="badassOnlyHordeStageGS1003" num="190" maxAlive="190" duration="1"/></gamestage>
+		<gamestage stage="1213"><spawn group="badassOnlyHordeStageGS1213" num="210" maxAlive="210" duration="1"/></gamestage>
+		<gamestage stage="1383"><spawn group="badassOnlyHordeStageGS1383" num="220" maxAlive="220" duration="1"/></gamestage>
 	</spawner>
 </append>
 
