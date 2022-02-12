@@ -65,6 +65,8 @@ Snufkin's Custom Server Side Zombies - PLUS
 https://community.7daystodie.com/topic/22698-snufkins-custom-server-side-zombies-plus/
 khzmusik's UMA Zombies
 https://community.7daystodie.com/topic/24348-a19-khzmusiks-modlets/
+Robeloto's Custom Zombies
+https://community.7daystodie.com/topic/12229-robelotos-a20-modlets/
 
 
 enZOMBIES DOWNLOAD & INSTALL: Go to the enZombies GitHub page. Download the package and unzip the conents to your 7 Days to Die "Mods" folder. https://github.com/ErrorNull0/enZombies
