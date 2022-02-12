@@ -1,6 +1,6 @@
 <ErrorNull>
 
-<!-- player chance of ragdoll with hit by a zombie or animal with 'knockdown' tag -->
+<!-- player chance of ragdoll when hit by a zombie or animal with 'knockdown' tag -->
 <append xpath="/entity_classes/entity_class[@name='playerMale']">
 	<effect_group>
 		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffInjuryKnockdown01">
@@ -31,7 +31,7 @@
 
 
 <!--
-By default, zombie HP varyies from -20% to +15% of base value. Modifying this variated to go from 0% to 20% instead. This only impacts the normal zombie variation. Feral, crawler, and radiated variations use different code to add this new variability.
+By default, zombie HP varies from -20% to +15% of base value. Changing this to go from 0% to 20%. This only impacts the normal zombie variation. Feral, crawler, and radiated variations use different code to add this new variability.
 -->
 <set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/effect_group[@name='Base Effects']/passive_effect[@name='HealthMax' and @operation='perc_add']/@value">0,0.2</set>
 
@@ -39,7 +39,10 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 
 <set xpath="/entity_classes/entity_class[@name='animalTemplateTimid']/effect_group[@name='Base Effects']/passive_effect[@name='HealthMax' and @operation='perc_add']/@value">-0.1,0.1</set>
 
-
+<!-- The vanilla lumberjack seems shorter than all average zombies. Making him taller again like from Alpha 19 -->
+<append xpath="/entity_classes/entity_class[@name='zombieLumberjack']">
+	<property name="SizeScale" value="1.2"/>
+</append>
 
 <append xpath="/entity_classes">
 
@@ -69,6 +72,7 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 	</entity_class>
 	
 	<entity_class name="EN_Zombie_Template_Male2" extends="EN_Zombie_Template">
+		<property name="HideInSpawnMenu" value="true"/>
 		<property name="SoundRandom" value="Enemies/Base_Zombie_Male2/zombiemale2roam"/>
 		<property name="SoundSense" value="Enemies/Base_Zombie_Male2/zombiemale2sense"/>
 		<property name="SoundAlert" value="Enemies/Base_Zombie_Male2/zombiemale2alert"/>
@@ -112,15 +116,34 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<property name="SoundDeath" value="Enemies/Feral_Zombie/zombieferaldeath"/>
 	</entity_class>
 	
-	<entity_class name="EN_Zombie_Template_Screamer" extends="EN_Zombie_Template">
+	<entity_class name="EN_Zombie_Template_Football" extends="EN_Zombie_Template">
 		<property name="HideInSpawnMenu" value="true"/>
-		<property name="SoundRandom" value="Enemies/Base_Zombie_Female/zombiefemalescoutroam"/>
-		<property name="SoundAlert" value="Enemies/Scout_Zombie/zombiefemalescoutalert"/>
-		<property name="SoundAttack" value="Enemies/Base_Zombie_Female/zombiefemalescoutattack"/>
-		<property name="SoundHurt" value="Enemies/Base_Zombie_Female/zombiefemalescoutpain"/>
-		<property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemalescoutdeath"/>
-		<property name="SoundSense" value="Enemies/Base_Zombie_Female/zombiefemalescoutsense"/>
-		<property name="AIPathCostScale" value=".5, .6"/>
+		<property name="WalkType" value="3"/>
+		<property name="MoveSpeed" value="1.2"/>
+		<property name="MoveSpeedPanic" value="1.3"/>
+		<property name="MoveSpeedAggro" value="1.2, 1.3"/>
+		<property name="PainResistPerHit" value=".6"/>
+		<property name="SoundRandom" value="Enemies/Base_Zombie_Male/zombiemaleroam"/>
+		<property name="SoundSense" value="Enemies/Base_Zombie_Male/zombiemalesense"/>
+		<property name="SoundAlert" value="Enemies/Base_Zombie_Male/zombiemalealert"/>
+		<property name="SoundHurt" value="Enemies/Base_Zombie_Male/zombiemalepain"/>
+		<property name="SoundAttack" value="Enemies/Base_Zombie_Male/zombiemaleattack"/>
+		<property name="SoundDeath" value="Enemies/Base_Zombie_Male/zombiemaledeath"/>
+	</entity_class>
+	
+	<entity_class name="EN_Zombie_Template_Jogger" extends="EN_Zombie_Template">
+		<property name="HideInSpawnMenu" value="true"/>
+		<property name="WalkType" value="7"/>
+		<property name="MoveSpeed" value="0.9"/>
+		<property name="MoveSpeedAggro" value="0.9, 1.25"/>
+		<property name="MoveSpeedPanic" value="1.25"/>
+		<property name="JumpMaxDistance" value="4.5, 5.5"/>
+		<property name="SoundRandom" value="Enemies/Base_Zombie_Female/zombiefemaleroam"/>
+		<property name="SoundAlert" value="Enemies/Base_Zombie_Female/zombiefemalealert"/>
+		<property name="SoundSense" value="Enemies/Base_Zombie_Female/zombiefemalesense"/>
+		<property name="SoundHurt" value="Enemies/Base_Zombie_Female/zombiefemalepain"/>
+		<property name="SoundAttack" value="Enemies/Base_Zombie_Female/zombiefemaleattack"/>
+		<property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemaledeath"/>
 	</entity_class>
 	
 	<entity_class name="EN_Zombie_Template_Lumberjack" extends="EN_Zombie_Template">
@@ -133,6 +156,17 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<property name="SoundDeath" value="Enemies/Snow_Zombie_Male/zombiemalesnowdeath"/>
 		<property name="SoundSense" value="Enemies/Snow_Zombie_Male/zombiemalesnowsense"/>
 		<property name="SoundFootstepModifier" value="Enemies/Snow_Zombie_Male/zombiesnowfootstep"/>
+	</entity_class>
+	
+	<entity_class name="EN_Zombie_Template_Screamer" extends="EN_Zombie_Template">
+		<property name="HideInSpawnMenu" value="true"/>
+		<property name="SoundRandom" value="Enemies/Base_Zombie_Female/zombiefemalescoutroam"/>
+		<property name="SoundAlert" value="Enemies/Scout_Zombie/zombiefemalescoutalert"/>
+		<property name="SoundAttack" value="Enemies/Base_Zombie_Female/zombiefemalescoutattack"/>
+		<property name="SoundHurt" value="Enemies/Base_Zombie_Female/zombiefemalescoutpain"/>
+		<property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemalescoutdeath"/>
+		<property name="SoundSense" value="Enemies/Base_Zombie_Female/zombiefemalescoutsense"/>
+		<property name="AIPathCostScale" value=".5, .6"/>
 	</entity_class>
 	
 	<entity_class name="EN_Zombie_Template_Spider" extends="EN_Zombie_Template">
@@ -200,9 +234,6 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<property name="WalkType" value="7"/>
 		<property name="MoveSpeed" value="1.0"/>
 		<property name="MoveSpeedAggro" value="1.8, 1.8"/>
-		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="base_set" value="50"/>
-		</effect_group>
 		<property name="SoundRandom" value="Enemies/Base_Zombie_Male/zombiemaleroam"/>
 		<property name="SoundAlert" value="Enemies/Base_Zombie_Male/zombiemaleattack"/>
 		<property name="SoundAttack" value="Enemies/Base_Zombie_Male/zombiemaleattack"/>
@@ -240,75 +271,6 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 			
 			
 			
-			
-			
-	<!-- ********************  TEST ZOMBIES  ************************ -->
-	<!-- these do not spawn anywhere in the game and is only used for dev testing -->
-		
-	<entity_class name="enTestWhite" extends="EN_Zombie_Template_Male1">
-		<property name="HideInSpawnMenu" value="false"/>
-		<property name="Tags" value="entity,zombie,walker,umazombie"/>
-		<property name="Archetype" value="en_testWhite"/>
-	</entity_class>
-	
-	<entity_class name="enTestWhite2" extends="EN_Zombie_Template_Male1">
-		<property name="HideInSpawnMenu" value="false"/>
-		<property name="Tags" value="entity,zombie,walker,umazombie"/>
-		<property name="Archetype" value="en_testWhite2"/>
-	</entity_class>
-	
-	<entity_class name="enTestWhite3" extends="EN_Zombie_Template_Male1">
-		<property name="HideInSpawnMenu" value="false"/>
-		<property name="Tags" value="entity,zombie,walker,umazombie"/>
-		<property name="Archetype" value="en_testWhite3"/>
-	</entity_class>
-	
-	<entity_class name="enTestBlack" extends="EN_Zombie_Template_Male1">
-		<property name="HideInSpawnMenu" value="false"/>
-		<property name="Tags" value="entity,zombie,walker,umazombie"/>
-		<property name="Archetype" value="en_testBlack"/>
-	</entity_class>
-	
-	<entity_class name="enTestRed" extends="EN_Zombie_Template_Male1">
-		<property name="HideInSpawnMenu" value="false"/>
-		<property name="Tags" value="entity,zombie,walker,umazombie"/>
-		<property name="Archetype" value="en_testRed"/>
-	</entity_class>
-	
-	<entity_class name="enTestGreen" extends="EN_Zombie_Template_Male1">
-		<property name="HideInSpawnMenu" value="false"/>
-		<property name="Tags" value="entity,zombie,walker,umazombie"/>
-		<property name="Archetype" value="en_testGreen"/>
-	</entity_class>
-	
-	<entity_class name="enTestBlue" extends="EN_Zombie_Template_Male1">
-		<property name="HideInSpawnMenu" value="false"/>
-		<property name="Tags" value="entity,zombie,walker,umazombie"/>
-		<property name="Archetype" value="en_testBlue"/>
-	</entity_class>
-	
-	<entity_class name="enTestPurple" extends="EN_Zombie_Template_Male1">
-		<property name="HideInSpawnMenu" value="false"/>
-		<property name="Tags" value="entity,zombie,walker,umazombie"/>
-		<property name="Archetype" value="en_testPurple"/>
-	</entity_class>
-	
-	<entity_class name="enTestYellow" extends="EN_Zombie_Template_Male1">
-		<property name="HideInSpawnMenu" value="false"/>
-		<property name="Tags" value="entity,zombie,walker,umazombie"/>
-		<property name="Archetype" value="en_testYellow"/>
-	</entity_class>
-	
-	<entity_class name="enTestCyan" extends="EN_Zombie_Template_Male1">
-		<property name="HideInSpawnMenu" value="false"/>
-		<property name="Tags" value="entity,zombie,walker,umazombie"/>
-		<property name="Archetype" value="en_testCyan"/>
-	</entity_class>
-	
-	
-	
-	
-	
 	
 	<!-- ******************** EN ZOMBIES  ************************ -->
 	
@@ -563,6 +525,7 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<property name="SizeScale" value="0.85"/>
 		<property name="ExperienceGain" value="260"/>
 		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="50"/>
 			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="BurntGoblinTorchDeco"/>
 			<passive_effect name="BuffResistance" operation="base_set" value="1" tags="buffBurningZombie,buffBurningElement,buffBurningEnvironment,buffBurningEnvironmentHack,buffBurningFlamingArrow,buffBurningMolotov,buffIsOnFire,buffBurningWeapon"/>
 		</effect_group>
@@ -1173,6 +1136,7 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		</effect_group>
 	</entity_class>
 	
+	<!-- floating crawler zombie (still in development) -->
 	<entity_class name="enDesertCrawler" extends="zombieSteveCrawler">
 		<property name="Tags" value="entity,zombie,walker,feral,radiated,hostile,vulture"/>
 		<property name="Class" value="EntityVulture"/>
@@ -1414,6 +1378,7 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<property name="SizeScale" value="0.85"/>
 		<property name="ExperienceGain" value="220"/>
 		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="50"/>
 			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="DesertGoblinDeco"/>
 		</effect_group>
 	</entity_class>
@@ -1759,7 +1724,10 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<property name="Tags" value="entity,zombie,umazombie"/>
 		<property name="HandItem" value="enHand_1109_005_xxxxxxx"/>
 		<property name="Archetype" value="en_DesertSpider"/>
-		<property name="ExperienceGain" value="413"/>	
+		<property name="ExperienceGain" value="413"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="150"/>
+		</effect_group>
 	</entity_class>
 	
 	<entity_class name="enDesertSpiderFeral" extends="enDesertSpider">
@@ -1783,8 +1751,6 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<property name="ExperienceGain" value="1200"/>
 		<effect_group name="Base Effects" id="regen5">
 			<passive_effect name="HealthMax" operation="perc_set" value="2.6,2.8"/>
-
-
 		</effect_group>		
 	</entity_class>
 	
@@ -2004,15 +1970,12 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		</effect_group>
 	</entity_class>
 	
-	<entity_class name="enFootballMale1" extends="EN_Zombie_Template_Male1">
-		<property name="Tags" value="entity,zombie,walker,umazombie,feral"/>
+	<entity_class name="enFootballMale1" extends="EN_Zombie_Template_Football">
+		<property name="Tags" value="entity,zombie,walker,umazombie"/>
 		<property name="HandItem" value="enHand_1620_010_xxxxxxx"/>
 		<property name="Archetype" value="en_footballMale1"/>
 		<property name="SizeScale" value="0.99"/>
-		<property name="WalkType" value="6"/>
-		<property name="MoveSpeed" value="0.75"/>
-		<property name="MoveSpeedAggro" value=".6, 1.3"/>
-		<property name="ExperienceGain" value="750"/>
+		<property name="ExperienceGain" value="770"/>
 		<effect_group name="Base Effects">
 			<passive_effect name="HealthMax" operation="base_set" value="270"/>
 		</effect_group>
@@ -2023,7 +1986,7 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<property name="HandItem" value="enHand_3060_015_xxxxxxx"/>
 		<property name="Archetype" value="en_footballMale1Feral"/>
 		<property name="PainResistPerHit" value=".7"/>
-		<property name="ExperienceGain" value="1200"/>
+		<property name="ExperienceGain" value="1250"/>
 		<effect_group name="Base Effects">
 			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
 		</effect_group>
@@ -2034,7 +1997,7 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<property name="HandItem" value="enHand_1218_010_xxxxxxx"/>
 		<property name="Archetype" value="en_footballMale1Feral"/>
 		<property name="WalkType" value="4"/>
-		<property name="ExperienceGain" value="495"/>
+		<property name="ExperienceGain" value="500"/>
 		<effect_group name="Base Effects">
 			<passive_effect name="HealthMax" operation="perc_set" value="0.65,0.85"/>
 		</effect_group>
@@ -2045,32 +2008,35 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<property name="HandItem" value="enHand_4070_015_AAAAAAA"/>
 		<property name="Archetype" value="en_footballMale1Radiated"/>
 		<property name="PainResistPerHit" value=".9"/>
-		<property name="ExperienceGain" value="1500"/>
+		<property name="ExperienceGain" value="1550"/>
 		<effect_group name="Base Effects" id="regen5">
 			<passive_effect name="HealthMax" operation="perc_set" value="2.6,2.8"/>
 		</effect_group>
 	</entity_class>
 	
-	<entity_class name="enFootballMale2" extends="EN_Zombie_Template_Male2">
-		<property name="Tags" value="entity,zombie,walker,umazombie,feral"/>
+	<entity_class name="enFootballMale2" extends="EN_Zombie_Template_Football">
+		<property name="Tags" value="entity,zombie,walker,umazombie"/>
 		<property name="HandItem" value="enHand_1620_010_xxxxxxx"/>
 		<property name="Archetype" value="en_footballMale2"/>
 		<property name="SizeScale" value="0.99"/>
-		<property name="WalkType" value="6"/>
-		<property name="MoveSpeed" value="0.75"/>
-		<property name="MoveSpeedAggro" value=".6, 1.3"/>
-		<property name="ExperienceGain" value="750"/>
+		<property name="ExperienceGain" value="770"/>
 		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="base_set" value="260"/>
+			<passive_effect name="HealthMax" operation="base_set" value="270"/>
 		</effect_group>
+		<property name="SoundRandom" value="Enemies/Base_Zombie_Male2/zombiemale2roam"/>
+		<property name="SoundSense" value="Enemies/Base_Zombie_Male2/zombiemale2sense"/>
+		<property name="SoundAlert" value="Enemies/Base_Zombie_Male2/zombiemale2alert"/>
+		<property name="SoundHurt" value="Enemies/Base_Zombie_Male2/zombiemale2pain"/>
+		<property name="SoundAttack" value="Enemies/Base_Zombie_Male2/zombiemale2attack"/>
+		<property name="SoundDeath" value="Enemies/Base_Zombie_Male2/zombiemale2death"/>
 	</entity_class>
-			
+	
 	<entity_class name="enFootballMale2Feral" extends="enFootballMale2">
 		<property name="Tags" value="entity,zombie,walker,umazombie,feral"/>
 		<property name="HandItem" value="enHand_3060_015_xxxxxxx"/>
 		<property name="Archetype" value="en_footballMale2Feral"/>
 		<property name="PainResistPerHit" value=".7"/>
-		<property name="ExperienceGain" value="1200"/>
+		<property name="ExperienceGain" value="1250"/>
 		<effect_group name="Base Effects">
 			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
 		</effect_group>
@@ -2081,7 +2047,7 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<property name="HandItem" value="enHand_1218_010_xxxxxxx"/>
 		<property name="Archetype" value="en_footballMale2Feral"/>
 		<property name="WalkType" value="4"/>
-		<property name="ExperienceGain" value="495"/>
+		<property name="ExperienceGain" value="500"/>
 		<effect_group name="Base Effects">
 			<passive_effect name="HealthMax" operation="perc_set" value="0.65,0.85"/>
 		</effect_group>
@@ -2092,12 +2058,106 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<property name="HandItem" value="enHand_4070_015_AAAAAAA"/>
 		<property name="Archetype" value="en_footballMale2Radiated"/>
 		<property name="PainResistPerHit" value=".9"/>
-		<property name="ExperienceGain" value="1500"/>
+		<property name="ExperienceGain" value="1550"/>
 		<effect_group name="Base Effects" id="regen5">
 			<passive_effect name="HealthMax" operation="perc_set" value="2.6,2.8"/>
 		</effect_group>
 	</entity_class>
-			
+	
+	<entity_class name="enFootballMale3" extends="EN_Zombie_Template_Football">
+		<property name="Tags" value="entity,zombie,walker,umazombie"/>
+		<property name="HandItem" value="enHand_2022_010_xxxxxxx"/>
+		<property name="Archetype" value="en_footballMale3"/>
+		<property name="SizeScale" value="0.99"/>
+		<property name="ExperienceGain" value="800"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="300"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enFootballMale3Feral" extends="enFootballMale3">
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral"/>
+		<property name="HandItem" value="enHand_4066_015_xxxxxxx"/>
+		<property name="Archetype" value="en_footballMale3Feral"/>
+		<property name="PainResistPerHit" value=".7"/>
+		<property name="ExperienceGain" value="1300"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enFootballMale3Crawler" extends="enFootballMale3">
+		<property name="Tags" value="entity,zombie,walker,umazombie"/>
+		<property name="HandItem" value="enHand_1414_010_xxxxxxx"/>
+		<property name="Archetype" value="en_footballMale3Feral"/>
+		<property name="WalkType" value="4"/>
+		<property name="ExperienceGain" value="525"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="perc_set" value="0.65,0.85"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enFootballMale3Radiated" extends="enFootballMale3Feral">
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated"/>
+		<property name="HandItem" value="enHand_4570_015_AAAAAAA"/>
+		<property name="Archetype" value="en_footballMale3Radiated"/>
+		<property name="PainResistPerHit" value=".9"/>
+		<property name="ExperienceGain" value="1600"/>
+		<effect_group name="Base Effects" id="regen5">
+			<passive_effect name="HealthMax" operation="perc_set" value="2.6,2.8"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enFootballMale4" extends="EN_Zombie_Template_Football">
+		<property name="Tags" value="entity,zombie,walker,umazombie"/>
+		<property name="HandItem" value="enHand_2022_010_xxxxxxx"/>
+		<property name="Archetype" value="en_footballMale4"/>
+		<property name="SizeScale" value="0.98"/>
+		<property name="ExperienceGain" value="800"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="300"/>
+		</effect_group>
+		<property name="SoundRandom" value="Enemies/Base_Zombie_Male2/zombiemale2roam"/>
+		<property name="SoundSense" value="Enemies/Base_Zombie_Male2/zombiemale2sense"/>
+		<property name="SoundAlert" value="Enemies/Base_Zombie_Male2/zombiemale2alert"/>
+		<property name="SoundHurt" value="Enemies/Base_Zombie_Male2/zombiemale2pain"/>
+		<property name="SoundAttack" value="Enemies/Base_Zombie_Male2/zombiemale2attack"/>
+		<property name="SoundDeath" value="Enemies/Base_Zombie_Male2/zombiemale2death"/>
+	</entity_class>
+	
+	<entity_class name="enFootballMale4Feral" extends="enFootballMale4">
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral"/>
+		<property name="HandItem" value="enHand_4066_015_xxxxxxx"/>
+		<property name="Archetype" value="en_footballMale4Feral"/>
+		<property name="PainResistPerHit" value=".7"/>
+		<property name="ExperienceGain" value="1300"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enFootballMale4Crawler" extends="enFootballMale4">
+		<property name="Tags" value="entity,zombie,walker,umazombie"/>
+		<property name="HandItem" value="enHand_1414_010_xxxxxxx"/>
+		<property name="Archetype" value="en_footballMale4Feral"/>
+		<property name="WalkType" value="4"/>
+		<property name="ExperienceGain" value="525"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="perc_set" value="0.65,0.85"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enFootballMale4Radiated" extends="enFootballMale4Feral">
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated"/>
+		<property name="HandItem" value="enHand_4570_015_AAAAAAA"/>
+		<property name="Archetype" value="en_footballMale4Radiated"/>
+		<property name="PainResistPerHit" value=".9"/>
+		<property name="ExperienceGain" value="1600"/>
+		<effect_group name="Base Effects" id="regen5">
+			<passive_effect name="HealthMax" operation="perc_set" value="2.6,2.8"/>
+		</effect_group>
+	</entity_class>
+	
 	<entity_class name="enForestFemale1" extends="EN_Zombie_Template_Female2">
 		<property name="Tags" value="entity,zombie,walker,umazombie"/>
 		<property name="HandItem" value="enHand_0907_020_xxxxxxx"/>
@@ -2345,6 +2405,9 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<property name="HandItem" value="enHand_0605_000_bbbbbbb"/>
 		<property name="Archetype" value="en_forestGoblin1"/>
 		<property name="SizeScale" value="0.85"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="50"/>
+		</effect_group>
 	</entity_class>
 	
 	<entity_class name="enForestGoblin2" extends="enForestGoblin1">
@@ -2737,6 +2800,9 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<property name="Tags" value="entity,zombie,walker,umazombie"/>
 		<property name="HandItem" value="enHand_1109_020_xxxxxxx"/>
 		<property name="Archetype" value="en_forestMaleCamo"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="150"/>
+		</effect_group>
 	</entity_class>
 	
 	<entity_class name="enForestMaleCamoFeral" extends="enForestMaleCamo">
@@ -2776,7 +2842,10 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<property name="Tags" value="entity,zombie,umazombie"/>
 		<property name="HandItem" value="enHand_1109_020_xxxxxxx"/>
 		<property name="Archetype" value="en_forestSpider"/>
-		<property name="ExperienceGain" value="413"/>		
+		<property name="ExperienceGain" value="413"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="150"/>
+		</effect_group>
 	</entity_class>
 	
 	<entity_class name="enForestSpiderFeral" extends="enForestSpider">
@@ -3023,14 +3092,11 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		</effect_group>
 	</entity_class>
 	
-	<entity_class name="enJoggerFemale1" extends="EN_Zombie_Template_Female1">
+	<entity_class name="enJoggerFemale1" extends="EN_Zombie_Template_Jogger">
 		<property name="Tags" value="entity,zombie,walker,umazombie"/>
 		<property name="HandItem" value="enHand_1209_010_xxxxxxx"/>
 		<property name="Archetype" value="en_joggerFemale1"/>
 		<property name="SizeScale" value="1.01"/>
-		<property name="WalkType" value="7"/>
-		<property name="MoveSpeedAggro" value="0.7, 1.25"/>
-		<property name="JumpMaxDistance" value="4, 5"/>
 		<property name="ExperienceGain" value="371"/>
 		<effect_group name="Base Effects">
 			<passive_effect name="HealthMax" operation="base_set" value="135"/>
@@ -3070,17 +3136,21 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		</effect_group>
 	</entity_class>
 	
-	<entity_class name="enJoggerFemale2" extends="EN_Zombie_Template_Female2">
+	<entity_class name="enJoggerFemale2" extends="EN_Zombie_Template_Jogger">
 		<property name="Tags" value="entity,zombie,walker,umazombie"/>
 		<property name="HandItem" value="enHand_1209_010_xxxxxxx"/>
 		<property name="Archetype" value="en_joggerFemale2"/>
 		<property name="SizeScale" value="1.01"/>
-		<property name="WalkType" value="3"/>
-		<property name="MoveSpeedAggro" value="0.6, 1.25"/>
 		<property name="ExperienceGain" value="371"/>
 		<effect_group name="Base Effects">
 			<passive_effect name="HealthMax" operation="base_set" value="135"/>
 		</effect_group>
+		<property name="SoundRandom" value="Enemies/Base_Zombie_Female2/zombiefemale2roam"/>
+		<property name="SoundAlert" value="Enemies/Base_Zombie_Female2/zombiefemale2alert"/>
+		<property name="SoundAttack" value="Enemies/Base_Zombie_Female2/zombiefemale2attack"/>
+		<property name="SoundHurt" value="Enemies/Base_Zombie_Female2/zombiefemale2pain"/>
+		<property name="SoundDeath" value="Enemies/Base_Zombie_Female2/zombiefemale2death"/>
+		<property name="SoundSense" value="Enemies/Base_Zombie_Female2/zombiefemale2sense"/>
 	</entity_class>
 	
 	<entity_class name="enJoggerFemale2Feral" extends="enJoggerFemale2">
@@ -3116,13 +3186,11 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		</effect_group>
 	</entity_class>
 	
-	<entity_class name="enJoggerFemale3" extends="EN_Zombie_Template_Female1">
+	<entity_class name="enJoggerFemale3" extends="EN_Zombie_Template_Jogger">
 		<property name="Tags" value="entity,zombie,walker,umazombie"/>
 		<property name="HandItem" value="enHand_1209_010_xxxxxxx"/>
 		<property name="Archetype" value="en_joggerFemale3"/>
 		<property name="SizeScale" value="1.01"/>
-		<property name="WalkType" value="5"/>
-		<property name="MoveSpeedAggro" value="0.9, 1.25"/>
 		<property name="ExperienceGain" value="371"/>
 		<effect_group name="Base Effects">
 			<passive_effect name="HealthMax" operation="base_set" value="135"/>
@@ -3162,13 +3230,11 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		</effect_group>
 	</entity_class>
 	
-	<entity_class name="enJoggerFemale4" extends="EN_Zombie_Template_Female1">
+	<entity_class name="enJoggerFemale4" extends="EN_Zombie_Template_Jogger">
 		<property name="Tags" value="entity,zombie,walker,umazombie"/>
 		<property name="HandItem" value="enHand_1209_010_xxxxxxx"/>
 		<property name="Archetype" value="en_joggerFemale4"/>
 		<property name="SizeScale" value="1.01"/>
-		<property name="WalkType" value="3"/>
-		<property name="MoveSpeedAggro" value="0.7, 1.25"/>
 		<property name="ExperienceGain" value="371"/>
 		<effect_group name="Base Effects">
 			<passive_effect name="HealthMax" operation="base_set" value="135"/>
@@ -3208,17 +3274,21 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		</effect_group>
 	</entity_class>
 	
-	<entity_class name="enJoggerFemale5" extends="EN_Zombie_Template_Female2">
+	<entity_class name="enJoggerFemale5" extends="EN_Zombie_Template_Jogger">
 		<property name="Tags" value="entity,zombie,walker,umazombie"/>
 		<property name="HandItem" value="enHand_1209_010_xxxxxxx"/>
 		<property name="Archetype" value="en_joggerFemale5"/>
 		<property name="SizeScale" value="1.01"/>
-		<property name="WalkType" value="7"/>
-		<property name="MoveSpeedAggro" value="0.8, 1.25"/>
 		<property name="ExperienceGain" value="371"/>
 		<effect_group name="Base Effects">
 			<passive_effect name="HealthMax" operation="base_set" value="135"/>
 		</effect_group>
+		<property name="SoundRandom" value="Enemies/Base_Zombie_Female2/zombiefemale2roam"/>
+		<property name="SoundAlert" value="Enemies/Base_Zombie_Female2/zombiefemale2alert"/>
+		<property name="SoundAttack" value="Enemies/Base_Zombie_Female2/zombiefemale2attack"/>
+		<property name="SoundHurt" value="Enemies/Base_Zombie_Female2/zombiefemale2pain"/>
+		<property name="SoundDeath" value="Enemies/Base_Zombie_Female2/zombiefemale2death"/>
+		<property name="SoundSense" value="Enemies/Base_Zombie_Female2/zombiefemale2sense"/>
 	</entity_class>
 	
 	<entity_class name="enJoggerFemale5Feral" extends="enJoggerFemale5">
@@ -3312,7 +3382,7 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<property name="MoveSpeedPanic" value="0.5"/>
 		<property name="MoveSpeedAggro" value="0.5, 0.5"/> 
 		<property name="ExperienceGain" value="1650"/>
-		<effect_group name="Base Effects">
+		<effect_group name="Base Effects" id="regen10">
 			<passive_effect name="HealthMax" operation="base_set" value="2400"/>
 			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffLabCreatureFemale4Scream"/>
 		</effect_group>
@@ -3406,10 +3476,9 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<property name="MoveSpeedPanic" value="0.5"/>
 		<property name="MoveSpeedAggro" value="0.5, 0.5"/> 
 		<property name="ExperienceGain" value="1980"/>
-		<effect_group name="Base Effects">
+		<effect_group name="Base Effects" id="regen10">
 			<passive_effect name="HealthMax" operation="base_set" value="2880"/>
 			<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
-			<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="10.0"/>
 		</effect_group>
 		<property name="SoundRandom" value="Enemies/Feral_Zombie/zombieferalroam"/>
 		<property name="SoundAlert" value="Enemies/Feral_Zombie/zombieferalalert"/>
@@ -3726,6 +3795,138 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<effect_group name="Base Effects">
 			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
 			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="PunkMale4Deco"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enSchoolFemale1" extends="EN_Zombie_Template_Female1">
+		<property name="Tags" value="entity,zombie,walker,umazombie"/>
+		<property name="HandItem" value="enHand_0907_020_xxxxxxx"/>
+		<property name="Archetype" value="en_schoolFemale1"/>
+		<property name="SizeScale" value="0.99"/>
+		<property name="WalkType" value="7"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="125"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enSchoolFemale1Feral" extends="enSchoolFemale1">
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral"/>
+		<property name="HandItem" value="enHand_1821_030_xxxxxxx"/>
+		<property name="Archetype" value="en_schoolFemale1Feral"/>
+		<property name="PainResistPerHit" value=".7"/>
+		<property name="ExperienceGain" value="625"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enSchoolFemale1Radiated" extends="enSchoolFemale1Feral">
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated"/>
+		<property name="HandItem" value="enHand_2023_030_AAAAAAA"/>
+		<property name="Archetype" value="en_schoolFemale1Radiated"/>
+		<property name="PainResistPerHit" value=".9"/>
+		<property name="ExperienceGain" value="1000"/>
+		<effect_group name="Base Effects" id="regen5">
+			<passive_effect name="HealthMax" operation="perc_set" value="2.6,2.8"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enSchoolFemale2" extends="EN_Zombie_Template_Female1">
+		<property name="Tags" value="entity,zombie,walker,umazombie"/>
+		<property name="HandItem" value="enHand_0907_020_xxxxxxx"/>
+		<property name="Archetype" value="en_schoolFemale2"/>
+		<property name="SizeScale" value="0.99"/>
+		<property name="WalkType" value="3"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="125"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enSchoolFemale2Feral" extends="enSchoolFemale2">
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral"/>
+		<property name="HandItem" value="enHand_1821_030_xxxxxxx"/>
+		<property name="Archetype" value="en_schoolFemale2Feral"/>
+		<property name="PainResistPerHit" value=".7"/>
+		<property name="ExperienceGain" value="625"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enSchoolFemale2Radiated" extends="enSchoolFemale2Feral">
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated"/>
+		<property name="HandItem" value="enHand_2023_030_AAAAAAA"/>
+		<property name="Archetype" value="en_schoolFemale2Radiated"/>
+		<property name="PainResistPerHit" value=".9"/>
+		<property name="ExperienceGain" value="1000"/>
+		<effect_group name="Base Effects" id="regen5">
+			<passive_effect name="HealthMax" operation="perc_set" value="2.6,2.8"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enSchoolMale1" extends="EN_Zombie_Template_Male1">
+		<property name="Tags" value="entity,zombie,walker,umazombie"/>
+		<property name="HandItem" value="enHand_1109_020_xxxxxxx"/>
+		<property name="Archetype" value="en_schoolMale1"/>
+		<property name="SizeScale" value="0.99"/>
+		<property name="WalkType" value="7"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="150"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enSchoolMale1Feral" extends="enSchoolMale1">
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral"/>
+		<property name="HandItem" value="enHand_2227_030_xxxxxxx"/>
+		<property name="Archetype" value="en_schoolMale1Feral"/>
+		<property name="PainResistPerHit" value=".7"/>
+		<property name="ExperienceGain" value="750"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enSchoolMale1Radiated" extends="enSchoolMale1Feral">
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated"/>
+		<property name="HandItem" value="enHand_2530_030_AAAAAAA"/>
+		<property name="Archetype" value="en_schoolMale1Radiated"/>
+		<property name="PainResistPerHit" value=".9"/>
+		<property name="ExperienceGain" value="1200"/>
+		<effect_group name="Base Effects" id="regen5">
+			<passive_effect name="HealthMax" operation="perc_set" value="2.6,2.8"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enSchoolMale2" extends="EN_Zombie_Template_Male2">
+		<property name="Tags" value="entity,zombie,walker,umazombie"/>
+		<property name="HandItem" value="enHand_1109_020_xxxxxxx"/>
+		<property name="Archetype" value="en_schoolMale2"/>
+		<property name="SizeScale" value="0.99"/>
+		<property name="WalkType" value="5"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="150"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enSchoolMale2Feral" extends="enSchoolMale2">
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral"/>
+		<property name="HandItem" value="enHand_2227_030_xxxxxxx"/>
+		<property name="Archetype" value="en_schoolMale2Feral"/>
+		<property name="PainResistPerHit" value=".7"/>
+		<property name="ExperienceGain" value="750"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enSchoolMale2Radiated" extends="enSchoolMale2Feral">
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated"/>
+		<property name="HandItem" value="enHand_2530_030_AAAAAAA"/>
+		<property name="Archetype" value="en_schoolMale2Radiated"/>
+		<property name="PainResistPerHit" value=".9"/>
+		<property name="ExperienceGain" value="1200"/>
+		<effect_group name="Base Effects" id="regen5">
+			<passive_effect name="HealthMax" operation="perc_set" value="2.6,2.8"/>
 		</effect_group>
 	</entity_class>
 	
@@ -5079,7 +5280,7 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 	
 	<entity_class name="enUtilityFemale1" extends="EN_Zombie_Template_Female2">
 		<property name="Tags" value="entity,zombie,walker,umazombie"/>
-		<property name="HandItem" value="enHand_1622_010_xxxxxxA"/>
+		<property name="HandItem" value="enHand_1620_010_xxxxxxA"/>
 		<property name="Archetype" value="en_utilityFemale1"/>
 		<property name="SizeScale" value="0.99"/>
 		<property name="WalkType" value="5"/>
@@ -5092,7 +5293,7 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 	
 	<entity_class name="enUtilityFemale1Feral" extends="enUtilityFemale1">
 		<property name="Tags" value="entity,zombie,walker,umazombie,feral"/>
-		<property name="HandItem" value="enHand_3236_015_xxxxxxA"/>
+		<property name="HandItem" value="enHand_3260_015_xxxxxxA"/>
 		<property name="Archetype" value="en_utilityFemale1Feral"/>
 		<property name="PainResistPerHit" value=".7"/>
 		<property name="ExperienceGain" value="650"/>
@@ -5103,10 +5304,45 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		
 	<entity_class name="enUtilityFemale1Radiated" extends="enUtilityFemale1Feral">
 		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated"/>
-		<property name="HandItem" value="enHand_3538_015_AAAAAAB"/>
+		<property name="HandItem" value="enHand_3565_015_AAAAAAB"/>
 		<property name="Archetype" value="en_utilityFemale1Radiated"/>
 		<property name="PainResistPerHit" value=".9"/>
 		<property name="ExperienceGain" value="1040"/>
+		<effect_group name="Base Effects" id="regen5">
+			<passive_effect name="HealthMax" operation="perc_set" value="2.6,2.8"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enUtilityFemale2" extends="EN_Zombie_Template_Female2">
+		<property name="Tags" value="entity,zombie,walker,umazombie"/>
+		<property name="HandItem" value="enHand_1420_010_xxxxxxA"/>
+		<property name="Archetype" value="en_utilityFemale2"/>
+		<property name="SizeScale" value="0.99"/>
+		<property name="WalkType" value="7"/>
+		<property name="ExperienceGain" value="371"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="135"/>
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="UtilityFemale2Deco"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enUtilityFemale2Feral" extends="enUtilityFemale2">
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral"/>
+		<property name="HandItem" value="enHand_2860_015_xxxxxxA"/>
+		<property name="Archetype" value="en_utilityFemale2Feral"/>
+		<property name="PainResistPerHit" value=".7"/>
+		<property name="ExperienceGain" value="675"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
+		</effect_group>
+	</entity_class>
+		
+	<entity_class name="enUtilityFemale2Radiated" extends="enUtilityFemale2Feral">
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated"/>
+		<property name="HandItem" value="enHand_3065_015_AAAAAAB"/>
+		<property name="Archetype" value="en_utilityFemale2Radiated"/>
+		<property name="PainResistPerHit" value=".9"/>
+		<property name="ExperienceGain" value="1080"/>
 		<effect_group name="Base Effects" id="regen5">
 			<passive_effect name="HealthMax" operation="perc_set" value="2.6,2.8"/>
 		</effect_group>
@@ -5266,6 +5502,42 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<property name="Archetype" value="en_utilityMale4Radiated"/>
 		<property name="PainResistPerHit" value=".9"/>
 		<property name="ExperienceGain" value="1360"/>
+		<effect_group name="Base Effects" id="regen5">
+			<passive_effect name="HealthMax" operation="perc_set" value="2.6,2.8"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enUtilityMale5" extends="EN_Zombie_Template_Male1">
+		<property name="Tags" value="entity,zombie,walker,umazombie"/>
+		<property name="HandItem" value="enHand_3075_010_xCCBABA"/>
+		<property name="Archetype" value="en_utilityMale5"/>
+		<property name="PainResistPerHit" value=".7"/>
+		<property name="SizeScale" value="0.98"/>
+		<property name="WalkType" value="2"/>
+		<property name="ExperienceGain" value="800"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="300"/>
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="UtilityMale5Deco"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enUtilityMale5Feral" extends="enUtilityMale5">
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral"/>
+		<property name="HandItem" value="enHand_60220_015_xCCBABA"/>
+		<property name="Archetype" value="en_utilityMale5Feral"/>
+		<property name="PainResistPerHit" value=".7"/>
+		<property name="ExperienceGain" value="1350"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enUtilityMale5Radiated" extends="enUtilityMale5Feral">
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated"/>
+		<property name="HandItem" value="enHand_65230_015_ACCBABA"/>
+		<property name="Archetype" value="en_utilityMale5Radiated"/>
+		<property name="PainResistPerHit" value=".9"/>
+		<property name="ExperienceGain" value="1700"/>
 		<effect_group name="Base Effects" id="regen5">
 			<passive_effect name="HealthMax" operation="perc_set" value="2.6,2.8"/>
 		</effect_group>
@@ -5774,23 +6046,22 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 	<!-- ********** CUSTOMIZED VANILLA ZOMBIES ********** -->
 	<!-- ************************************************ -->
 	
-	<!-- Vanilla Spider Zombie from Alpha 19.6 -->
 <!--
-
 <property name="ReplaceMaterial1" value="#Entities/Zombies?Zombies/Materials/feral_eye.mat"/>
 <property name="ReplaceMaterial1" value="#Entities/Zombies?Zombies/Materials/rad_eye.mat"/>
-
 <property name="ReplaceMaterial2" value="#Entities/Zombies?Zombies/Materials/rad_eye.mat"/>	
-
 <property name="ReplaceMaterial0" value="#Entities/Zombies?Zombies/Materials/feral_radiated.mat"/>
 <property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
 -->
 
-
+	<!-- zombieLab model from Alpha 19.6 -->
 	<entity_class name="enLab196" extends="zombieLab">
 		<property name="Tags" value="entity,zombie,walker"/>
 		<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardLabRagdoll.prefab"/>
 		<property name="WalkType" value="5"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="130"/>
+		</effect_group>
 		<property name="SoundRandom" value="Enemies/Base_Zombie_Female2/zombiefemale2roam"/>
 		<property name="SoundAlert" value="Enemies/Base_Zombie_Female2/zombiefemale2alert"/>
 		<property name="SoundAttack" value="Enemies/Base_Zombie_Female2/zombiefemale2attack"/>
@@ -5809,10 +6080,10 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<property name="PainResistPerHit" value=".7"/>
 		<property name="MoveSpeedAggro" value=".5, 1.35"/>
 		<property name="HandItem" value="meleeHandZombieFeral"/>
-		<property name="ExperienceGain" value="750"/>
+		<property name="ExperienceGain" value="350"/>
 		<property name="LootDropProb" value=".03"/>
 		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="base_set" value="285"/>
+			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
 		</effect_group>
 	</entity_class>
 
@@ -5820,7 +6091,7 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<property name="Tags" value="entity,zombie"/>
 		<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardLabRagdoll.prefab"/>
 		<property name="WalkType" value="4"/>
-		<property name="ExperienceGain" value="227"/>
+		<property name="ExperienceGain" value="236"/>
 		<effect_group name="Base Effects">
 			<passive_effect name="HealthMax" operation="perc_set" value="0.65,0.85"/>
 		</effect_group>
@@ -5835,21 +6106,23 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<property name="DismemberMultiplierArms" value=".3"/>
 		<property name="DismemberMultiplierLegs" value=".3"/>
 		<property name="PainResistPerHit" value=".9"/>
-		<property name="ExperienceGain" value="1320"/> <!-- 10% increase -->
-		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="base_set" value="595"/> <!-- 10% increase -->
+		<property name="ExperienceGain" value="1040"/> <!-- 10% increase -->
+		<effect_group name="Base Effects" id="regen10">
+			<passive_effect name="HealthMax" operation="perc_set" value="2.7,2.9"/> <!-- 10% increase -->
 			<passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
-			<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="10"/>
-			<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffRadiationAura"/>
 		</effect_group>
 	</entity_class>
 
-
+	<!-- zombieScreamer model from Alpha 19.6 -->
 	<entity_class name="enScreamer196" extends="zombieScreamer">
 		<property name="Tags" value="entity,zombie,walker"/>
 		<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardScreamerRagdoll.prefab"/>
 		<property name="WalkType" value="6"/>
+		<property name="ExperienceGain" value="344"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="125"/>
+		</effect_group>
 	</entity_class>
 
 	<entity_class name="enScreamer196Feral" extends="enScreamer196">
@@ -5862,10 +6135,10 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<property name="PainResistPerHit" value=".7"/>
 		<property name="MoveSpeedAggro" value=".5, 1.35"/>
 		<property name="HandItem" value="meleeHandZombieFeral"/>
-		<property name="ExperienceGain" value="750"/>
+		<property name="ExperienceGain" value="625"/>
 		<property name="LootDropProb" value=".03"/>
 		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="base_set" value="142"/>
+			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
 		</effect_group>
 	</entity_class>
 
@@ -5879,22 +6152,21 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<property name="DismemberMultiplierLegs" value=".3"/>
 		<property name="PainResistPerHit" value=".9"/>
 		<property name="MoveSpeedAggro" value=".5, 1.35"/>
-		<property name="ExperienceGain" value="1320"/> <!-- 10% increase -->
+		<property name="ExperienceGain" value="1096"/> <!-- 10% increase -->
 		<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
-		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="base_set" value="297"/> <!-- 10% increase -->
-			<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="10"/>
-			<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+		<effect_group name="Base Effects" id="regen10">
+			<passive_effect name="HealthMax" operation="perc_set" value="2.7,2.9"/> <!-- 10% increase -->
 			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffRadiationAura"/>
 		</effect_group>
 	</entity_class>
 
-
+	<!-- zombieSoldier model from Alpha 19.6 -->
 	<entity_class name="enSoldier196" extends="zombieSoldier">
 		<property name="Tags" value="entity,zombie,walker"/>
 		<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardSoldierRagdoll.prefab"/>
-		<property name="ExperienceGain" value="750"/>	
+		<property name="ExperienceGain" value="760"/>	
 		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="160"/>
 			<passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
 		</effect_group>
 	</entity_class>
@@ -5910,10 +6182,10 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<property name="MoveSpeedAggro" value="0.6, 1.45"/>
 		<property name="JumpMaxDistance" value="4.6, 5"/>
 		<property name="HandItem" value="meleeHandZombieFeral"/>
-		<property name="ExperienceGain" value="750"/>
+		<property name="ExperienceGain" value="760"/>
 		<property name="LootDropProb" value=".03"/>
 		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="base_set" value="285"/>
+			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
 			<passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
 		</effect_group>
 	</entity_class>
@@ -5929,24 +6201,21 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<property name="PainResistPerHit" value=".9"/>
 		<property name="ExperienceGain" value="1320"/> <!-- 10% increase -->
 		<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
-		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="base_set" value="594"/> <!-- 10% increase -->
+		<effect_group name="Base Effects" id="regen10">
+			<passive_effect name="HealthMax" operation="perc_set" value="2.7,2.9"/> <!-- 10% increase -->
 			<passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
-			<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="10"/>
-			<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffRadiationAura"/>
 		</effect_group>
 	</entity_class>
 
+	<!-- zombieSpider model from Alpha 19.6 -->
 	<entity_class name="enSpider196" extends="zombieSpider">
-		<!--<property name="SizeScale" value="1.0"/>-->
 		<property name="Tags" value="entity,zombie"/>
-		<!--<property name="Prefab" value="ZLong"/>-->
 		<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardSpiderRagdoll.prefab"/>
 		<property name="WalkType" value="3"/>
 		<property name="MoveSpeedAggro" value="0.7, 1.35"/>
 		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="base_set" value="125"/>
+			<passive_effect name="HealthMax" operation="base_set" value="150"/>
 		</effect_group>
 	</entity_class>
 
@@ -5964,7 +6233,7 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<property name="ExperienceGain" value="750"/>
 		<property name="LootDropProb" value=".03"/>
 		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="base_set" value="237"/>
+			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
 		</effect_group>
 	</entity_class>
 
@@ -5978,55 +6247,55 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<property name="DismemberMultiplierLegs" value=".3"/>
 		<property name="PainResistPerHit" value=".9"/>
 		<property name="ExperienceGain" value="1320"/>
-		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="base_set" value="594"/>
-			<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="10"/>
-			<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+		<effect_group name="Base Effects" id="regen10">
+			<passive_effect name="HealthMax" operation="perc_set" value="2.7,2.9"/> <!-- 10% increase -->
 			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffRadiationAura"/>
 		</effect_group>
 	</entity_class>
 
-
+	<!-- Spider zombie using Alpha 20 HD Tom Clark texture -->
 	<entity_class name="enSpiderTom" extends="zombieSpider">
 		<property name="SizeScale" value=".94"/>
 		<property name="Tags" value="entity,zombie"/>
 		<property name="Mesh" value="#Entities/Zombies?Prefabs/ZTomClark.prefab"/>
 		<property name="MoveSpeed" value="0.06"/>
-		<property name="MoveSpeedAggro" value="0.2, 1.25"/> <!-- slim, regular -->
+		<property name="MoveSpeedAggro" value="0.2, 1.25"/>
 		<property name="MoveSpeedPanic" value="1.1"/>
 		<property name="SwimSpeed" value="1.2"/>
 		<property name="SwimStrokeRate" value="1.4,1.6"/>
 		<property name="JumpMaxDistance" value="6, 8"/>
 		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="base_set" value="110"/>
+			<passive_effect name="HealthMax" operation="base_set" value="150"/>
 		</effect_group>
 	</entity_class>
 	
 	<entity_class name="enSpiderTomFeral" extends="enSpiderTom">
 		<property name="Tags" value="entity,zombie,feral"/>
 		<property name="Mesh" value="#Entities/Zombies?Prefabs/ZTomClarkFeral.prefab"/>
-		<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
+		<property name="DismemberMultiplierHead" value=".7"/>
+		<property name="DismemberMultiplierArms" value=".7"/>
+		<property name="DismemberMultiplierLegs" value=".7"/>
 		<property name="PainResistPerHit" value=".7"/>
 		<property name="MoveSpeedAggro" value="0.5, 1.35"/>
 		<property name="JumpMaxDistance" value="10, 12"/>
 		<property name="HandItem" value="meleeHandZombie02Feral"/>
-		<property name="ExperienceGain" value="730"/>
+		<property name="ExperienceGain" value="750"/>
 		<property name="LootDropProb" value=".03"/>
 		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="base_set" value="210"/>
+			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
 		</effect_group>
 	</entity_class>
 
 	<entity_class name="enSpiderTomRadiated" extends="enSpiderTomFeral">
 		<property name="Tags" value="entity,zombie,feral,radiated"/>
 		<property name="Mesh" value="#Entities/Zombies?Prefabs/ZTomClarkRadiated.prefab"/>
-		<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/>
+		<property name="DismemberMultiplierHead" value=".4"/>
+		<property name="DismemberMultiplierArms" value=".4"/>
+		<property name="DismemberMultiplierLegs" value=".4"/>
 		<property name="PainResistPerHit" value=".9"/>
-		<property name="ExperienceGain" value="1150"/>
-		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="base_set" value="420"/>
-			<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="5"/>
-			<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+		<property name="ExperienceGain" value="1320"/>
+		<effect_group name="Base Effects" id="regen10">
+			<passive_effect name="HealthMax" operation="perc_set" value="2.7,2.9"/> <!-- 10% increase -->
 		</effect_group>
 	</entity_class>
 	
@@ -6047,6 +6316,9 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 		<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 		<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="200"/>
+		</effect_group>
 	</entity_class>
 	
 	<!-- only spawns during goblin challenge quests and do not attack the other zombies -->
@@ -6062,6 +6334,9 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 		<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 		<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="750"/>
+		</effect_group>
 	</entity_class>
 	
 	<!-- only spawns during goblin challenge quests and do not attack the other zombies -->
@@ -6080,8 +6355,12 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 		<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 		<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="100"/>
+		</effect_group>
 	</entity_class>
 	
+	<!-- Larger sized business man wielding a computer monitor -->
 	<entity_class name="enBusinessmanBoss" extends="zombieTemplateMale">
 		<property name="Tags" value="entity,zombie,walker,feral"/>
 		<property name="Mesh" value="#Entities/Zombies?Prefabs/ZSuit.prefab"/>
@@ -6103,12 +6382,10 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<property name="ExperienceGain" value="1500"/>
 		<property name="LootDropProb" value="1.0"/>
 		<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
-		<effect_group name="Base Effects">
+		<effect_group name="Base Effects" id="regen10">
 			<passive_effect name="HealthMax" operation="base_set" value="1050"/>
 			<passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
 			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="BusinessmanBossDeco"/>
-			<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
-			<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="10.0"/>
 		</effect_group>
 		<property name="AITask-1" value="BreakBlock"/>
 		<property name="AITask-2" value="RangedAttackTarget" data="itemType=1;cooldown=1;duration=5"/>
@@ -6126,6 +6403,7 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 	</entity_class>
 	
 	
+	<!-- Evil Scientist boss for Snufkin Addon, appears in "snufkin raid" quest -->
 	<entity_class name="enSnufkinBoss" extends="EN_Zombie_Template_Male1">
 		<property name="HideInSpawnMenu" value="false"/>
 		<property name="Tags" value="entity,zombie,walker,umazombie"/>
@@ -6156,12 +6434,10 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<property name="ExperienceGain" value="5000"/>
 		<property name="LootDropProb" value="0"/>
 		<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
-		<effect_group name="Base Effects">
+		<effect_group name="Base Effects" id="regen15">
 			<passive_effect name="HealthMax" operation="base_set" value="1200"/>
 			<passive_effect name="PhysicalDamageResist" operation="base_set" value="55"/>
 			<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
-			<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="22"/>
-			<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="SnufkinDeco"/>
 			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="SnufkinScream"/>
 		</effect_group>
@@ -6198,92 +6474,43 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		default forest zombie handItems, and have 0.7 (normal) and 1.0 (feral) pain resist, 
 		and 10% higher HP and EXP
 	-->
-
-	<entity_class name="khzTemplateMale1" extends="zombieTemplateMale">
-		<property name="HideInSpawnMenu" value="true"/>
-		<property name="Prefab" value="NPC"/>
-		<property name="ModelType" value="ZombieUMA" />
-		<property name="PhysicsBody" value="zombieUMA" />
-		<property name="HasDeathAnim" value="false" />
-		<property name="WalkType" value="7" />
-		<property name="PainResistPerHit" value=".9" />
-		<property name="ExperienceGain" value="575" />
-		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="perc_set" value="2" />
-		</effect_group>
-		<property name="SoundRandom" value="Enemies/Base_Zombie_Male/zombiemaleroam"/>
-		<property name="SoundAlert" value="Enemies/Base_Zombie_Male/zombiemalealert"/>
-		<property name="SoundAttack" value="Enemies/Base_Zombie_Male/zombiemaleattack"/>
-		<property name="SoundHurt" value="Enemies/Base_Zombie_Male/zombiemalepain"/>
-		<property name="SoundDeath" value="Enemies/Base_Zombie_Male/zombiemaledeath"/>
-		<property name="SoundSense" value="Enemies/Base_Zombie_Male/zombiemalesense"/>
-	</entity_class>
-	<entity_class name="khzTemplateMale2" extends="khzTemplateMale1">
-		<property name="HideInSpawnMenu" value="true"/>
-		<property name="SoundRandom" value="Enemies/Base_Zombie_Male2/zombiemale2roam"/>
-		<property name="SoundSense" value="Enemies/Base_Zombie_Male2/zombiemale2sense"/>
-		<property name="SoundAlert" value="Enemies/Base_Zombie_Male2/zombiemale2alert"/>
-		<property name="SoundHurt" value="Enemies/Base_Zombie_Male2/zombiemale2pain"/>
-		<property name="SoundAttack" value="Enemies/Base_Zombie_Male2/zombiemale2attack"/>
-		<property name="SoundDeath" value="Enemies/Base_Zombie_Male2/zombiemale2death"/>
-	</entity_class>
-	
-	<entity_class name="khzTemplateFemale1" extends="khzTemplateMale1">
-		<property name="HideInSpawnMenu" value="true"/>
-		<property name="PainResistPerHit" value=".8" />
-		<property name="ExperienceGain" value="525" />
-		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="perc_set" value="1.8" />
-		</effect_group>
-		<property name="SoundRandom" value="Enemies/Base_Zombie_Female/zombiefemaleroam"/>
-		<property name="SoundAlert" value="Enemies/Base_Zombie_Female/zombiefemalealert"/>
-		<property name="SoundSense" value="Enemies/Base_Zombie_Female/zombiefemalesense"/>
-		<property name="SoundHurt" value="Enemies/Base_Zombie_Female/zombiefemalepain"/>
-		<property name="SoundAttack" value="Enemies/Base_Zombie_Female/zombiefemaleattack"/>
-		<property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemaledeath"/>
-		<property name="DanceType" value="2" />
-	</entity_class>
-	<entity_class name="khzTemplateFemale2" extends="khzTemplateFemale1">
-		<property name="HideInSpawnMenu" value="true"/>
-		<property name="SoundRandom" value="Enemies/Base_Zombie_Female2/zombiefemale2roam"/>
-		<property name="SoundAlert" value="Enemies/Base_Zombie_Female2/zombiefemale2alert"/>
-		<property name="SoundAttack" value="Enemies/Base_Zombie_Female2/zombiefemale2attack"/>
-		<property name="SoundHurt" value="Enemies/Base_Zombie_Female2/zombiefemale2pain"/>
-		<property name="SoundDeath" value="Enemies/Base_Zombie_Female2/zombiefemale2death"/>
-		<property name="SoundSense" value="Enemies/Base_Zombie_Female2/zombiefemale2sense"/>
-	</entity_class>
-	
 			
 	<!-- male with yellow mohawk and tshirt -->
-	<entity_class name="khzAiden" extends="khzTemplateMale1">
+	<entity_class name="khzAiden" extends="EN_Zombie_Template_Male1">
 		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="Archetype" value="KHz_Aiden" />
 		<property name="HandItem" value="meleeHandZombieStrong" />
+		<property name="WalkType" value="7"/>
+		<property name="ExperienceGain" value="399"/>
 		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="145"/>
 			<passive_effect name="PhysicalDamageResist" operation="base_set" value="20" />
 		</effect_group>
 	</entity_class>
 	
 	<!-- old bald male asian with leather tunic -->
-	<entity_class name="khzChang" extends="khzTemplateMale1">
+	<entity_class name="khzChang" extends="EN_Zombie_Template_Male1">
 		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="Archetype" value="KHz_Chang" />
 		<property name="HandItem" value="meleeHandZombieStrong" />
+		<property name="WalkType" value="7"/>
+		<property name="ExperienceGain" value="385"/>
 		<effect_group name="Base Effects">
-			<passive_effect name="PhysicalDamageResist" operation="base_set" value="25" />
+			<passive_effect name="HealthMax" operation="base_set" value="140"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
 		</effect_group>
 	</entity_class>
 	
 	<!-- female wearing leather hood and long sleeves -->
-	<entity_class name="khzCharlotte" extends="khzTemplateFemale1">
+	<entity_class name="khzCharlotte" extends="EN_Zombie_Template_Female1">
 		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="HandItem" value="enHand_0907_020_xxxxxxx"/>
 		<property name="Archetype" value="KHz_Charlotte" />
 		<property name="WalkType" value="3"/>
 		<property name="PainResistPerHit" value=".7"/>
-		<property name="ExperienceGain" value="377"/>
+		<property name="ExperienceGain" value="344"/>
 		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="base_set" value="137"/>
+			<passive_effect name="HealthMax" operation="base_set" value="125"/>
 		</effect_group>
 	</entity_class>
 	
@@ -6292,35 +6519,37 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<property name="HandItem" value="enHand_1821_030_xxxxxxx"/>
 		<property name="Archetype" value="KHz_CharlotteFeral" />
 		<property name="PainResistPerHit" value="1.0"/>
-		<property name="ExperienceGain" value="685"/>
+		<property name="ExperienceGain" value="625"/>
 		<effect_group name="Base Effects">
 			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
 		</effect_group>
 	</entity_class>
 	
 	<!-- male wearing cowboy hat and poncho -->
-	<entity_class name="khzClint" extends="khzTemplateMale2">
+	<entity_class name="khzClint" extends="EN_Zombie_Template_Male2">
 		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="Archetype" value="KHz_Clint" />
 		<property name="HandItem" value="meleeHandZombieStrong" />
 		<property name="JumpMaxDistance" value="1.4, 1.5" />
-		<property name="ExperienceGain" value="750" />
+		<property name="WalkType" value="7"/>
+		<property name="ExperienceGain" value="440" />
 		<property name="LootDropEntityClass" value="EntityLootContainerStrong" />
 		<effect_group name="Base Effects">
-			<passive_effect name="PhysicalDamageResist" operation="base_set" value="30" />
+			<passive_effect name="HealthMax" operation="base_set" value="160"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
 		</effect_group>
 	</entity_class>
 	
 	<!-- female wearing red tank top -->
-	<entity_class name="khzEmma" extends="khzTemplateFemale1">
+	<entity_class name="khzEmma" extends="EN_Zombie_Template_Female1">
 		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="HandItem" value="enHand_0907_020_xxxxxxx"/>
 		<property name="Archetype" value="KHz_Emma" />
 		<property name="WalkType" value="7"/>
 		<property name="PainResistPerHit" value=".7"/>
-		<property name="ExperienceGain" value="377"/>
+		<property name="ExperienceGain" value="344"/>
 		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="base_set" value="137"/>
+			<passive_effect name="HealthMax" operation="base_set" value="125"/>
 		</effect_group>
 	</entity_class>
 	
@@ -6329,84 +6558,104 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<property name="HandItem" value="enHand_1821_030_xxxxxxx"/>
 		<property name="Archetype" value="KHz_EmmaFeral" />
 		<property name="PainResistPerHit" value="1.0"/>
-		<property name="ExperienceGain" value="685"/>
+		<property name="WalkType" value="7"/>
+		<property name="ExperienceGain" value="625"/>
 		<effect_group name="Base Effects">
 			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
 		</effect_group>
 	</entity_class>
 	
 	<!-- larger female with dreadlocks and wearing kevlar vest and leg armor -->
-	<entity_class name="khzGabrielle" extends="khzTemplateFemale2">
+	<entity_class name="khzGabrielle" extends="EN_Zombie_Template_Female2">
 		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="Archetype" value="KHz_Gabrielle" />
 		<property name="HandItem" value="meleeHandZombieStrong" />
 		<property name="JumpMaxDistance" value=".5, .6" />
+		<property name="WalkType" value="7"/>
+		<property name="ExperienceGain" value="371" />
 		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="135"/>
 			<passive_effect name="PhysicalDamageResist" operation="base_set" value="40" />
 		</effect_group>
 	</entity_class>
 	
 	<!-- female wearing jacket -->
-	<entity_class name="khzGrace" extends="khzTemplateFemale1">
+	<entity_class name="khzGrace" extends="EN_Zombie_Template_Female1">
 		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="Archetype" value="KHz_Grace" />
+		<property name="WalkType" value="7"/>
+		<property name="ExperienceGain" value="358" />
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="130"/>
+		</effect_group>
 	</entity_class>
 	
 	<!-- old bearded male wearing cowboy hat and leather duster -->
-	<entity_class name="khzHank" extends="khzTemplateMale2">
+	<entity_class name="khzHank" extends="EN_Zombie_Template_Male2">
 		<property name="Archetype" value="KHz_Hank" />
 		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="HandItem" value="meleeHandZombieStrong" />
 		<property name="JumpMaxDistance" value="1.4, 1.5" />
-		<property name="ExperienceGain" value="750" />
+		<property name="WalkType" value="7"/>
+		<property name="ExperienceGain" value="440" />
 		<property name="LootDropEntityClass" value="EntityLootContainerStrong" />
 		<effect_group name="Base Effects">
-			<passive_effect name="PhysicalDamageResist" operation="base_set" value="9" />
+			<passive_effect name="HealthMax" operation="base_set" value="160"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
 		</effect_group>
 	</entity_class>
 	
 	<!-- female wearing cowboy hat and jacket -->
-	<entity_class name="khzHelen" extends="khzTemplateFemale2">
+	<entity_class name="khzHelen" extends="EN_Zombie_Template_Female2">
 		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="Archetype" value="KHz_Helen" />
 		<property name="HandItem" value="meleeHandZombieStrong" />
 		<property name="JumpMaxDistance" value=".5, .6" />
+		<property name="WalkType" value="7"/>
+		<property name="ExperienceGain" value="358" />
 		<effect_group name="Base Effects">
-			<passive_effect name="PhysicalDamageResist" operation="base_set" value="8" />
+			<passive_effect name="HealthMax" operation="base_set" value="130"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_set" value="5" />
 		</effect_group>
 	</entity_class>
 	
 	<!-- male wearing mining helmet and devlar vest no shirt -->
-	<entity_class name="khzJack" extends="khzTemplateMale2">
+	<entity_class name="khzJack" extends="EN_Zombie_Template_Male2">
 		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="Archetype" value="KHz_Jack" />
 		<property name="HandItem" value="meleeHandZombieStrong" />
 		<property name="JumpMaxDistance" value="1.4, 1.5" />
-		<property name="ExperienceGain" value="750" />
+		<property name="WalkType" value="7"/>
+		<property name="ExperienceGain" value="440" />
 		<property name="LootDropEntityClass" value="EntityLootContainerStrong" />
 		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="160"/>
 			<passive_effect name="PhysicalDamageResist" operation="base_set" value="50" />
 		</effect_group>
 	</entity_class>
 	
 	 <!-- bald male with mustache wearing metal chest armor, gloves, and boots -->
-	<entity_class name="khzJeff" extends="khzTemplateMale1">
+	<entity_class name="khzJeff" extends="EN_Zombie_Template_Male1">
 		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="Archetype" value="KHz_Jeff" />
+		<property name="WalkType" value="7"/>
+		<property name="ExperienceGain" value="413" />
 		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="150"/>
 			<passive_effect name="PhysicalDamageResist" operation="base_set" value="30" />
 		</effect_group>
 	</entity_class>
 	
 	<!-- vanilla looking female wih long shirt and pants -->
-	<entity_class name="khzMaria" extends="khzTemplateFemale1">
+	<entity_class name="khzMaria" extends="EN_Zombie_Template_Female1">
 		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="HandItem" value="enHand_0907_020_xxxxxxx"/>
 		<property name="Archetype" value="KHz_Maria" />
 		<property name="PainResistPerHit" value=".7"/>
-		<property name="ExperienceGain" value="377"/>
+		<property name="WalkType" value="7"/>
+		<property name="ExperienceGain" value="358"/>
 		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="base_set" value="137"/>
+			<passive_effect name="HealthMax" operation="base_set" value="130"/>
 		</effect_group>
 	</entity_class>
 	
@@ -6415,7 +6664,7 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<property name="HandItem" value="enHand_1821_030_xxxxxxx"/>
 		<property name="Archetype" value="KHz_MariaFeral" />
 		<property name="PainResistPerHit" value="1.0"/>
-		<property name="ExperienceGain" value="685"/>
+		<property name="ExperienceGain" value="650"/>
 		<effect_group name="Base Effects">
 			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
 		</effect_group>
@@ -6428,9 +6677,9 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<property name="Archetype" value="KHz_Miguel" />
 		<property name="PainResistPerHit" value=".7"/>
 		<property name="WalkType" value="7"/>
-		<property name="ExperienceGain" value="499"/>
+		<property name="ExperienceGain" value="413"/>
 		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="base_set" value="165"/>
+			<passive_effect name="HealthMax" operation="base_set" value="150"/>
 		</effect_group>
 	</entity_class>
 	
@@ -6439,53 +6688,108 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 		<property name="HandItem" value="enHand_2227_030_xxxxxxx"/>
 		<property name="Archetype" value="KHz_MiguelFeral" />
 		<property name="PainResistPerHit" value="1.0"/>
-		<property name="ExperienceGain" value="907"/>
+		<property name="ExperienceGain" value="750"/>
 		<effect_group name="Base Effects">
 			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
 		</effect_group>
 	</entity_class>
 	
 	<!-- slightly thick female with dreadlocks wearing kevlar leg armor -->
-	<entity_class name="khzRayah" extends="khzTemplateFemale1">
+	<entity_class name="khzRayah" extends="EN_Zombie_Template_Female1">
 		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="Archetype" value="KHz_Rayah" />
+		<property name="WalkType" value="7"/>
+		<property name="ExperienceGain" value="371"/>
 		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="135"/>
 			<passive_effect name="PhysicalDamageResist" operation="base_set" value="30" />
 		</effect_group>
 	</entity_class>
 	
 	<!-- male wearing business suit -->
-	 <entity_class name="khzRichie" extends="khzTemplateMale1">
+	 <entity_class name="khzRichie" extends="EN_Zombie_Template_Male1">
 		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="Archetype" value="KHz_Richie" />
+		<property name="WalkType" value="7"/>
+		<property name="ExperienceGain" value="413"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="150"/>
+		</effect_group>
 	</entity_class>
 	
 	<!-- female with afro wearing tank top and goth pants -->
-	<entity_class name="khzRoxy" extends="khzTemplateFemale1">
+	<entity_class name="khzRoxy" extends="EN_Zombie_Template_Female1">
 		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="Archetype" value="KHz_Roxy" />
+		<property name="WalkType" value="7"/>
+		<property name="ExperienceGain" value="358"/>
 		<effect_group name="Base Effects">
-			<passive_effect name="PhysicalDamageResist" operation="base_set" value="9" />
+			<passive_effect name="HealthMax" operation="base_set" value="130"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_set" value="5" />
 		</effect_group>
 	</entity_class>
 	
 	<!-- older male all armored up and also wearing footbal helmet -->
-	<entity_class name="khzVince" extends="khzTemplateMale1">
+	<entity_class name="khzVince" extends="EN_Zombie_Template_Male1">
 		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="Archetype" value="KHz_Vince" />
+		<property name="WalkType" value="7"/>
+		<property name="ExperienceGain" value="454"/>
 		<effect_group name="Base Effects">
-			<passive_effect name="PhysicalDamageResist" operation="base_set" value="30" />
+			<passive_effect name="HealthMax" operation="base_set" value="165"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_set" value="40" />
 		</effect_group>
 	</entity_class>
 	
 	<!-- male with afro wearing goggles, scrap chest armor, no shirt -->
-	<entity_class name="khzWillie" extends="khzTemplateMale1">
+	<entity_class name="khzWillie" extends="EN_Zombie_Template_Male1">
 		<property name="Tags" value="entity,zombie,walker,umazombie" />
 		<property name="Archetype" value="KHz_Willie" />
+		<property name="WalkType" value="7"/>
+		<property name="ExperienceGain" value="426"/>
 		<effect_group name="Base Effects">
-			<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+			<passive_effect name="HealthMax" operation="base_set" value="155"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_set" value="15" />
 		</effect_group>
 	</entity_class>
+	
+	
+	
+	
+	
+	<!-- ********************  TEST ZOMBIES  ************************ -->
+	<!-- these do not spawn anywhere in the game and is only used for dev testing -->
+		
+	<entity_class name="enTestWhite1" extends="EN_Zombie_Template_Male1">
+		<property name="HideInSpawnMenu" value="false"/>
+		<property name="Tags" value="entity,zombie,walker,umazombie"/>
+		<property name="Archetype" value="en_testWhite1"/>
+	</entity_class>
+	
+	<entity_class name="enTestWhite2" extends="EN_Zombie_Template_Male1">
+		<property name="HideInSpawnMenu" value="false"/>
+		<property name="Tags" value="entity,zombie,walker,umazombie"/>
+		<property name="Archetype" value="en_testWhite2"/>
+	</entity_class>
+	
+	<entity_class name="enTestWhite3" extends="EN_Zombie_Template_Male1">
+		<property name="HideInSpawnMenu" value="false"/>
+		<property name="Tags" value="entity,zombie,walker,umazombie"/>
+		<property name="Archetype" value="en_testWhite3"/>
+	</entity_class>
+	
+	<entity_class name="enTestWhite4" extends="EN_Zombie_Template_Male1">
+		<property name="HideInSpawnMenu" value="false"/>
+		<property name="Tags" value="entity,zombie,walker,umazombie"/>
+		<property name="Archetype" value="en_testWhite4"/>
+	</entity_class>
+	
+	<entity_class name="enTestWhite5" extends="EN_Zombie_Template_Male1">
+		<property name="HideInSpawnMenu" value="false"/>
+		<property name="Tags" value="entity,zombie,walker,umazombie"/>
+		<property name="Archetype" value="en_testWhite5"/>
+	</entity_class>
+	
 	
 	
 
@@ -6554,11 +6858,16 @@ By default, zombie HP varyies from -20% to +15% of base value. Modifying this va
 </append>
 
 
-<!-- one method to systemically give all radiated zombies regen ability -->
+<!-- systemically give all radiated zombies regen ability -->
 <append xpath="/entity_classes/entity_class/effect_group[@id='regen5']">
 	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="5"/>
 </append>
 
+<!-- systemically give all radiated zombies regen ability -->
+<append xpath="/entity_classes/entity_class/effect_group[@id='regen10']">
+	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="10"/>
+</append>
 
 </ErrorNull>

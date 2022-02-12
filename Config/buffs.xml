@@ -320,26 +320,6 @@
 			</effect_group>
 		</buff>
 		
-<!--
-		BUFF PREFAB POSITIONING:
-		OFFSET
-		x: pos = up the arm toward shoulders, neg = down the arm toward fingers
-		y: pos = veritcal up/out along thumb
-		z: pos = away from side of zombie 
-		ROTATION
-		x: pos = rotate leftward along forearm as axis
-		y: pos = clockwise along thumb axis
-		z: pos = rotate toward player along hips axis
-		
-		
-		<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
-			prefab="#Other/Items?Food/bottledriverwaterprefab.prefab" 
-			local_offset="-0.09,-0.05,-0.05" 
-			local_rotation="0,0,0" 
-			parent_transform="RightHand"
-		/>	
--->
-
 		<!-- ********** HOLDING NAILGUN ********** -->
 		<buff name="UtilityFemale1Deco" hidden="true">
 			<effect_group>
@@ -357,7 +337,25 @@
 				/>
 			</effect_group>
 		</buff>
-				
+
+		<!-- ********** HOLDING BUCKET AND BAG ********** -->
+		<buff name="UtilityFemale2Deco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Crafting/Metal/IronBucketWater.fbx"  
+					local_offset="-0.31,0.0,-0.13"
+					local_rotation="90,-25,-90" 
+					parent_transform="RightHand"
+				/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Misc/sackprefab.prefab" 
+					local_offset="-0.09,-0.05,-0.03" 
+					local_rotation="-30,-30,-160" 
+					parent_transform="LeftHand"
+				/>
+			</effect_group>
+		</buff>
+		
 		<!-- ********** HOLDING HAMMER ********** -->
 		<buff name="UtilityMale3Deco" hidden="true">
 			<effect_group>
@@ -370,7 +368,7 @@
 			</effect_group>
 		</buff>
 		
-		<!-- ********** HOLDING BUCKET ********** -->
+		<!-- ********** HOLDING SHOVEL ********** -->
 		<buff name="UtilityMale4Deco" hidden="true">
 			<effect_group>
 				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
@@ -386,8 +384,94 @@
 					parent_transform="LeftHand"
 				/>
 			</effect_group>
-			
-			
+		</buff>
+		
+<!--
+	BUFF PREFAB POSITIONING:
+	OFFSET
+	X vertical: 	pos = up, neg = down
+	y to / fro: 	pos = toward player, neg = away from player
+	z horizontal: 	pos = left, neg = right 
+	ROTATION
+	x vert axis:	pos = rotate lefward, neg = rotate righttward
+	y forward axis:	pos = clockwise, neg = counter-clockwise
+	z horiz axis:	pos = rotate downard, neg = rotate upward
+		
+	<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+		prefab="#Other/Items?Crafting/Metal/IronBucket.fbx" 
+		local_offset="-0.15,0.12,-0.17" 
+		local_rotation="135,0,330" 
+		parent_transform="LeftHand"
+	/>	
+-->
+
+		<!-- ********** HOLDING IRON SLEDGE HAMMER ********** -->
+		<buff name="UtilityMale5Deco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Weapons/Melee/SledgeHammer/ironSledgehammerPrefab.prefab" 
+					local_offset="-0.10,0.19,-0.03" 
+					local_rotation="0,60,0" 
+					parent_transform="RightHand"
+				/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Misc/sackprefab.prefab" 
+					local_offset="-0.09,-0.05,-0.03" 
+					local_rotation="-30,-30,-160" 
+					parent_transform="LeftHand"
+				/>
+			</effect_group>
+		</buff>
+		
+		<buff name="UtilityMale5Deco2" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Weapons/Melee/SledgeHammer/ironSledgehammerPrefab.prefab" 
+					local_offset="-0.10,0.19,-0.03" 
+					local_rotation="0,60,0" 
+					parent_transform="RightHand"
+				/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Misc/sackprefab.prefab" 
+					local_offset="-0.09,-0.05,-0.03" 
+					local_rotation="-30,-30,-160" 
+					parent_transform="LeftHand"
+				/>
+			</effect_group>
+		</buff>
+		
+		<buff name="UtilityMale5Deco3" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Weapons/Melee/SledgeHammer/ironSledgehammerPrefab.prefab" 
+					local_offset="-0.10,0.19,-0.03" 
+					local_rotation="0,60,0" 
+					parent_transform="RightHand"
+				/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Misc/sackprefab.prefab" 
+					local_offset="-0.09,-0.05,-0.03" 
+					local_rotation="-30,-30,-160" 
+					parent_transform="LeftHand"
+				/>
+			</effect_group>
+		</buff>
+		
+		<buff name="UtilityMale5Deco4" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Weapons/Melee/SledgeHammer/ironSledgehammerPrefab.prefab" 
+					local_offset="-0.10,0.19,-0.03" 
+					local_rotation="0,60,0" 
+					parent_transform="RightHand"
+				/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" 
+					prefab="#Other/Items?Misc/sackprefab.prefab" 
+					local_offset="-0.09,-0.05,-0.03" 
+					local_rotation="-30,-30,-160" 
+					parent_transform="LeftHand"
+				/>
+			</effect_group>
 		</buff>
 		
 		<!-- ********** HOLDING BONE KNIVES IN BOTH HANDS ********** -->
@@ -971,7 +1055,7 @@
 
 		<buff name="buffDanceFever">
 			<stack_type value="replace"/>
-			<duration value="5"/>
+			<duration value="60"/>
 			  <effect_group>
 				  <triggered_effect trigger="onSelfBuffStart" action="SetDancing" enabled="true" />
 				  <triggered_effect trigger="onSelfBuffRemove" action="SetDancing" enabled="false" />

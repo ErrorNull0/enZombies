@@ -5,13 +5,14 @@
 	<!-- ********** FOREST ZOMBIES ********** -->
 	
 	
-	<!-- forest female -->
+	<!-- forest female / school female -->
 	<item name="enHand_0907_020_xxxxxxx">
 		<property name="Extends" value="meleeHandZombie01"/>
 		<property name="CreativeMode" value="None"/>
 		<property class="Action0">
 			<property name="DamageEntity" value="9"/>
 			<property name="DamageBlock" value="7"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_0907_020_xxxxxxx" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -23,13 +24,14 @@
 		</effect_group>
 	</item>
 	
-	<!-- forest female feral -->
+	<!-- forest female feral / school female feral -->
 	<item name="enHand_1821_030_xxxxxxx">
 		<property name="Extends" value="meleeHandZombie01"/>
 		<property name="CreativeMode" value="None"/>
 		<property class="Action0">
 			<property name="DamageEntity" value="18"/>
 			<property name="DamageBlock" value="21"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_1821_030_xxxxxxx" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -41,13 +43,14 @@
 		</effect_group>
 	</item>
 	
-	<!-- forest female radiated -->
+	<!-- forest female radiated / school female radiated -->
 	<item name="enHand_2023_030_AAAAAAA">
 		<property name="Extends" value="meleeHandZombie01"/>
 		<property name="CreativeMode" value="None"/>
 		<property class="Action0">
 			<property name="DamageEntity" value="20"/>
 			<property name="DamageBlock" value="23"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_2023_030_AAAAAAA" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -59,7 +62,7 @@
 		</effect_group>
 	</item>
 	
-	<!-- forest male -->
+	<!-- forest male / school male -->
 	<!-- also used by camo and spider zombies -->
 	<item name="enHand_1109_020_xxxxxxx">
 		<property name="Extends" value="meleeHandZombie01"/>
@@ -67,6 +70,7 @@
 		<property class="Action0">
 			<property name="DamageEntity" value="11"/>
 			<property name="DamageBlock" value="9"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_1109_020_xxxxxxx" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -79,13 +83,14 @@
 		</effect_group>
 	</item>
 	
-	<!-- forest male feral -->
+	<!-- forest male feral / school male feral -->
 	<item name="enHand_2227_030_xxxxxxx">
 		<property name="Extends" value="meleeHandZombie01"/>
 		<property name="CreativeMode" value="None"/>
 		<property class="Action0">
 			<property name="DamageEntity" value="22"/>
 			<property name="DamageBlock" value="27"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_2227_030_xxxxxxx" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -97,13 +102,14 @@
 		</effect_group>
 	</item>
 	
-	<!-- forest male radiated -->
+	<!-- forest male radiated / school male radiated -->
 	<item name="enHand_2530_030_AAAAAAA">
 		<property name="Extends" value="meleeHandZombie01"/>
 		<property name="CreativeMode" value="None"/>
 		<property class="Action0">
 			<property name="DamageEntity" value="25"/>
 			<property name="DamageBlock" value="30"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_2530_030_AAAAAAA" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -124,6 +130,7 @@
 			<property name="DamageEntity" value="10"/>
 			<property name="DamageBlock" value="16"/>
 			<property name="Delay" value="2.0"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_1016_020_xxxxxxx" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -291,6 +298,7 @@
 		<property class="Action0">
 			<property name="DamageEntity" value="7"/>
 			<property name="DamageBlock" value="5"/>
+			<property name="Range" value="1.5"/>
 		</property>
 		<effect_group name="enHand_0705_025_xxxxxxx" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -309,6 +317,7 @@
 		<property class="Action0">
 			<property name="DamageEntity" value="13"/>
 			<property name="DamageBlock" value="13"/>
+			<property name="Range" value="1.5"/>
 		</property>
 		<effect_group name="enHand_1313_035_xxxxxxx" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -327,6 +336,7 @@
 		<property class="Action0">
 			<property name="DamageEntity" value="16"/>
 			<property name="DamageBlock" value="20"/>
+			<property name="Range" value="1.5"/>
 		</property>
 		<effect_group name="enHand_1620_035_xxxxxxx" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -350,6 +360,7 @@
 		<property class="Action0">
 			<property name="DamageEntity" value="11"/>
 			<property name="DamageBlock" value="9"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_1109_005_xxxxxxx" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -368,6 +379,7 @@
 		<property class="Action0">
 			<property name="DamageEntity" value="9"/>
 			<property name="DamageBlock" value="7"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_0907_005_xxxxxxx" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -386,6 +398,7 @@
 		<property class="Action0">
 			<property name="DamageEntity" value="22"/>
 			<property name="DamageBlock" value="27"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_2227_007_xxxxxxx" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -404,6 +417,7 @@
 		<property class="Action0">
 			<property name="DamageEntity" value="18"/>
 			<property name="DamageBlock" value="21"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_1821_007_xxxxxxx" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -422,6 +436,7 @@
 		<property class="Action0">
 			<property name="DamageEntity" value="25"/>
 			<property name="DamageBlock" value="30"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_2530_007_AAAAAAA" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -440,6 +455,7 @@
 		<property class="Action0">
 			<property name="DamageEntity" value="20"/>
 			<property name="DamageBlock" value="23"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_2023_007_AAAAAAA" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -460,6 +476,7 @@
 			<property name="DamageEntity" value="10"/>
 			<property name="DamageBlock" value="16"/>
 			<property name="Delay" value="2.0"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_1016_005_xxxxxxx" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -527,27 +544,7 @@
 			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
 		</effect_group>
 	</item>
-	
-	<!-- desert cowboy/cowgirl crawler -->
-	<item name="enHand_1216_005_xxxxxxx">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property name="HoldType" value="24"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="12"/>
-			<property name="DamageBlock" value="16"/>
-			<property name="Delay" value="2.0"/>
-		</property>
-		<effect_group name="enHand_1216_005_xxxxxxx" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="5">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
-		</effect_group>
-	</item>
-	
+		
 	<!-- desert cowboy robber -->
 	<item name="enHand_2518_005_xxxxxxx">
 		<property name="Extends" value="meleeHandZombie01"/>
@@ -887,6 +884,81 @@
 	
 	
 	
+	
+	<!-- Desert Crawler (still in development) -->
+	<item name="meleeHandDesertCrawler">
+		<property name="Extends" value="meleeHandMaster"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="Delay" value=".1"/>
+			<!-- obsolete if rounds per minute exists -->
+			<property name="DamageEntity" value="5"/>
+			<property name="DamageBlock" value="5"/>
+			<property name="Buff" value="buffInjuryBleedingZombie,buffInfectionCatch"/></property>
+		<property class="Action1">
+			<property name="Class" value="Vomit"/>
+			<property name="Hitmask_override" value="Arrow"/>
+			<property name="Delay" value=".5"/>
+			<property name="Infinite_ammo" value="true"/>
+			<property name="Magazine_items" value="ammoProjectileCrawler"/>
+			<property name="Range" value="1.75"/> <!-- Testers 1.65 default for parent -->
+			<property name="Sphere" value=".1"/> <!--Testers -->
+			<property name="Sound_warning" value=""/>
+			<property name="Sound_start" value=""/>
+			<property name="Sound_repeat" value=""/>
+			<property name="Sound_end" value=""/>
+			<property name="Sound_empty" value=""/>
+			<property name="Sound_reload" value=""/>
+		</property>
+		<effect_group name="meleeHandDesertCrawler" tiered="false">
+			<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			<passive_effect name="MagazineSize" operation="base_set" value="1"/>
+			<passive_effect name="BurstRoundCount" operation="base_set" value="6"/>
+			<passive_effect name="SpreadDegreesVertical" operation="base_set" value="6"/>
+			<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="15"/>
+			<passive_effect name="SpreadMultiplierIdle" operation="base_set" value="1"/>
+			<passive_effect name="DamageFalloffRange" operation="base_set" value="50"/>
+			<passive_effect name="MaxRange" operation="base_set" value="50"/>
+		</effect_group>
+	</item>
+	<item name="ammoProjectileCrawler">
+		<!--property name="Meshfile" value="particleeffects/p_onFire"/-->
+		<property name="Meshfile" value="particleeffects/p_fire_small"/>
+		<property name="Material" value="Morganic"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action1">
+			<property name="Class" value="Projectile"/>
+			<property name="DamageEntity" value="20"/>
+			<property name="DamageBlock" value="20"/>
+			<property name="Explosion.ParticleIndex" value="12"/>
+			<property name="Explosion.RadiusEntities" value="2"/>
+			<property name="Velocity" value="13"/>
+			<property name="FlyTime" value="6"/>
+			<property name="LifeTime" value="8"/>
+			<property name="CollisionRadius" value=".5"/>
+			<property name="Buff" value="buffBurningZombie"/>
+		</property>
+		<effect_group name="ammoProjectileCrawler" tiered="false">
+			<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth"/>
+			<passive_effect name="DamageModifier" operation="perc_set" value="0.5" tags="stone"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="1.2" tags="metal"/>
+			<passive_effect name="BuffProcChance" operation="base_set" value=".20" tags="buffInfectionCatch"/>
+			<passive_effect name="BuffProcChance" operation="base_set" value="0.90" tags="buffBurningZombie"/>
+			
+			<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="selfAOE" range="12" buff="buffArchon">
+				<requirement name="EntityTagCompare" target="other" tags="zombie"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="infectionZombieHit" operation="set" value="60"/>
+			<!--InfectionRadiated-->
+		</effect_group>
+	</item>
+		
+		
+		
+	
+	
+	
+	
 	<!-- ********** SNOW ZOMBIES ********** -->
 	
 	<!-- snow male -->
@@ -897,6 +969,7 @@
 		<property class="Action0">
 			<property name="DamageEntity" value="15"/>
 			<property name="DamageBlock" value="13"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_1513_010_AxxxxBx" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -915,6 +988,7 @@
 		<property class="Action0">
 			<property name="DamageEntity" value="13"/>
 			<property name="DamageBlock" value="11"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_1311_010_AxxxxBx" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -933,6 +1007,7 @@
 		<property class="Action0">
 			<property name="DamageEntity" value="26"/>
 			<property name="DamageBlock" value="31"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_2631_015_AxxxxBx" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -951,6 +1026,7 @@
 		<property class="Action0">
 			<property name="DamageEntity" value="22"/>
 			<property name="DamageBlock" value="25"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_2225_015_AxxxxBx" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -969,6 +1045,7 @@
 		<property class="Action0">
 			<property name="DamageEntity" value="29"/>
 			<property name="DamageBlock" value="34"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_2934_015_BBBBBBB" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -987,6 +1064,7 @@
 		<property class="Action0">
 			<property name="DamageEntity" value="24"/>
 			<property name="DamageBlock" value="27"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_2427_015_BBBBBBB" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -1028,6 +1106,7 @@
 			<property name="DamageEntity" value="13"/>
 			<property name="DamageBlock" value="19"/>
 			<property name="Delay" value="2.0"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_1319_010_AxxxxBx" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -1078,13 +1157,13 @@
 	<!-- ********** BURNT ZOMBIES ********** -->
 	
 	<!-- burnt male -->
-	<!-- also used by camo and spider zombies -->
 	<item name="enHand_1109_030_xxxBCxx">
 		<property name="Extends" value="meleeHandZombie01"/>
 		<property name="CreativeMode" value="None"/>
 		<property class="Action0">
 			<property name="DamageEntity" value="11"/>
 			<property name="DamageBlock" value="9"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_1109_030_xxxBCxx" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -1103,6 +1182,7 @@
 		<property class="Action0">
 			<property name="DamageEntity" value="9"/>
 			<property name="DamageBlock" value="7"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_0907_030_xxxBCxx" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -1121,6 +1201,7 @@
 		<property class="Action0">
 			<property name="DamageEntity" value="22"/>
 			<property name="DamageBlock" value="27"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_2227_045_xxxBCxx" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -1139,6 +1220,7 @@
 		<property class="Action0">
 			<property name="DamageEntity" value="18"/>
 			<property name="DamageBlock" value="21"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_1821_045_xxxBCxx" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -1157,6 +1239,7 @@
 		<property class="Action0">
 			<property name="DamageEntity" value="25"/>
 			<property name="DamageBlock" value="30"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_2530_045_AAABCAA" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -1175,6 +1258,7 @@
 		<property class="Action0">
 			<property name="DamageEntity" value="20"/>
 			<property name="DamageBlock" value="23"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_2023_045_AAABCAA" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -1195,6 +1279,7 @@
 			<property name="DamageEntity" value="10"/>
 			<property name="DamageBlock" value="16"/>
 			<property name="Delay" value="2.0"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_1016_030_xxxABxx" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -1212,9 +1297,9 @@
 		<property name="CreativeMode" value="None"/>
 		<property name="Degradation" value="99999" param1="true"/>
 		<property class="Action0">
-			<property name="Range" value="1.75"/>
 			<property name="DamageEntity" value="20"/>
 			<property name="DamageBlock" value="20"/>
+			<property name="Range" value="1.75"/>
 			<property name="Buff" value="buffBurningZombie"/>
 		</property>
 		<effect_group name="enHand_2020_000_xxxABxx" tiered="false">
@@ -1232,9 +1317,9 @@
 		<property name="CreativeMode" value="None"/>
 		<property name="Degradation" value="99999" param1="true"/>
 		<property class="Action0">
-			<property name="Range" value="1.75"/>
 			<property name="DamageEntity" value="30"/>
 			<property name="DamageBlock" value="50"/>
+			<property name="Range" value="1.75"/>
 			<property name="Buff" value="buffBurningZombie"/>
 		</property>
 		<effect_group name="enHand_3050_000_xxxABxx" tiered="false">
@@ -1252,9 +1337,9 @@
 		<property name="CreativeMode" value="None"/>
 		<property name="Degradation" value="99999" param1="true"/>
 		<property class="Action0">
-			<property name="Range" value="1.75"/>
 			<property name="DamageEntity" value="35"/>
 			<property name="DamageBlock" value="60"/>
+			<property name="Range" value="1.75"/>
 			<property name="Buff" value="buffBurningZombie"/>
 		</property>
 		<effect_group name="enHand_3050_000_AAABBAA" tiered="false">
@@ -1411,7 +1496,7 @@
 		</effect_group>
 	</item>
 	
-	<!-- burnt (red) goblins -->
+	<!-- burnt "red" goblins -->
 	<item name="enHand_0807_000_bbbxabb">
 		<property name="Extends" value="meleeHandZombie01"/>
 		<property name="CreativeMode" value="None"/>
@@ -1428,7 +1513,7 @@
 		</effect_group>
 	</item>
 	
-	<!-- burnt (red) giant -->
+	<!-- burnt "red" giant -->
 	<item name="enHand_50500_000_xBBCDBx">
 		<property name="Extends" value="meleeHandZombie01"/>
 		<property name="CreativeMode" value="None"/>
@@ -1450,13 +1535,13 @@
 	<!-- ********** WASTELAND ZOMBIES ********** -->
 	
 	<!-- wasteland male -->
-	<!-- also used by camo and spider zombies -->
 	<item name="enHand_1816_050_AAABCBA">
 		<property name="Extends" value="meleeHandZombie01"/>
 		<property name="CreativeMode" value="None"/>
 		<property class="Action0">
 			<property name="DamageEntity" value="18"/>
 			<property name="DamageBlock" value="16"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_1816_050_AAABCBA" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -1475,6 +1560,7 @@
 		<property class="Action0">
 			<property name="DamageEntity" value="16"/>
 			<property name="DamageBlock" value="14"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_1614_050_AAABCBA" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -1493,6 +1579,7 @@
 		<property class="Action0">
 			<property name="DamageEntity" value="29"/>
 			<property name="DamageBlock" value="34"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_2934_075_AAABCBA" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -1511,6 +1598,7 @@
 		<property class="Action0">
 			<property name="DamageEntity" value="25"/>
 			<property name="DamageBlock" value="28"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_2528_075_AAABCBA" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -1529,6 +1617,7 @@
 		<property class="Action0">
 			<property name="DamageEntity" value="32"/>
 			<property name="DamageBlock" value="37"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_3237_075_BBBBCCB" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -1547,6 +1636,7 @@
 		<property class="Action0">
 			<property name="DamageEntity" value="27"/>
 			<property name="DamageBlock" value="30"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_2730_075_BBBBCCB" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -1567,6 +1657,7 @@
 			<property name="DamageEntity" value="16"/>
 			<property name="DamageBlock" value="22"/>
 			<property name="Delay" value="2.0"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_1622_050_AAABCBA" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -1612,846 +1703,6 @@
 		</effect_group>
 	</item>
 
-
-
-	<!-- ********** SOLDIER/MILITARY ZOMBIES ********** -->
-	
-	<!-- soldier male -->
-	<item name="enHand_2040_010_xAAAAAA">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="20"/>
-			<property name="DamageBlock" value="40"/>
-		</property>
-		<effect_group name="enHand_2040_010_xAAAAAA" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.15,.15,.10,.40,.45,.15"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2000"/>
-		</effect_group>
-	</item>
-
-	<!-- soldier female -->
-	<item name="enHand_1736_010_xAAAAAA">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="17"/>
-			<property name="DamageBlock" value="36"/>
-		</property>
-		<effect_group name="enHand_1736_010_xAAAAAA" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.15,.15,.10,.40,.45,.15"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2000"/>
-		</effect_group>
-	</item>
-
-	<!-- soldier male feral -->
-	<item name="enHand_40120_015_xAAAAAA">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="40"/>
-			<property name="DamageBlock" value="120"/>
-		</property>
-		<effect_group name="enHand_40120_015_xAAAAAA" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.15,.15,.10,.40,.45,.15"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
-		</effect_group>
-	</item>
-	
-	<!-- soldier female feral -->
-	<item name="enHand_34108_015_xAAAAAA">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="34"/>
-			<property name="DamageBlock" value="108"/>
-		</property>
-		<effect_group name="enHand_34108_015_xAAAAAA" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.15,.15,.10,.40,.45,.15"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
-		</effect_group>
-	</item>
-
-	<!-- soldier male radiated -->
-	<item name="enHand_45130_015_ABBBAAA">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="45"/>
-			<property name="DamageBlock" value="130"/>
-		</property>
-		<effect_group name="enHand_45130_015_ABBBAAA" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".15,.20,.20,.15,.40,.45,.15"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
-		</effect_group>
-	</item>
-	
-	<!-- soldier female radiated -->
-	<item name="enHand_40118_015_ABBBAAA">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="40"/>
-			<property name="DamageBlock" value="118"/>
-		</property>
-		<effect_group name="enHand_40118_015_ABBBAAA" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".15,.20,.20,.15,.40,.45,.15"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
-		</effect_group>
-	</item>
-
-	<!-- soldier crawler -->
-	<item name="enHand_1630_010_xAAAAAA">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="16"/>
-			<property name="DamageBlock" value="30"/>
-		</property>
-		<effect_group name="enHand_1630_010_xAAAAAA" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.15,.15,.10,.40,.45,.15"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2000"/>
-		</effect_group>
-	</item>
-
-	<!-- stealth male1 -->
-	<item name="enHand_2005_010_fffffff">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="20"/>
-			<property name="DamageBlock" value="5"/>
-			<property name="Range" value="1.8"/>
-			<property name="Buff" value="buffInjuryBleedingOne"/>
-		</property>
-		<effect_group name="enHand_2005_010_fffffff" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="buffInjuryBleedingOne"/>
-		</effect_group>
-	</item>
-	
-	<!-- stealth male1 feral -->
-	<item name="enHand_3510_010_fffffff">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="35"/>
-			<property name="DamageBlock" value="10"/>
-			<property name="Range" value="1.8"/>
-			<property name="Buff" value="buffInjuryBleedingOne"/>
-		</property>
-		<effect_group name="enHand_3510_010_fffffff" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="buffInjuryBleedingOne"/>
-		</effect_group>
-	</item>
-	
-	<!-- stealth male1 radiated -->
-	<item name="enHand_4015_010_fffffff">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="40"/>
-			<property name="DamageBlock" value="15"/>
-			<property name="Range" value="1.8"/>
-			<property name="Buff" value="buffInjuryBleedingOne"/>
-		</property>
-		<effect_group name="enHand_4015_010_fffffff" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="buffInjuryBleedingOne"/>
-		</effect_group>
-	</item>
-	
-	<!-- swat male -->
-	<item name="enHand_3040_010_xBABAAA">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="30"/>
-			<property name="DamageBlock" value="40"/>
-			<property name="Range" value="2.3"/>
-			<property name="Buff" value="buffShocked"/>
-		</property>
-		<effect_group name="enHand_3040_010_xBABAAA" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.25,.15,.25,.40,.45,.15"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2000"/>
-			<passive_effect name="BuffProcChance" operation="base_set" value="0.5" tags="buffShocked"/>
-		</effect_group>
-	</item>
-	
-	<!-- swat male feral -->
-	<item name="enHand_60120_015_xBABAAA">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="60"/>
-			<property name="DamageBlock" value="120"/>
-			<property name="Range" value="2.3"/>
-			<property name="Buff" value="buffShocked"/>
-		</property>
-		<effect_group name="enHand_60120_015_xBABAAA" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.25,.15,.25,.40,.45,.15"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
-			<passive_effect name="BuffProcChance" operation="base_set" value="0.5" tags="buffShocked"/>
-		</effect_group>
-	</item>
-
-	<!-- swat male radiated -->
-	<item name="enHand_70130_015_xBABAAA">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="70"/>
-			<property name="DamageBlock" value="130"/>
-			<property name="Range" value="2.3"/>
-			<property name="Buff" value="buffShocked"/>
-		</property>
-		<effect_group name="enHand_70130_015_xBABAAA" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.25,.15,.25,.40,.45,.15"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
-			<passive_effect name="BuffProcChance" operation="base_set" value="0.5" tags="buffShocked"/>
-		</effect_group>
-	</item>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	<!-- ********** BUSINESSMAN/WOMEN ZOMBIES ********** -->
-
-	<!-- busniessman -->
-	<item name="enHand_1109_010_xxxxxxx">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="11"/>
-			<property name="DamageBlock" value="9"/>
-		</property>
-		<effect_group name="enHand_1109_010_xxxxxxx" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
-		</effect_group>
-	</item>
-	
-	<!-- busniess woman -->
-	<item name="enHand_0907_010_xxxxxxx">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="9"/>
-			<property name="DamageBlock" value="7"/>
-		</property>
-		<effect_group name="enHand_0907_010_xxxxxxx" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
-		</effect_group>
-	</item>
-	
-	<!-- busniessman feral -->
-	<item name="enHand_2227_015_xxxxxxx">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="22"/>
-			<property name="DamageBlock" value="27"/>
-		</property>
-		<effect_group name="enHand_2227_015_xxxxxxx" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
-		</effect_group>
-	</item>
-
-	<!-- busniess woman feral -->
-	<item name="enHand_1821_015_xxxxxxx">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="18"/>
-			<property name="DamageBlock" value="21"/>
-		</property>
-		<effect_group name="enHand_1821_015_xxxxxxx" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
-		</effect_group>
-	</item>
-	
-	<!-- busniessman radiated -->
-	<item name="enHand_2530_015_AAAAAAA">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="25"/>
-			<property name="DamageBlock" value="30"/>
-		</property>
-		<effect_group name="enHand_2530_015_AAAAAAA" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".15,.10,.10,.08,.40,.45,.15"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
-		</effect_group>
-	</item>
-	
-	<!-- busniess woman radiated -->
-	<item name="enHand_2023_015_AAAAAAA">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="20"/>
-			<property name="DamageBlock" value="23"/>
-		</property>
-		<effect_group name="enHand_2023_015_AAAAAAA" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".15,.10,.10,.08,.40,.45,.15"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
-		</effect_group>
-	</item>
-	
-	<!-- busniessman/woman crawler -->
-	<item name="enHand_1016_010_xxxxxxx">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property name="HoldType" value="24"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="10"/>
-			<property name="DamageBlock" value="16"/>
-			<property name="Delay" value="2.0"/>
-		</property>
-		<effect_group name="enHand_1016_010_xxxxxxx" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
-		</effect_group>
-	</item>
-
-
-
-	<!-- ********** HAZMAT ZOMBIES ********** -->
-
-	<!-- hazmat male -->
-	<item name="enHand_1109_100_xxxxxxx">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="11"/>
-			<property name="DamageBlock" value="9"/>
-		</property>
-		<effect_group name="enHand_1109_100_xxxxxxx" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
-		</effect_group>
-	</item>
-	
-	<!-- hazmat female -->
-	<item name="enHand_1007_100_xxxxxxx">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="10"/>
-			<property name="DamageBlock" value="7"/>
-		</property>
-		<effect_group name="enHand_1007_100_xxxxxxx" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
-		</effect_group>
-	</item>
-	
-	<!-- hazmat male feral -->
-	<item name="enHand_2227_100_xxxxxxx">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="22"/>
-			<property name="DamageBlock" value="27"/>
-		</property>
-		<effect_group name="enHand_2227_100_xxxxxxx" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
-		</effect_group>
-	</item>
-
-	<!-- hazmat female feral -->
-	<item name="enHand_2021_100_xxxxxxx">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="20"/>
-			<property name="DamageBlock" value="21"/>
-		</property>
-		<effect_group name="enHand_2021_100_xxxxxxx" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
-		</effect_group>
-	</item>
-	
-	<!-- hazmat male radiated -->
-	<item name="enHand_2530_100_AAAAAAA">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="25"/>
-			<property name="DamageBlock" value="30"/>
-		</property>
-		<effect_group name="enHand_2530_100_AAAAAAA" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".15,.10,.10,.08,.40,.45,.15"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
-		</effect_group>
-	</item>
-	
-	<!-- hazmat female radiated -->
-	<item name="enHand_2223_100_AAAAAAA">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="22"/>
-			<property name="DamageBlock" value="23"/>
-		</property>
-		<effect_group name="enHand_2223_100_AAAAAAA" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".15,.10,.10,.08,.40,.45,.15"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
-		</effect_group>
-	</item>
-	
-	<!-- hazmat crawler -->
-	<item name="enHand_0916_100_xxxxxxx">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property name="HoldType" value="24"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="9"/>
-			<property name="DamageBlock" value="16"/>
-			<property name="Delay" value="2.0"/>
-		</property>
-		<effect_group name="enHand_0916_100_xxxxxxx" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
-		</effect_group>
-	</item>
-
-
-
-	<!-- ********** STRIPPER ZOMBIES ********** -->
-
-	<!-- stripper -->
-	<item name="enHand_0907_100_xxxxxxx">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="9"/>
-			<property name="DamageBlock" value="7"/>
-		</property>
-		<effect_group name="enHand_0907_100_xxxxxxx" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
-		</effect_group>
-	</item>
-	
-	<!-- stripper feral -->
-	<item name="enHand_1821_100_xxxxxxx">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="18"/>
-			<property name="DamageBlock" value="21"/>
-		</property>
-		<effect_group name="enHand_1821_100_xxxxxxx" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
-		</effect_group>
-	</item>
-
-	<!-- stripper radiated -->
-	<item name="enHand_2023_100_AAAAAAA">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="20"/>
-			<property name="DamageBlock" value="23"/>
-		</property>
-		<effect_group name="enHand_2023_100_AAAAAAA" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".15,.10,.10,.08,.40,.45,.15"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
-		</effect_group>
-	</item>
-	
-	<!-- stripper crawler -->
-	<item name="enHand_1016_100_xxxxxxx">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property name="HoldType" value="24"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="10"/>
-			<property name="DamageBlock" value="16"/>
-			<property name="Delay" value="2.0"/>
-		</property>
-		<effect_group name="enHand_1016_100_xxxxxxx" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
-		</effect_group>
-	</item>
-
-
-
-	<!-- ********** JOGGER FEMALE ZOMBIES ********** -->
-
-	<!-- jogger female -->
-	<item name="enHand_1209_010_xxxxxxx">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="12"/>
-			<property name="DamageBlock" value="9"/>
-		</property>
-		<effect_group name="enHand_1209_010_xxxxxxx" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
-		</effect_group>
-	</item>
-	
-	<!-- jogger feral -->
-	<item name="enHand_2427_015_xxxxxxx">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="24"/>
-			<property name="DamageBlock" value="27"/>
-		</property>
-		<effect_group name="enHand_2427_015_xxxxxxx" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
-		</effect_group>
-	</item>
-	
-	<!-- jogger radiated -->
-	<item name="enHand_2630_015_AAAAAAA">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="26"/>
-			<property name="DamageBlock" value="30"/>
-		</property>
-		<effect_group name="enHand_2630_015_AAAAAAA" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".15,.10,.10,.08,.40,.45,.15"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
-		</effect_group>
-	</item>
-	
-	<!-- jogger crawler -->
-	<item name="enHand_1116_010_xxxxxxx">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property name="HoldType" value="24"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="11"/>
-			<property name="DamageBlock" value="16"/>
-			<property name="Delay" value="2.0"/>
-		</property>
-		<effect_group name="enHand_1116_010_xxxxxxx" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
-		</effect_group>
-	</item>
-	
-	
-	
-	<!-- ********** FOOTBALL PLAYER ZOMBIES ********** -->
-
-	<!-- football male -->
-	<item name="enHand_1620_010_xxxxxxx">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="16"/>
-			<property name="DamageBlock" value="20"/>
-		</property>
-		<effect_group name="enHand_1620_010_xxxxxxx" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
-		</effect_group>
-	</item>
-	
-	<!-- football feral -->
-	<item name="enHand_3060_015_xxxxxxx">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="30"/>
-			<property name="DamageBlock" value="60"/>
-		</property>
-		<effect_group name="enHand_3060_015_xxxxxxx" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
-		</effect_group>
-	</item>
-	
-	<!-- football radiated -->
-	<item name="enHand_4070_015_AAAAAAA">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="40"/>
-			<property name="DamageBlock" value="70"/>
-		</property>
-		<effect_group name="enHand_4070_015_AAAAAAA" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".15,.10,.10,.08,.40,.45,.15"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
-		</effect_group>
-	</item>
-	
-	<!-- football crawler -->
-	<item name="enHand_1218_010_xxxxxxx">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property name="HoldType" value="24"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="12"/>
-			<property name="DamageBlock" value="18"/>
-			<property name="Delay" value="2.0"/>
-		</property>
-		<effect_group name="enHand_1218_010_xxxxxxx" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
-		</effect_group>
-	</item>
-
-
-
-<!-- ********** LUMBERJACK ZOMBIES ********** -->
-
-	<!-- lumberjack male -->
-	<item name="enHand_2120_010_xxxxxxx">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="21"/>
-			<property name="DamageBlock" value="20"/>
-			<property name="Range" value="1.85"/>
-		</property>
-		<effect_group name="enHand_2120_010_xxxxxxx" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
-		</effect_group>
-	</item>
-	
-	<!-- lumberjack feral -->
-	<item name="enHand_4260_015_AAAAAAA">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="42"/>
-			<property name="DamageBlock" value="60"/>
-			<property name="Range" value="1.85"/>
-		</property>
-		<effect_group name="enHand_4260_015_AAAAAAA" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".15,.10,.10,.10,.35,.40,.15"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
-		</effect_group>
-	</item>
-	
-	<!-- lumberjack radiated -->
-	<item name="enHand_5270_015_BBBBBBB">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="52"/>
-			<property name="DamageBlock" value="70"/>
-			<property name="Range" value="1.85"/>
-		</property>
-		<effect_group name="enHand_5270_015_BBBBBBB" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".20,.15,.15,.10,.45,.50,.20"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
-		</effect_group>
-	</item>
-	
-	<!-- lumberjack crawler -->
-	<item name="enHand_1616_010_xxxxxxx">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property name="HoldType" value="24"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="16"/>
-			<property name="DamageBlock" value="16"/>
-			<property name="Delay" value="2.0"/>
-			<property name="Range" value="1.85"/>
-		</property>
-		<effect_group name="enHand_1616_010_xxxxxxx" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
-		</effect_group>
-	</item>
-	
 
 
 	<!-- ********** BIKER ZOMBIES ********** -->
@@ -2522,6 +1773,7 @@
 			<property name="DamageEntity" value="21"/>
 			<property name="DamageBlock" value="21"/>
 			<property name="Delay" value="2.0"/>
+			<property name="Range" value="1.75"/>
 		</property>
 		<effect_group name="enHand_2121_010_xxxxxxx" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -2532,7 +1784,810 @@
 			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
 		</effect_group>
 	</item>
+	
+	
+	
+	
+	
+	<!-- busniessman -->
+	<item name="enHand_1109_010_xxxxxxx">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="11"/>
+			<property name="DamageBlock" value="9"/>
+			<property name="Range" value="1.65"/>
+		</property>
+		<effect_group name="enHand_1109_010_xxxxxxx" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.11"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
+		</effect_group>
+	</item>
+	
+	<!-- busniess woman -->
+	<item name="enHand_0907_010_xxxxxxx">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="9"/>
+			<property name="DamageBlock" value="7"/>
+			<property name="Range" value="1.65"/>
+		</property>
+		<effect_group name="enHand_0907_010_xxxxxxx" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.11"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
+		</effect_group>
+	</item>
+	
+	<!-- busniessman feral -->
+	<item name="enHand_2227_015_xxxxxxx">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="22"/>
+			<property name="DamageBlock" value="27"/>
+			<property name="Range" value="1.65"/>
+		</property>
+		<effect_group name="enHand_2227_015_xxxxxxx" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.11"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
+		</effect_group>
+	</item>
 
+	<!-- busniess woman feral -->
+	<item name="enHand_1821_015_xxxxxxx">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="18"/>
+			<property name="DamageBlock" value="21"/>
+			<property name="Range" value="1.65"/>
+		</property>
+		<effect_group name="enHand_1821_015_xxxxxxx" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.11"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
+		</effect_group>
+	</item>
+	
+	<!-- busniessman radiated -->
+	<item name="enHand_2530_015_AAAAAAA">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="25"/>
+			<property name="DamageBlock" value="30"/>
+			<property name="Range" value="1.65"/>
+		</property>
+		<effect_group name="enHand_2530_015_AAAAAAA" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".15,.10,.10,.08,.40,.45,.15"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
+		</effect_group>
+	</item>
+	
+	<!-- busniess woman radiated -->
+	<item name="enHand_2023_015_AAAAAAA">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="20"/>
+			<property name="DamageBlock" value="23"/>
+			<property name="Range" value="1.65"/>
+		</property>
+		<effect_group name="enHand_2023_015_AAAAAAA" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".15,.10,.10,.08,.40,.45,.15"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
+		</effect_group>
+	</item>
+	
+	<!-- busniessman/woman crawler -->
+	<item name="enHand_1016_010_xxxxxxx">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property name="HoldType" value="24"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="10"/>
+			<property name="DamageBlock" value="16"/>
+			<property name="Delay" value="2.0"/>
+			<property name="Range" value="1.65"/>
+		</property>
+		<effect_group name="enHand_1016_010_xxxxxxx" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.11"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
+		</effect_group>
+	</item>
+	
+	
+	
+	
+	
+	<!-- ********** FARMER ZOMBIES ********** -->
+
+	<!-- farmer male1 -->
+	<item name="enHand_1520_010_xxxxxxx">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="15"/>
+			<property name="DamageBlock" value="20"/>
+			<property name="Range" value="1.7"/>
+		</property>
+		<effect_group name="enHand_1520_010_xxxxxxx" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.11"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
+		</effect_group>
+	</item>
+	
+	<!-- farmer male1 feral -->
+	<item name="enHand_2960_015_xxxxxxx">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="29"/>
+			<property name="DamageBlock" value="60"/>
+			<property name="Range" value="1.7"/>
+		</property>
+		<effect_group name="enHand_2960_015_xxxxxxx" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.11"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
+		</effect_group>
+	</item>
+	
+	<!-- farmer male1 radiated -->
+	<item name="enHand_4069_015_AAAAAAA">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="40"/>
+			<property name="DamageBlock" value="69"/>
+			<property name="Range" value="1.7"/>
+		</property>
+		<effect_group name="enHand_4069_015_AAAAAAA" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".15,.10,.10,.08,.40,.45,.15"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
+		</effect_group>
+	</item>
+	
+	<!-- farmer male2/female2 -->
+	<item name="enHand_2020_010_xxxxxxx">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="20"/>
+			<property name="DamageBlock" value="20"/>
+			<property name="Range" value="1.7"/>
+		</property>
+		<effect_group name="enHand_2020_010_xxxxxxx" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.11"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
+		</effect_group>
+	</item>
+	
+	<!-- farmer male2/female2 feral -->
+	<item name="enHand_4060_015_xxxxxxx">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="40"/>
+			<property name="DamageBlock" value="60"/>
+			<property name="Range" value="1.7"/>
+		</property>
+		<effect_group name="enHand_4060_015_xxxxxxx" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.11"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
+		</effect_group>
+	</item>
+	
+	<!-- farmer male2/female2 radiated -->
+	<item name="enHand_5070_015_AAAAAAA">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="50"/>
+			<property name="DamageBlock" value="70"/>
+			<property name="Range" value="1.7"/>
+		</property>
+		<effect_group name="enHand_5070_015_AAAAAAA" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".15,.10,.10,.08,.40,.45,.15"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
+		</effect_group>
+	</item>
+	
+	<!-- farmer female1 -->
+	<item name="enHand_0908_010_xxxxxxx">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="9"/>
+			<property name="DamageBlock" value="8"/>
+			<property name="Range" value="1.65"/>
+		</property>
+		<effect_group name="enHand_0908_010_xxxxxxx" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.11"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
+		</effect_group>
+	</item>
+	
+	<!-- farmer female1 feral -->
+	<item name="enHand_1824_015_xxxxxxx">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="18"/>
+			<property name="DamageBlock" value="24"/>
+			<property name="Range" value="1.65"/>
+		</property>
+		<effect_group name="enHand_1824_015_xxxxxxx" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.11"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
+		</effect_group>
+	</item>
+	
+	<!-- farmer female1 radiated -->
+	<item name="enHand_2025_015_AAAAAAA">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="20"/>
+			<property name="DamageBlock" value="25"/>
+			<property name="Range" value="1.65"/>
+		</property>
+		<effect_group name="enHand_2025_015_AAAAAAA" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".15,.10,.10,.08,.40,.45,.15"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
+		</effect_group>
+	</item>
+	
+	<!-- farmer female3 -->
+	<item name="enHand_1109_010_xxxxxxD">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="11"/>
+			<property name="DamageBlock" value="9"/>
+			<property name="Range" value="1.9"/> 
+		</property>
+		<effect_group name="enHand_1109_010_xxxxxxD" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.70"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
+		</effect_group>
+	</item>
+	
+	<!-- farmer female3 feral -->
+	<item name="enHand_2227_015_xxxxxxD">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="22"/>
+			<property name="DamageBlock" value="27"/>
+			<property name="Range" value="1.9"/> 
+		</property>
+		<effect_group name="enHand_2227_015_xxxxxxD" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.70"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
+		</effect_group>
+	</item>
+	
+	<!-- farmer female3 radiated -->
+	<item name="enHand_2530_015_AAAAAAD">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="25"/>
+			<property name="DamageBlock" value="30"/>
+			<property name="Range" value="1.9"/> 
+		</property>
+		<effect_group name="enHand_2530_015_AAAAAAD" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".15,.10,.10,.08,.40,.45,.75"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
+		</effect_group>
+	</item>
+	
+	
+	<!-- farmer male1/male2/female2 crawler -->
+	<item name="enHand_1217_010_xxxxxxx">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property name="HoldType" value="24"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="13"/>
+			<property name="DamageBlock" value="17"/>
+			<property name="Delay" value="2.0"/>
+			<property name="Range" value="1.65"/>
+		</property>
+		<effect_group name="enHand_1217_010_xxxxxxx" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.11"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
+		</effect_group>
+	</item>
+	
+	<!-- farmer female1 crawler -->
+	<item name="enHand_0814_010_xxxxxxx">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property name="HoldType" value="24"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="8"/>
+			<property name="DamageBlock" value="14"/>
+			<property name="Range" value="1.65"/>
+		</property>
+		<effect_group name="enHand_0814_010_xxxxxxx" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.11"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
+		</effect_group>
+	</item>
+	
+	
+	
+	
+	<!-- ********** FOOTBALL PLAYER ZOMBIES ********** -->
+
+	<!-- football male 1 and 2-->
+	<item name="enHand_1620_010_xxxxxxx">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="16"/>
+			<property name="DamageBlock" value="20"/>
+			<property name="Range" value="1.7"/>
+		</property>
+		<effect_group name="enHand_1620_010_xxxxxxx" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.11"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
+		</effect_group>
+	</item>
+	
+	<!-- football 1 and 2 feral -->
+	<item name="enHand_3060_015_xxxxxxx">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="30"/>
+			<property name="DamageBlock" value="60"/>
+			<property name="Range" value="1.7"/>
+		</property>
+		<effect_group name="enHand_3060_015_xxxxxxx" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.11"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
+		</effect_group>
+	</item>
+	
+	<!-- football 1 and 2 radiated -->
+	<item name="enHand_4070_015_AAAAAAA">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="40"/>
+			<property name="DamageBlock" value="70"/>
+			<property name="Range" value="1.7"/>
+		</property>
+		<effect_group name="enHand_4070_015_AAAAAAA" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".15,.10,.10,.08,.40,.45,.15"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
+		</effect_group>
+	</item>
+	
+	<!-- football 1 and 2 crawler -->
+	<item name="enHand_1218_010_xxxxxxx">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property name="HoldType" value="24"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="12"/>
+			<property name="DamageBlock" value="18"/>
+			<property name="Range" value="1.7"/>
+			<property name="Delay" value="2.0"/>
+		</property>
+		<effect_group name="enHand_1218_010_xxxxxxx" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.11"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
+		</effect_group>
+	</item>
+
+	<!-- football male 3 and 4-->
+	<item name="enHand_2022_010_xxxxxxx">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="20"/>
+			<property name="DamageBlock" value="22"/>
+			<property name="Range" value="1.85"/>
+		</property>
+		<effect_group name="enHand_2022_010_xxxxxxx" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.11"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
+		</effect_group>
+	</item>
+	
+	<!-- football 3 and 4 feral -->
+	<item name="enHand_4066_015_xxxxxxx">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="40"/>
+			<property name="DamageBlock" value="66"/>
+			<property name="Range" value="1.85"/>
+		</property>
+		<effect_group name="enHand_4066_015_xxxxxxx" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.11"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
+		</effect_group>
+	</item>
+	
+	<!-- football 3 and 4 radiated -->
+	<item name="enHand_4570_015_AAAAAAA">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="45"/>
+			<property name="DamageBlock" value="70"/>
+			<property name="Range" value="1.85"/>
+		</property>
+		<effect_group name="enHand_4570_015_AAAAAAA" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".15,.10,.10,.08,.40,.45,.15"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
+		</effect_group>
+	</item>
+	
+	<!-- football 3 and 4 crawler -->
+	<item name="enHand_1414_010_xxxxxxx">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property name="HoldType" value="24"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="14"/>
+			<property name="DamageBlock" value="14"/>
+			<property name="Range" value="1.85"/>
+			<property name="Delay" value="2.0"/>
+		</property>
+		<effect_group name="enHand_1414_010_xxxxxxx" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.11"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
+		</effect_group>
+	</item>
+	
+	
+	
+	
+	
+	<!-- ********** HAZMAT ZOMBIES ********** -->
+
+	<!-- hazmat male -->
+	<item name="enHand_1109_100_xxxxxxx">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="11"/>
+			<property name="DamageBlock" value="9"/>
+			<property name="Range" value="1.65"/>
+		</property>
+		<effect_group name="enHand_1109_100_xxxxxxx" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.11"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
+		</effect_group>
+	</item>
+	
+	<!-- hazmat female -->
+	<item name="enHand_1007_100_xxxxxxx">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="10"/>
+			<property name="DamageBlock" value="7"/>
+			<property name="Range" value="1.65"/>
+		</property>
+		<effect_group name="enHand_1007_100_xxxxxxx" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.11"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
+		</effect_group>
+	</item>
+	
+	<!-- hazmat male feral -->
+	<item name="enHand_2227_100_xxxxxxx">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="22"/>
+			<property name="DamageBlock" value="27"/>
+			<property name="Range" value="1.65"/>
+		</property>
+		<effect_group name="enHand_2227_100_xxxxxxx" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.11"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
+		</effect_group>
+	</item>
+
+	<!-- hazmat female feral -->
+	<item name="enHand_2021_100_xxxxxxx">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="20"/>
+			<property name="DamageBlock" value="21"/>
+			<property name="Range" value="1.65"/>
+		</property>
+		<effect_group name="enHand_2021_100_xxxxxxx" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.11"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
+		</effect_group>
+	</item>
+	
+	<!-- hazmat male radiated -->
+	<item name="enHand_2530_100_AAAAAAA">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="25"/>
+			<property name="DamageBlock" value="30"/>
+			<property name="Range" value="1.65"/>
+		</property>
+		<effect_group name="enHand_2530_100_AAAAAAA" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".15,.10,.10,.08,.40,.45,.15"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
+		</effect_group>
+	</item>
+	
+	<!-- hazmat female radiated -->
+	<item name="enHand_2223_100_AAAAAAA">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="22"/>
+			<property name="DamageBlock" value="23"/>
+			<property name="Range" value="1.65"/>
+		</property>
+		<effect_group name="enHand_2223_100_AAAAAAA" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".15,.10,.10,.08,.40,.45,.15"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
+		</effect_group>
+	</item>
+	
+	<!-- hazmat crawler -->
+	<item name="enHand_0916_100_xxxxxxx">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property name="HoldType" value="24"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="9"/>
+			<property name="DamageBlock" value="16"/>
+			<property name="Delay" value="2.0"/>
+			<property name="Range" value="1.65"/>
+		</property>
+		<effect_group name="enHand_0916_100_xxxxxxx" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.11"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
+		</effect_group>
+	</item>
+	
+	
+	
+
+
+
+	<!-- ********** JOGGER FEMALE ZOMBIES ********** -->
+
+	<!-- jogger female -->
+	<item name="enHand_1209_010_xxxxxxx">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="12"/>
+			<property name="DamageBlock" value="9"/>
+			<property name="Range" value="1.65"/>
+		</property>
+		<effect_group name="enHand_1209_010_xxxxxxx" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.11"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
+		</effect_group>
+	</item>
+	
+	<!-- jogger feral -->
+	<item name="enHand_2427_015_xxxxxxx">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="24"/>
+			<property name="DamageBlock" value="27"/>
+			<property name="Range" value="1.65"/>
+		</property>
+		<effect_group name="enHand_2427_015_xxxxxxx" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.11"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
+		</effect_group>
+	</item>
+	
+	<!-- jogger radiated -->
+	<item name="enHand_2630_015_AAAAAAA">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="26"/>
+			<property name="DamageBlock" value="30"/>
+			<property name="Range" value="1.65"/>
+		</property>
+		<effect_group name="enHand_2630_015_AAAAAAA" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".15,.10,.10,.08,.40,.45,.15"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
+		</effect_group>
+	</item>
+	
+	<!-- jogger crawler -->
+	<item name="enHand_1116_010_xxxxxxx">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property name="HoldType" value="24"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="11"/>
+			<property name="DamageBlock" value="16"/>
+			<property name="Delay" value="2.0"/>
+			<property name="Range" value="1.65"/>
+		</property>
+		<effect_group name="enHand_1116_010_xxxxxxx" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.11"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
+		</effect_group>
+	</item>
+	
+	
 
 
 	<!-- ********** PUNK GANG ZOMBIES ********** -->
@@ -2689,464 +2744,234 @@
 
 
 
-	<!-- ********** UTILITY ZOMBIES ********** -->
-
-	<!-- utility female1 (holding nailguns) -->
-	<item name="enHand_1622_010_xxxxxxA">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="16"/>
-			<property name="DamageBlock" value="12"/>
-			<property name="Range" value="2.0"/>
-		</property>
-		<effect_group name="enHand_1622_010_xxxxxxA" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.22"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
-		</effect_group>
-	</item>
+	<!-- ********** SOLDIER/MILITARY ZOMBIES ********** -->
 	
-	<!-- utility female1 feral (holding nailguns) -->
-	<item name="enHand_3236_015_xxxxxxA">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="32"/>
-			<property name="DamageBlock" value="36"/>
-			<property name="Range" value="2.0"/>
-		</property>
-		<effect_group name="enHand_3236_015_xxxxxxA" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.22"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
-		</effect_group>
-	</item>
-	
-	<!-- utility female1 radiated (holding nailguns) -->
-	<item name="enHand_3538_015_AAAAAAB">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="35"/>
-			<property name="DamageBlock" value="38"/>
-			<property name="Range" value="2.0"/>
-		</property>
-		<effect_group name="enHand_3538_015_AAAAAAB" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".15,.10,.10,.08,.40,.45,.30"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
-		</effect_group>
-	</item>
-	
-	<!-- utility male -->
-	<item name="enHand_1130_010_xxxxxxx">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="11"/>
-			<property name="DamageBlock" value="30"/>
-		</property>
-		<effect_group name="enHand_1130_010_xxxxxxx" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
-		</effect_group>
-	</item>
-	
-	<!-- utility male feral -->
-	<item name="enHand_2290_015_xxxxxxx">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="22"/>
-			<property name="DamageBlock" value="90"/>
-		</property>
-		<effect_group name="enHand_2290_015_xxxxxxx" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
-		</effect_group>
-	</item>
-	
-	<!-- utility male radiated -->
-	<item name="enHand_2595_015_AAAAAAA">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="25"/>
-			<property name="DamageBlock" value="95"/>
-		</property>
-		<effect_group name="enHand_2595_015_AAAAAAA" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".15,.10,.10,.08,.40,.45,.15"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
-		</effect_group>
-	</item>
-	
-	<!-- utility male3 -->
-	<item name="enHand_2045_010_ABBBBBB">
+	<!-- soldier male -->
+	<item name="enHand_2040_010_xAAAAAA">
 		<property name="Extends" value="meleeHandZombie01"/>
 		<property name="CreativeMode" value="None"/>
 		<property class="Action0">
 			<property name="DamageEntity" value="20"/>
-			<property name="DamageBlock" value="45"/>
-			<property name="Range" value="2.0"/>
+			<property name="DamageBlock" value="40"/>
+			<property name="Range" value="1.65"/>
 		</property>
-		<effect_group name="enHand_2045_010_ABBBBBB" tiered="false">
+		<effect_group name="enHand_2040_010_xAAAAAA" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
 				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".25,.30,.30,.30,.60,.60,.30"/>
+				weights=".11,.15,.15,.10,.40,.45,.15"/>
 			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
 				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
 			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2000"/>
 		</effect_group>
 	</item>
-	
-	<!-- utility male3 feral -->
-	<item name="enHand_40120_015_ABBBBBB">
+
+	<!-- soldier female -->
+	<item name="enHand_1736_010_xAAAAAA">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="17"/>
+			<property name="DamageBlock" value="36"/>
+			<property name="Range" value="1.65"/>
+		</property>
+		<effect_group name="enHand_1736_010_xAAAAAA" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.15,.15,.10,.40,.45,.15"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2000"/>
+		</effect_group>
+	</item>
+
+	<!-- soldier male feral -->
+	<item name="enHand_40120_015_xAAAAAA">
 		<property name="Extends" value="meleeHandZombie01"/>
 		<property name="CreativeMode" value="None"/>
 		<property class="Action0">
 			<property name="DamageEntity" value="40"/>
 			<property name="DamageBlock" value="120"/>
-			<property name="Range" value="2.0"/> 
+			<property name="Range" value="1.65"/>
 		</property>
-		<effect_group name="enHand_40120_015_ABBBBBB" tiered="false">
+		<effect_group name="enHand_40120_015_xAAAAAA" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
 				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".25,.30,.30,.30,.60,.60,.30"/>
+				weights=".11,.15,.15,.10,.40,.45,.15"/>
 			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
 				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
 			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
 		</effect_group>
 	</item>
 	
-	<!-- utility male3 radiated -->
-	<item name="enHand_50130_015_ABBBBBB">
+	<!-- soldier female feral -->
+	<item name="enHand_34108_015_xAAAAAA">
 		<property name="Extends" value="meleeHandZombie01"/>
 		<property name="CreativeMode" value="None"/>
 		<property class="Action0">
-			<property name="DamageEntity" value="50"/>
-			<property name="DamageBlock" value="130"/>
-			<property name="Range" value="2.0"/> 
+			<property name="DamageEntity" value="34"/>
+			<property name="DamageBlock" value="108"/>
+			<property name="Range" value="1.65"/>
 		</property>
-		<effect_group name="enHand_50130_015_ABBBBBB" tiered="false">
+		<effect_group name="enHand_34108_015_xAAAAAA" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
 				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".25,.30,.30,.30,.60,.60,.30"/>
+				weights=".11,.15,.15,.10,.40,.45,.15"/>
 			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
 				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2800"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
 		</effect_group>
 	</item>
-	
-	<!-- utility male crawler -->
-	<item name="enHand_0925_010_xxxxxxx">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property name="HoldType" value="24"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="9"/>
-			<property name="DamageBlock" value="20"/>
-			<property name="Delay" value="2.0"/>
-		</property>
-		<effect_group name="enHand_0925_010_xxxxxxx" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
-		</effect_group>
-	</item>
-	
-	
-	
-	<!-- ********** FARMER ZOMBIES ********** -->
 
-	<!-- farmer male1 -->
-	<item name="enHand_1520_010_xxxxxxx">
+	<!-- soldier male radiated -->
+	<item name="enHand_45130_015_ABBBAAA">
 		<property name="Extends" value="meleeHandZombie01"/>
 		<property name="CreativeMode" value="None"/>
 		<property class="Action0">
-			<property name="DamageEntity" value="15"/>
-			<property name="DamageBlock" value="20"/>
-			<property name="Range" value="1.7"/>
+			<property name="DamageEntity" value="45"/>
+			<property name="DamageBlock" value="130"/>
+			<property name="Range" value="1.65"/>
 		</property>
-		<effect_group name="enHand_1520_010_xxxxxxx" tiered="false">
+		<effect_group name="enHand_45130_015_ABBBAAA" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
 				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
-		</effect_group>
-	</item>
-	
-	<!-- farmer male1 feral -->
-	<item name="enHand_2960_015_xxxxxxx">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="29"/>
-			<property name="DamageBlock" value="60"/>
-			<property name="Range" value="1.7"/>
-		</property>
-		<effect_group name="enHand_2960_015_xxxxxxx" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
-		</effect_group>
-	</item>
-	
-	<!-- farmer male1 radiated -->
-	<item name="enHand_4069_015_AAAAAAA">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="40"/>
-			<property name="DamageBlock" value="69"/>
-			<property name="Range" value="1.7"/>
-		</property>
-		<effect_group name="enHand_4069_015_AAAAAAA" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".15,.10,.10,.08,.40,.45,.15"/>
+				weights=".15,.20,.20,.15,.40,.45,.15"/>
 			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
 				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
 			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
 		</effect_group>
 	</item>
 	
-	<!-- farmer male2/female2 -->
-	<item name="enHand_2020_010_xxxxxxx">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="20"/>
-			<property name="DamageBlock" value="20"/>
-			<property name="Range" value="1.7"/>
-		</property>
-		<effect_group name="enHand_2020_010_xxxxxxx" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
-		</effect_group>
-	</item>
-	
-	<!-- farmer male2/female2 feral -->
-	<item name="enHand_4060_015_xxxxxxx">
+	<!-- soldier female radiated -->
+	<item name="enHand_40118_015_ABBBAAA">
 		<property name="Extends" value="meleeHandZombie01"/>
 		<property name="CreativeMode" value="None"/>
 		<property class="Action0">
 			<property name="DamageEntity" value="40"/>
-			<property name="DamageBlock" value="60"/>
-			<property name="Range" value="1.7"/>
+			<property name="DamageBlock" value="118"/>
+			<property name="Range" value="1.65"/>
 		</property>
-		<effect_group name="enHand_4060_015_xxxxxxx" tiered="false">
+		<effect_group name="enHand_40118_015_ABBBAAA" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
 				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
-		</effect_group>
-	</item>
-	
-	<!-- farmer male2/female2 radiated -->
-	<item name="enHand_5070_015_AAAAAAA">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="50"/>
-			<property name="DamageBlock" value="70"/>
-			<property name="Range" value="1.7"/>
-		</property>
-		<effect_group name="enHand_5070_015_AAAAAAA" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".15,.10,.10,.08,.40,.45,.15"/>
+				weights=".15,.20,.20,.15,.40,.45,.15"/>
 			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
 				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
 			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
 		</effect_group>
 	</item>
-	
-	<!-- farmer female1 -->
-	<item name="enHand_0908_010_xxxxxxx">
+
+	<!-- soldier crawler -->
+	<item name="enHand_1630_010_xAAAAAA">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="16"/>
+			<property name="DamageBlock" value="30"/>
+			<property name="Range" value="1.65"/>
+		</property>
+		<effect_group name="enHand_1630_010_xAAAAAA" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.15,.15,.10,.40,.45,.15"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2000"/>
+		</effect_group>
+	</item>
+
+
+
+
+	<!-- ********** STRIPPER ZOMBIES ********** -->
+
+	<!-- stripper -->
+	<item name="enHand_0907_100_xxxxxxx">
 		<property name="Extends" value="meleeHandZombie01"/>
 		<property name="CreativeMode" value="None"/>
 		<property class="Action0">
 			<property name="DamageEntity" value="9"/>
-			<property name="DamageBlock" value="8"/>
+			<property name="DamageBlock" value="7"/>
+			<property name="Range" value="1.65"/>
 		</property>
-		<effect_group name="enHand_0908_010_xxxxxxx" tiered="false">
+		<effect_group name="enHand_0907_100_xxxxxxx" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
 				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
 				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100">
 				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
 			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
 		</effect_group>
 	</item>
 	
-	<!-- farmer female1 feral -->
-	<item name="enHand_1824_015_xxxxxxx">
+	<!-- stripper feral -->
+	<item name="enHand_1821_100_xxxxxxx">
 		<property name="Extends" value="meleeHandZombie01"/>
 		<property name="CreativeMode" value="None"/>
 		<property class="Action0">
 			<property name="DamageEntity" value="18"/>
-			<property name="DamageBlock" value="24"/>
+			<property name="DamageBlock" value="21"/>
+			<property name="Range" value="1.65"/>
 		</property>
-		<effect_group name="enHand_1824_015_xxxxxxx" tiered="false">
+		<effect_group name="enHand_1821_100_xxxxxxx" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
 				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
 				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100">
 				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
 			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
 		</effect_group>
 	</item>
-	
-	<!-- farmer female1 radiated -->
-	<item name="enHand_2025_015_AAAAAAA">
+
+	<!-- stripper radiated -->
+	<item name="enHand_2023_100_AAAAAAA">
 		<property name="Extends" value="meleeHandZombie01"/>
 		<property name="CreativeMode" value="None"/>
 		<property class="Action0">
 			<property name="DamageEntity" value="20"/>
-			<property name="DamageBlock" value="25"/>
+			<property name="DamageBlock" value="23"/>
+			<property name="Range" value="1.65"/>
 		</property>
-		<effect_group name="enHand_2025_015_AAAAAAA" tiered="false">
+		<effect_group name="enHand_2023_100_AAAAAAA" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
 				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
 				weights=".15,.10,.10,.08,.40,.45,.15"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100">
 				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
 			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
 		</effect_group>
 	</item>
 	
-	<!-- farmer female3 -->
-	<item name="enHand_1109_010_xxxxxxD">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="11"/>
-			<property name="DamageBlock" value="9"/>
-			<property name="Range" value="1.9"/> 
-		</property>
-		<effect_group name="enHand_1109_010_xxxxxxD" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.70"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
-		</effect_group>
-	</item>
-	
-	<!-- farmer female3 feral -->
-	<item name="enHand_2227_015_xxxxxxD">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="22"/>
-			<property name="DamageBlock" value="27"/>
-			<property name="Range" value="1.9"/> 
-		</property>
-		<effect_group name="enHand_2227_015_xxxxxxD" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.70"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
-		</effect_group>
-	</item>
-	
-	<!-- farmer female3 radiated -->
-	<item name="enHand_2530_015_AAAAAAD">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="25"/>
-			<property name="DamageBlock" value="30"/>
-			<property name="Range" value="1.9"/> 
-		</property>
-		<effect_group name="enHand_2530_015_AAAAAAD" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".15,.10,.10,.08,.40,.45,.75"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
-		</effect_group>
-	</item>
-	
-	
-	<!-- farmer male1/male2/female2 crawler -->
-	<item name="enHand_1217_010_xxxxxxx">
+	<!-- stripper crawler -->
+	<item name="enHand_1016_100_xxxxxxx">
 		<property name="Extends" value="meleeHandZombie01"/>
 		<property name="CreativeMode" value="None"/>
 		<property name="HoldType" value="24"/>
 		<property class="Action0">
-			<property name="DamageEntity" value="13"/>
-			<property name="DamageBlock" value="17"/>
+			<property name="DamageEntity" value="10"/>
+			<property name="DamageBlock" value="16"/>
 			<property name="Delay" value="2.0"/>
+			<property name="Range" value="1.65"/>
 		</property>
-		<effect_group name="enHand_1217_010_xxxxxxx" tiered="false">
+		<effect_group name="enHand_1016_100_xxxxxxx" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
 				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
 				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100">
 				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
 			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
 		</effect_group>
 	</item>
+
+
+
 	
-	<!-- farmer female1 crawler -->
-	<item name="enHand_0814_010_xxxxxxx">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property name="HoldType" value="24"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="8"/>
-			<property name="DamageBlock" value="14"/>
-		</property>
-		<effect_group name="enHand_0814_010_xxxxxxx" tiered="false">
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
-		</effect_group>
-	</item>
+	
+
+
+
+
+	
+	
 	
 	
 	
@@ -3159,6 +2984,7 @@
 		<property class="Action0">
 			<property name="DamageEntity" value="12"/>
 			<property name="DamageBlock" value="10"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_1210_010_xxxxxxx" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -3177,6 +3003,7 @@
 		<property class="Action0">
 			<property name="DamageEntity" value="24"/>
 			<property name="DamageBlock" value="30"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_2430_015_xxxxxxx" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -3195,6 +3022,7 @@
 		<property class="Action0">
 			<property name="DamageEntity" value="25"/>
 			<property name="DamageBlock" value="35"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_2535_015_AAAAAAA" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -3347,6 +3175,7 @@
 		<property class="Action0">
 			<property name="DamageEntity" value="8"/>
 			<property name="DamageBlock" value="6"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_0806_010_xxxxxxx" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -3367,6 +3196,7 @@
 		<property class="Action0">
 			<property name="DamageEntity" value="16"/>
 			<property name="DamageBlock" value="18"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_1618_015_xxxxxxx" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -3387,6 +3217,7 @@
 		<property class="Action0">
 			<property name="DamageEntity" value="18"/>
 			<property name="DamageBlock" value="22"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_1822_015_AAAAAAA" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -3445,6 +3276,7 @@
 		<property class="Action0">
 			<property name="DamageEntity" value="10"/>
 			<property name="DamageBlock" value="10"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<property class="Action1"> 
 			<property name="Class" value="Vomit"/>
@@ -3590,9 +3422,6 @@
 	
 	
 	
-	
-	
-	
 	<!-- creature female1 -->
 	<item name="enHand_0808_100_xxxxxxx">
 		<property name="Extends" value="meleeHandZombie01"/>
@@ -3601,6 +3430,7 @@
 		<property class="Action0">
 			<property name="DamageEntity" value="8"/>
 			<property name="DamageBlock" value="8"/>
+			<property name="Range" value="1.65"/>
 		</property>
 		<effect_group name="enHand_0808_100_xxxxxxx" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -3676,73 +3506,574 @@
 		</effect_group>
 	</item>
 	
-	<!-- Desert Crawler -->
-	<item name="meleeHandDesertCrawler">
-		<property name="Extends" value="meleeHandMaster"/>
+	
+	
+	
+
+<!-- ********** LUMBERJACK ZOMBIES ********** -->
+
+	<!-- lumberjack male -->
+	<item name="enHand_2120_010_xxxxxxx">
+		<property name="Extends" value="meleeHandZombie01"/>
 		<property name="CreativeMode" value="None"/>
 		<property class="Action0">
-			<property name="Delay" value=".1"/>
-			<!-- obsolete if rounds per minute exists -->
-			<property name="DamageEntity" value="5"/>
+			<property name="DamageEntity" value="21"/>
+			<property name="DamageBlock" value="20"/>
+			<property name="Range" value="1.85"/>
+		</property>
+		<effect_group name="enHand_2120_010_xxxxxxx" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.11"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
+		</effect_group>
+	</item>
+	
+	<!-- lumberjack feral -->
+	<item name="enHand_4260_015_AAAAAAA">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="42"/>
+			<property name="DamageBlock" value="60"/>
+			<property name="Range" value="1.85"/>
+		</property>
+		<effect_group name="enHand_4260_015_AAAAAAA" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".15,.10,.10,.10,.35,.40,.15"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
+		</effect_group>
+	</item>
+	
+	<!-- lumberjack radiated -->
+	<item name="enHand_5270_015_BBBBBBB">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="52"/>
+			<property name="DamageBlock" value="70"/>
+			<property name="Range" value="1.85"/>
+		</property>
+		<effect_group name="enHand_5270_015_BBBBBBB" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".20,.15,.15,.10,.45,.50,.20"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
+		</effect_group>
+	</item>
+	
+	<!-- lumberjack crawler -->
+	<item name="enHand_1616_010_xxxxxxx">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property name="HoldType" value="24"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="16"/>
+			<property name="DamageBlock" value="16"/>
+			<property name="Delay" value="2.0"/>
+			<property name="Range" value="1.85"/>
+		</property>
+		<effect_group name="enHand_1616_010_xxxxxxx" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.11"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
+		</effect_group>
+	</item>
+	
+
+	
+	
+	
+	<!-- stealth male1 -->
+	<item name="enHand_2005_010_fffffff">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="20"/>
 			<property name="DamageBlock" value="5"/>
-			<property name="Buff" value="buffInjuryBleedingZombie,buffInfectionCatch"/></property>
-		<property class="Action1">
+			<property name="Range" value="1.8"/>
+			<property name="Buff" value="buffInjuryBleedingOne"/>
+		</property>
+		<effect_group name="enHand_2005_010_fffffff" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="buffInjuryBleedingOne"/>
+		</effect_group>
+	</item>
+	
+	<!-- stealth male1 feral -->
+	<item name="enHand_3510_010_fffffff">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="35"/>
+			<property name="DamageBlock" value="10"/>
+			<property name="Range" value="1.8"/>
+			<property name="Buff" value="buffInjuryBleedingOne"/>
+		</property>
+		<effect_group name="enHand_3510_010_fffffff" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="buffInjuryBleedingOne"/>
+		</effect_group>
+	</item>
+	
+	<!-- stealth male1 radiated -->
+	<item name="enHand_4015_010_fffffff">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="40"/>
+			<property name="DamageBlock" value="15"/>
+			<property name="Range" value="1.8"/>
+			<property name="Buff" value="buffInjuryBleedingOne"/>
+		</property>
+		<effect_group name="enHand_4015_010_fffffff" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="buffInjuryBleedingOne"/>
+		</effect_group>
+	</item>
+	
+	<!-- swat male -->
+	<item name="enHand_3040_010_xBABAAA">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="30"/>
+			<property name="DamageBlock" value="40"/>
+			<property name="Range" value="2.3"/>
+			<property name="Buff" value="buffShocked"/>
+		</property>
+		<effect_group name="enHand_3040_010_xBABAAA" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.25,.15,.25,.40,.45,.15"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2000"/>
+			<passive_effect name="BuffProcChance" operation="base_set" value="0.5" tags="buffShocked"/>
+		</effect_group>
+	</item>
+	
+	<!-- swat male feral -->
+	<item name="enHand_60120_015_xBABAAA">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="60"/>
+			<property name="DamageBlock" value="120"/>
+			<property name="Range" value="2.3"/>
+			<property name="Buff" value="buffShocked"/>
+		</property>
+		<effect_group name="enHand_60120_015_xBABAAA" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.25,.15,.25,.40,.45,.15"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
+			<passive_effect name="BuffProcChance" operation="base_set" value="0.5" tags="buffShocked"/>
+		</effect_group>
+	</item>
+
+	<!-- swat male radiated -->
+	<item name="enHand_70130_015_xBABAAA">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="70"/>
+			<property name="DamageBlock" value="130"/>
+			<property name="Range" value="2.3"/>
+			<property name="Buff" value="buffShocked"/>
+		</property>
+		<effect_group name="enHand_70130_015_xBABAAA" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.25,.15,.25,.40,.45,.15"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
+			<passive_effect name="BuffProcChance" operation="base_set" value="0.5" tags="buffShocked"/>
+		</effect_group>
+	</item>
+		
+		
+		
+
+	<!-- ********** UTILITY ZOMBIES ********** -->
+
+	<!-- utility female1 (holding nailguns) -->
+	<item name="enHand_1620_010_xxxxxxA">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="16"/>
+			<property name="DamageBlock" value="20"/>
+			<property name="Range" value="2.0"/>
+		</property>
+		<effect_group name="enHand_1620_010_xxxxxxA" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.22"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
+		</effect_group>
+	</item>
+	
+	<!-- utility female1 feral (holding nailguns) -->
+	<item name="enHand_3260_015_xxxxxxA">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="32"/>
+			<property name="DamageBlock" value="60"/>
+			<property name="Range" value="2.0"/>
+		</property>
+		<effect_group name="enHand_3260_015_xxxxxxA" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.22"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
+		</effect_group>
+	</item>
+	
+	<!-- utility female1 radiated (holding nailguns) -->
+	<item name="enHand_3565_015_AAAAAAB">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="35"/>
+			<property name="DamageBlock" value="65"/>
+			<property name="Range" value="2.0"/>
+		</property>
+		<effect_group name="enHand_3565_015_AAAAAAB" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".15,.10,.10,.08,.40,.45,.30"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
+		</effect_group>
+	</item>
+	
+	<!-- utility female2 (holding bucket) -->
+	<item name="enHand_1420_010_xxxxxxA">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="14"/>
+			<property name="DamageBlock" value="20"/>
+			<property name="Range" value="2.0"/>
+		</property>
+		<effect_group name="enHand_1420_010_xxxxxxA" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.22"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
+		</effect_group>
+	</item>
+	
+	<!-- utility female2 feral (holding bucket) -->
+	<item name="enHand_2860_015_xxxxxxA">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="28"/>
+			<property name="DamageBlock" value="60"/>
+			<property name="Range" value="2.0"/>
+		</property>
+		<effect_group name="enHand_2860_015_xxxxxxA" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.22"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
+		</effect_group>
+	</item>
+	
+	<!-- utility female2 radiated (holding bucket) -->
+	<item name="enHand_3065_015_AAAAAAB">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="30"/>
+			<property name="DamageBlock" value="65"/>
+			<property name="Range" value="2.0"/>
+		</property>
+		<effect_group name="enHand_3065_015_AAAAAAB" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".15,.10,.10,.08,.40,.45,.30"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
+		</effect_group>
+	</item>
+	
+	<!-- utility male -->
+	<item name="enHand_1130_010_xxxxxxx">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="11"/>
+			<property name="DamageBlock" value="30"/>
+			<property name="Range" value="1.65"/>
+		</property>
+		<effect_group name="enHand_1130_010_xxxxxxx" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.11"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
+		</effect_group>
+	</item>
+	
+	<!-- utility male feral -->
+	<item name="enHand_2290_015_xxxxxxx">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="22"/>
+			<property name="DamageBlock" value="90"/>
+			<property name="Range" value="1.65"/>
+		</property>
+		<effect_group name="enHand_2290_015_xxxxxxx" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.11"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
+		</effect_group>
+	</item>
+	
+	<!-- utility male radiated -->
+	<item name="enHand_2595_015_AAAAAAA">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="25"/>
+			<property name="DamageBlock" value="95"/>
+			<property name="Range" value="1.65"/>
+		</property>
+		<effect_group name="enHand_2595_015_AAAAAAA" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".15,.10,.10,.08,.40,.45,.15"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
+		</effect_group>
+	</item>
+	
+	<!-- utility male3 -->
+	<item name="enHand_2045_010_ABBBBBB">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="20"/>
+			<property name="DamageBlock" value="45"/>
+			<property name="Range" value="2.0"/>
+		</property>
+		<effect_group name="enHand_2045_010_ABBBBBB" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".25,.30,.30,.30,.60,.60,.30"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2000"/>
+		</effect_group>
+	</item>
+	
+	<!-- utility male3 feral -->
+	<item name="enHand_40120_015_ABBBBBB">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="40"/>
+			<property name="DamageBlock" value="120"/>
+			<property name="Range" value="2.0"/> 
+		</property>
+		<effect_group name="enHand_40120_015_ABBBBBB" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".25,.30,.30,.30,.60,.60,.30"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
+		</effect_group>
+	</item>
+	
+	<!-- utility male3 radiated -->
+	<item name="enHand_50130_015_ABBBBBB">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="50"/>
+			<property name="DamageBlock" value="130"/>
+			<property name="Range" value="2.0"/> 
+		</property>
+		<effect_group name="enHand_50130_015_ABBBBBB" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".25,.30,.30,.30,.60,.60,.30"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2800"/>
+		</effect_group>
+	</item>
+	
+	<!-- utility male crawler -->
+	<item name="enHand_0925_010_xxxxxxx">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property name="HoldType" value="24"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="9"/>
+			<property name="DamageBlock" value="20"/>
+			<property name="Delay" value="2.0"/>
+			<property name="Range" value="1.65"/>
+		</property>
+		<effect_group name="enHand_0925_010_xxxxxxx" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.11"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
+		</effect_group>
+	</item>
+	
+	<!-- utility male5 (holding iron sledge hammer) -->
+	<item name="enHand_3075_010_xCCBABA">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="30"/>
+			<property name="DamageBlock" value="75"/>
+			<property name="Range" value="2.4"/>
+			<property name="Buff" value="buffInjuryBleedingOne"/>
+		</property>
+		<effect_group name="enHand_3075_010_xCCBABA" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.35,.35,.25,.45,.60,.18"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2000"/>
+			<passive_effect name="BuffProcChance" operation="base_set" value="0.4" tags="buffInjuryBleedingOne"/>
+		</effect_group>
+	</item>
+	
+	<!-- utility male5 feral (holding iron sledge hammer) -->
+	<item name="enHand_60220_015_xCCBABA">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="60"/>
+			<property name="DamageBlock" value="220"/>
+			<property name="Range" value="2.4"/>
+			<property name="Buff" value="buffInjuryBleedingOne"/>
+		</property>
+		<effect_group name="enHand_60220_015_xCCBABA" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.35,.35,.25,.45,.60,.18"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2600"/>
+			<passive_effect name="BuffProcChance" operation="base_set" value="0.4" tags="buffInjuryBleedingOne"/>
+		</effect_group>
+	</item>
+	
+	<!-- utility male5 radiated (holding iron sledge hammer) -->
+	<item name="enHand_65230_015_ACCBABA">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">
+			<property name="DamageEntity" value="65"/>
+			<property name="DamageBlock" value="230"/>
+			<property name="Range" value="2.4"/>
+			<property name="Buff" value="buffInjuryBleedingOne"/>
+		</property>
+		<effect_group name="enHand_65230_015_ACCBABA" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".16,.35,.35,.25,.45,.60,.18"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2800"/>
+			<passive_effect name="BuffProcChance" operation="base_set" value="0.4" tags="buffInjuryBleedingOne"/>
+		</effect_group>
+	</item>
+		
+		
+		
+
+	<!-- **************************************************** -->
+	<!-- ***** NEW HANDITEMS FOR MODDED VANILLA ZOMBIES ***** -->
+	<!-- **************************************************** -->
+
+	<!-- Businessman Boss -->
+	<item name="enHand_4050_015_AAAAAAA">
+		<property name="Extends" value="meleeHandZombie01"/>
+		<property name="CreativeMode" value="None"/>
+		<property name="Degradation" value="99999" param1="true"/>
+		<property class="Action0">
+			<property name="Range" value="2.52"/>
+			<property name="DamageEntity" value="40"/>
+			<property name="DamageBlock" value="50"/>
+		</property>
+		<property class="Action1"> 
 			<property name="Class" value="Vomit"/>
 			<property name="Hitmask_override" value="Arrow"/>
-			<property name="Delay" value=".5"/>
+			<property name="Delay" value=".3"/> 
+			<property name="Range" value="200"/>
 			<property name="Infinite_ammo" value="true"/>
-			<property name="Magazine_items" value="ammoProjectileCrawler"/>
-			<property name="Range" value="1.75"/> <!-- Testers 1.65 default for parent -->
-			<property name="Sphere" value=".1"/> <!--Testers -->
-			<property name="Sound_warning" value=""/>
-			<property name="Sound_start" value=""/>
+			<property name="Magazine_items" value="ammoProjectileZombieVomit"/>
+			<property name="Sound_warning" value="hulkvomitwarning"/>
+			<property name="Sound_start" value="hulkvomitattack"/>
 			<property name="Sound_repeat" value=""/>
 			<property name="Sound_end" value=""/>
 			<property name="Sound_empty" value=""/>
 			<property name="Sound_reload" value=""/>
 		</property>
-		<effect_group name="meleeHandDesertCrawler" tiered="false">
-			<passive_effect name="ModSlots" operation="base_set" value="0"/>
-			<passive_effect name="MagazineSize" operation="base_set" value="1"/>
-			<passive_effect name="BurstRoundCount" operation="base_set" value="6"/>
-			<passive_effect name="SpreadDegreesVertical" operation="base_set" value="6"/>
-			<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="15"/>
-			<passive_effect name="SpreadMultiplierIdle" operation="base_set" value="1"/>
+		<effect_group name="enHand_4050_015_AAAAAAA" tiered="false">
 			<passive_effect name="DamageFalloffRange" operation="base_set" value="50"/>
-			<passive_effect name="MaxRange" operation="base_set" value="50"/>
-		</effect_group>
-	</item>
-	<item name="ammoProjectileCrawler">
-		<!--property name="Meshfile" value="particleeffects/p_onFire"/-->
-		<property name="Meshfile" value="particleeffects/p_fire_small"/>
-		<property name="Material" value="Morganic"/>
-		<property name="CreativeMode" value="None"/>
-		<property class="Action1">
-			<property name="Class" value="Projectile"/>
-			<property name="DamageEntity" value="20"/>
-			<property name="DamageBlock" value="20"/>
-			<property name="Explosion.ParticleIndex" value="12"/>
-			<property name="Explosion.RadiusEntities" value="2"/>
-			<property name="Velocity" value="13"/>
-			<property name="FlyTime" value="6"/>
-			<property name="LifeTime" value="8"/>
-			<property name="CollisionRadius" value=".5"/>
-			<property name="Buff" value="buffBurningZombie"/>
-		</property>
-		<effect_group name="ammoProjectileCrawler" tiered="false">
-			<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth"/>
-			<passive_effect name="DamageModifier" operation="perc_set" value="0.5" tags="stone"/>
-			<passive_effect name="DamageModifier" operation="perc_add" value="1.2" tags="metal"/>
-			<passive_effect name="BuffProcChance" operation="base_set" value=".20" tags="buffInfectionCatch"/>
-			<passive_effect name="BuffProcChance" operation="base_set" value="0.90" tags="buffBurningZombie"/>
-			
-			<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="selfAOE" range="12" buff="buffArchon">
-				<requirement name="EntityTagCompare" target="other" tags="zombie"/>
+			<passive_effect name="MaxRange" operation="base_set" value="100"/>
+			<passive_effect name="MagazineSize" operation="base_set" value="6"/>
+			<passive_effect name="BurstRoundCount" operation="base_set" value="3"/>
+			<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2"/>
+			<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="4"/>
+			<passive_effect name="SpreadMultiplierIdle" operation="base_set" value="1"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.30,.30,.30,.50,.50,.20"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/>
 			</triggered_effect>
-			<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="infectionZombieHit" operation="set" value="60"/>
-			<!--InfectionRadiated-->
 		</effect_group>
 	</item>
+
 		
 		
 	<!-- ***** SNUFKIN BOSS ***** -->
@@ -3812,52 +4143,6 @@
 	
 	
 
-
-	<!-- **************************************************** -->
-	<!-- ***** NEW HANDITEMS FOR MODDED VANILLA ZOMBIES ***** -->
-	<!-- **************************************************** -->
-
-	<!-- Businessman Boss -->
-	<item name="enHand_4050_015_AAAAAAA">
-		<property name="Extends" value="meleeHandZombie01"/>
-		<property name="CreativeMode" value="None"/>
-		<property name="Degradation" value="99999" param1="true"/>
-		<property class="Action0">
-			<property name="Range" value="2.6"/>
-			<property name="DamageEntity" value="40"/>
-			<property name="DamageBlock" value="50"/>
-		</property>
-		<property class="Action1"> 
-			<property name="Class" value="Vomit"/>
-			<property name="Hitmask_override" value="Arrow"/>
-			<property name="Delay" value=".3"/> 
-			<property name="Range" value="200"/>
-			<property name="Infinite_ammo" value="true"/>
-			<property name="Magazine_items" value="ammoProjectileZombieVomit"/>
-			<property name="Sound_warning" value="hulkvomitwarning"/>
-			<property name="Sound_start" value="hulkvomitattack"/>
-			<property name="Sound_repeat" value=""/>
-			<property name="Sound_end" value=""/>
-			<property name="Sound_empty" value=""/>
-			<property name="Sound_reload" value=""/>
-		</property>
-		<effect_group name="enHand_4050_015_AAAAAAA" tiered="false">
-			<passive_effect name="DamageFalloffRange" operation="base_set" value="50"/>
-			<passive_effect name="MaxRange" operation="base_set" value="100"/>
-			<passive_effect name="MagazineSize" operation="base_set" value="6"/>
-			<passive_effect name="BurstRoundCount" operation="base_set" value="3"/>
-			<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2"/>
-			<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="4"/>
-			<passive_effect name="SpreadMultiplierIdle" operation="base_set" value="1"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.30,.30,.30,.50,.50,.20"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15">
-				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/>
-			</triggered_effect>
-		</effect_group>
-	</item>
 
 	
 
