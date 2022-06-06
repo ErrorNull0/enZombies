@@ -1,11 +1,14 @@
 <ErrorNull>
-	
 
-	<!-- PINE FOREST -->
-	
-	<remove xpath="/spawning/biome[@name='pine_forest']" />
-	<append xpath="/spawning">
-	<biome name="pine_forest">
+	<!-- ################################## PINE FOREST #################################
+	First, disable vanilla spawners ZombiesAll, ZombiesNight, ZombiesForestDowntown,
+	ZombiesForestDowntownNight,	WildGameForest, and EnemyAnimalsForest by setting
+	maxcount=0. Then, append custom spawners (starts with "Pineforest") in order to allow
+	spawning of zombies specific only to this biome. Vanilla spawners are not deleted to
+	prevent warning/errors by other mods that still try to use those spawners.
+	##################################################################################-->
+	<set xpath="/spawning/biome[@name='pine_forest']/spawn/@maxcount">0</set>
+	<append xpath="/spawning/biome[@name='pine_forest']">
 		<spawn maxcount="2" respawndelay="1.00"	time="Day" 		entitygroup="PineforestZombiesDay" 				notags="commercial,industrial,downtown" />
 		<spawn maxcount="3" respawndelay="0.50"	time="Day" 		entitygroup="PineforestZombiesDayCity" 			tags="commercial,industrial" notags="downtown" />
 		<spawn maxcount="4" respawndelay="0.25"	time="Day" 		entitygroup="PineforestZombiesDayDowntown" 		tags="downtown" />
@@ -16,14 +19,18 @@
 		<spawn maxcount="5" respawndelay="0.10"	time="Night" 	entitygroup="PineforestZombiesNightDowntown" 	tags="downtown" />
 		<spawn maxcount="1" respawndelay="1.00"	time="Night" 	entitygroup="PineforestAnimalsAggroNight" 		spawnDeadChance="0" />
 		<spawn maxcount="1" respawndelay="1.00"	time="Night" 	entitygroup="PineforestAnimalsGameNight" 		spawnDeadChance="0" />
-	</biome>
 	</append>
 	
 	
-	<!-- DESERT -->
-	<remove xpath="/spawning/biome[@name='desert']" />
-	<append xpath="/spawning">
-	<biome name="desert">
+	<!-- #################################### DESERT ###################################
+	First, disable vanilla spawners ZombiesAll, ZombiesNight, ZombiesDowntown,
+	WildGameForest, and EnemyAnimalsDesert by setting maxcount=0. Then, append custom
+	spawners (starts with "Desert") in order to allow spawning of zombies specific only
+	to this biome. Vanilla spawners are not deleted to prevent warning/errors by other
+	mods that still try to use those spawners.
+	##################################################################################-->
+	<set xpath="/spawning/biome[@name='desert']/spawn/@maxcount">0</set>
+	<append xpath="/spawning/biome[@name='desert']">
 		<spawn maxcount="2" respawndelay="1.00" time="Day" 		entitygroup="DesertZombiesDay"				notags="commercial,industrial,downtown" />
 		<spawn maxcount="3" respawndelay="0.50" time="Day" 		entitygroup="DesertZombiesDayCity"			tags="commercial,industrial" notags="downtown" />
 		<spawn maxcount="4" respawndelay="0.25" time="Day" 		entitygroup="DesertZombiesDayDowntown"		tags="downtown" />
@@ -34,14 +41,18 @@
 		<spawn maxcount="5" respawndelay="0.10"	time="Night" 	entitygroup="DesertZombiesNightDowntown"	tags="downtown" />
 		<spawn maxcount="1" respawndelay="1.00"	time="Night" 	entitygroup="DesertAnimalsAggroNight" 		spawnDeadChance="0" />
 		<spawn maxcount="1" respawndelay="1.00"	time="Night" 	entitygroup="DesertAnimalsGameNight" 		spawnDeadChance="0" />
-	</biome>
 	</append>
 	
 	
-	<!-- SNOW -->
-	<remove xpath="/spawning/biome[@name='snow']" />
-	<append xpath="/spawning">
-	<biome name="snow">
+	<!-- ##################################### SNOW ####################################
+	First, disable vanilla spawners SnowZombies, ZombiesNight, ZombiesAll, 
+	ZombiesDowntown, WildGameForest, and EnemyAnimalsSnow by setting maxcount=0. Then,
+	append custom spawners (starts with "Snow") in order to allow spawning of zombies
+	specific only to this biome. Vanilla spawners are not deleted to prevent warning or
+	errors by other	mods that still try to use those spawners.
+	##################################################################################-->
+	<set xpath="/spawning/biome[@name='snow']/spawn/@maxcount">0</set>
+	<append xpath="/spawning/biome[@name='snow']">
 		<spawn maxcount="2" respawndelay="1.00" time="Day" 		entitygroup="SnowZombiesDay"		 	notags="commercial,industrial,downtown" />
 		<spawn maxcount="3" respawndelay="0.50" time="Day" 		entitygroup="SnowZombiesDayCity"		tags="commercial,industrial" notags="downtown" />
 		<spawn maxcount="4" respawndelay="0.25" time="Day" 		entitygroup="SnowZombiesDayDowntown"	tags="downtown" />
@@ -52,14 +63,18 @@
 		<spawn maxcount="5" respawndelay="0.10" time="Night" 	entitygroup="SnowZombiesNightDowntown"	tags="downtown" />
 		<spawn maxcount="1" respawndelay="1.00" time="Night" 	entitygroup="SnowAnimalsAggroNight" 	spawnDeadChance="0" />
 		<spawn maxcount="1" respawndelay="1.00" time="Night" 	entitygroup="SnowAnimalsGameDay" 		spawnDeadChance="0" />
-	</biome>
 	</append>
 	
 	
-	<!-- BURNT FOREST -->
-	<remove xpath="/spawning/biome[@name='burnt_forest']" />
-	<append xpath="/spawning">
-	<biome name="burnt_forest">
+	<!-- ################################# BURNT FOREST #################################
+	First, disable vanilla spawners ZombiesBurntForest, ZombiesNight, ZombiesAll, 
+	ZombiesDowntown, WildGameForest, and EnemyAnimalsBurntForest by setting maxcount=0.
+	Then, append custom spawners (starts with "Burnt") in order to allow spawning of
+	zombies specific only to this biome. Vanilla spawners are not deleted to prevent
+	warning or errors by other	mods that still try to use those spawners.
+	##################################################################################-->
+	<set xpath="/spawning/biome[@name='burnt_forest']/spawn/@maxcount">0</set>
+	<append xpath="/spawning/biome[@name='burnt_forest']">
 		<spawn maxcount="2" respawndelay="1.00" time="Day" 		entitygroup="BurntZombiesDay"			notags="commercial,industrial,downtown" />
 		<spawn maxcount="3" respawndelay="0.50" time="Day" 		entitygroup="BurntZombiesDayCity"		tags="commercial,industrial" notags="downtown" />
 		<spawn maxcount="4" respawndelay="0.25" time="Day" 		entitygroup="BurntZombiesDayDowntown"	tags="downtown" />
@@ -70,29 +85,28 @@
 		<spawn maxcount="5" respawndelay="0.10" time="Night" 	entitygroup="BurntZombiesNightDowntown"	tags="downtown" />
 		<spawn maxcount="1" respawndelay="1.00" time="Night" 	entitygroup="BurntAnimalsAggroNight" 	spawnDeadChance="0" />
 		<spawn maxcount="1" respawndelay="1.00" time="Night" 	entitygroup="BurntAnimalsGameNight" 	spawnDeadChance="0" />
-	</biome>
 	</append>
 	
 	
+	<!-- ################################## WASTELAND ###################################
+	First, disable vanilla spawners ZombiesWasteland, ZombiesWastelandNight,  
+	ZombiesWastelandDowntown, EnemyAnimalsWasteland, and EnemyAnimalsBurntForest by
+	setting maxcount=0. Then, append custom spawners (starts with "Burnt") to allow 
+	spawning of zombies specific only to this biome. Vanilla spawners are not deleted to
+	prevent warning or errors by other	mods that still try to use those spawners.
+	##################################################################################-->
 	<!-- WASTELAND-->
-	<remove xpath="/spawning/biome[@name='wasteland']" />
-	<append xpath="/spawning">
-	<biome name="wasteland">
+	<set xpath="/spawning/biome[@name='wasteland']/spawn/@maxcount">0</set>
+	<append xpath="/spawning/biome[@name='wasteland']">
 		<spawn maxcount="3" respawndelay="0.50"	time="Day" 		entitygroup="WastelandZombiesDay"			notags="commercial,industrial,downtown" />
 		<spawn maxcount="4" respawndelay="0.50"	time="Day" 		entitygroup="WastelandZombiesDayCity"		tags="commercial,industrial" notags="downtown" />
 		<spawn maxcount="5" respawndelay="0.25"	time="Day" 		entitygroup="WastelandZombiesDayDowntown"	tags="downtown" />
 		<spawn maxcount="1" respawndelay="1.00" time="Day" 		entitygroup="WastelandAnimalsAggroDay" 		spawnDeadChance="0" />
-		<spawn maxcount="1" respawndelay="1.00" time="Day" 		entitygroup="WastelandAnimalsGameDay"		spawnDeadChance="0" />
 		<spawn maxcount="4" respawndelay="0.40" time="Night" 	entitygroup="WastelandZombiesNight"			notags="commercial,industrial,downtown" />
 		<spawn maxcount="5" respawndelay="0.20" time="Night" 	entitygroup="WastelandZombiesNightCity"		tags="commercial,industrial" notags="downtown" />
 		<spawn maxcount="6" respawndelay="0.08" time="Night" 	entitygroup="WastelandZombiesNightDowntown"	tags="downtown" />
 		<spawn maxcount="1" respawndelay="0.75" time="Night" 	entitygroup="WastelandAnimalsAggroNight" 	spawnDeadChance="0" />
-		<spawn maxcount="1" respawndelay="1.00" time="Night" 	entitygroup="WastelandAnimalsGameNight" 	spawnDeadChance="0" />
-	</biome>
 	</append>
-	
-
-	
 	
 	
 </ErrorNull>

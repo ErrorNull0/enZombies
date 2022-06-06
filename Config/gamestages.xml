@@ -1,8 +1,6 @@
 <ErrorNull>
 
-<remove xpath="/gamestages/spawner[@name='SleeperTestChamberGSList']" />
-<append xpath="/gamestages">
-	<spawner name="SleeperTestChamberGSList">		
+	<set xpath="/gamestages/spawner[@name='SleeperTestChamberGSList']">
 		<gamestage stage="1"><spawn group="testChamberZombie1" num="1" maxAlive="1" duration="1"/></gamestage>
 		<gamestage stage="50"><spawn group="testChamberZombie50" num="1" maxAlive="1" duration="1"/></gamestage>
 		<gamestage stage="100"><spawn group="testChamberZombie100" num="1" maxAlive="1" duration="1"/></gamestage>
@@ -14,73 +12,58 @@
 		<gamestage stage="800"><spawn group="testChamberZombie800" num="1" maxAlive="1" duration="1"/></gamestage>
 		<gamestage stage="1000"><spawn group="testChamberZombie1000" num="1" maxAlive="1" duration="1"/></gamestage>
 		<gamestage stage="1200"><spawn group="testChamberZombie1200" num="1" maxAlive="1" duration="1"/></gamestage>
-	</spawner>
-</append>
+	</set>
 
-
-
-
-<!--
-WanderingHorde appears to be a hardcoded reference and is not called directly from an XML file. These zombie groups spawn as random wandering horde groups.
--->
-<remove xpath="/gamestages/spawner[@name='WanderingHorde']" />
-<append xpath="/gamestages">
-	<spawner name="WanderingHorde">
-		<gamestage stage="01"><spawn group="ZombiesCrawlers" 			num="10" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="02"><spawn group="enWanderingBusiness" 		num="10" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="03"><spawn group="enWanderingFarmers" 		num="10" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="04"><spawn group="enWanderingStrippers" 		num="10" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="05"><spawn group="enWanderingHazmats" 		num="10" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="06"><spawn group="enWanderingWorkers" 		num="10" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="07"><spawn group="enWanderingCrazies" 		num="10" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="08"><spawn group="enWanderingCamos" 			num="05" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="09"><spawn group="enWanderingHikers" 			num="10" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="10"><spawn group="enWanderingPunks" 			num="10" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="11"><spawn group="enWanderingKHz" 			num="10" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="12"><spawn group="ZombieDogGroup"				num="05" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="13"><spawn group="enWanderingCowboys"			num="10" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="14"><spawn group="enWanderingFatasses"		num="10" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="15"><spawn group="enWanderingSpiders" 		num="10" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="16"><spawn group="enWanderingAthletes" 		num="10" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="17"><spawn group="enWanderingBikers" 			num="08" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="18"><spawn group="enWanderingMiners"			num="08" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="19"><spawn group="enWanderingFlamers" 		num="08" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="20"><spawn group="enWanderingLumberjacks" 	num="06" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="21"><spawn group="enWanderingMilitary"		num="10" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="22"><spawn group="enWanderingLabCreatures"	num="08" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="23"><spawn group="ZombieDogGroup"				num="06" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="24"><spawn group="enWanderingCops" 			num="01" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="25"><spawn group="enWanderingGiants" 			num="01" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="26"><spawn group="enWanderingBusiness2"		num="08" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="27"><spawn group="enWanderingFarmers2"		num="08" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="28"><spawn group="enWanderingStrippers2"		num="08" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="29"><spawn group="enWanderingHazmats2"		num="08" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="30"><spawn group="enWanderingWorkers2"		num="08" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="31"><spawn group="enWanderingCrazies2" 		num="08" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="32"><spawn group="enWanderingCamos2"			num="05" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="33"><spawn group="enWanderingHikers2"			num="08" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="34"><spawn group="ZombieDogGroup"				num="07" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="35"><spawn group="enWanderingPunks2"			num="08" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="36"><spawn group="enWanderingKHz2"			num="08" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="37"><spawn group="enWanderingCowboys2"		num="08" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="38"><spawn group="enWanderingFatasses2"		num="08" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="39"><spawn group="enWanderingSpiders2"		num="08" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="40"><spawn group="enWanderingAthletes2"		num="08" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="41"><spawn group="enWanderingBikers2"			num="06" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="42"><spawn group="enWanderingMiners2"			num="06" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="43"><spawn group="enWanderingFlamers2"		num="06" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="44"><spawn group="enWanderingLumberjacks2"	num="06" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="45"><spawn group="ZombieDogGroup"				num="08" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="46"><spawn group="enWanderingMilitary2"		num="08" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="47"><spawn group="enWanderingLabCreatures2"	num="08" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="48"><spawn group="enWanderingCops2"			num="02" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="49"><spawn group="enWanderingGiants"			num="02" maxAlive="30" duration="09"/></gamestage>
-		<gamestage stage="50"><spawn group="enWanderingDemolition"		num="01" maxAlive="30" duration="09"/></gamestage>
-	</spawner>
-</append>
-
-
-
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='01']/spawn/@num">10</set>	<!-- Businessmen / businesswomen -->	
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='02']/spawn/@num">10</set>	<!-- Farmers -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='03']/spawn/@num">04</set>	<!-- Coyotes (from vanilla EnemyAnimalsCoyote group) -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='04']/spawn/@num">08</set>	<!-- Feral Businessmen / businesswomen -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='05']/spawn/@num">04</set>	<!-- Zombie Dogs (from vanilla ZombieDogGroup) -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='06']/spawn/@num">08</set>	<!-- Feral Farmers -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='07']/spawn/@num">08</set>	<!-- Feral Hazmats -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='08']/spawn/@num">05</set>	<!-- Vultures (from vanilla VultureGroup) -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='09']/spawn/@num">10</set>	<!-- Zombie Workers (utility and janitor zombies) -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='10']/spawn/@num">10</set>	<!-- Crazies (half nakeds and hobos) -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='11']/spawn/@num">06</set>	<!-- Camos (those grass/bushmen) -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='12']/spawn/@num">03</set>	<!-- Wolves (from vanilla WolfGroup) -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='13']/spawn/@num">08</set>	<!-- Feral Zombie Workers (utility and janitor zombies) -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='14']/spawn/@num">08</set>	<!-- Feral Crazies (half nakeds and hobos) -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='15']/spawn/@num">10</set>	<!-- Biker Bar Zombies (from vanilla ZombieBikerBarGroup) -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='16']/spawn/@num">06</set>	<!-- Feral Camos (those grass/bushmen) -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='17']/spawn/@num">10</set>	<!-- Punks -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='18']/spawn/@num">10</set>	<!-- KHz zombies -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='19']/spawn/@num">10</set>	<!-- Fatasses -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='20']/spawn/@num">06</set>	<!-- Zombie Dogs (from vanilla ZombieDogGroup) -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='21']/spawn/@num">08</set>	<!-- Feral Punks -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='22']/spawn/@num">08</set>	<!-- Feral KHz zombies -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='23']/spawn/@num">08</set>	<!-- Feral Cowboys -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='24']/spawn/@num">10</set>	<!-- Old Western zombies (from vanilla ZombieGhostTownGroup) -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='25']/spawn/@num">10</set>	<!-- Spider zombies -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='26']/spawn/@num">10</set>	<!-- Athletes (footballers and female joggers) -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='27']/spawn/@num">06</set>	<!-- Vultures (from vanilla VultureGroup) -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='28']/spawn/@num">10</set>	<!-- Strippers -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='29']/spawn/@num">08</set>	<!-- Feral Fatasses -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='30']/spawn/@num">08</set>	<!-- Feral Athletes (footballers and female joggers) -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='31']/spawn/@num">06</set>	<!-- Feral Bikers -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='32']/spawn/@num">08</set>	<!-- Miners -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='33']/spawn/@num">06</set>	<!-- Lumberjacks -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='34']/spawn/@num">07</set>	<!-- Zombie Dogs (from vanilla ZombieDogGroup) -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='35']/spawn/@num">10</set>	<!-- Military (soldiers, swat, and stealth zombies) -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='36']/spawn/@num">02</set>	<!-- Cops (just the vanilla fat cop for now) -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='37']/spawn/@num">06</set>	<!-- Feral Miners -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='38']/spawn/@num">05</set>	<!-- Zombie Dogs and Bears (from vanilla ZombieAnimalsGroup) -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='39']/spawn/@num">06</set>	<!-- Feral Lumberjacks -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='40']/spawn/@num">08</set>	<!-- Feral Spiders zombies -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='41']/spawn/@num">05</set>	<!-- Wolf and Direwold (from vanilla WolfPack) -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='42']/spawn/@num">08</set>	<!-- LabCreatures -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='43']/spawn/@num">02</set>	<!-- Giants -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='44']/spawn/@num">08</set>	<!-- Feral Soldiers (modified vanilla ZombieSoldierGroup) -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='45']/spawn/@num">20</set>	<!-- Goblins -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='46']/spawn/@num">08</set>	<!-- Stronger LabCreatures -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='47']/spawn/@num">08</set>	<!-- Vultures (from vanilla VultureGroup) -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='48']/spawn/@num">04</set>	<!-- Feral Fat Cops -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='49']/spawn/@num">10</set>	<!-- Hazmat zombies -->
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='50']/spawn/@num">02</set>	<!-- Zombie Bears (from vanilla ZombieBearsGroup) -->
 
 		
 </ErrorNull>

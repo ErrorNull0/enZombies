@@ -1,4 +1,4 @@
-ErrorNull Zombies (enZombies) v2.6
+ErrorNull Zombies (enZombies) v2.7
 https://community.7daystodie.com/topic/24594-enzombies-more-zombie-variations/
 
 
@@ -70,6 +70,23 @@ https://community.7daystodie.com/topic/12229-robelotos-a20-modlets/
 
 
 enZOMBIES DOWNLOAD & INSTALL: Go to the enZombies GitHub page. Download the package and unzip the conents to your 7 Days to Die "Mods" folder. https://github.com/ErrorNull0/enZombies
+
+Version 2.7 Update:
+-removed ability for any zombies that wear hats/helmets, holding items/weapons, or are giants, from becoming crawlers
+-removed all custom zombie crawlers to simplify code. existing zombies (that are not mentioned above) can still be crawlers if they are crippled.
+-added elemental zombies: enElementalOrganicCrawler, enElementalSandCrawler, enElementalStoneCrawler, enElementalIronCrawler, enElementalSandWalker, enElementalStoneWalker, enElementalIronWalker, enElementalRadiatedWalker
+-added custom characteristics to elemental zombies: nerfed ranged weapons against them, bonus to mining tools against them, they do not bleed, they have increased entity and block damage
+-redid wandering horde code to use vanilla groups and progression. should make more mods (like UL) no need for patch
+-renamed enSnufkinBoss to enScientistBoss1
+-added feral versions of khzAiden and khzChang
+-added hospital zombies: patientFemale1, patientFemale2, and patientFemale3, patientMale1 and patientMale2, labFemale1, nurseHD
+-added more existing zombies: biker3 and biker4, lumberjack3 and lumberjack4
+-renamed and streamlined all enemy handitems
+-added louder swoosh sounds to the larger weapons carried by zombies: clubs, shovels, pickaxes, stun baton, etc
+-updated all entitygroups/spawning code to be more compatible with mods that rely on vanilla zombie groups
+-removed game animals from spawning in wasteland (since it was removed from vanilla game)
+-added loadingscreen tips specific to enZombies
+-added settings mod enZombiesSettings09RemoveZombies
 
 Version 2.6 Update:
 -created XML builder program to automatically generate sliding prob values for entitygroups

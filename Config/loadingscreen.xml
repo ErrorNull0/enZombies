@@ -1,0 +1,9 @@
+<ErrorNull>
+	<append xpath="/doc/tips">
+		<tip key="enLoadingTipInfection" />
+		<tip key="enLoadingTipPersonalSpace" />
+		<tip key="enLoadingTipMorePainMoreGain" />
+		<tip key="enLoadingTipPetrified" />
+		<tip key="enLoadingTipHospitalZombies" />
+	</append>
+</ErrorNull>
