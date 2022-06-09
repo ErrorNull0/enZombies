@@ -1479,12 +1479,9 @@ CRAWLER* handitems have the same attributes as normal zombies, except with the h
 	<item name="enHand_farmerMaleFeral">
 		<property name="Extends" value="enHand_farmerMale"/>
 		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="29"/>
-			<property name="DamageBlock" value="60"/>
-			<property name="Range" value="1.7"/>
-		</property>
 		<effect_group name="enHand_farmerMaleFeral" tiered="false">
+			<passive_effect name="DamageModifier" operation="perc_set" value="2"/>
+			<passive_effect name="DamageModifier" operation="perc_set" value="3" tags="wood,earth,stone,metal,terrGravel,cloth"/>
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
 				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
 				weights=".11,.07,.07,.05,.29,.36,.11"/>
@@ -1498,12 +1495,9 @@ CRAWLER* handitems have the same attributes as normal zombies, except with the h
 	<item name="enHand_farmerMaleRadiated">
 		<property name="Extends" value="enHand_farmerMaleFeral"/>
 		<property name="CreativeMode" value="None"/>
-		<property class="Action0">
-			<property name="DamageEntity" value="40"/>
-			<property name="DamageBlock" value="69"/>
-			<property name="Range" value="1.7"/>
-		</property>
 		<effect_group name="enHand_farmerMaleRadiated" tiered="false">
+			<passive_effect name="DamageModifier" operation="perc_set" value="2.5"/>
+			<passive_effect name="DamageModifier" operation="perc_set" value="3.5" tags="wood,earth,stone,metal,terrGravel,cloth"/>
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
 				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
 				weights=".15,.10,.10,.08,.40,.45,.15"/>
@@ -4453,7 +4447,7 @@ CRAWLER* handitems have the same attributes as normal zombies, except with the h
 		<property name="Extends" value="meleeHandZombie01"/>
 		<property name="CreativeMode" value="None"/>
 		<property class="Action0">
-			<property name="Range" value="2.52"/>
+			<property name="Range" value="2.6"/>
 			<property name="DamageEntity" value="40"/>
 			<property name="DamageBlock" value="50"/>
 		</property>
