@@ -9,7 +9,7 @@ By default, zombie HP varies from -20% to +15% of base value. Changing this to g
 
 <set xpath="/entity_classes/entity_class[@name='animalTemplateTimid']/effect_group[@name='Base Effects']/passive_effect[@name='HealthMax' and @operation='perc_add']/@value">-0.1,0.1</set>
 
-<!-- reduce xp gain from crawlers, to match the reduced hp ratio compared to normal zombies and match enZombie crawlers -->
+<!-- reduce xp gain from vanilla crawlers, to match the reduced hp ratio compared to normal zombies and match enZombie crawlers -->
 <append xpath="/entity_classes/entity_class[@name='zombieSteveCrawler']"><property name="ExperienceGain" value="220"/></append>
 <append xpath="/entity_classes/entity_class[@name='zombieSteveCrawlerFeral']"><property name="ExperienceGain" value="418"/></append>
 
@@ -61,7 +61,7 @@ By default, zombie HP varies from -20% to +15% of base value. Changing this to g
 		<property name="WalkType" value="7"/>
 		<property name="PainResistPerHit" value=".7"/>
 		<effect_group name="Base Effects">
-			<passive_effect name="BuffResistance" operation="base_set" value="100" tags="buffInjuryBleeding"/>
+			<passive_effect name="BuffResistance" operation="base_set" value="1" tags="buffShocked,buffInjuryBleeding,buffBurningZombie,buffBurningElement,buffBurningEnvironment,buffBurningEnvironmentHack,buffBurningFlamingArrow,buffBurningMolotov,buffIsOnFire,buffBurningWeapon"/>
 			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffRangedAttackNerf1"/>
 		</effect_group>
 		<property name="HideInSpawnMenu" value="true"/>
@@ -79,7 +79,7 @@ By default, zombie HP varies from -20% to +15% of base value. Changing this to g
 		<effect_group name="Base Effects">	
 			<passive_effect name="HealthMax" operation="base_set" value="80"/>
 			<passive_effect name="PhysicalDamageResist" operation="base_set" value="30"/>
-			<passive_effect name="BuffResistance" operation="base_set" value="100" tags="buffInjuryBleeding"/>
+			<passive_effect name="BuffResistance" operation="base_set" value="1" tags="buffShocked,buffInjuryBleeding,buffBurningZombie,buffBurningElement,buffBurningEnvironment,buffBurningEnvironmentHack,buffBurningFlamingArrow,buffBurningMolotov,buffIsOnFire,buffBurningWeapon"/>
 			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffRangedAttackNerf1"/>
 		</effect_group>
 	</entity_class>
@@ -604,8 +604,7 @@ By default, zombie HP varies from -20% to +15% of base value. Changing this to g
 		<property name="SizeScale" value="0.84"/>
 		<property name="ExperienceGain" value="300"/>
 		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="perc_set" value="1.3"/>
-			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="BurntGoblinDeco"/>
+			<passive_effect name="HealthMax" operation="base_set" value="65"/>
 		</effect_group>
 	</entity_class>
 	
@@ -614,8 +613,7 @@ By default, zombie HP varies from -20% to +15% of base value. Changing this to g
 		<property name="Archetype" value="en_burntGoblin3"/>
 		<property name="ExperienceGain" value="280"/>
 		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="perc_set" value="1.1"/>
-			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="BurntGoblinDeco"/>
+			<passive_effect name="HealthMax" operation="base_set" value="55"/>
 		</effect_group>
 	</entity_class>
 	
@@ -886,6 +884,49 @@ By default, zombie HP varies from -20% to +15% of base value. Changing this to g
 		<effect_group name="Base Effects" id="regen5">
 			<passive_effect name="HealthMax" operation="perc_set" value="2.6,2.8"/>
 		</effect_group>
+	</entity_class>
+	
+	<!-- Larger businessman boos wielding a computer monitor -->
+	<entity_class name="enBusinessmanBoss" extends="zombieTemplateMale">
+		<property name="Tags" value="entity,zombie,walker,feral"/>
+		<property name="Mesh" value="#Entities/Zombies?Prefabs/ZSuit.prefab"/>
+		<property name="AvatarController" value="AvatarZombie01Controller"/>
+		<property name="ModelType" value="Standard"/>
+		<property name="WalkType" value="7"/>
+		<property name="SizeScale" value="1.30"/>
+		<property name="DismemberMultiplierHead" value="0.25"/>
+		<property name="DismemberMultiplierArms" value="0"/>
+		<property name="DismemberMultiplierLegs" value="0.25"/>
+		<property name="LegCrawlerThreshold" value="0"/>
+		<property name="HandItem" value="enHand_businessmanBoss1"/>
+		<property name="RootMotion" value="true"/>
+		<property name="TintMaterial1" value="255,0,0"/>
+		<property name="PainResistPerHit" value=".9"/>
+		<property name="MoveSpeedAggro" value="0.6, 0.6"/>
+		<property name="JumpMaxDistance" value="0.25, 0.5"/>
+		<property name="MaxViewAngle" value="200"/>
+		<property name="SightRange" value="100"/>
+		<property name="ExperienceGain" value="1500"/>
+		<property name="LootDropProb" value="1.0"/>
+		<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
+		<effect_group name="Base Effects" id="regen10">
+			<passive_effect name="HealthMax" operation="base_set" value="1050"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="BusinessmanBossDeco"/>
+		</effect_group>
+		<property name="AITask-1" value="BreakBlock"/>
+		<property name="AITask-2" value="RangedAttackTarget" data="itemType=1;cooldown=1;duration=5"/>
+		<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,0,EntityPlayer"/>
+		<property name="AITask-4" value="ApproachSpot"/>
+		<property name="AITask-5" value="Look"/>
+		<property name="AITask-6" value="Wander"/>
+		<property name="AITask-7" value=""/>
+		<property name="SoundRandom" value="Enemies/Feral_Zombie/zombieferalroam"/>
+		<property name="SoundAlert" value="Enemies/Feral_Zombie/zombieferalalert"/>
+		<property name="SoundAttack" value="Enemies/Feral_Zombie/zombieferalattack"/>
+		<property name="SoundHurt" value="Enemies/Feral_Zombie/zombieferalpain"/>
+		<property name="SoundDeath" value="Enemies/Feral_Zombie/zombieferaldeath"/>
+		<property name="SoundSense" value="Enemies/Feral_Zombie/zombieferalsense"/>
 	</entity_class>
 	
 	<entity_class name="enBusinesswoman1" extends="EN_Zombie_Template_Female2">
@@ -1308,7 +1349,7 @@ By default, zombie HP varies from -20% to +15% of base value. Changing this to g
 		<property name="SizeScale" value="0.84"/>
 		<property name="ExperienceGain" value="260"/>
 		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="perc_set" value="1.3"/>
+			<passive_effect name="HealthMax" operation="base_set" value="65"/>
 			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="DesertGoblinDeco"/>
 		</effect_group>
 	</entity_class>
@@ -1318,7 +1359,7 @@ By default, zombie HP varies from -20% to +15% of base value. Changing this to g
 		<property name="Archetype" value="en_desertGoblin3"/>
 		<property name="ExperienceGain" value="240"/>
 		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="perc_set" value="1.1"/>
+			<passive_effect name="HealthMax" operation="base_set" value="55"/>
 			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="DesertGoblinDeco"/>
 		</effect_group>
 	</entity_class>
@@ -1645,147 +1686,6 @@ By default, zombie HP varies from -20% to +15% of base value. Changing this to g
 		</effect_group>
 	</entity_class>
 	
-	<entity_class name="enElementalOrganicCrawler" extends="zombieSteveCrawler">
-		<property name="Tags" value="entity,zombie"/>
-		<property name="HandItem" value="enHand_elementalOrganicCrawler"/>
-		<property name="ReplaceMaterial0" value="entities/animals/boar/materials/grace"/>	
-		<property name="ExperienceGain" value="220"/> <!-- default -->
-		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="base_set" value="80"/> <!-- default -->
-		</effect_group>
-	</entity_class>
-	
-	<entity_class name="enElementalOrganicCrawlerFeral" extends="enElementalOrganicCrawler">
-		<property name="Tags" value="entity,zombie"/>
-		<property name="HandItem" value="enHand_elementalOrganicCrawlerFeral"/>
-		<property name="PainResistPerHit" value=".7"/>
-		<property name="ExperienceGain" value="400"/> <!-- default -->
-		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
-		</effect_group>
-	</entity_class>
-	
-	<entity_class name="enElementalSandWalker" extends="EN_Zombie_Template_Elemental">
-		<property name="Tags" value="entity,zombie,walker,sand"/>
-		<property name="ReplaceMaterial0" value="entities/sandbags/sandbag"/>
-		<property name="HandItem" value="enHand_elementalSand"/>
-		<property name="SurfaceCategory" value="earth"/>
-		<property name="Mass" value="340"/>
-		<property name="Weight" value="140"/>
-		<property name="ExperienceGain" value="536"/> <!-- +30% -->
-		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="base_set" value="150"/>
-			<passive_effect name="PhysicalDamageResist" operation="base_set" value="30"/>
-		</effect_group>
-	</entity_class>
-	
-	<entity_class name="enElementalSandWalkerFeral" extends="enElementalSandWalker">
-		<property name="Tags" value="entity,zombie,feral,sand"/>
-		<property name="HandItem" value="enHand_elementalSandFeral"/>
-		<property name="PainResistPerHit" value=".9"/>
-		<property name="ExperienceGain" value="975"/> <!-- +30% -->
-		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
-		</effect_group>
-	</entity_class>
-	
-	<entity_class name="enElementalSandCrawler" extends="EN_Zombie_Template_Elemental_Crawler">
-		<property name="Tags" value="entity,zombie,sand"/>
-		<property name="ReplaceMaterial0" value="entities/sandbags/sandbag"/>
-		<property name="HandItem" value="enHand_elementalSandCrawler"/>
-		<property name="SurfaceCategory" value="earth"/>
-		<property name="Mass" value="340"/>
-		<property name="Weight" value="140"/>
-		<property name="ExperienceGain" value="286"/> <!-- +30% -->
-		<effect_group name="Base Effects">	
-			<passive_effect name="HealthMax" operation="base_set" value="80"/>
-			<passive_effect name="PhysicalDamageResist" operation="base_set" value="30"/>
-		</effect_group>
-	</entity_class>
-	
-	<entity_class name="enElementalSandCrawlerFeral" extends="enElementalSandCrawler">
-		<property name="Tags" value="entity,zombie,sand"/>
-		<property name="HandItem" value="enHand_elementalSandCrawlerFeral"/>
-		<property name="PainResistPerHit" value=".9"/>
-		<property name="ExperienceGain" value="520"/> <!-- +30% -->
-		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
-		</effect_group>
-	</entity_class>
-	
-	<entity_class name="enElementalStoneWalker" extends="EN_Zombie_Template_Elemental">
-		<property name="Tags" value="entity,zombie,walker,stone"/>
-		<property name="ReplaceMaterial0" value="entities/resources/materials/rock_resource"/>
-		<property name="HandItem" value="enHand_elementalStone"/>
-		<property name="SurfaceCategory" value="stone"/>
-		<property name="Mass" value="382"/>
-		<property name="Weight" value="157"/>
-		<property name="ExperienceGain" value="578"/> <!-- +40% -->
-		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="base_set" value="150"/>
-			<passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
-		</effect_group>
-	</entity_class>
-	
-	<entity_class name="enElementalStoneWalkerFeral" extends="enElementalStoneWalker">
-		<property name="Tags" value="entity,zombie,feral,stone"/>
-		<property name="HandItem" value="enHand_elementalStoneFeral"/>
-		<property name="PainResistPerHit" value=".9"/>
-		<property name="ExperienceGain" value="1050"/> <!-- +40% -->
-		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
-		</effect_group>
-	</entity_class>
-	
-	<entity_class name="enElementalStoneCrawler" extends="EN_Zombie_Template_Elemental_Crawler">
-		<property name="Tags" value="entity,zombie,stone"/>
-		<property name="ReplaceMaterial0" value="entities/resources/materials/rock_resource"/>
-		<property name="HandItem" value="enHand_elementalStoneCrawler"/>
-		<property name="SurfaceCategory" value="stone"/>
-		<property name="Mass" value="382"/>
-		<property name="Weight" value="157"/>
-		<property name="ExperienceGain" value="308"/> <!-- +40% -->
-		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="base_set" value="80"/>
-			<passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
-		</effect_group>
-	</entity_class>
-	
-	<entity_class name="enElementalStoneCrawlerFeral" extends="enElementalStoneCrawler">
-		<property name="Tags" value="entity,zombie,stone"/>
-		<property name="HandItem" value="enHand_elementalStoneCrawlerFeral"/>
-		<property name="PainResistPerHit" value=".9"/>
-		<property name="ExperienceGain" value="560"/> <!-- +40% -->
-		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
-		</effect_group>
-	</entity_class>
-	
-	<entity_class name="enElementalIronWalker" extends="EN_Zombie_Template_Elemental">
-		<property name="Tags" value="entity,zombie,walker,metal"/>
-		<property name="ReplaceMaterial0" value="entities/resources/materials/oreironboulder"/>
-		<property name="HandItem" value="enHand_elementalIron"/>
-		<property name="SurfaceCategory" value="metal"/>
-		<property name="Mass" value="425"/>
-		<property name="Weight" value="175"/>
-		<property name="PainResistPerHit" value=".75"/>
-		<property name="ExperienceGain" value="619"/> <!-- +50% -->
-		<effect_group name="Base Effects">	
-			<passive_effect name="HealthMax" operation="base_set" value="150"/>
-			<passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
-		</effect_group>
-	</entity_class>
-	
-	<entity_class name="enElementalIronWalkerFeral" extends="enElementalIronWalker">
-		<property name="Tags" value="entity,zombie,feral,metal"/>
-		<property name="HandItem" value="enHand_elementalIronFeral"/>
-		<property name="PainResistPerHit" value=".95"/>
-		<property name="ExperienceGain" value="1125"/> <!-- +50% -->
-		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
-		</effect_group>
-	</entity_class>
-	
 	<entity_class name="enElementalIronCrawler" extends="EN_Zombie_Template_Elemental_Crawler">
 		<property name="Tags" value="entity,zombie,metal"/>
 		<property name="ReplaceMaterial0" value="entities/resources/materials/oreironboulder"/>
@@ -1793,6 +1693,9 @@ By default, zombie HP varies from -20% to +15% of base value. Changing this to g
 		<property name="SurfaceCategory" value="metal"/>
 		<property name="Mass" value="425"/>
 		<property name="Weight" value="175"/>
+		<property name="DismemberMultiplierHead" value="0"/>
+		<property name="DismemberMultiplierArms" value="0"/>
+		<property name="DismemberMultiplierLegs" value="0"/>
 		<property name="PainResistPerHit" value=".75"/>
 		<property name="ExperienceGain" value="330"/> <!-- +50% -->
 		<effect_group name="Base Effects">
@@ -1811,14 +1714,62 @@ By default, zombie HP varies from -20% to +15% of base value. Changing this to g
 		</effect_group>
 	</entity_class>
 	
+	<entity_class name="enElementalIronWalker" extends="EN_Zombie_Template_Elemental">
+		<property name="Tags" value="entity,zombie,walker,metal"/>
+		<property name="ReplaceMaterial0" value="entities/resources/materials/oreironboulder"/>
+		<property name="HandItem" value="enHand_elementalIron"/>
+		<property name="SurfaceCategory" value="metal"/>
+		<property name="Mass" value="425"/>
+		<property name="Weight" value="175"/>
+		<property name="DismemberMultiplierHead" value="0"/>
+		<property name="DismemberMultiplierArms" value="0"/>
+		<property name="DismemberMultiplierLegs" value="0"/>
+		<property name="PainResistPerHit" value=".75"/>
+		<property name="ExperienceGain" value="619"/> <!-- +50% -->
+		<effect_group name="Base Effects">	
+			<passive_effect name="HealthMax" operation="base_set" value="150"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enElementalIronWalkerFeral" extends="enElementalIronWalker">
+		<property name="Tags" value="entity,zombie,feral,metal"/>
+		<property name="HandItem" value="enHand_elementalIronFeral"/>
+		<property name="PainResistPerHit" value=".95"/>
+		<property name="ExperienceGain" value="1125"/> <!-- +50% -->
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enElementalOrganicCrawler" extends="zombieSteveCrawler">
+		<property name="Tags" value="entity,zombie"/>
+		<property name="HandItem" value="enHand_elementalOrganicCrawler"/>
+		<property name="ReplaceMaterial0" value="entities/animals/boar/materials/grace"/>
+		<property name="ExperienceGain" value="220"/> <!-- default -->
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="80"/> <!-- default -->
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enElementalOrganicCrawlerFeral" extends="enElementalOrganicCrawler">
+		<property name="Tags" value="entity,zombie"/>
+		<property name="HandItem" value="enHand_elementalOrganicCrawlerFeral"/>
+		<property name="PainResistPerHit" value=".7"/>
+		<property name="ExperienceGain" value="400"/> <!-- default -->
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
+		</effect_group>
+	</entity_class>
+	
 	<entity_class name="enElementalRadiatedWalker" extends="EN_Zombie_Template_Elemental">
 		<property name="Tags" value="entity,zombie,walker,metal"/>
 		<property name="ReplaceMaterial0" value="entities/resources/materials/orecoalboulder"/>
 		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
 		<property name="SizeScale" value="1.2"/>
-		<property name="DismemberMultiplierHead" value="0.0"/>
-		<property name="DismemberMultiplierArms" value=".2"/>
-		<property name="DismemberMultiplierLegs" value=".2"/>
+		<property name="DismemberMultiplierHead" value="0"/>
+		<property name="DismemberMultiplierArms" value="0"/>
+		<property name="DismemberMultiplierLegs" value="0"/>
 		<property name="HandItem" value="enHand_elementalStone"/>
 		<property name="SurfaceCategory" value="stone"/>
 		<property name="MoveSpeedAggro" value="0.08, 0.08"/>
@@ -1833,6 +1784,114 @@ By default, zombie HP varies from -20% to +15% of base value. Changing this to g
 			<passive_effect name="HealthMax" operation="base_set" value="280"/>
 			<passive_effect name="PhysicalDamageResist" operation="base_set" value="55"/>
 			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffRadiationAura"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enElementalSandCrawler" extends="EN_Zombie_Template_Elemental_Crawler">
+		<property name="Tags" value="entity,zombie,sand"/>
+		<property name="ReplaceMaterial0" value="entities/sandbags/sandbag"/>
+		<property name="HandItem" value="enHand_elementalSandCrawler"/>
+		<property name="SurfaceCategory" value="earth"/>
+		<property name="Mass" value="340"/>
+		<property name="Weight" value="140"/>
+		<property name="DismemberMultiplierHead" value="0"/>
+		<property name="DismemberMultiplierArms" value="0"/>
+		<property name="DismemberMultiplierLegs" value="0"/>
+		<property name="ExperienceGain" value="286"/> <!-- +30% -->
+		<effect_group name="Base Effects">	
+			<passive_effect name="HealthMax" operation="base_set" value="80"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_set" value="30"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enElementalSandCrawlerFeral" extends="enElementalSandCrawler">
+		<property name="Tags" value="entity,zombie,sand"/>
+		<property name="HandItem" value="enHand_elementalSandCrawlerFeral"/>
+		<property name="PainResistPerHit" value=".9"/>
+		<property name="ExperienceGain" value="520"/> <!-- +30% -->
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enElementalSandWalker" extends="EN_Zombie_Template_Elemental">
+		<property name="Tags" value="entity,zombie,walker,sand"/>
+		<property name="ReplaceMaterial0" value="entities/sandbags/sandbag"/>
+		<property name="HandItem" value="enHand_elementalSand"/>
+		<property name="SurfaceCategory" value="earth"/>
+		<property name="Mass" value="340"/>
+		<property name="Weight" value="140"/>
+		<property name="DismemberMultiplierHead" value="0"/>
+		<property name="DismemberMultiplierArms" value="0"/>
+		<property name="DismemberMultiplierLegs" value="0"/>
+		<property name="ExperienceGain" value="536"/> <!-- +30% -->
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="150"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_set" value="30"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enElementalSandWalkerFeral" extends="enElementalSandWalker">
+		<property name="Tags" value="entity,zombie,feral,sand"/>
+		<property name="HandItem" value="enHand_elementalSandFeral"/>
+		<property name="PainResistPerHit" value=".9"/>
+		<property name="ExperienceGain" value="975"/> <!-- +30% -->
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enElementalStoneCrawler" extends="EN_Zombie_Template_Elemental_Crawler">
+		<property name="Tags" value="entity,zombie,stone"/>
+		<property name="ReplaceMaterial0" value="entities/resources/materials/rock_resource"/>
+		<property name="HandItem" value="enHand_elementalStoneCrawler"/>
+		<property name="SurfaceCategory" value="stone"/>
+		<property name="Mass" value="382"/>
+		<property name="Weight" value="157"/>
+		<property name="DismemberMultiplierHead" value="0"/>
+		<property name="DismemberMultiplierArms" value="0"/>
+		<property name="DismemberMultiplierLegs" value="0"/>
+		<property name="ExperienceGain" value="308"/> <!-- +40% -->
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="80"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enElementalStoneCrawlerFeral" extends="enElementalStoneCrawler">
+		<property name="Tags" value="entity,zombie,stone"/>
+		<property name="HandItem" value="enHand_elementalStoneCrawlerFeral"/>
+		<property name="PainResistPerHit" value=".9"/>
+		<property name="ExperienceGain" value="560"/> <!-- +40% -->
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enElementalStoneWalker" extends="EN_Zombie_Template_Elemental">
+		<property name="Tags" value="entity,zombie,walker,stone"/>
+		<property name="ReplaceMaterial0" value="entities/resources/materials/rock_resource"/>
+		<property name="HandItem" value="enHand_elementalStone"/>
+		<property name="SurfaceCategory" value="stone"/>
+		<property name="Mass" value="382"/>
+		<property name="Weight" value="157"/>
+		<property name="DismemberMultiplierHead" value="0"/>
+		<property name="DismemberMultiplierArms" value="0"/>
+		<property name="DismemberMultiplierLegs" value="0"/>
+		<property name="ExperienceGain" value="578"/> <!-- +40% -->
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="150"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enElementalStoneWalkerFeral" extends="enElementalStoneWalker">
+		<property name="Tags" value="entity,zombie,feral,stone"/>
+		<property name="HandItem" value="enHand_elementalStoneFeral"/>
+		<property name="PainResistPerHit" value=".9"/>
+		<property name="ExperienceGain" value="1050"/> <!-- +40% -->
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
 		</effect_group>
 	</entity_class>
 	
@@ -2373,7 +2432,7 @@ By default, zombie HP varies from -20% to +15% of base value. Changing this to g
 		<property name="SizeScale" value="0.84"/>
 		<property name="ExperienceGain" value="240"/>
 		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="perc_set" value="1.3"/>
+			<passive_effect name="HealthMax" operation="base_set" value="65"/>
 		</effect_group>
 	</entity_class>
 	
@@ -2382,7 +2441,7 @@ By default, zombie HP varies from -20% to +15% of base value. Changing this to g
 		<property name="Archetype" value="en_forestGoblin3"/>
 		<property name="ExperienceGain" value="220"/>
 		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="perc_set" value="1.1"/>
+			<passive_effect name="HealthMax" operation="base_set" value="55"/>
 		</effect_group>
 	</entity_class>
 	
@@ -2776,42 +2835,6 @@ By default, zombie HP varies from -20% to +15% of base value. Changing this to g
 		<effect_group name="Base Effects" id="regen5">
 			<passive_effect name="HealthMax" operation="perc_set" value="2.6,2.8"/>
 		</effect_group>		
-	</entity_class>
-	
-	<entity_class name="enWildlingFemale1" extends="EN_Zombie_Template_Female1">
-		<property name="Tags" value="entity,zombie,walker,umazombie"/>
-		<property name="HandItem" value="enHand_wildlingFemale"/>
-		<property name="HandItemCrawler" value="enHand_wildlingCrawler"/>
-		<property name="Archetype" value="en_wildlingFemale1"/>
-		<property name="SizeScale" value="0.98"/>
-		<property name="WalkType" value="7"/>
-		<property name="MoveSpeedAggro" value="1.15, 1.35"/>
-		<property name="ExperienceGain" value="265"/>
-		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="base_set" value="90"/>
-		</effect_group>
-	</entity_class>
-	
-	<entity_class name="enWildlingFemale1Feral" extends="enWildlingFemale1">
-		<property name="Tags" value="entity,zombie,walker,umazombie,feral"/>
-		<property name="HandItem" value="enHand_wildlingFemaleFeral"/>
-		<property name="Archetype" value="en_wildlingFemale1Feral"/>
-		<property name="PainResistPerHit" value=".7"/>	
-		<property name="ExperienceGain" value="470"/>
-		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
-		</effect_group>
-	</entity_class>
-	
-	<entity_class name="enWildlingFemale1Radiated" extends="enWildlingFemale1Feral">
-		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated"/>
-		<property name="HandItem" value="enHand_wildlingFemaleRadiated"/>
-		<property name="Archetype" value="en_wildlingFemale1Radiated"/>
-		<property name="PainResistPerHit" value=".9"/>	
-		<property name="ExperienceGain" value="750"/>
-		<effect_group name="Base Effects" id="regen5">
-			<passive_effect name="HealthMax" operation="perc_set" value="2.6,2.8"/>
-		</effect_group>
 	</entity_class>
 	
 	<entity_class name="enHazmatFemale1" extends="EN_Zombie_Template_Female2">
@@ -3358,7 +3381,6 @@ By default, zombie HP varies from -20% to +15% of base value. Changing this to g
 		</effect_group>
 	</entity_class>
 	
-	
 	<entity_class name="enLumberjack1" extends="EN_Zombie_Template_Lumberjack">
 		<property name="Tags" value="entity,zombie,walker,umazombie"/>
 		<property name="HandItem" value="enHand_lumberjack"/>
@@ -3516,6 +3538,7 @@ By default, zombie HP varies from -20% to +15% of base value. Changing this to g
 			<passive_effect name="HealthMax" operation="perc_set" value="2.6,2.8"/>
 		</effect_group>
 	</entity_class>
+	
 	
 	<entity_class name="enPatientFemale1" extends="EN_Zombie_Template_Female1">
 		<property name="Tags" value="entity,zombie,walker,umazombie"/>
@@ -4392,7 +4415,7 @@ By default, zombie HP varies from -20% to +15% of base value. Changing this to g
 		<property name="SizeScale" value="0.84"/>
 		<property name="ExperienceGain" value="280"/>
 		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="perc_set" value="1.3"/>
+			<passive_effect name="HealthMax" operation="base_set" value="85"/>
 		</effect_group>
 	</entity_class>
 	
@@ -4401,7 +4424,7 @@ By default, zombie HP varies from -20% to +15% of base value. Changing this to g
 		<property name="Archetype" value="en_snowGoblin3"/>
 		<property name="ExperienceGain" value="260"/>
 		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="perc_set" value="1.1"/>
+			<passive_effect name="HealthMax" operation="base_set" value="72"/>
 		</effect_group>
 	</entity_class>
 	
@@ -5647,7 +5670,7 @@ By default, zombie HP varies from -20% to +15% of base value. Changing this to g
 		<property name="SizeScale" value="0.84"/>
 		<property name="ExperienceGain" value="320"/>
 		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="perc_set" value="1.3"/>
+			<passive_effect name="HealthMax" operation="base_set" value="98"/>
 			<passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
 			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="WastelandGoblinDeco"/>
 		</effect_group>
@@ -5658,7 +5681,7 @@ By default, zombie HP varies from -20% to +15% of base value. Changing this to g
 		<property name="Archetype" value="en_wastelandGoblin3"/>
 		<property name="ExperienceGain" value="300"/>
 		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="perc_set" value="1.1"/>
+			<passive_effect name="HealthMax" operation="base_set" value="83"/>
 			<passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
 			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="WastelandGoblinDeco"/>
 		</effect_group>
@@ -5840,6 +5863,41 @@ By default, zombie HP varies from -20% to +15% of base value. Changing this to g
 		</effect_group>		
 	</entity_class>	
 	
+	<entity_class name="enWildlingFemale1" extends="EN_Zombie_Template_Female1">
+		<property name="Tags" value="entity,zombie,walker,umazombie"/>
+		<property name="HandItem" value="enHand_wildlingFemale"/>
+		<property name="HandItemCrawler" value="enHand_wildlingCrawler"/>
+		<property name="Archetype" value="en_wildlingFemale1"/>
+		<property name="SizeScale" value="0.98"/>
+		<property name="WalkType" value="7"/>
+		<property name="MoveSpeedAggro" value="1.15, 1.35"/>
+		<property name="ExperienceGain" value="265"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="90"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enWildlingFemale1Feral" extends="enWildlingFemale1">
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral"/>
+		<property name="HandItem" value="enHand_wildlingFemaleFeral"/>
+		<property name="Archetype" value="en_wildlingFemale1Feral"/>
+		<property name="PainResistPerHit" value=".7"/>	
+		<property name="ExperienceGain" value="470"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="perc_set" value="1.9,2.1"/>
+		</effect_group>
+	</entity_class>
+	
+	<entity_class name="enWildlingFemale1Radiated" extends="enWildlingFemale1Feral">
+		<property name="Tags" value="entity,zombie,walker,umazombie,feral,radiated"/>
+		<property name="HandItem" value="enHand_wildlingFemaleRadiated"/>
+		<property name="Archetype" value="en_wildlingFemale1Radiated"/>
+		<property name="PainResistPerHit" value=".9"/>	
+		<property name="ExperienceGain" value="750"/>
+		<effect_group name="Base Effects" id="regen5">
+			<passive_effect name="HealthMax" operation="perc_set" value="2.6,2.8"/>
+		</effect_group>
+	</entity_class>
 	
 	
 	
@@ -6196,48 +6254,7 @@ By default, zombie HP varies from -20% to +15% of base value. Changing this to g
 		</effect_group>
 	</entity_class>
 	
-	<!-- Larger sized business man wielding a computer monitor -->
-	<entity_class name="enBusinessmanBoss" extends="zombieTemplateMale">
-		<property name="Tags" value="entity,zombie,walker,feral"/>
-		<property name="Mesh" value="#Entities/Zombies?Prefabs/ZSuit.prefab"/>
-		<property name="AvatarController" value="AvatarZombie01Controller"/>
-		<property name="ModelType" value="Standard"/>
-		<property name="WalkType" value="7"/>
-		<property name="SizeScale" value="1.30"/>
-		<property name="DismemberMultiplierHead" value="0.25"/>
-		<property name="DismemberMultiplierArms" value="0"/>
-		<property name="DismemberMultiplierLegs" value="0.25"/>
-		<property name="LegCrawlerThreshold" value="0"/>
-		<property name="HandItem" value="enHand_businessmanBoss1"/>
-		<property name="RootMotion" value="true"/>
-		<property name="TintMaterial1" value="255,0,0"/>
-		<property name="PainResistPerHit" value=".9"/>
-		<property name="MoveSpeedAggro" value="0.6, 0.6"/>
-		<property name="JumpMaxDistance" value="0.25, 0.5"/>
-		<property name="MaxViewAngle" value="200"/>
-		<property name="SightRange" value="100"/>
-		<property name="ExperienceGain" value="1500"/>
-		<property name="LootDropProb" value="1.0"/>
-		<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
-		<effect_group name="Base Effects" id="regen10">
-			<passive_effect name="HealthMax" operation="base_set" value="1050"/>
-			<passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
-			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="BusinessmanBossDeco"/>
-		</effect_group>
-		<property name="AITask-1" value="BreakBlock"/>
-		<property name="AITask-2" value="RangedAttackTarget" data="itemType=1;cooldown=1;duration=5"/>
-		<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,0,EntityPlayer"/>
-		<property name="AITask-4" value="ApproachSpot"/>
-		<property name="AITask-5" value="Look"/>
-		<property name="AITask-6" value="Wander"/>
-		<property name="AITask-7" value=""/>
-		<property name="SoundRandom" value="Enemies/Feral_Zombie/zombieferalroam"/>
-		<property name="SoundAlert" value="Enemies/Feral_Zombie/zombieferalalert"/>
-		<property name="SoundAttack" value="Enemies/Feral_Zombie/zombieferalattack"/>
-		<property name="SoundHurt" value="Enemies/Feral_Zombie/zombieferalpain"/>
-		<property name="SoundDeath" value="Enemies/Feral_Zombie/zombieferaldeath"/>
-		<property name="SoundSense" value="Enemies/Feral_Zombie/zombieferalsense"/>
-	</entity_class>
+	
 	
 	
 	<!-- Evil Scientist boss for Snufkin Addon, appears in "snufkin raid" quest -->
@@ -6253,6 +6270,8 @@ By default, zombie HP varies from -20% to +15% of base value. Changing this to g
 		<property name="MoveSpeed" value="1"/>
 		<property name="MoveSpeedAggro" value="2.5, 2.5"/>
 		<property name="MaxTurnSpeed" value="200"/>
+		<property name="MaxViewAngle" value="200"/>
+		<property name="SightRange" value="100"/>
 		<property name="DismemberMultiplierHead" value="0"/>
 		<property name="DismemberMultiplierArms" value="0"/>
 		<property name="DismemberMultiplierLegs" value="0"/>
@@ -6292,13 +6311,319 @@ By default, zombie HP varies from -20% to +15% of base value. Changing this to g
 		<property name="SoundSense" value="Enemies/Feral_Zombie/zombieferalsense"/>
 		<property name="SoundFootstepModifier" value="Enemies/Feral_Zombie/zombieferalfootstep"/>
 		<property name="SoundSpawn" value="Ambient_Loops/drone_idle_hover"/>
-		
+	</entity_class>
+	
+	<!-- forest biome boss - radiated stag -->
+	<entity_class name="enForestBoss" extends="animalTemplateTimid">
+		<property name="Tags" value="entity,animal,deer,boss,perkAT02,perkAT03"/>
+		<property name="MapIcon" value="ui_game_symbol_tracking_deer"/>
+		<property name="TrackerIcon" value="ui_game_symbol_tracking_deer"/>
+		<property name="NavObject" value="animaltracking_stag" />
+		<property name="AvatarController" value="AvatarAnimalController"/>
+		<property name="ModelType" value="Standard"/>
+		<property name="Prefab" value="/Entities/Animals/Deer/animalDeerStagRagdoll"/>
+		<property name="ReplaceMaterial0" value="entities/animals/boar/materials/grace"/>
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+		<property name="SizeScale" value="1.8"/>
+		<property name="HandItem" value="enHand_forestBoss"/>
+		<property name="Parent" value="Animals"/>
+		<property name="HasDeathAnim" value="true"/>
+		<property name="HasRagdoll" value="true"/>
+		<property name="RootMotion" value="true"/>
+		<property name="RotateToGround" value="true"/>
+		<property name="Faction" value="animals"/>
+		<property name="PhysicsBody" value="Doe"/>
+		<property name="Mass" value="360"/> <!-- 2x higher from default -->
+		<property name="Weight" value="140"/> <!-- 2x higher from default -->
+		<property name="DismemberMultiplierHead" value="0"/>
+		<property name="DismemberMultiplierArms" value="0"/>
+		<property name="DismemberMultiplierLegs" value="0"/>
+		<property name="SurfaceCategory" value="organic"/>
+		<property name="ParticleOnDeath" value="blood_death"/>
+		<property name="SightRange" value="30"/>
+		<property name="PainResistPerHit" value=".90"/>
+		<property name="MaxTurnSpeed" value="300"/>
+		<property name="MoveSpeed" value="1.3"/>
+		<property name="MoveSpeedPanic" value="1.3"/>
+		<property name="SwimSpeed" value="1.2"/>
+		<property name="SwimStrokeRate" value="1.2,1.4"/>
+		<property name="StompsSpikes" value="true"/>
+		<property name="AITask-1" value="BreakBlock"/>
+		<property name="AITask-2" value="Territorial"/>
+		<property name="AITask-3" value="ApproachSpot"/>
+		<property name="AITask-4" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityPlayer,0"/>
+		<property name="AITask-5" value="RunawayWhenHurt" data="runChance=0.2;healthPer=0.3;healthPerMax=0.6"/>
+		<property name="AITask-6" value="Look"/>
+		<property name="AITask-7" value="Wander"/>
+		<property name="AITask-8" value=""/>
+		<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityNPC,EntityPlayer"/>
+		<property name="AITarget-2" value="BlockingTargetTask"/>
+		<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityNPC,0,0,EntityPlayer,0,0"/>
+		<property name="AITarget-4" value=""/>		
+		<property name="ExperienceGain" value="2500"/>
+		<property name="TimeStayAfterDeath" value="500"/>
+		<property name="DeadBodyHitPoints" value="700"/>
+		<drop event="Harvest" name="foodRottingFlesh" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="50"/>
+		<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="12"/>
+		<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
+		<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="10"/>
+		<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
+		<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+		<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+		<effect_group name="Base Effects" id="regen10">
+			<passive_effect name="HealthMax" operation="base_set" value="1800"/>
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffRadiationAura8"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_set" value="35"/>
+			<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+		</effect_group>
+		<property name="SoundHurt" value="Animals/Bear/bearpain"/>
+		<property name="SoundDeath" value="Animals/Bear/beardeath"/>
+		<property name="SoundRandom" value="Animals/Bear/bearroam"/>
+		<property name="SoundSense" value="Animals/Bear/bearsense"/>
+		<property name="SoundAlert" value="Animals/Bear/bearalert"/>
+		<property name="SoundAttack" value="Animals/Bear/bearattack"/>
+		<property name="SoundFootstepModifier" value="Animals/Bear/bear_footstep"/>
+		<property name="SoundGiveUp" value="Animals/Bear/beargiveup"/>
+	</entity_class>
+	
+	<!-- desert biome boss - vomiting sandman -->
+	<entity_class name="enDesertBoss" extends="EN_Zombie_Template_Elemental">
+		<property name="Tags" value="entity,zombie,walker,boss,desertboss"/>
+		<property name="Mesh" value="#Entities/Zombies?Prefabs/ZBurnt.prefab"/>
+		<property name="ReplaceMaterial0" value="entities/resources/materials/rock_resource"/>
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+		<property name="HandItem" value="enHand_desertBoss"/>
+		<property name="SurfaceCategory" value="stone"/>
+		<property name="SizeScale" value="1.8"/>
+		<property name="WalkType" value="7"/>
+		<property name="DismemberMultiplierHead" value="0"/>
+		<property name="DismemberMultiplierArms" value="0"/>
+		<property name="DismemberMultiplierLegs" value="0"/>
+		<property name="PainResistPerHit" value="10.0"/>
+		<property name="MaxTurnSpeed" value="100"/>
+		<property name="MoveSpeed" value="0.06"/>
+		<property name="MoveSpeedAggro" value="0.08, 0.08"/>
+		<property name="MoveSpeedRand" value="0, 0"/>
+		<property name="MoveSpeedPanic" value="0.08"/>
+		<property name="SwimSpeed" value="0.08"/>
+		<property name="SwimStrokeRate" value="0.08,0.08"/>
+		<property name="CanClimbLadders" value="false"/>
+		<property name="JumpMaxDistance" value="1.0, 1.0"/>
+		<property name="StompsSpikes" value="true"/>
+		<property name="Mass" value="650"/>
+		<property name="Weight" value="300"/>
+		<property name="ExperienceGain" value="4000"/>
+		<effect_group name="Base Effects" id="regen5">
+			<passive_effect name="HealthMax" operation="base_set" value="1600"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_set" value="30"/>
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffRadiationAura"/>
+			<passive_effect name="BuffResistance" operation="base_set" value="1" tags="buffBurningZombie,buffBurningElement,buffBurningEnvironment,buffBurningEnvironmentHack,buffBurningFlamingArrow,buffBurningMolotov,buffIsOnFire,buffBurningWeapon"/>
+			<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+		</effect_group>
+		<property name="AITask-1" value="BreakBlock"/>
+		<property name="AITask-2" value="RangedAttackTarget" data="itemType=1;cooldown=1;duration=5"/>
+		<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityPlayer,0"/>
+		<property name="AITask-4" value="ApproachSpot"/>
+		<property name="AITask-5" value="Look"/>
+		<property name="AITask-6" value="Wander"/>
+		<property name="AITask-7" value=""/>
+		<property name="SoundRandom" value="Enemies/Burnt_Zombie/zombieburntroam"/>
+		<property name="SoundAlert" value="Enemies/Burnt_Zombie/zombieburntalert"/>
+		<property name="SoundAttack" value="Enemies/Burnt_Zombie/zombieburntattack"/>
+		<property name="SoundHurt" value="Enemies/Burnt_Zombie/zombieburntpain"/>
+		<property name="SoundDeath" value="Enemies/Burnt_Zombie/zombieburntdeath"/>
+		<property name="SoundSense" value="Enemies/Burnt_Zombie/zombieburntsense"/>
 	</entity_class>
 	
 	
+	<!-- snow biome boss - vomiting snowman -->
+	<entity_class name="enSnowBoss" extends="EN_Zombie_Template_Elemental">
+		<property name="Tags" value="entity,zombie,walker,boss,desertboss"/>
+		<property name="Mesh" value="#Entities/Zombies?Prefabs/ZHawaiian.prefab"/>
+		<property name="ReplaceMaterial0" value="#Other/Items?Misc/snowballPrefab/materials/snowball"/>
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+		<property name="HandItem" value="enHand_snowBoss"/>
+		<property name="SurfaceCategory" value="stone"/>
+		<property name="SizeScale" value="1.8"/>
+		<property name="WalkType" value="1"/>
+		<property name="DismemberMultiplierHead" value="0"/>
+		<property name="DismemberMultiplierArms" value="0"/>
+		<property name="DismemberMultiplierLegs" value="0"/>
+		<property name="PainResistPerHit" value="10.0"/>
+		<property name="MaxTurnSpeed" value="100"/>
+		<property name="MoveSpeed" value="0.06"/>
+		<property name="MoveSpeedAggro" value="0.08, 0.08"/>
+		<property name="MoveSpeedRand" value="0, 0"/>
+		<property name="MoveSpeedPanic" value="0.08"/>
+		<property name="SwimSpeed" value="0.08"/>
+		<property name="SwimStrokeRate" value="0.08,0.08"/>
+		<property name="CanClimbLadders" value="false"/>
+		<property name="JumpMaxDistance" value="1.0, 1.0"/>
+		<property name="StompsSpikes" value="true"/>
+		<property name="Mass" value="650"/>
+		<property name="Weight" value="300"/>
+		<property name="ExperienceGain" value="4000"/>
+		<effect_group name="Base Effects" id="regen5">
+			<passive_effect name="HealthMax" operation="base_set" value="1600"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_set" value="30"/>
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffRadiationAura8"/>
+			<passive_effect name="BuffResistance" operation="base_set" value="1" tags="buffBurningZombie,buffBurningElement,buffBurningEnvironment,buffBurningEnvironmentHack,buffBurningFlamingArrow,buffBurningMolotov,buffIsOnFire,buffBurningWeapon"/>
+			<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+		</effect_group>
+		<property name="AITask-1" value="BreakBlock"/>
+		<property name="AITask-2" value="RangedAttackTarget" data="itemType=1;cooldown=1;duration=5"/>
+		<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityPlayer,0"/>
+		<property name="AITask-4" value="ApproachSpot"/>
+		<property name="AITask-5" value="Look"/>
+		<property name="AITask-6" value="Wander"/>
+		<property name="AITask-7" value=""/>
+		<property name="SoundRandom" value="Enemies/Acid_Puking_Hulk/hulkroam"/>
+		<property name="SoundAlert" value="Enemies/Acid_Puking_Hulk/hulkalert"/>
+		<property name="SoundAttack" value="Enemies/Acid_Puking_Hulk/hulkattack"/>
+		<property name="SoundHurt" value="Enemies/Acid_Puking_Hulk/hulkpain"/>
+		<property name="SoundDeath" value="Enemies/Acid_Puking_Hulk/hulkdeath"/>
+		<property name="SoundSense" value="Enemies/Acid_Puking_Hulk/hulksense"/>
+	</entity_class>
+	
+	<!-- burnt biome boss - flaming zombie -->
+	<entity_class name="enBurntBoss" extends="EN_Zombie_Template_Elemental">
+		<property name="Tags" value="entity,zombie,walker,boss,desertboss"/>
+		<property name="Mesh" value="#Entities/Zombies?Prefabs/ZMutated.prefab"/>
+		<property name="ReplaceMaterial0" value="itemmodeffects/materials/melee_fire"/>
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+		<property name="HandItem" value="enHand_burntBoss"/>
+		<property name="SurfaceCategory" value="stone"/>
+		<property name="SizeScale" value="2.2"/>
+		<property name="WalkType" value="6"/>
+		<property name="DismemberMultiplierHead" value="0"/>
+		<property name="DismemberMultiplierArms" value="0"/>
+		<property name="DismemberMultiplierLegs" value="0"/>
+		<property name="PainResistPerHit" value="10.0"/>
+		<property name="MaxTurnSpeed" value="100"/>
+		<property name="MoveSpeed" value="0.8"/>
+		<property name="MoveSpeedAggro" value="0.8, 0.8"/>
+		<property name="MoveSpeedRand" value="0,0"/>
+		<property name="MoveSpeedPanic" value="0.8"/>
+		<property name="SwimSpeed" value="0.8"/>
+		<property name="SwimStrokeRate" value="0.7,0.7"/>
+		<property name="CanClimbLadders" value="false"/>
+		<property name="JumpMaxDistance" value="15.0, 20.0"/>
+		<property name="StompsSpikes" value="true"/>
+		<property name="Mass" value="300"/>
+		<property name="Weight" value="150"/>
+		<property name="ExperienceGain" value="4000"/>
+		<effect_group name="Base Effects" id="regen5">
+			<passive_effect name="HealthMax" operation="base_set" value="1600"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_set" value="30"/>
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffRadiationAura8"/>
+			<passive_effect name="BuffResistance" operation="base_set" value="1" tags="buffBurningZombie,buffBurningElement,buffBurningEnvironment,buffBurningEnvironmentHack,buffBurningFlamingArrow,buffBurningMolotov,buffIsOnFire,buffBurningWeapon"/>
+			<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+		</effect_group>
+		<property name="AITask-1" value="Leap"/>
+		<property name="AITask-2" value="BreakBlock"/>
+		<property name="AITask-3" value="RangedAttackTarget" data="itemType=1;cooldown=1;duration=5"/>
+		<property name="AITask-4" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityPlayer,0"/>
+		<property name="AITask-5" value="ApproachSpot"/>
+		<property name="AITask-6" value="Look"/>
+		<property name="AITask-7" value="Wander"/>
+		<property name="AITask-8" value=""/>
+		<property name="SoundRandom" value="Enemies/Burnt_Zombie/zombieburntroam"/>
+		<property name="SoundAlert" value="Enemies/Burnt_Zombie/zombieburntalert"/>
+		<property name="SoundAttack" value="Enemies/Burnt_Zombie/zombieburntattack"/>
+		<property name="SoundHurt" value="Enemies/Burnt_Zombie/zombieburntpain"/>
+		<property name="SoundDeath" value="Enemies/Burnt_Zombie/zombieburntdeath"/>
+		<property name="SoundSense" value="Enemies/Burnt_Zombie/zombieburntsense"/>
+	</entity_class>
+	
+	<!-- wasteland biome boss - rocket demolition -->
+	<entity_class name="enWastelandBoss" extends="EN_Zombie_Template_Elemental">
+		<property name="Tags" value="entity,zombie,walker,boss,metal"/>
+		<property name="Class" value="EntityZombieCop"/>
+		<property name="Mesh" value="#Entities/Zombies?Prefabs/ZDemolition.prefab"/>
+		<property name="ReplaceMaterial0" value="entities/electrical/materials/flamethrowertrap"/>	
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+		<property name="SizeScale" value="1.8"/>
+		<property name="SurfaceCategory" value="metal"/>
+		<property name="WalkType" value="2"/>
+		<property name="DismemberMultiplierHead" value="0"/>
+		<property name="DismemberMultiplierArms" value="0"/>
+		<property name="DismemberMultiplierLegs" value="0"/>
+		<property name="PainResistPerHit" value="10.0"/>
+		<property name="MaxTurnSpeed" value="200"/>
+		<property name="MoveSpeed" value="0.5"/>
+		<property name="MoveSpeedAggro" value="0.5, 0.5"/>
+		<property name="MoveSpeedRand" value="0,0"/>
+		<property name="MoveSpeedPanic" value="0.5"/>
+		<property name="SwimSpeed" value="0.5"/>
+		<property name="SwimStrokeRate" value="0.4,0.4"/>
+		<property name="CanClimbLadders" value="false"/>
+		<property name="JumpMaxDistance" value="1.0, 1.0"/>
+		<property name="StompsSpikes" value="true"/>
+		<property name="HandItem" value="enHand_wastelandBoss"/>
+		<property name="Explosion.ParticleIndex" value="2"/>
+		<property name="Explosion.RadiusBlocks" value="10"/>
+		<property name="Explosion.RadiusEntities" value="10"/>
+		<property name="Explosion.BlockDamage" value="1"/>
+		<property name="Explosion.EntityDamage" value="1"/>
+		<property name="Explosion.DamageBonus.earth" value="0.0"/>
+		<property name="SoundExplodeWarn" value="demolitionzexplodewarning"/>
+		<property name="SoundTick" value="demolitionz_beep,.5,.9"/>
+		<property name="ExplodeHealthThreshold" value="0.1"/>
+		
+		<property name="Mass" value="700"/>
+		<property name="Weight" value="350"/>
+		<property name="ExperienceGain" value="1"/>
+		<effect_group name="Base Effects" id="regen10">
+			<passive_effect name="HealthMax" operation="base_set" value="3000"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffRadiationAura8"/>
+			<passive_effect name="BuffResistance" operation="base_set" value="1" tags="buffBurningZombie,buffBurningElement,buffBurningEnvironment,buffBurningEnvironmentHack,buffBurningFlamingArrow,buffBurningMolotov,buffIsOnFire,buffBurningWeapon"/>
+			<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="enDecoTurrets"/>
+		</effect_group>
+		<property name="AITask-1" value="BreakBlock"/>
+		<property name="AITask-2" value="RangedAttackTarget" data="itemType=1;cooldown=1;duration=5"/>
+		<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityPlayer,0"/>
+		<property name="AITask-4" value="ApproachSpot"/>
+		<property name="AITask-5" value="Look"/>
+		<property name="AITask-6" value="Wander"/>
+		<property name="AITask-7" value=""/>
+		<property name="SoundRandom" value="demolitionzroam"/>
+		<property name="SoundAlert" value="demolitionzalert"/>
+		<property name="SoundAttack" value="demolitionzattack"/>
+		<property name="SoundHurt" value="demolitionzpain"/>
+		<property name="SoundDeath" value="demolitionzdeath"/>
+		<property name="SoundSense" value="demolitionzsense"/>
+	</entity_class>
+
+
+	<!-- final boss - explosive diamond mutant -->
+
+	<entity_class name="enFinalBoss" extends="zombieMutated">
+		<property name="Tags" value="entity,zombie,walker,boss,metal"/>
+		<property name="ReplaceMaterial0" value="entities/electrical/materials/spotlight"/>	
+		<property name="SizeScale" value="1.9"/>
+		<property name="SurfaceCategory" value="stone"/>
+		<property name="MaxTurnSpeed" value="180"/>
+		<property name="MoveSpeed" value="0.4"/>
+		<property name="MoveSpeedAggro" value="0.4, 0.4"/>
+		<property name="MoveSpeedRand" value="0,0"/>
+		<property name="MoveSpeedPanic" value="0.4"/>
+		<property name="SwimSpeed" value="0.4"/>
+		<property name="SwimStrokeRate" value="0.4,0.4"/>
+		<property name="CanClimbLadders" value="false"/>
+		<property name="JumpMaxDistance" value="1.0, 1.0"/>
+		<property name="StompsSpikes" value="true"/>
+		<property name="WalkType" value="1"/>
+		<property name="HandItem" value="enHand_finalBoss"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="4500"/>
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="enDecoSparksHands"/>		
+		</effect_group>
+	</entity_class>
 	
 
-	
 	
 	<!-- ************************************************************* -->
 	<!-- * Vanilla Player Archetypes TURNED UMA Zombies! by KHzMusik * -->
