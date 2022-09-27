@@ -1,4 +1,4 @@
-<config>
+<ErrorNull>
 
 <append xpath="/archetypes">		
 
@@ -29197,101 +29197,604 @@
 
 <!-- Test Zombies: they do not spawn in the game -->		
 
-<archetype name="en_testWhite1" skin_color="255,255,255">
+<archetype name="en_test-01" skin_color="255,255,255" hair_color="100,80,60">
 	<base_mesh_parts>
-		<part slot="head" layer="base" mesh="male_base_face"><texture name="male_head" color="skin"/></part>
-		<part slot="eyes" layer="base" mesh="male_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
-		<part slot="chest" layer="base" mesh="male_base_chest"><texture name="male_torso" color="skin"/></part>
-		<part slot="hands" layer="base" mesh="male_base_hands"><texture name="male_hands" color="skin"/></part>
-		<part slot="legs" layer="base" mesh="male_base_legs"><texture name="male_legs" color="skin" /></part>
-		<part mesh="male_base_feet" slot="feet" layer="base" ><texture name="male_feet" color="skin" /></part>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="unisex_hair_pete" >
+			<texture name="female_shaggy_hair" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
 	</base_mesh_parts>
-	<dna><gene name="height" value="1.4"/></dna>
-	<dna><gene name="weight" value="0.0"/></dna>
 </archetype>
 
-<archetype name="en_testWhite2" skin_color="255,255,255">
+<archetype name="en_test-02" skin_color="255,255,255" hair_color="100,80,60">
 	<base_mesh_parts>
-		<part slot="head" layer="base" mesh="male_base_face"><texture name="male_head" color="skin"/></part>
-		<part slot="eyes" layer="base" mesh="male_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
-		<part slot="chest" layer="base" mesh="male_base_chest"><texture name="male_torso" color="skin"/></part>
-		<part slot="hands" layer="base" mesh="male_base_hands"><texture name="male_hands" color="skin"/></part>
-		<part slot="legs" layer="base" mesh="male_base_legs"><texture name="male_legs" color="skin" /></part>
-		<part mesh="male_base_feet" slot="feet" layer="base" ><texture name="male_feet" color="skin" /></part>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="unisex_hair_pete" >
+			<texture name="unisex_hair_afro" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
 	</base_mesh_parts>
-	<dna><gene name="height" value="1.4"/></dna>
-	<dna><gene name="weight" value="0.5"/></dna>
 </archetype>
 
-<archetype name="en_testWhite3" skin_color="255,255,255">
+<archetype name="en_test-03" skin_color="255,255,255" hair_color="100,80,60">
 	<base_mesh_parts>
-		<part slot="head" layer="base" mesh="male_base_face"><texture name="male_head" color="skin"/></part>
-		<part slot="eyes" layer="base" mesh="male_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
-		<part slot="chest" layer="base" mesh="male_base_chest"><texture name="male_torso" color="skin"/></part>
-		<part slot="hands" layer="base" mesh="male_base_hands"><texture name="male_hands" color="skin"/></part>
-		<part slot="legs" layer="base" mesh="male_base_legs"><texture name="male_legs" color="skin" /></part>
-		<part mesh="male_base_feet" slot="feet" layer="base" ><texture name="male_feet" color="skin" /></part>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="unisex_hair_pete" >
+			<texture name="unisex_hair_dreads_hat" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
 	</base_mesh_parts>
-	<dna><gene name="height" value="1.4"/></dna>
-	<dna><gene name="weight" value="0.8"/></dna>
 </archetype>
 
-<archetype name="en_testWhite4" skin_color="255,255,255">
+<archetype name="en_test-04" skin_color="255,255,255" hair_color="100,80,60">
 	<base_mesh_parts>
-		<part slot="head" layer="base" mesh="male_base_face"><texture name="male_head" color="skin"/></part>
-		<part slot="eyes" layer="base" mesh="male_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
-		<part slot="chest" layer="base" mesh="male_base_chest"><texture name="male_torso" color="skin"/></part>
-		<part slot="hands" layer="base" mesh="male_base_hands"><texture name="male_hands" color="skin"/></part>
-		<part slot="legs" layer="base" mesh="male_base_legs"><texture name="male_legs" color="skin" /></part>
-		<part mesh="male_base_feet" slot="feet" layer="base" ><texture name="male_feet" color="skin" /></part>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="unisex_hair_pete" >
+			<texture name="unisex_hair_dreads" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
 	</base_mesh_parts>
-	<dna><gene name="height" value="1.4"/></dna>
-	<dna><gene name="weight" value="0.9"/></dna>
 </archetype>
 
-<archetype name="en_testWhite5" skin_color="255,255,255">
+<archetype name="en_test-05" skin_color="255,255,255" hair_color="100,80,60">
 	<base_mesh_parts>
-		<part slot="head" layer="base" mesh="male_base_face"><texture name="male_head" color="skin"/></part>
-		<part slot="eyes" layer="base" mesh="male_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
-		<part slot="chest" layer="base" mesh="male_base_chest"><texture name="male_torso" color="skin"/></part>
-		<part slot="hands" layer="base" mesh="male_base_hands"><texture name="male_hands" color="skin"/></part>
-		<part slot="legs" layer="base" mesh="male_base_legs"><texture name="male_legs" color="skin" /></part>
-		<part mesh="male_base_feet" slot="feet" layer="base" ><texture name="male_feet" color="skin" /></part>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="unisex_hair_pete" >
+			<texture name="unisex_viking_braid" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
 	</base_mesh_parts>
-	<dna><gene name="height" value="1.4"/></dna>
-	<dna><gene name="weight" value="1.0"/></dna>
 </archetype>
 
+<archetype name="en_test-06" skin_color="255,255,255" hair_color="100,80,60">
+	<base_mesh_parts>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="unisex_hair_pete" >
+			<texture name="unisex_hair_christa" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
+	</base_mesh_parts>
+</archetype>
 
+<archetype name="en_test-07" skin_color="255,255,255" hair_color="100,80,60">
+	<base_mesh_parts>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="unisex_hair_pete" >
+			<texture name="unisex_hair_lee" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
+	</base_mesh_parts>
+</archetype>
+
+<archetype name="en_test-08" skin_color="255,255,255" hair_color="100,80,60">
+	<base_mesh_parts>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="unisex_hair_pete" >
+			<texture name="unisex_hair_luke" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
+	</base_mesh_parts>
+</archetype>
+
+<archetype name="en_test-09" skin_color="255,255,255" hair_color="100,80,60">
+	<base_mesh_parts>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="unisex_hair_pete" >
+			<texture name="unisex_hair_michonne" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
+	</base_mesh_parts>
+</archetype>
+
+<archetype name="en_test-10" skin_color="255,255,255" hair_color="100,80,60">
+	<base_mesh_parts>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="unisex_hair_pete" >
+			<texture name="unisex_hair_pete" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
+	</base_mesh_parts>
+</archetype>
+
+<archetype name="en_test-11" skin_color="255,255,255" hair_color="100,80,60">
+	<base_mesh_parts>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="unisex_hair_pete" >
+			<texture name="female_raider_hair_tie" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
+	</base_mesh_parts>
+</archetype>
 
 <!--
-other textures to try:
+<archetype name="en_test-12" skin_color="255,255,255" hair_color="100,80,60">
+	<base_mesh_parts>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="female_base_hair" >
+			<texture name="female_shaggy_hair" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
+	</base_mesh_parts>
+</archetype>
 
-female_christa_head
-female_michonne_head
-male_lee_head
-male_luke_head
-male_pete_head
-male_skull_overlay		(head)
-unisex_face_paint01
-unisex_face_paint02
-unisex_tattoo_rose_arm
-unisex_tattoo_skull_arm
-unisex_tattoo_tribal_arm
-female_stockings		(legs)
-unisex_football_logo	(chest)
+<archetype name="en_test-13" skin_color="255,255,255" hair_color="100,80,60">
+	<base_mesh_parts>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="female_hair_ponytail03" >
+			<texture name="female_shaggy_hair" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
+	</base_mesh_parts>
+</archetype>
 
-- Assets/UMA/Content/Player2/Slots/male_pete_eyes_Slot.asset
-- Assets/UMA/Content/Player2/Slots/male_pete_eyelashes_Slot.asset
-- Assets/UMA/Content/Player2/Slots/unisex_hair_pete_Slot.asset
+<archetype name="en_test-14" skin_color="255,255,255" hair_color="100,80,60">
+	<base_mesh_parts>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="female_hair_ponytail03_hat" >
+			<texture name="female_shaggy_hair" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
+	</base_mesh_parts>
+</archetype>
 
-- Assets/UMA/Content/Player2/Overlays/unisex_hair_pete.asset
-- Assets/UMA/Content/Player2/Overlays/male_pete_head.asset
+<archetype name="en_test-15" skin_color="255,255,255" hair_color="100,80,60">
+	<base_mesh_parts>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="female_hair_shaggy02" >
+			<texture name="female_shaggy_hair" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
+	</base_mesh_parts>
+</archetype>
 
--->		
+<archetype name="en_test-16" skin_color="255,255,255" hair_color="100,80,60">
+	<base_mesh_parts>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="female_hair_shaggy02_hat" >
+			<texture name="female_shaggy_hair" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
+	</base_mesh_parts>
+</archetype>
 
+<archetype name="en_test-17" skin_color="255,255,255" hair_color="100,80,60">
+	<base_mesh_parts>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="female_mohawk" >
+			<texture name="female_shaggy_hair" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
+	</base_mesh_parts>
+</archetype>
+
+<archetype name="en_test-18" skin_color="255,255,255" hair_color="100,80,60">
+	<base_mesh_parts>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="female_ponytail" >
+			<texture name="female_shaggy_hair" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
+	</base_mesh_parts>
+</archetype>
+
+<archetype name="en_test-19" skin_color="255,255,255" hair_color="100,80,60">
+	<base_mesh_parts>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="female_ponytail_hat" >
+			<texture name="female_shaggy_hair" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
+	</base_mesh_parts>
+</archetype>
+
+<archetype name="en_test-20" skin_color="255,255,255" hair_color="100,80,60">
+	<base_mesh_parts>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="female_shaggy_hair" >
+			<texture name="female_shaggy_hair" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
+	</base_mesh_parts>
+</archetype>
+
+<archetype name="en_test-21" skin_color="255,255,255" hair_color="100,80,60">
+	<base_mesh_parts>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="female_shaggy_hair_hat" >
+			<texture name="female_shaggy_hair" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
+	</base_mesh_parts>
+</archetype>
+
+<archetype name="en_test-22" skin_color="255,255,255" hair_color="100,80,60">
+	<base_mesh_parts>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="female_shaggy_hair_ponytail" >
+			<texture name="female_shaggy_hair" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
+	</base_mesh_parts>
+</archetype>
+
+<archetype name="en_test-23" skin_color="255,255,255" hair_color="100,80,60">
+	<base_mesh_parts>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="female_shaggy_hair02" >
+			<texture name="female_shaggy_hair" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
+	</base_mesh_parts>
+</archetype>
+
+<archetype name="en_test-24" skin_color="255,255,255" hair_color="100,80,60">
+	<base_mesh_parts>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="female_shaggy_ponytail" >
+			<texture name="female_shaggy_hair" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
+	</base_mesh_parts>
+</archetype>
+
+<archetype name="en_test-25" skin_color="255,255,255" hair_color="100,80,60">
+	<base_mesh_parts>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="female_sideshave_hair" >
+			<texture name="female_shaggy_hair" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
+	</base_mesh_parts>
+</archetype>
+
+<archetype name="en_test-26" skin_color="255,255,255" hair_color="100,80,60">
+	<base_mesh_parts>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="female_sideshave_hair_hat" >
+			<texture name="female_shaggy_hair" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
+	</base_mesh_parts>
+</archetype>
+
+<archetype name="en_test-27" skin_color="255,255,255" hair_color="100,80,60">
+	<base_mesh_parts>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="unisex_hair_afro" >
+			<texture name="female_shaggy_hair" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
+	</base_mesh_parts>
+</archetype>
+
+<archetype name="en_test-28" skin_color="255,255,255" hair_color="100,80,60">
+	<base_mesh_parts>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="unisex_hair_afro_hat" >
+			<texture name="female_shaggy_hair" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
+	</base_mesh_parts>
+</archetype>
+
+<archetype name="en_test-29" skin_color="255,255,255" hair_color="100,80,60">
+	<base_mesh_parts>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="unisex_hair_dreads" >
+			<texture name="female_shaggy_hair" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
+	</base_mesh_parts>
+</archetype>
+
+<archetype name="en_test-30" skin_color="255,255,255" hair_color="100,80,60">
+	<base_mesh_parts>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="unisex_hair_dreads_hat" >
+			<texture name="female_shaggy_hair" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
+	</base_mesh_parts>
+</archetype>
+
+<archetype name="en_test-31" skin_color="255,255,255" hair_color="100,80,60">
+	<base_mesh_parts>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="unisex_hair_raider" >
+			<texture name="female_shaggy_hair" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
+	</base_mesh_parts>
+</archetype>
+
+<archetype name="en_test-32" skin_color="255,255,255" hair_color="100,80,60">
+	<base_mesh_parts>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="unisex_viking_braid" >
+			<texture name="female_shaggy_hair" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
+	</base_mesh_parts>
+</archetype>
+
+<archetype name="en_test-33" skin_color="255,255,255" hair_color="100,80,60">
+	<base_mesh_parts>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="unisex_hair_luke" >
+			<texture name="female_shaggy_hair" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
+	</base_mesh_parts>
+</archetype>
+
+<archetype name="en_test-34" skin_color="255,255,255" hair_color="100,80,60">
+	<base_mesh_parts>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="unisex_hair_michonne" >
+			<texture name="female_shaggy_hair" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
+	</base_mesh_parts>
+</archetype>
+
+<archetype name="en_test-35" skin_color="255,255,255" hair_color="100,80,60">
+	<base_mesh_parts>
+		<part slot="head" layer="base" mesh="female_base_face">
+			<texture name="female_head" color="skin"/>
+			<texture name="female_hair_overlay" color="60,40,20" />
+		</part>
+		<part slot="head" layer="outer" mesh="unisex_hair_pete" >
+			<texture name="female_shaggy_hair" color="hair" />
+		</part>
+		<part slot="hands" layer="base" mesh="female_base_hands"><texture name="female_hands" color="skin"/></part>
+		<part slot="chest" layer="base" mesh="female_base_chest"><texture name="female_torso" color="skin"/></part>
+		<part slot="eyes" layer="base" mesh="female_base_eyes"><texture name="unisex_eye_bloodshot" color="255,255,255"/></part>
+		<part slot="feet" layer="base" mesh="female_base_feet"><texture name="female_feet" color="skin" /></part>
+		<part slot="legs" layer="base" mesh="female_base_legs"><texture name="female_legs" color="skin" /></part>
+	</base_mesh_parts>
+</archetype>
+-->
 
 </append>	
 
 
-</config>
+</ErrorNull>

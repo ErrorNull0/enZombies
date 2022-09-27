@@ -1,0 +1,8 @@
+<ErrorNull>
+
+<!-- inserts the new UMA traders into existing trader POIs -->
+<!--
+<set xpath="/blocks/block[@name='spawnTrader']/property[@name='SpawnClass']/@value">enTraderJoel1,enTraderRekt1,enTraderHugh,enTraderBob,enTraderJen1</set>
+-->
+
+</ErrorNull>

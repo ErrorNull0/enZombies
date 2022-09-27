@@ -1,0 +1,28 @@
+<ErrorNull>
+	<append xpath="/recipes">
+	
+<recipe name="enSnowPellet" count="1" craft_time="2">
+	<ingredient name="resourceSnowBall" count="2"/>
+</recipe>
+
+<recipe name="enSlushBomb" count="1" craft_time="4">
+	<ingredient name="foodCropYuccaFruit" count="4"/>
+	<ingredient name="resourceSnowBall" count="4"/>
+	<ingredient name="resourceYuccaFibers" count="4"/>
+</recipe>
+
+<recipe name="enSnowCannon" count="1" craft_time="4">
+	<ingredient name="gunExplosivesT3RocketLauncherParts" count="1"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="resourceElectricParts" count="2"/>
+	<ingredient name="enCondensor" count="1"/> <!-- switch -->
+	<ingredient name="enRefrigerant" count="1"/> <!-- domed trash can, empty -->
+</recipe>
+		
+<recipe name="drinkJarRiverWater" count="1" craft_area="campfire" tags="perkMasterChef">
+	<ingredient name="enSnowPellet" count="1"/>
+	<ingredient name="drinkJarEmpty" count="1"/>
+</recipe>
+
+	</append>
+</ErrorNull>

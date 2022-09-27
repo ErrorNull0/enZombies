@@ -9,4 +9,5 @@ Z: pos = chest vertically up higher when ragdoll on stomach, and lower when ragd
 -->
 <set xpath="/bodies/body[@name='zombieUMA']/collider/property[@name='ragdollOffset']/@value">0.03 0.03 0.03</set>
 
+
 </ErrorNull>

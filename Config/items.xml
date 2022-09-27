@@ -265,7 +265,7 @@ CRAWLER* handitems have the same attributes as normal zombies, except with the h
 			<property name="DamageEntity" value="50"/>
 			<property name="DamageBlock" value="500"/>
 			<property name="Range" value="2.7"/>
-			<property name="Buff" value="buffInjuryKnockdown01"/>	
+			<property name="Buff" value="buffInjuryKnockdown01"/>
 		</property>
 		<effect_group name="enHand_burntGiant" tiered="false">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
@@ -379,7 +379,7 @@ CRAWLER* handitems have the same attributes as normal zombies, except with the h
 			<property name="DamageBonus.earth" value="0"/>
 			<property name="Buff" value="buffBurningZombie"/>
 		</property>
-		<effect_group name="ammoProjectileZombieVomit" tiered="false">
+		<effect_group name="ammoProjectileFlamer" tiered="false">
 			<passive_effect name="BuffProcChance" operation="base_set" value="0.5" tags="buffBurningZombie"/>
 		</effect_group>
 	</item>
@@ -1068,7 +1068,7 @@ CRAWLER* handitems have the same attributes as normal zombies, except with the h
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
 				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
 				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="30">
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100">
 				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
 			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/>
 		</effect_group>
@@ -1083,7 +1083,7 @@ CRAWLER* handitems have the same attributes as normal zombies, except with the h
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
 				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
 				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="45">
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100">
 				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
 			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
 		</effect_group>
@@ -3976,7 +3976,7 @@ CRAWLER* handitems have the same attributes as normal zombies, except with the h
 			<passive_effect name="BuffProcChance" operation="base_set" value="0.5" tags="buffShocked"/>
 		</effect_group>
 	</item>
-
+	
 	<!-- utility female1 (holding nailguns) -->
 	<item name="enHand_utilityFemale1">
 		<property name="Extends" value="meleeHandZombie01"/>
@@ -4550,7 +4550,1114 @@ CRAWLER* handitems have the same attributes as normal zombies, except with the h
 	</item>
 	
 	
+	<!-- ***** FOREST BIOME BOSS: Radiated Stag ***** -->
+	<item name="enHand_forestBoss">
+		<property name="Extends" value="meleeHandMaster"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">			
+			<property name="Delay" value="1.5"/>
+			<property name="Range" value="3.6"/>
+			<property name="Sphere" value=".5"/>
+			<property name="DamageEntity" value="100"/>
+			<property name="DamageBlock" value="650"/>
+			<property name="Sound_start" value="club_swinglight"/>
+			<property name="Buff" value="buffInjuryKnockdown01"/>
+		</property>
+		<effect_group name="enHand_forestBoss" tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".25,.40,.40,.40,.60,.70,.20"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/>
+			</triggered_effect>
+			<passive_effect name="BuffProcChance" operation="base_set" value="0.75" tags="buffInjuryKnockdown01"/>
+		</effect_group>
+	</item>
 	
+	<!-- ***** DESERT BIOME BOSS: Radiated Sandman ***** -->
+
+	<item name="ammoProjectileDesertBoss">
+		<property name="Meshfile" value="Entities/Resources/rock_resource02_broke3Prefab"/>
+		<property name="Material" value="Morganic"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action1">
+			<property name="Class" value="Projectile"/>
+			<property name="DamageEntity" value="130"/>
+			<property name="DamageBlock" value="200"/>
+			<property name="Explosion.ParticleIndex" value="7"/>
+			<property name="Velocity" value="8"/>
+			<property name="FlyTime" value="1"/>
+			<property name="LifeTime" value="5"/>
+			<property name="CollisionRadius" value="5"/>
+			<property name="Buff" value="buffInfectionCatch"/>
+			<property name="Buff" value="buffInjuryKnockdown01"/>
+		</property>
+		<effect_group name="ammoProjectileDesertBoss" tiered="false">
+			<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			<passive_effect name="BuffProcChance" operation="base_set" value="1.0" tags="buffInfectionCatch"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/>
+			</triggered_effect>
+			<passive_effect name="BuffProcChance" operation="base_set" value="1.0" tags="buffInjuryKnockdown01"/>
+		</effect_group>
+	</item>
+	
+	<item name="enHand_desertBoss">
+		<property name="Extends" value="meleeHandMaster"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action0">			
+			<property name="Delay" value="0.0"/>
+			<property name="Range" value="3.0"/>
+			<property name="Sphere" value=".3"/>
+			<property name="DamageEntity" value="130"/>
+			<property name="DamageBlock" value="750"/>
+			<property name="Buff" value="buffInjuryKnockdown01"/>
+		</property>
+		<property class="Action1"> 
+			<property name="Class" value="Vomit"/>
+			<property name="Hitmask_override" value="Arrow"/>
+			<property name="Delay" value="0.0"/> 
+			<property name="WarningMax" value="2"/>	
+			<property name="Range" value="50"/>
+			<property name="Sphere" value="1.0"/>
+			<property name="Infinite_ammo" value="true"/>
+			<property name="Magazine_items" value="ammoProjectileDesertBoss"/>
+			<property name="Sound_warning" value="hulkvomitwarning"/>
+			<property name="Sound_start" value="hulkvomitattack"/>
+			<property name="Sound_repeat" value=""/>
+			<property name="Sound_end" value=""/>
+			<property name="Sound_empty" value=""/>
+			<property name="Sound_reload" value=""/>
+		</property>
+		<effect_group name="enHand_desertBoss" tiered="false">
+			<passive_effect name="DamageFalloffRange" operation="base_set" value="100"/>
+			<passive_effect name="MaxRange" operation="base_set" value="50"/>
+			<passive_effect name="MagazineSize" operation="base_set" value="4"/> <!-- number of groups -->
+			<passive_effect name="BurstRoundCount" operation="base_set" value="4"/> <!-- number in each group -->
+			<passive_effect name="SpreadDegreesVertical" operation="base_set" value="30"/>
+			<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="60"/>
+			<passive_effect name="SpreadMultiplierIdle" operation="base_set" value="0"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".25,.60,.40,.40,.65,0.85,.10"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="0">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/>
+			</triggered_effect>
+			<passive_effect name="BuffProcChance" operation="base_set" value="1.0" tags="buffInjuryKnockdown01"/>
+		</effect_group>
+	</item>
+	
+	<!-- ***** SNOW BIOME BOSS: Radiated Polar Bear ***** -->
+		
+	<item name="ammoProjectileSnowBoss">
+		<property name="Meshfile" value="#Other/Items?Misc/snowballPrefab.prefab"/>	
+		<property name="Material" value="Morganic"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action1">
+			<property name="Class" value="Projectile"/>
+			<property name="DamageEntity" value="15"/>
+			<property name="DamageBlock" value="10"/>		
+			<property name="Explosion.ParticleIndex" value="7"/>
+			<property name="Velocity" value="10"/>
+			<property name="FlyTime" value="1.5"/>
+			<property name="LifeTime" value="6"/>
+			<property name="CollisionRadius" value="0.4"/>
+			<property name="Buff" value="buffInfectionCatch,buffFrozen,buffElementFreezing"/>
+		</property>
+			<effect_group name="ammoProjectileSnowBoss" tiered="false">
+			<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			<passive_effect name="BuffProcChance" operation="base_set" value="1.0" tags="buffInfectionCatch"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/>
+			</triggered_effect>
+			<passive_effect name="BuffProcChance" operation="base_set" value="0.5" tags="buffFrozen"/>		
+			<passive_effect name="BuffProcChance" operation="base_set" value="1.0" tags="buffElementFreezing"/>	
+		</effect_group>
+	</item>
+	
+	<item name="enHand_snowBoss">
+		<property name="Extends" value="meleeHandMaster"/>
+		<property name="CreativeMode" value="None"/>
+		<property name="Degradation" value="99999" param1="true"/>
+		<property class="Action0">
+			<property name="Range" value="2.9"/>
+			<property name="Sphere" value="1.0"/>		
+			<property name="DamageEntity" value="110"/>
+			<property name="DamageBlock" value="375"/>
+			<property name="Buff" value="buffElementFreezing"/>
+			<property name="Buff" value="buffInjuryKnockdown01"/>
+		</property>
+		<property class="Action1"> 
+			<property name="Class" value="Vomit"/>
+			<property name="Range" value="200"/>
+			<property name="Delay" value="0.0"/> 
+			<property name="WarningMax" value="2"/>
+			<property name="Infinite_ammo" value="true"/>
+			<property name="Magazine_items" value="ammoProjectileSnowBoss"/>
+			<property name="Sound_warning" value=""/>
+			<property name="Sound_start" value=""/>
+		</property>
+			<effect_group name="enHand_snowBoss" tiered="false">	
+			<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			<passive_effect name="DamageFalloffRange" operation="base_set" value="200"/>
+			<passive_effect name="MaxRange" operation="base_set" value="200"/>
+			<passive_effect name="MagazineSize" operation="base_set" value="1"/>
+			<passive_effect name="BurstRoundCount" operation="base_set" value="50"/>
+			<passive_effect name="SpreadDegreesVertical" operation="base_set" value="8"/>
+			<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="40"/>
+			<passive_effect name="SpreadMultiplierIdle" operation="base_set" value="1"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".25,.60,.40,.40,.65,0.85,.10"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="0">
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/>
+			</triggered_effect>
+			<passive_effect name="BuffProcChance" operation="base_set" value="1.0" tags="buffElementFreezing"/>	
+			<passive_effect name="BuffProcChance" operation="base_set" value="1.0" tags="buffInjuryKnockdown01"/>
+		</effect_group>
+	</item>	
+
+	
+	<!-- ***** BURNT BIOME BOSS: Flaming Mutant ***** -->
+	
+	<item name="ammoProjectileBurntBoss">
+		<property name="Meshfile" value="particleeffects/p_fire_small"/>
+		<property name="Material" value="Morganic" />
+		<property name="CreativeMode" value="None"/>
+		<property class="Action1">
+			<property name="Class" value="Projectile"/>			
+			<property name="DamageEntity" value="10"/>
+			<property name="DamageBlock" value="10"/>			
+			<property name="Explosion.ParticleIndex" value="10"/>
+			<property name="Velocity" value="9"/>
+			<property name="FlyTime" value="6"/>
+			<property name="LifeTime" value="12"/>
+			<property name="DamageBonus.earth" value="4"/>
+			<property name="DamageBonus.wood" value="0"/>			
+			<property name="DamageBonus.stone" value="0"/>		
+			<property name="DamageBonus.metal" value="1"/>		
+			<property name="CollisionRadius" value="0.9"/>
+			<property name="Buff" value="buffBurningZombie"/>
+		</property>
+		<effect_group name="ammoProjectileBurntBoss" tiered="false">
+			<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="positionAOE" range="10" buff="buffBurningZombie"/>
+		</effect_group>	
+	</item>	
+	
+	<item name="enHand_burntBoss">
+		<property name="Extends" value="meleeHandMaster"/>
+		<property name="CreativeMode" value="None"/>
+		<property name="Degradation" value="99999" param1="true"/>
+		<property class="Action0">
+			<property name="Delay" value="0.2"/>		
+			<property name="Range" value="2.8"/>
+			<property name="Sphere" value=".4"/>		
+			<property name="DamageEntity" value="40"/>
+			<property name="DamageBlock" value="110"/>
+			<property name="Buff" value="buffBurningZombie"/>
+		</property>
+		<property class="Action1"> 
+			<property name="Class" value="Vomit"/>
+			<property name="Delay" value="0.0"/>
+			<!--<property name="WarningMax" value="2"/>			-->
+			<property name="Range" value="200"/>
+			<property name="Infinite_ammo" value="true"/>
+			<property name="Magazine_items" value="ammoProjectileBurntBoss"/>
+			<property name="Sound_warning" value=""/>
+			<property name="Sound_start" value=""/>
+			<property name="Sound_end" value=""/>			
+		</property>
+	<effect_group name="enHand_burntBoss" tiered="false">
+			<passive_effect name="ModSlots" operation="base_set" value="0"/>	
+			<passive_effect name="DamageFalloffRange" operation="base_set" value="200"/>
+			<passive_effect name="MaxRange" operation="base_set" value="200"/>
+			<passive_effect name="MagazineSize" operation="base_set" value="10"/>
+			<passive_effect name="BurstRoundCount" operation="base_set" value="6"/>
+			<passive_effect name="SpreadDegreesVertical" operation="base_set" value="8"/>
+			<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="35"/>
+			<passive_effect name="SpreadMultiplierIdle" operation="base_set" value="1"/>	
+		</effect_group>
+	</item>	
+
+	<!-- ***** WASTELAND BIOME BOSS: Demolition Boss ***** -->
+	
+	<item name="ammoProjectileWastelandBoss">
+		<property name="Meshfile" value="#Other/Items?Weapons/Ranged/RocketLauncher/rocketPrefab.prefab"/>
+		<property name="Material" value="Mmetal"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action1">
+			<property name="Class" value="Projectile"/>
+			<property name="DamageEntity" value="200"/>
+			<property name="DamageBlock" value="600"/>
+			<property name="Explosion.ParticleIndex" value="5"/>
+			<property name="Explosion.RadiusBlocks" value="5"/>
+			<property name="Explosion.RadiusEntities" value="4"/>
+			<property name="Explosion.DamageBonus.water" value="0"/>
+			<property name="Velocity" value="18"/>
+			<property name="FlyTime" value="2"/>
+			<property name="LifeTime" value="4"/>
+			<property name="CollisionRadius" value="0.85"/>
+			<property name="DamageBonus.earth" value="0"/></property>
+		<effect_group name="ammoProjectileWastelandBoss" tiered="false">
+			<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth"/>
+			<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="stone"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="metal"/>
+		</effect_group>
+	</item>
+		
+	<item name="enHand_wastelandBoss">
+		<property name="Extends" value="meleeHandMaster"/>
+		<property name="CreativeMode" value="None"/>
+		<property name="Degradation" value="99999" param1="true"/>
+		<property class="Action0">
+			<property name="Range" value="3.0"/>
+			<property name="DamageEntity" value="150"/>
+			<property name="DamageBlock" value="750"/>
+			<property name="Delay" value="0.0"/> 
+			<property name="Buff" value="buffInjuryBleedingZombie,buffInfectionCatch,buffInjuryStunned01"/>
+		</property>
+		<property class="Action1">
+			<property name="Class" value="Vomit"/>
+			<property name="Delay" value="0.0"/>
+			<property name="Range" value="500"/>
+			<property name="Infinite_ammo" value="true"/>
+			<property name="Magazine_items" value="ammoProjectileWastelandBoss"/>
+			<property name="Sound_warning" value="demolitionzattack"/>
+			<property name="Sound_start" value="m136_fire"/>
+			<property name="Sound_repeat" value=""/>
+			<property name="Sound_end" value=""/>
+			<property name="Sound_empty" value=""/>
+			<property name="Sound_reload" value=""/></property>
+		<effect_group name="enHand_wastelandBoss" tiered="false">
+			<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			<passive_effect name="DamageFalloffRange" operation="base_set" value="100"/>
+			<passive_effect name="MaxRange" operation="base_set" value="100"/>
+			<passive_effect name="MagazineSize" operation="base_set" value="2"/>
+			<passive_effect name="BurstRoundCount" operation="base_set" value="6"/>
+			<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2"/>
+			<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="12"/>
+			<passive_effect name="SpreadMultiplierIdle" operation="base_set" value="1"/>
+			<passive_effect name="BuffProcChance" operation="base_set" value=".20" tags="buffInjuryBleedingZombie"/>
+			<passive_effect name="BuffProcChance" operation="base_set" value=".20" tags="buffInfectionCatch"/>
+			<passive_effect name="BuffProcChance" operation="base_set" value=".25" tags="buffInjuryStunned01"/>
+			<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="infectionZombieHit" operation="set" value="30"/>
+		</effect_group>
+	</item>
+		
+
+	<!-- ***** FINAL BOSS: explosive diamond mutant ***** -->
+	
+	<item name="ammoProjectileFinalBoss">
+		<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Vomit/vomitRadPrefab.prefab"/>
+		<property name="Material" value="Morganic"/>
+		<property name="CreativeMode" value="None"/>
+		<property class="Action1">
+			<property name="Class" value="Projectile"/>
+			<property name="DamageEntity" value="15"/>
+			<property name="DamageBlock" value="50"/>
+			<property name="Explosion.ParticleIndex" value="7"/>
+			<property name="Gravity" value="-7.5"/>
+			<property name="Velocity" value="4.5"/>
+			<property name="FlyTime" value="0"/>
+			<property name="LifeTime" value="4"/>
+			<property name="CollisionRadius" value=".4"/>
+			<property name="DamageBonus.earth" value="0"/>
+			<property name="Buff" value="buffInfectionCatch"/>
+		</property>
+		<effect_group name="ammoProjectileFinalBoss" tiered="false">
+			<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth"/>
+			<passive_effect name="DamageModifier" operation="perc_set" value="0.5" tags="stone"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="1.2" tags="metal"/>
+			<passive_effect name="BuffProcChance" operation="base_set" value=".30" tags="buffInfectionCatch"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10"><!--InfectionRegular-->
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/><!--AbrasionRegular-->
+		</effect_group>
+	</item>
+
+	<item name="enHand_finalBoss">
+		<property name="Extends" value="meleeHandMaster"/>
+		<property name="CreativeMode" value="None"/>
+		<property name="Degradation" value="99999" param1="true"/>
+		<property class="Action0">
+			<property name="Range" value="2.8"/>
+			<property name="DamageEntity" value="20"/>
+			<property name="DamageBlock" value="100"/>
+		</property>
+		<property class="Action1"> <!-- UseAction -->
+			<property name="Class" value="Vomit"/>
+			<property name="Hitmask_override" value="Arrow"/>
+			<property name="AnimType" value="1"/>
+			<property name="Delay" value=".1"/> <!-- obsolete if rounds per minute exists -->
+			<property name="Range" value="200"/>
+			<property name="SpreadVerticalOffset" value="-50"/>
+			<property name="WarningDelay" value=".6"/>
+			<property name="WarningMax" value="1"/>
+			<property name="Infinite_ammo" value="true"/>
+			<property name="Magazine_items" value="ammoProjectileFinalBoss"/>
+			<property name="Sound_warning" value="hulkvomitwarning"/>
+			<property name="Sound_start" value="hulkvomitattack"/>
+			<property name="Sound_repeat" value=""/>
+			<property name="Sound_end" value=""/>
+			<property name="Sound_empty" value=""/>
+			<property name="Sound_reload" value=""/>
+		</property>
+		<effect_group name="enHand_finalBoss" tiered="false">
+			<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			<passive_effect name="DamageFalloffRange" operation="base_set" value="50"/>
+			<passive_effect name="MaxRange" operation="base_set" value="10"/>
+			<passive_effect name="MagazineSize" operation="base_set" value="1"/>
+			<passive_effect name="BurstRoundCount" operation="base_set" value="5"/>
+			<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="90"/>
+			<passive_effect name="SpreadDegreesVertical" operation="base_set" value="30"/>
+			<passive_effect name="SpreadMultiplierIdle" operation="base_set" value="1"/>
+
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+				weights=".11,.07,.07,.05,.29,.36,.11"/>
+
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10"><!--InfectionRegular-->
+				<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/><!--AbrasionRegular-->
+		</effect_group>
+	</item>
+
+
+	<!-- **************************************** -->
+	<!-- ************ CUSTOM WEAPONS ************ -->
+	<!-- **************************************** -->
+	
+	<item name="enSnowCannon">
+		<property name="ItemTypeIcon" value="star"/>
+		<property name="CustomIconTint" value="180,200,255"/>
+		<property name="CustomIcon" value="gunExplosivesT3RocketLauncher"/>
+		<property name="DescriptionKey" value="enSnowCannonDesc"/>
+		<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,launcher,attIntellect,perkDeadEye,canHaveCosmetic,noSilencer"/>
+		<property name="DisplayType" value="rangedGun"/>
+		<property name="HoldType" value="60"/>
+		<property name="Meshfile" value="#Other/Items?Weapons/Ranged/RocketLauncher/rocketlauncherPrefab.prefab"/>
+		<property name="TintColor" value="150,170,255"/>
+		<property name="Material" value="MHandGunParts"/>
+		<property name="Weight" value="4"/>
+		<property name="RepairTools" value="resourceRepairKit"/>
+		<property name="DegradationBreaksAfter" value="false"/>
+		<property name="SoundJammed" value="weapon_jam"/>
+		<property name="Attachments" value="meleeToolFlashlight02"/>
+		<property name="CrosshairOnAim" value="true"/> 
+		<property name="CrosshairUpAfterShot" value="true"/>
+		<property name="Sound_Sight_In" value="pistol_sight_in"/>
+		<property name="Sound_Sight_Out" value="pistol_sight_out"/>
+		<property name="LightSource" value="lightSource"/> 
+		<property name="ActivateObject" value="Attachments/flashlight/lightSource"/>
+		<property name="AttachmentFlashlight" value="flashlight02"/> 
+		<property name="Group" value="Ammo/Weapons"/>
+		<property name="RepairExpMultiplier" value="10.8"/>
+		<property name="LightValue" value=".45"/>
+		<property name="EconomicValue" value="500"/>
+		<property name="UnlockedBy" value="perkDeadEye"/>
+		<property name="ShowQuality" value="true"/>
+		<property class="Action0">
+			<property name="Class" value="Launcher"/>
+			<property name="Delay" value=".8"/> 
+			<property name="Magazine_items" value="enSnowPellet,enSlushBomb"/>
+			<property name="Sound_start" value="m136_fire"/>
+			<property name="Sound_repeat" value=""/>
+			<property name="Sound_end" value=""/>
+			<property name="Sound_empty" value="dryfire"/>
+			<property name="Sound_reload" value="m136_reload"/>
+		</property>
+		<property class="Action1">
+			<property name="Class" value="Zoom"/>
+			<property name="Zoom_max_out" value="55"/>
+			<property name="Zoom_max_in" value="55"/>
+			<property name="ScopeCameraOffset" value="-.00062,-.15,.055"/>
+		</property>
+		<effect_group name="Deco">
+			<triggered_effect trigger="onSelfPrimaryActionUpdate" action="SetTransformActive" active="false" transform_path="ProjectileJoint"/>
+			<triggered_effect trigger="onSelfEquipStart" action="SetTransformActive" active="false" transform_path="crossbow_mesh"/>
+			<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="true" transform_path="ProjectileJoint"/>
+			<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="true" transform_path="crossbow_mesh"/>
+			<triggered_effect trigger="onSelfEquipStart" action="AttachPrefabToHeldItem" prefab="#Other/Items?Items/Misc/sack.fbx" parent_transform="Handle"/>
+			<triggered_effect trigger="onSelfEquipStart" action="SetTransformActive" active="false"  parent_transform="Handle" transform_path="sackMesh"/>
+			<triggered_effect trigger="onSelfPrimaryActionUpdate" action="SetTransformActive" active="false"  parent_transform="Handle" transform_path="sack_LOD1"/>
+			<triggered_effect trigger="onSelfPrimaryActionUpdate" action="SetTransformActive" active="false"  parent_transform="Handle" transform_path="sack_LOD2"/>
+			<triggered_effect trigger="onSelfEquipStart" action="AttachPrefabToHeldItem" prefab="Entities/Electrical/power_switchPrefab" parent_transform="main1" local_offset=".45,.13,-.05" local_rotation="0,90,90"/>
+			<triggered_effect trigger="onSelfEquipStart" action="AttachPrefabToHeldItem" prefab="#Other/Items?Weapons/Explosive/trapMineTinCan_01Prefab.prefab" parent_transform="main1" local_offset="0,.13,-.35" local_rotation="-90,0,0"/>
+			<triggered_effect trigger="onSelfEquipStart" action="AttachPrefabToHeldItem" prefab="#Other/Items?Weapons/Explosive/trapMineTinCan_01Prefab.prefab" parent_transform="main2" local_offset="0,.17,-.42" local_rotation="-90,0,0"/>
+		</effect_group>
+		<effect_group name="enSnowCannon">
+			<passive_effect name="MaxRange" operation="base_set" value="30"/>
+			<passive_effect name="DamageFalloffRange" operation="base_set" value="20"/>
+			<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/>
+			<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15"/>
+			<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/>
+			<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkDeadEye"/> 
+			<passive_effect name="RoundsPerMinute" operation="base_set" value="120"/>
+			<passive_effect name="BurstRoundCount" operation="base_set" value="1"/>
+			<passive_effect name="MagazineSize" operation="base_set" value="25"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="2.0"/>
+			<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6"	 tier="1,2,3,4,5,6"/>
+			<passive_effect name="SpreadDegreesVertical" operation="base_set" value="3"/>
+			<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="3"/>
+			<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".15"/>
+			<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8"/>
+			<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5"/>
+			<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2"/>
+			<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="1"/>
+			<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="2"/>
+			<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.2"/>
+			<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".2"/>
+			<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2.2"/>
+			<passive_effect name="WeaponHandling" operation="base_set" value="1"/>
+			<passive_effect name="DegradationMax" operation="base_set" value="100,200" tier="1,6" tags="perkDeadEye"/>
+			<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkDeadEye"/>
+		</effect_group>
+	</item>
+
+
+	<item name="enSnowPellet">
+		<property name="Tags" value="enSnowWeapon"/>
+		<property name="ItemTypeIcon" value="star"/>
+		<property name="CustomIcon" value="terrOrePotassiumNitrate"/>
+		<property name="CustomIconTint" value="200,200,255"/>
+		<property name="DescriptionKey" value="enSnowPelletDesc"/>
+		<property name="Group" value="Ammo/Weapons"/>			
+		<property name="Meshfile" value="#Other/Items?Misc/snowballPrefab.prefab"/>
+		<property name="HandMeshfile" value="#Other/Items?Misc/snowball_FP_Prefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/snowballPrefab.prefab"/>
+		<property name="TintColor" value="180,200,255"/>
+		<property name="Material" value="Morganic"/>
+		<property name="HoldType" value="40"/>
+		<property name="DropScale" value="1.5"/>
+		<property name="Class" value="ItemClassTimeBomb"/>
+		<property name="ExplodeOnHit" value="true"/>
+		<property name="FuseTime" value="20000"/>
+		<property name="Explosion.ParticleIndex" value="20"/>
+        <property name="Explosion.RadiusBlocks" value="1"/>
+        <property name="Explosion.RadiusEntities" value="1"/>
+		<property name="Stacknumber" value="200"/>
+		<property name="ThrowableDecoy" value="true"/>
+		<property name="EconomicValue" value="0"/>
+		<property name="SellableToTrader" value="false"/>
+		<property name="DistractionTags" value="zombie,requires_contact"/>
+		<property class="Action0">
+			<property name="Class" value="ThrowAway"/>
+			<property name="Delay" value="1.2"/>
+			<property name="Throw_strength_default" value="10"/>
+			<property name="Throw_strength_max" value="40"/>
+			<property name="Max_strain_time" value="1.25"/>
+			<property name="Sound_start" value="swoosh"/>
+		</property>
+		<property class="Action1">
+			<property name="Class" value="Projectile"/>
+			<property name="DamageEntity" value="1"/>
+			<property name="DamageBlock" value="1"/>
+			<property name="Velocity" value="12"/>
+			<property name="FlyTime" value="2"/>
+			<property name="LifeTime" value="5"/>
+			<property name="CollisionRadius" value=".5"/>
+		</property>
+		<effect_group name="enSnowPellet" tiered="false">
+			<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			<passive_effect name="DistractionRadius" operation="base_set" value="15"/>
+			<passive_effect name="DistractionLifetime" operation="base_set" value="1"/>
+			<passive_effect name="DistractionStrength" operation="base_set" value="80"/>
+			<passive_effect name="EntityDamage" operation="base_set" value="40">
+				<requirement name="EntityTagCompare" target="other" tags="enFireEntity"/></passive_effect>
+			<passive_effect name="EntityDamage" operation="base_set" value="10">
+				<requirement name="!EntityTagCompare" target="other" tags="enFireEntity"/></passive_effect>
+			<passive_effect name="BlockDamage" operation="base_set" value="10"/>
+            <triggered_effect trigger="onSelfExplosionDamagedOther" action="AddBuff" target="other" buff="enBuffSnowballHitSound"/>
+		</effect_group>
+	</item>
+	
+
+	<item name="enSlushBomb">
+		<property name="Tags" value="enSnowWeapon,enSlushBomb"/>
+		<property name="ItemTypeIcon" value="star"/>
+		<property name="CustomIconTint" value="64,140,128"/>
+		<property name="CustomIcon" value="resourceSnowBall"/>
+		<property name="DescriptionKey" value="enSlushBombDesc"/>
+		<property name="Group" value="Ammo/Weapons"/>			
+		<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Vomit/vomitBulbPrefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="HandMeshfile" value="#Other/Items?Weapons/Ranged/Vomit/vomitBulbPrefab.prefab"/>
+		<property name="HoldType" value="64"/>
+		<property name="Stacknumber" value="100"/>
+		<property name="Material" value="Morganic"/>
+		<property name="TintColor" value="0,0,255"/>
+		<property name="EconomicValue" value="0"/>
+		<property name="SellableToTrader" value="false"/>
+		<property class="Action0">
+			<property name="Class" value="Eat"/>
+			<property name="Delay" value="1"/>
+			<property name="Use_time" value="..."/>
+			<property name="Sound_start" value="player_ointment"/>
+		</property>
+		<property class="Action1">
+			<property name="Class" value="Projectile"/>
+			<property name="Velocity" value="16"/>
+			<property name="FlyTime" value="1"/>
+			<property name="LifeTime" value="6"/>
+			<property name="CollisionRadius" value=".9"/>
+			<property name="DamageBonus.earth" value="0"/>
+		</property>
+		<effect_group name="enSlushBomb" tiered="false">
+			<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			<passive_effect name="BlockDamage" operation="base_set" value="15"/>
+			<passive_effect name="EntityDamage" operation="base_set" value="20"/>
+			
+			<!-- default damage ability to non-snow and non-fire entities -->
+			<passive_effect name="EntityDamage" operation="base_set" value="25">
+				<requirement name="!EntityTagCompare" target="other" tags="enSnowEntity,enFireEntity"/></passive_effect>
+				
+			<!-- damage on fire entities increased -->
+			<passive_effect name="EntityDamage" operation="base_set" value="100">
+				<requirement name="EntityTagCompare" target="other" tags="enFireEntity"/></passive_effect>
+			
+			<!-- damage on snow entities eliminated -->			
+			<passive_effect name="EntityDamage" operation="base_set" value="0">
+				<requirement name="EntityTagCompare" target="other" tags="enSnowEntity"/></passive_effect>
+			
+			<!-- also add healing to snow entities if hit by slushBomb -->			
+			<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="other" buff="enBuffHealing">
+				<requirement name="EntityTagCompare" target="other" tags="enSnowEntity"/></triggered_effect>
+				
+			<!-- extinguishes fire on entities if hit by slushBomb -->
+			<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="other" buff="buffExtinguishFire">
+				<requirement name="HasBuff" target="other" buff="buffIsOnFire"/></triggered_effect>
+				
+		</effect_group>
+	</item>
+
+	<item name="enHammer">
+		<property name="Tags" value="blunt,melee,grunting,heavy,sledge,weapon,meleeWeapon,longShaft,attStrength,perkSkullCrusher,canHaveCosmetic"/>
+		<property name="CustomIcon" value="meleeWpnSledgeT0StoneSledgehammer"/>
+		<property name="CustomIconTint" value="64,0,0"/>
+		<property name="TintColor" value="64,0,0"/>
+		<property name="DisplayType" value="meleeHeavy"/>
+		<property name="HoldType" value="33"/>
+		<property name="Meshfile" value="#Other/Items?Weapons/Melee/SledgeHammer/stoneSledgeHammerPrefab.prefab"/>
+		<property name="Material" value="Mstone"/>
+		<property name="RepairTools" value="resourceRockSmall"/>
+		<property name="DegradationBreaksAfter" value="false"/>
+		<property name="SoundJammed" value="ItemNeedsRepair"/>
+		<property name="SoundDestroy" value="wooddestroy1"/>
+		<property name="EconomicValue" value="175"/>
+		<property name="SellableToTrader" value="false"/>
+		<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
+		<property name="ShowQuality" value="true"/>
+		<property class="Action0">
+			<property name="Class" value="DynamicMelee"/>
+			<property name="Sphere" value=".15"/>   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
+			<property name="Sound_start" value="sledge_swinglight"/>
+			<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+			<property name="UseGrazingHits" value="true"/>
+			<property name="GrazeStart" value=".515"/>
+			<property name="GrazeEnd" value=".52"/>
+			<property name="SwingDegrees" value="65"/>
+			<property name="SwingAngle" value="160"/>
+			<property class="HitSounds">
+				<property name="Override0" value="organic" param1="stonehitorganic"/>
+			</property>
+			<property class="GrazeSounds">
+				<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+			</property>
+		</property>
+		<property class="Action1">
+			<property name="Class" value="DynamicMelee"/>
+			<property name="Sphere" value=".15"/>   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
+			<property name="Sound_start" value="sledge_swingheavy"/>
+			<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+			<property name="UsePowerAttackAnimation" value="true"/>
+			<property name="UseGrazingHits" value="true"/>
+			<property name="GrazeStart" value=".515"/>
+			<property name="GrazeEnd" value=".52"/>
+			<property name="SwingDegrees" value="110"/>
+			<property name="SwingAngle" value="90"/>
+			<property class="HitSounds">
+				<property name="Override0" value="organic" param1="stonehitorganic"/>
+			</property>
+			<property class="GrazeSounds">
+				<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+			</property>
+		</property>
+		<effect_group name="enHammer">
+			<passive_effect name="EntityDamage" operation="base_set" value="5" tags="perkSkullCrusher"/> <!-- meleeWpnSledgeT0StoneSledgehammer -->
+			<passive_effect name="BlockDamage" operation="base_set" value="27.2" tags="perkSkullCrusher"/>
+			<passive_effect name="AttacksPerMinute" operation="base_set" value="50" tags="perkSkullCrusher"/>
+			<passive_effect name="StaminaLoss" operation="base_set" value="1" tags="primary"/>
+			<passive_effect name="DegradationMax" operation="base_set" value="55,112" tier="1,6" tags="perkSkullCrusher"/>
+			<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkSkullCrusher"/>
+			<passive_effect name="MaxRange" operation="base_set" value="2.6" tags="perkSkullCrusher"/>
+			<passive_effect name="BlockRange" operation="base_set" value="3.5" tags="perkSkullCrusher"/>
+			<passive_effect name="DismemberChance" operation="base_add" value=".1" tags="perkSkullCrusher,primary"/>
+			<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+			<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+			<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkSkullCrusher"/> <!-- tier bonus -->
+			<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkSkullCrusher"/> <!-- tier bonus -->
+			<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allHarvest"/>
+			<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allToolsHarvest"/>
+			<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="oreWoodHarvest"/>
+		</effect_group>
+		<effect_group name="Power Attack">
+			<passive_effect name="EntityDamage" operation="perc_add" value="1.25" tags="secondary"/>
+			<passive_effect name="GrazeDamageMultiplier" operation="base_set" value=".1" tags="secondary"/>
+			<passive_effect name="BlockDamage" operation="perc_add" value="1.25" tags="secondary"/>
+			<passive_effect name="StaminaLoss" operation="base_set" value="1" tags="secondary"/>
+			<passive_effect name="DismemberChance" operation="base_add" value=".3" tags="secondary"/>
+		</effect_group>
+	</item>
+	
+	<item name="enHammer2">
+		<property name="Tags" value="blunt,melee,grunting,heavy,sledge,weapon,meleeWeapon,longShaft,attStrength,perkSkullCrusher,canHaveCosmetic"/>
+		<property name="CustomIcon" value="meleeWpnSledgeT0StoneSledgehammer"/>
+		<property name="CustomIconTint" value="128,0,0"/>
+		<property name="TintColor" value="128,0,0"/>
+		<property name="DisplayType" value="meleeHeavy"/>
+		<property name="HoldType" value="33"/>
+		<property name="Meshfile" value="#Other/Items?Weapons/Melee/SledgeHammer/stoneSledgeHammerPrefab.prefab"/>
+		<property name="Material" value="Mstone"/>
+		<property name="RepairTools" value="resourceRockSmall"/>
+		<property name="DegradationBreaksAfter" value="false"/>
+		<property name="SoundJammed" value="ItemNeedsRepair"/>
+		<property name="SoundDestroy" value="wooddestroy1"/>
+		<property name="EconomicValue" value="175"/>
+		<property name="SellableToTrader" value="false"/>
+		<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
+		<property name="ShowQuality" value="true"/>
+		<property class="Action0">
+			<property name="Class" value="DynamicMelee"/>
+			<property name="Sphere" value=".15"/>   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
+			<property name="Sound_start" value="sledge_swinglight"/>
+			<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+			<property name="UseGrazingHits" value="true"/>
+			<property name="GrazeStart" value=".515"/>
+			<property name="GrazeEnd" value=".52"/>
+			<property name="SwingDegrees" value="65"/>
+			<property name="SwingAngle" value="160"/>
+			<property class="HitSounds">
+				<property name="Override0" value="organic" param1="stonehitorganic"/>
+			</property>
+			<property class="GrazeSounds">
+				<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+			</property>
+		</property>
+		<property class="Action1">
+			<property name="Class" value="DynamicMelee"/>
+			<property name="Sphere" value=".15"/>   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
+			<property name="Sound_start" value="sledge_swingheavy"/>
+			<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+			<property name="UsePowerAttackAnimation" value="true"/>
+			<property name="UseGrazingHits" value="true"/>
+			<property name="GrazeStart" value=".515"/>
+			<property name="GrazeEnd" value=".52"/>
+			<property name="SwingDegrees" value="110"/>
+			<property name="SwingAngle" value="90"/>
+			<property class="HitSounds">
+				<property name="Override0" value="organic" param1="stonehitorganic"/>
+			</property>
+			<property class="GrazeSounds">
+				<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+			</property>
+		</property>
+		<effect_group name="enHammer2">
+			<passive_effect name="EntityDamage" operation="base_set" value="15" tags="perkSkullCrusher"/> <!-- meleeWpnSledgeT0StoneSledgehammer -->
+			<passive_effect name="BlockDamage" operation="base_set" value="27.2" tags="perkSkullCrusher"/>
+			<passive_effect name="AttacksPerMinute" operation="base_set" value="50" tags="perkSkullCrusher"/>
+			<passive_effect name="StaminaLoss" operation="base_set" value="1" tags="primary"/>
+			<passive_effect name="DegradationMax" operation="base_set" value="55,112" tier="1,6" tags="perkSkullCrusher"/>
+			<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkSkullCrusher"/>
+			<passive_effect name="MaxRange" operation="base_set" value="2.6" tags="perkSkullCrusher"/>
+			<passive_effect name="BlockRange" operation="base_set" value="3.5" tags="perkSkullCrusher"/>
+			<passive_effect name="DismemberChance" operation="base_add" value=".1" tags="perkSkullCrusher,primary"/>
+			<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+			<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+			<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkSkullCrusher"/> <!-- tier bonus -->
+			<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkSkullCrusher"/> <!-- tier bonus -->
+			<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allHarvest"/>
+			<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allToolsHarvest"/>
+			<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="oreWoodHarvest"/>
+		</effect_group>
+		<effect_group name="Power Attack">
+			<passive_effect name="EntityDamage" operation="perc_add" value="1.25" tags="secondary"/>
+			<passive_effect name="GrazeDamageMultiplier" operation="base_set" value=".1" tags="secondary"/>
+			<passive_effect name="BlockDamage" operation="perc_add" value="1.25" tags="secondary"/>
+			<passive_effect name="StaminaLoss" operation="base_set" value="1" tags="secondary"/>
+			<passive_effect name="DismemberChance" operation="base_add" value=".3" tags="secondary"/>
+		</effect_group>
+	</item>
+	
+	<item name="enHammer3">
+		<property name="Tags" value="blunt,melee,grunting,heavy,sledge,weapon,meleeWeapon,longShaft,attStrength,perkSkullCrusher,canHaveCosmetic"/>
+		<property name="CustomIcon" value="meleeWpnSledgeT0StoneSledgehammer"/>
+		<property name="CustomIconTint" value="192,0,0"/>
+		<property name="TintColor" value="192,0,0"/>
+		<property name="DisplayType" value="meleeHeavy"/>
+		<property name="HoldType" value="33"/>
+		<property name="Meshfile" value="#Other/Items?Weapons/Melee/SledgeHammer/stoneSledgeHammerPrefab.prefab"/>
+		<property name="Material" value="Mstone"/>
+		<property name="RepairTools" value="resourceRockSmall"/>
+		<property name="DegradationBreaksAfter" value="false"/>
+		<property name="SoundJammed" value="ItemNeedsRepair"/>
+		<property name="SoundDestroy" value="wooddestroy1"/>
+		<property name="EconomicValue" value="175"/>
+		<property name="SellableToTrader" value="false"/>
+		<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
+		<property name="ShowQuality" value="true"/>
+		<property class="Action0">
+			<property name="Class" value="DynamicMelee"/>
+			<property name="Sphere" value=".15"/>   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
+			<property name="Sound_start" value="sledge_swinglight"/>
+			<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+			<property name="UseGrazingHits" value="true"/>
+			<property name="GrazeStart" value=".515"/>
+			<property name="GrazeEnd" value=".52"/>
+			<property name="SwingDegrees" value="65"/>
+			<property name="SwingAngle" value="160"/>
+			<property class="HitSounds">
+				<property name="Override0" value="organic" param1="stonehitorganic"/>
+			</property>
+			<property class="GrazeSounds">
+				<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+			</property>
+		</property>
+		<property class="Action1">
+			<property name="Class" value="DynamicMelee"/>
+			<property name="Sphere" value=".15"/>   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
+			<property name="Sound_start" value="sledge_swingheavy"/>
+			<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+			<property name="UsePowerAttackAnimation" value="true"/>
+			<property name="UseGrazingHits" value="true"/>
+			<property name="GrazeStart" value=".515"/>
+			<property name="GrazeEnd" value=".52"/>
+			<property name="SwingDegrees" value="110"/>
+			<property name="SwingAngle" value="90"/>
+			<property class="HitSounds">
+				<property name="Override0" value="organic" param1="stonehitorganic"/>
+			</property>
+			<property class="GrazeSounds">
+				<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+			</property>
+		</property>
+		<effect_group name="enHammer3">
+			<passive_effect name="EntityDamage" operation="base_set" value="25" tags="perkSkullCrusher"/> <!-- meleeWpnSledgeT0StoneSledgehammer -->
+			<passive_effect name="BlockDamage" operation="base_set" value="27.2" tags="perkSkullCrusher"/>
+			<passive_effect name="AttacksPerMinute" operation="base_set" value="50" tags="perkSkullCrusher"/>
+			<passive_effect name="StaminaLoss" operation="base_set" value="1" tags="primary"/>
+			<passive_effect name="DegradationMax" operation="base_set" value="55,112" tier="1,6" tags="perkSkullCrusher"/>
+			<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkSkullCrusher"/>
+			<passive_effect name="MaxRange" operation="base_set" value="2.6" tags="perkSkullCrusher"/>
+			<passive_effect name="BlockRange" operation="base_set" value="3.5" tags="perkSkullCrusher"/>
+			<passive_effect name="DismemberChance" operation="base_add" value=".1" tags="perkSkullCrusher,primary"/>
+			<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+			<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+			<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkSkullCrusher"/> <!-- tier bonus -->
+			<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkSkullCrusher"/> <!-- tier bonus -->
+			<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allHarvest"/>
+			<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allToolsHarvest"/>
+			<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="oreWoodHarvest"/>
+		</effect_group>
+		<effect_group name="Power Attack">
+			<passive_effect name="EntityDamage" operation="perc_add" value="1.25" tags="secondary"/>
+			<passive_effect name="GrazeDamageMultiplier" operation="base_set" value=".1" tags="secondary"/>
+			<passive_effect name="BlockDamage" operation="perc_add" value="1.25" tags="secondary"/>
+			<passive_effect name="StaminaLoss" operation="base_set" value="1" tags="secondary"/>
+			<passive_effect name="DismemberChance" operation="base_add" value=".3" tags="secondary"/>
+		</effect_group>
+	</item>
+	
+	<item name="enNerfedHammer">
+		<property name="Tags" value="blunt,melee,grunting,heavy,sledge,weapon,meleeWeapon,longShaft,attStrength,perkSkullCrusher,canHaveCosmetic"/>
+		<property name="CustomIcon" value="meleeWpnSledgeT0StoneSledgehammer"/>
+		<property name="CustomIconTint" value="0,0,0"/>
+		<property name="TintColor" value="0,0,0"/>
+		<property name="DisplayType" value="meleeHeavy"/>
+		<property name="HoldType" value="33"/>
+		<property name="Meshfile" value="#Other/Items?Weapons/Melee/SledgeHammer/stoneSledgeHammerPrefab.prefab"/>
+		<property name="Material" value="Mstone"/>
+		<property name="RepairTools" value="resourceRockSmall"/>
+		<property name="DegradationBreaksAfter" value="false"/>
+		<property name="SoundJammed" value="ItemNeedsRepair"/>
+		<property name="SoundDestroy" value="wooddestroy1"/>
+		<property name="EconomicValue" value="175"/>
+		<property name="SellableToTrader" value="false"/>
+		<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
+		<property name="ShowQuality" value="true"/>
+		<property class="Action0">
+			<property name="Class" value="DynamicMelee"/>
+			<property name="Sphere" value=".15"/>   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
+			<property name="Sound_start" value="sledge_swinglight"/>
+			<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+			<property name="UseGrazingHits" value="true"/>
+			<property name="GrazeStart" value=".515"/>
+			<property name="GrazeEnd" value=".52"/>
+			<property name="SwingDegrees" value="65"/>
+			<property name="SwingAngle" value="160"/>
+			<property class="HitSounds">
+				<property name="Override0" value="organic" param1="stonehitorganic"/>
+			</property>
+			<property class="GrazeSounds">
+				<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+			</property>
+		</property>
+		<property class="Action1">
+			<property name="Class" value="DynamicMelee"/>
+			<property name="Sphere" value=".15"/>   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
+			<property name="Sound_start" value="sledge_swingheavy"/>
+			<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+			<property name="UsePowerAttackAnimation" value="true"/>
+			<property name="UseGrazingHits" value="true"/>
+			<property name="GrazeStart" value=".515"/>
+			<property name="GrazeEnd" value=".52"/>
+			<property name="SwingDegrees" value="110"/>
+			<property name="SwingAngle" value="90"/>
+			<property class="HitSounds">
+				<property name="Override0" value="organic" param1="stonehitorganic"/>
+			</property>
+			<property class="GrazeSounds">
+				<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+			</property>
+		</property>
+		<effect_group name="enNerfedHammer">
+			<passive_effect name="EntityDamage" operation="base_set" value="5" tags="perkSkullCrusher"/> <!-- meleeWpnSledgeT0StoneSledgehammer -->
+			<passive_effect name="BlockDamage" operation="base_set" value="27.2" tags="perkSkullCrusher"/>
+			<passive_effect name="AttacksPerMinute" operation="base_set" value="50" tags="perkSkullCrusher"/>
+			<passive_effect name="StaminaLoss" operation="base_set" value="1" tags="primary"/>
+			<passive_effect name="DegradationMax" operation="base_set" value="55,112" tier="1,6" tags="perkSkullCrusher"/>
+			<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkSkullCrusher"/>
+			<passive_effect name="MaxRange" operation="base_set" value="2.6" tags="perkSkullCrusher"/>
+			<passive_effect name="BlockRange" operation="base_set" value="3.5" tags="perkSkullCrusher"/>
+			<passive_effect name="DismemberChance" operation="base_add" value=".1" tags="perkSkullCrusher,primary"/>
+			<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+			<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+			<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkSkullCrusher"/> <!-- tier bonus -->
+			<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkSkullCrusher"/> <!-- tier bonus -->
+			<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allHarvest"/>
+			<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allToolsHarvest"/>
+			<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="oreWoodHarvest"/>
+			<triggered_effect trigger="onSelfPrimaryActionRayHit" action="Ragdoll" target="otherAOE" range="1.1" target_tags="zombie,animal" duration="2.5" force="1"/>
+			<triggered_effect trigger="onSelfSecondaryActionRayHit" action="Ragdoll" target="otherAOE" range="1.1" target_tags="zombie,animal" duration="2.5" force="1"/>
+			<triggered_effect trigger="onSelfKilledOther" action="Ragdoll" target="otherAOE" range="1.1" target_tags="zombie,animal" duration="2.5" force="1"/>
+		</effect_group>
+		<effect_group name="Power Attack">
+			<passive_effect name="EntityDamage" operation="perc_add" value="1.25" tags="secondary"/>
+			<passive_effect name="GrazeDamageMultiplier" operation="base_set" value=".1" tags="secondary"/>
+			<passive_effect name="BlockDamage" operation="perc_add" value="1.25" tags="secondary"/>
+			<passive_effect name="StaminaLoss" operation="base_set" value="1" tags="secondary"/>
+			<passive_effect name="DismemberChance" operation="base_add" value=".3" tags="secondary"/>
+		</effect_group>
+	</item>
+	
+	<item name="enNerfedHammer2">
+		<property name="Tags" value="blunt,melee,grunting,heavy,sledge,weapon,meleeWeapon,longShaft,attStrength,perkSkullCrusher,canHaveCosmetic"/>
+		<property name="CustomIcon" value="meleeWpnSledgeT0StoneSledgehammer"/>
+		<property name="CustomIconTint" value="64,64,64"/>
+		<property name="TintColor" value="64,64,64"/>
+		<property name="DisplayType" value="meleeHeavy"/>
+		<property name="HoldType" value="33"/>
+		<property name="Meshfile" value="#Other/Items?Weapons/Melee/SledgeHammer/stoneSledgeHammerPrefab.prefab"/>
+		<property name="Material" value="Mstone"/>
+		<property name="RepairTools" value="resourceRockSmall"/>
+		<property name="DegradationBreaksAfter" value="false"/>
+		<property name="SoundJammed" value="ItemNeedsRepair"/>
+		<property name="SoundDestroy" value="wooddestroy1"/>
+		<property name="EconomicValue" value="175"/>
+		<property name="SellableToTrader" value="false"/>
+		<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
+		<property name="ShowQuality" value="true"/>
+		<property class="Action0">
+			<property name="Class" value="DynamicMelee"/>
+			<property name="Sphere" value=".15"/>   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
+			<property name="Sound_start" value="sledge_swinglight"/>
+			<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+			<property name="UseGrazingHits" value="true"/>
+			<property name="GrazeStart" value=".515"/>
+			<property name="GrazeEnd" value=".52"/>
+			<property name="SwingDegrees" value="65"/>
+			<property name="SwingAngle" value="160"/>
+			<property class="HitSounds">
+				<property name="Override0" value="organic" param1="stonehitorganic"/>
+			</property>
+			<property class="GrazeSounds">
+				<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+			</property>
+		</property>
+		<property class="Action1">
+			<property name="Class" value="DynamicMelee"/>
+			<property name="Sphere" value=".15"/>   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
+			<property name="Sound_start" value="sledge_swingheavy"/>
+			<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+			<property name="UsePowerAttackAnimation" value="true"/>
+			<property name="UseGrazingHits" value="true"/>
+			<property name="GrazeStart" value=".515"/>
+			<property name="GrazeEnd" value=".52"/>
+			<property name="SwingDegrees" value="110"/>
+			<property name="SwingAngle" value="90"/>
+			<property class="HitSounds">
+				<property name="Override0" value="organic" param1="stonehitorganic"/>
+			</property>
+			<property class="GrazeSounds">
+				<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+			</property>
+		</property>
+		<effect_group name="enNerfedHammer2">
+			<passive_effect name="EntityDamage" operation="base_set" value="15" tags="perkSkullCrusher"/> <!-- meleeWpnSledgeT0StoneSledgehammer -->
+			<passive_effect name="BlockDamage" operation="base_set" value="27.2" tags="perkSkullCrusher"/>
+			<passive_effect name="AttacksPerMinute" operation="base_set" value="50" tags="perkSkullCrusher"/>
+			<passive_effect name="StaminaLoss" operation="base_set" value="1" tags="primary"/>
+			<passive_effect name="DegradationMax" operation="base_set" value="55,112" tier="1,6" tags="perkSkullCrusher"/>
+			<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkSkullCrusher"/>
+			<passive_effect name="MaxRange" operation="base_set" value="2.6" tags="perkSkullCrusher"/>
+			<passive_effect name="BlockRange" operation="base_set" value="3.5" tags="perkSkullCrusher"/>
+			<passive_effect name="DismemberChance" operation="base_add" value=".1" tags="perkSkullCrusher,primary"/>
+			<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+			<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+			<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkSkullCrusher"/> <!-- tier bonus -->
+			<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkSkullCrusher"/> <!-- tier bonus -->
+			<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allHarvest"/>
+			<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allToolsHarvest"/>
+			<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="oreWoodHarvest"/>
+			<triggered_effect trigger="onSelfPrimaryActionRayHit" action="Ragdoll" target="otherAOE" range="1.1" target_tags="zombie,animal" duration="2.5" force="1"/>
+			<triggered_effect trigger="onSelfSecondaryActionRayHit" action="Ragdoll" target="otherAOE" range="1.1" target_tags="zombie,animal" duration="2.5" force="1"/>
+			<triggered_effect trigger="onSelfKilledOther" action="Ragdoll" target="otherAOE" range="1.1" target_tags="zombie,animal" duration="2.5" force="1"/>
+		</effect_group>
+		<effect_group name="Power Attack">
+			<passive_effect name="EntityDamage" operation="perc_add" value="1.25" tags="secondary"/>
+			<passive_effect name="GrazeDamageMultiplier" operation="base_set" value=".1" tags="secondary"/>
+			<passive_effect name="BlockDamage" operation="perc_add" value="1.25" tags="secondary"/>
+			<passive_effect name="StaminaLoss" operation="base_set" value="1" tags="secondary"/>
+			<passive_effect name="DismemberChance" operation="base_add" value=".3" tags="secondary"/>
+		</effect_group>
+	</item>
+	
+	<item name="enNerfedHammer3">
+		<property name="Tags" value="blunt,melee,grunting,heavy,sledge,weapon,meleeWeapon,longShaft,attStrength,perkSkullCrusher,canHaveCosmetic"/>
+		<property name="CustomIcon" value="meleeWpnSledgeT0StoneSledgehammer"/>
+		<property name="CustomIconTint" value="128,128,128"/>
+		<property name="TintColor" value="128,128,128"/>
+		<property name="DisplayType" value="meleeHeavy"/>
+		<property name="HoldType" value="33"/>
+		<property name="Meshfile" value="#Other/Items?Weapons/Melee/SledgeHammer/stoneSledgeHammerPrefab.prefab"/>
+		<property name="Material" value="Mstone"/>
+		<property name="RepairTools" value="resourceRockSmall"/>
+		<property name="DegradationBreaksAfter" value="false"/>
+		<property name="SoundJammed" value="ItemNeedsRepair"/>
+		<property name="SoundDestroy" value="wooddestroy1"/>
+		<property name="EconomicValue" value="175"/>
+		<property name="SellableToTrader" value="false"/>
+		<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
+		<property name="ShowQuality" value="true"/>
+		<property class="Action0">
+			<property name="Class" value="DynamicMelee"/>
+			<property name="Sphere" value=".15"/>   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
+			<property name="Sound_start" value="sledge_swinglight"/>
+			<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+			<property name="UseGrazingHits" value="true"/>
+			<property name="GrazeStart" value=".515"/>
+			<property name="GrazeEnd" value=".52"/>
+			<property name="SwingDegrees" value="65"/>
+			<property name="SwingAngle" value="160"/>
+			<property class="HitSounds">
+				<property name="Override0" value="organic" param1="stonehitorganic"/>
+			</property>
+			<property class="GrazeSounds">
+				<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+			</property>
+		</property>
+		<property class="Action1">
+			<property name="Class" value="DynamicMelee"/>
+			<property name="Sphere" value=".15"/>   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
+			<property name="Sound_start" value="sledge_swingheavy"/>
+			<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+			<property name="UsePowerAttackAnimation" value="true"/>
+			<property name="UseGrazingHits" value="true"/>
+			<property name="GrazeStart" value=".515"/>
+			<property name="GrazeEnd" value=".52"/>
+			<property name="SwingDegrees" value="110"/>
+			<property name="SwingAngle" value="90"/>
+			<property class="HitSounds">
+				<property name="Override0" value="organic" param1="stonehitorganic"/>
+			</property>
+			<property class="GrazeSounds">
+				<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+			</property>
+		</property>
+		<effect_group name="enNerfedHammer3">
+			<passive_effect name="EntityDamage" operation="base_set" value="25" tags="perkSkullCrusher"/> <!-- meleeWpnSledgeT0StoneSledgehammer -->
+			<passive_effect name="BlockDamage" operation="base_set" value="27.2" tags="perkSkullCrusher"/>
+			<passive_effect name="AttacksPerMinute" operation="base_set" value="50" tags="perkSkullCrusher"/>
+			<passive_effect name="StaminaLoss" operation="base_set" value="1" tags="primary"/>
+			<passive_effect name="DegradationMax" operation="base_set" value="55,112" tier="1,6" tags="perkSkullCrusher"/>
+			<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkSkullCrusher"/>
+			<passive_effect name="MaxRange" operation="base_set" value="2.6" tags="perkSkullCrusher"/>
+			<passive_effect name="BlockRange" operation="base_set" value="3.5" tags="perkSkullCrusher"/>
+			<passive_effect name="DismemberChance" operation="base_add" value=".1" tags="perkSkullCrusher,primary"/>
+			<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+			<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+			<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkSkullCrusher"/> <!-- tier bonus -->
+			<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkSkullCrusher"/> <!-- tier bonus -->
+			<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allHarvest"/>
+			<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allToolsHarvest"/>
+			<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="oreWoodHarvest"/>
+			<triggered_effect trigger="onSelfPrimaryActionRayHit" action="Ragdoll" target="otherAOE" range="1.1" target_tags="zombie,animal" duration="2.5" force="1"/>
+			<triggered_effect trigger="onSelfSecondaryActionRayHit" action="Ragdoll" target="otherAOE" range="1.1" target_tags="zombie,animal" duration="2.5" force="1"/>
+			<triggered_effect trigger="onSelfKilledOther" action="Ragdoll" target="otherAOE" range="1.1" target_tags="zombie,animal" duration="2.5" force="1"/>
+		</effect_group>
+		<effect_group name="Power Attack">
+			<passive_effect name="EntityDamage" operation="perc_add" value="1.25" tags="secondary"/>
+			<passive_effect name="GrazeDamageMultiplier" operation="base_set" value=".1" tags="secondary"/>
+			<passive_effect name="BlockDamage" operation="perc_add" value="1.25" tags="secondary"/>
+			<passive_effect name="StaminaLoss" operation="base_set" value="1" tags="secondary"/>
+			<passive_effect name="DismemberChance" operation="base_add" value=".3" tags="secondary"/>
+		</effect_group>
+	</item>
+
+	<!-- ***************************************************** -->
+	<!-- ************ INGREDIENTS FOR SNOW CANNON ************ -->
+	<!-- ***************************************************** -->
+		
+			
+	<item name="enCondensor"> <!-- scrap material -->
+		<property name="HoldType" value="45"/>
+		<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="MelectricParts"/>
+		<property name="CustomIcon" value="switch"/>
+		<property name="CustomIconTint" value="AACCFF"/>
+		<property name="Weight" value="1"/>
+		<property name="Stacknumber" value="5"/>
+		<property name="EconomicValue" value="50"/>
+		<property name="Group" value="Science"/>
+		<property name="CraftingIngredientTime" value=".2"/>
+	</item>
+			
+	<item name="enRefrigerant"> <!-- scrap material -->
+		<property name="HoldType" value="45"/>
+		<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="Miron_scrap"/>
+		<property name="CustomIcon" value="cntDomedTrashCanEmpty"/>
+		<property name="CustomIconTint" value="88BBFF"/>
+		<property name="Weight" value="1"/>
+		<property name="Stacknumber" value="5"/>
+		<property name="EconomicValue" value="50"/>
+		<property name="Group" value="Science"/>
+		<property name="CraftingIngredientTime" value=".2"/>
+	</item>
 	
 	
 	
@@ -4819,10 +5926,75 @@ CRAWLER* handitems have the same attributes as normal zombies, except with the h
 	</item>
 
 
-
-
-
-		
+	<!-- ***************************************************************** -->
+	<!-- ************ RESTORE MAX HEALTH FROM DEATH PENALTIES ************ -->
+	<!-- ***************************************************************** -->
+	<!-- This item is useful when the death penalty option is enabled when using the enZombie Survival add-on mod -->
+	
+	<!-- restores 10 max health -->
+	<item name="enStemCells">
+		<property name="Tags" value="medical"/>
+		<property name="DisplayType" value="medicalPainkillers"/>
+		<property name="HoldType" value="16"/>
+		<property name="Meshfile" value="#Other/Items?Health/painkillersPrefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="CustomIcon" value="drugPainkillers"/>
+		<property name="CustomIconTint" value="FF8888"/>
+		<property name="Material" value="Morganic"/>
+		<property name="EconomicValue" value="15000"/>
+		<property name="SellableToTrader" value="false"/>
+		<property name="Stacknumber" value="10"/>
+		<property name="Group" value="Science,Medical"/>
+		<property class="Action0">
+			<property name="Class" value="Eat"/>
+			<property name="Delay" value="1.0"/>
+			<property name="Use_time" value="..."/>
+			<property name="Sound_start" value="player_painkillers"/>
+			<requirement name="NotHasBuff" buff="buffDrugPainkillers"/>
+		</property>
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$enDeathPenalty" operation="subtract" value="0.05">
+				<requirement name="CVarCompare" cvar="$enDeathPenalty" operation="GT" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$enDeathPenalty" operation="set" value="0">
+				<requirement name="CVarCompare" cvar="$enDeathPenalty" operation="LT" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="enBuffDeathPenalty">
+				<requirement name="CVarCompare" cvar="$enDeathPenalty" operation="LTE" value="0"/>
+			</triggered_effect>
+		</effect_group>
+	</item>	
+			
+	
+	
+	<!-- Used for Testing Only: Resets test cvar -->
+	<item name="enCvarReset">
+		<property name="Tags" value="medical"/>
+		<property name="DisplayType" value="medicalPainkillers"/>
+		<property name="HoldType" value="16"/>
+		<property name="Meshfile" value="#Other/Items?Health/painkillersPrefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="CustomIcon" value="drugPainkillers"/>
+		<property name="CustomIconTint" value="8888FF"/>
+		<property name="Material" value="Morganic"/>
+		<property name="EconomicValue" value="15000"/>
+		<property name="SellableToTrader" value="false"/>
+		<property name="Stacknumber" value="100"/>
+		<property name="Group" value="Science,Medical"/>
+		<property class="Action0">
+			<property name="Class" value="Eat"/>
+			<property name="Delay" value="1.0"/>
+			<property name="Use_time" value="..."/>
+			<property name="Sound_start" value="player_painkillers"/>
+			<requirement name="NotHasBuff" buff="buffDrugPainkillers"/>
+		</property>
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$entestvar" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="enBuffTraderIsHitCounter"/>
+		</effect_group>
+	</item>
+	
+	
 	<!-- ********************************************** -->
 	<!-- ************ NEW CHALLENGE QUESTS ************ -->
 	<!-- ********************************************** -->
@@ -4882,9 +6054,29 @@ CRAWLER* handitems have the same attributes as normal zombies, except with the h
 			<property name="QuestGiven" value="challenge_BusinessmanRaid1"/>
 		</property>
 	</item>
-
 	
 </append>
+
+
+
+<!-- *************************************************************************************************** -->
+<!-- heal fire entities when struck with a flame based attack -->
+<!-- *************************************************************************************************** -->
+
+<!--
+must modify for molotovs [buffBurningMolotov]
+must modify for torches [buffBurningElement]
+must modify for campfires, ember piles [buffBurningEnvironment]
+must modify for arrows [buffBurningFlamingArrow]
+-->
+
+<append xpath="/items/item[@name='thrownAmmoMolotovCocktail']/effect_group">
+	<!--<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="other" buff="xxxxxx"/>-->
+
+</append>
+
+
+
 
 </ErrorNull>
 

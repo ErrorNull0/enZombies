@@ -110,7 +110,26 @@ challenge_BusinessmanRaid3_subtitle,Quest,Challenge Info,,,Retire the CEO
 challenge_BusinessmanRaid3_completion,,Quest Info,New,,That Chairman Cho was an asshole even before he got zombiefied. Great job taking him down and his team of undead. Here you go...,,,,
 
 modDanceFever,item_modifiers,mod,,,Saturdy Night Fever,,
-buffFrozenDesc,buffs,Buff,,x,You are frozen and can hardly move..,,,,,
+
+buffFrozenDesc,buffs,Buff,,x,You are stiff and can hardly move..,,,,,
+enBuffRadAuraEffectDesc,buffs,Buff,,x,Radiation is being emitted..,,,,,
+
+enStemCells,items,Medical,,,Stem Cells,,
+enStemCellsDesc,items,Medical,,,Experimental therapy that claims to revive dead tissue and restore lost health.,,
+
+enSnowCannon,items,item,,,Snow Cannon,,,,,
+enSnowCannonDesc,items,item,,,"Shoots snow and ice."
+
+enSnowPellet,items,item,,,Snow Pellet,,,,,
+enSnowPelletDesc,items,item,,,"Densely packed snow in the size of a pellet."
+enSlushBomb,items,item,,,Slush Bomb,,,,,
+enSlushBombDesc,items,item,,,"A ball made of yucca fruit and lots of snow, then added plant fibers for durability. Anyone hit by this will be chilled to the bone while falling to the ground."
+
+enCondensor,items,item,,,Condensor,,,,,
+enCondensorDesc,items,item,,,"Works with refrigerant to make stuff cold."
+enRefrigerant,items,item,,,Refrigerant,,,,,
+enRefrigerantDesc,items,item,,,"The substance that creates a cooling effect when being processed by the condesor."
+ 
 
 enBiker1,entityclasses,Entity,,,Abobo,,
 enBiker1Feral,entityclasses,Entity,,,Abobo Feral,,
@@ -522,6 +541,15 @@ enSwatMale2Radiated,entityclasses,Entity,,,SWAT Shocker Radiated,,
 enSwatMale3,entityclasses,Entity,,,SWAT Stinger,,
 enSwatMale3Feral,entityclasses,Entity,,,SWAT Stinger Feral,,
 enSwatMale3Radiated,entityclasses,Entity,,,SWAT Stinger Radiated,,
+enTraderJen1,entityclasses,Entity,,,Trader Jen,,
+enTraderJen2,entityclasses,Entity,,,Trader Jen,,
+enTraderJen3,entityclasses,Entity,,,Trader Jen,,
+enTraderJen4,entityclasses,Entity,,,Trader Jen,,
+enTraderJen5,entityclasses,Entity,,,Trader Jen,,
+enTraderJoel1,entityclasses,Entity,,,Trader Joel,,
+enTraderRekt1,entityclasses,Entity,,,Trader Rekt,,
+enTraderHugh,entityclasses,Entity,,,Trader Hugh,,
+enTraderBob,entityclasses,Entity,,,Trader Bob,,
 enUtilityFemale1,entityclasses,Entity,,,Nailgun Nona,,
 enUtilityFemale1Feral,entityclasses,Entity,,,Nailgun Nona Feral,,
 enUtilityFemale1Radiated,entityclasses,Entity,,,Nailgun Nona Radiated,,
